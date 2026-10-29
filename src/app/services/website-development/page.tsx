@@ -4,6 +4,7 @@ import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDetailHero';
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
+import CTASection from '@/components/common/CTASection/CTASection';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
@@ -18,8 +19,9 @@ export const metadata: Metadata = {
 export default function WebsiteDevelopmentPage() {
   return (
     <div className={styles.page}>
-      {/* Hero */}
+      {/* Hero with Visual */}
       <ServiceDetailHero
+        serviceId={service.id}
         number={service.number}
         tagline={service.tagline}
         headline={service.headline}
@@ -108,7 +110,13 @@ export default function WebsiteDevelopmentPage() {
         </Container>
       </section>
 
+      {/* Enquiry CTA */}
+      <CTASection
+        title="Ready to Build Your Flagship Web Experience?"
+        description="Let's discuss your technical specifications and business targets. Our engineering team is ready to deliver."
+        primaryCtaText="Request a Web Consultation"
+        primaryCtaHref="/contact"
+      />
     </div>
   );
 }
-

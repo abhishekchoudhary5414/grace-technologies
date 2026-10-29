@@ -4,6 +4,7 @@ import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDetailHero';
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
+import CTASection from '@/components/common/CTASection/CTASection';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
@@ -18,8 +19,9 @@ export const metadata: Metadata = {
 export default function DigitalMarketingPage() {
   return (
     <div className={styles.page}>
-      {/* Hero */}
+      {/* Hero with Visual */}
       <ServiceDetailHero
+        serviceId={service.id}
         number={service.number}
         tagline={service.tagline}
         headline={service.headline}
@@ -108,7 +110,13 @@ export default function DigitalMarketingPage() {
         </Container>
       </section>
 
+      {/* Enquiry CTA */}
+      <CTASection
+        title="Ready to Scale Your Inbound Pipeline?"
+        description="Connect with our digital marketing specialists to evaluate your competitive positioning and organic growth opportunities."
+        primaryCtaText="Request a Marketing Audit"
+        primaryCtaHref="/contact"
+      />
     </div>
   );
 }
-

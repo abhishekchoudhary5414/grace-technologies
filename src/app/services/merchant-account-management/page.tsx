@@ -4,6 +4,7 @@ import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDetailHero';
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
+import CTASection from '@/components/common/CTASection/CTASection';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
@@ -11,16 +12,17 @@ import styles from '../service-page.module.css';
 const service = SERVICES_DATA[1]; // Merchant Account Management
 
 export const metadata: Metadata = {
-  title: 'Merchant Account Management | Grace Technologies',
+  title: 'Merchant Account Management & Store Catalog Operations | Grace Technologies',
   description:
-    'Helping Businesses Navigate Merchant Account Management. Merchant onboarding support, application documentation guidance, payment operations support and ongoing coordination.',
+    'End-to-End Merchant Onboarding, Account Setup, Product Catalog Taxonomy, Inventory Sync & Ongoing Store Management.',
 };
 
 export default function MerchantAccountManagementPage() {
   return (
     <div className={styles.page}>
-      {/* Hero */}
+      {/* Hero with Visual */}
       <ServiceDetailHero
+        serviceId={service.id}
         number={service.number}
         tagline={service.tagline}
         headline={service.headline}
@@ -33,7 +35,7 @@ export default function MerchantAccountManagementPage() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
             <InfoOutlinedIcon style={{ color: 'var(--color-accent)', flexShrink: 0 }} />
             <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.8)', margin: 0 }}>
-              <strong>Advisory & Management Disclaimer:</strong> Grace Technologies provides strategic consulting, onboarding guidance, and merchant account administrative coordination. We are not a bank, payment processor, or regulated financial institution, and do not guarantee merchant account approvals. All approval determinations remain solely with independent acquiring institutions.
+              <strong>Advisory & Management Disclaimer:</strong> Grace Technologies provides strategic consulting, onboarding guidance, product catalog listing management, and merchant account administrative coordination. We are not a bank, payment processor, or regulated financial institution, and do not guarantee merchant account approvals. All approval determinations remain solely with independent acquiring institutions.
             </p>
           </div>
         </Container>
@@ -43,9 +45,9 @@ export default function MerchantAccountManagementPage() {
       <section id="capabilities" className={styles.section}>
         <Container size="wide">
           <SectionHeading
-            label="ADVISORY & COORDINATION"
-            title="Navigating Payment Operations With Confidence."
-            description="We support businesses across every phase of merchant underwriting, compliance documentation, and ongoing account facilitation."
+            label="TURNKEY OPERATIONS"
+            title="Comprehensive Merchant Store & Catalog Solutions."
+            description="From initial merchant portal registration to bulk product catalog taxonomy, asset ingestion, and multi-channel inventory synchronization."
             align="left"
           />
 
@@ -67,9 +69,9 @@ export default function MerchantAccountManagementPage() {
       <section className={styles.benefitsSection}>
         <Container size="wide">
           <SectionHeading
-            label="STRATEGIC VALUE"
-            title="Operational Certainty & Clarity."
-            description="Eliminate payment administrative bottlenecks and keep your business transactions flowing without friction."
+            label="COMMERCIAL ADVANTAGES"
+            title="Accelerate Store Launch & Maximize Sales Velocity."
+            description="Eliminate tedious administrative backlogs and launch professionally formatted product catalogs ready to convert."
             align="left"
           />
 
@@ -89,9 +91,9 @@ export default function MerchantAccountManagementPage() {
       <section className={styles.section}>
         <Container size="wide">
           <SectionHeading
-            label="ONBOARDING TIMELINE"
-            title="Our Account Management Process."
-            description="A methodical process designed to present your business accurately to financial underwriting partners."
+            label="DEPLOYMENT WORKFLOW"
+            title="Our 4-Stage Store Management Lifecycle."
+            description="A structured roadmap designed to set up, populate, verify, and scale your merchant digital presence."
             align="center"
           />
 
@@ -113,7 +115,7 @@ export default function MerchantAccountManagementPage() {
           <SectionHeading
             label="FREQUENT QUESTIONS"
             title="Merchant Account Management FAQs."
-            description="Key information on how we assist corporate clients with their payment operations."
+            description="Everything you need to know about our account creation, product listing, and store management services."
             align="center"
           />
 
@@ -121,7 +123,13 @@ export default function MerchantAccountManagementPage() {
         </Container>
       </section>
 
+      {/* Enquiry CTA */}
+      <CTASection
+        title="Ready to Launch or Optimize Your Merchant Operations?"
+        description="Speak with our UK advisory team today to discuss your store setup, catalog taxonomy, and platform onboarding."
+        primaryCtaText="Consult With Our Team"
+        primaryCtaHref="/contact"
+      />
     </div>
   );
 }
-
