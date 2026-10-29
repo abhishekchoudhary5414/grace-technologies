@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
+import EnquiryModal from '@/components/common/EnquiryModal/EnquiryModal';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gracetechnologies.co.uk'),
+  metadataBase: new URL('https://gracetechnologies.uk'),
   title: {
     default: 'Grace Technologies | British Corporate Excellence & Intelligent Technology',
     template: '%s | Grace Technologies',
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://gracetechnologies.co.uk',
+    url: 'https://gracetechnologies.uk',
     title: 'Grace Technologies | Technology That Moves Business Forward',
     description:
       'Empowering ambitious businesses with intelligent technology, powerful digital experiences and smarter business solutions.',
@@ -65,6 +66,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {/* Automatic Welcome Lead Enquiry Popup */}
+        <EnquiryModal />
       </body>
     </html>
   );
