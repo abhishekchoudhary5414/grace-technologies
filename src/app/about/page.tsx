@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import Button from '@/components/common/Button/Button';
+import CTASection from '@/components/common/CTASection/CTASection';
+import AboutHeroVisual from '@/components/sections/AboutHeroVisual/AboutHeroVisual';
 import styles from './about.module.css';
 
 export const metadata: Metadata = {
@@ -14,17 +16,25 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className={styles.page}>
-      {/* Editorial Hero */}
+      {/* Editorial Hero with 2-Column Visual Layout */}
       <section className={styles.heroSection}>
         <Container size="wide">
-          <div className={styles.heroContent}>
-            <span className={styles.badge}>ABOUT GRACE TECHNOLOGIES</span>
-            <h1 className={styles.heroTitle}>
-              Combining British Corporate Elegance With Global Technology Prowess.
-            </h1>
-            <p className={styles.heroSubtitle}>
-              We empower ambitious enterprises to solve real commercial challenges through strategic consulting, modern engineering architectures, and disciplined international delivery.
-            </p>
+          <div className={styles.heroGrid}>
+            {/* Left Content */}
+            <div className={styles.heroContent}>
+              <span className={styles.badge}>ABOUT GRACE TECHNOLOGIES</span>
+              <h1 className={styles.heroTitle}>
+                Combining British Corporate Elegance With Global Technology Prowess.
+              </h1>
+              <p className={styles.heroSubtitle}>
+                We empower ambitious enterprises to solve real commercial challenges through strategic consulting, modern engineering architectures, and disciplined international delivery.
+              </p>
+            </div>
+
+            {/* Right Hero Visual */}
+            <div className={styles.heroVisualWrap}>
+              <AboutHeroVisual />
+            </div>
           </div>
         </Container>
       </section>
@@ -133,7 +143,12 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <CTASection
+        title="Discover What We Can Build Together."
+        description="Let's discuss your current operational bottlenecks and technical goals with our UK consulting team."
+        primaryCtaText="Speak With Our Team"
+        primaryCtaHref="/contact"
+      />
     </div>
   );
 }
-

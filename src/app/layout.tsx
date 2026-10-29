@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
 import EnquiryModal from '@/components/common/EnquiryModal/EnquiryModal';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gracetechnologies.uk'),
@@ -66,6 +67,15 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <a
+          href="https://wa.me/919939337638?text=Hello%20Grace%20Technologies%2C%20I%20would%20like%20to%20discuss%20a%20project."
+          className="whatsappFloat"
+          aria-label="Chat on WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <WhatsAppIcon fontSize="large" />
+        </a>
         {/* Automatic Welcome Lead Enquiry Popup */}
         <EnquiryModal />
       </body>

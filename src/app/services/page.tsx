@@ -1,13 +1,11 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import Container from '@/components/common/Container/Container';
-import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
-import ServiceCard from '@/components/common/ServiceCard/ServiceCard';
-import { SERVICES_DATA } from '@/config/site';
+import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
+import CTASection from '@/components/common/CTASection/CTASection';
 import styles from './services.module.css';
 
 export const metadata: Metadata = {
-  title: 'Our Services & Capabilities',
+  title: 'Our Services & Capabilities | Grace Technologies',
   description:
     'Explore the four core capabilities of Grace Technologies: Website Development, Merchant Account Management, AI Automation, and Digital Marketing.',
 };
@@ -15,36 +13,18 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className={styles.page}>
-      <section className={styles.heroSection}>
-        <Container size="wide">
-          <SectionHeading
-            label="ENTERPRISE CAPABILITIES"
-            title="Integrated Technology & Business Services."
-            description="We deliver full-cycle digital transformation across four interconnected pillars, engineered to empower ambitious businesses to scale securely and efficiently."
-            align="center"
-          />
-        </Container>
-      </section>
+      {/* Alternating Services Showcase Matching the Homepage */}
+      <ServicesOverview />
 
-      <section className={styles.gridSection}>
-        <Container size="wide">
-          <div className={styles.cardsGrid}>
-            {SERVICES_DATA.map((service, index) => (
-              <ServiceCard
-                key={service.id}
-                number={service.number}
-                title={service.title}
-                tagline={service.tagline}
-                description={service.description}
-                href={service.route}
-                index={index}
-              />
-            ))}
-          </div>
-        </Container>
-      </section>
-
+      {/* Conversion CTA */}
+      <CTASection
+        title="Ready to Transform Your Digital Infrastructure?"
+        description="Speak with our strategic consulting team in the UK and discover how our collaborative approach accelerates delivery."
+        primaryCtaText="Discuss Your Project"
+        primaryCtaHref="/contact"
+        secondaryCtaText="Explore Case Studies"
+        secondaryCtaHref="/projects"
+      />
     </div>
   );
 }
-

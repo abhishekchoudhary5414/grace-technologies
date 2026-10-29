@@ -107,6 +107,32 @@ img, svg {
   border-radius: 4px;
 }
 
+.whatsappFloat {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25d366 0%, #1ebc59 100%);
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
+  z-index: 1200;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.whatsappFloat:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.65);
+}
+
+.whatsappFloat svg {
+  font-size: 2rem;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
