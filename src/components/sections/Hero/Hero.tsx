@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
@@ -10,30 +10,14 @@ import { openEnquiryModal } from '@/utils/modal';
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start'],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.85], [0, 60]);
-
-  const scrollToNext = () => {
-    const nextSection = document.getElementById('company-intro');
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section ref={heroRef} className={styles.hero}>
+    <section className={styles.hero}>
       {/* Background architectural grid and ambient particles */}
       <div className={styles.gridOverlay} />
       <div className={styles.radialBackdrop} />
 
       <Container size="wide" className={styles.container}>
-        <motion.div style={{ opacity, y }} className={styles.heroGrid}>
+        <div className={styles.heroGrid}>
           {/* LEFT SIDE: Brand Intro, Headline, Description, CTAs & Metrics */}
           <div className={styles.leftCol}>
             <motion.div
@@ -119,7 +103,7 @@ export default function Hero() {
               <HeroVisual />
             </motion.div>
           </div>
-        </motion.div>
+        </div>
 
       
       </Container>
