@@ -1,0 +1,145 @@
+.page {
+  background-color: var(--color-primary);
+  padding-top: calc(var(--header-height) + 2rem);
+  min-height: 100vh;
+}
+
+.section {
+  padding-top: 3.5rem;
+  padding-bottom: var(--section-padding-y);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: flex-start;
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  padding: 0.35rem 0.875rem;
+  background-color: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 1.75rem;
+}
+
+.heading {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.subheading {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 2.5rem;
+}
+
+.officeCard {
+  background-color: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.officeHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.officeIcon {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.officeName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.officeRole {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.55);
+  display: block;
+}
+
+.officeDetails {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.contactLine {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.82rem;
+}
+
+.contactLine a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.contactLine a:hover {
+  text-decoration: underline;
+}
+
+.trustStrip {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.trustIcon {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.formCol {
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

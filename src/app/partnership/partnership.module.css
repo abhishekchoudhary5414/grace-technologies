@@ -1,0 +1,326 @@
+.page {
+  background-color: var(--color-primary);
+  padding-top: calc(var(--header-height) + 2rem);
+}
+
+.heroSection {
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.heroContent {
+  max-width: 900px;
+}
+
+.badge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  padding: 0.35rem 0.875rem;
+  background-color: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 1.75rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-accent);
+  margin-bottom: 1.75rem;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Profiles */
+.profilesSection {
+  padding-top: var(--section-padding-y);
+  padding-bottom: 3.5rem;
+}
+
+.profilesGrid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profileCard {
+  background-color: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 3.5vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.profileIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(8, 13, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.profileCountry {
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+}
+
+.profileTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.urlBadge {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.25rem 0.65rem;
+  background-color: rgba(8, 13, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.urlBadge:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background-color: rgba(8, 13, 25, 0.95);
+}
+
+/* Official Logo Box */
+.logoBox {
+  background-color: rgba(8, 13, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.officialLogo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.profileRole {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.profileDesc {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.75rem;
+}
+
+.coreContributions {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.contribTitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.contribList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contribList li {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.contribList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.cardFooterLink {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.externalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.externalLink:hover {
+  transform: translateX(4px);
+}
+
+.nexusStrip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nexusCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.nexusIcon {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+}
+
+.nexusTag {
+  font-family: var(--font-heading);
+  font-size: 0.45rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+}
+
+/* Legal Notice */
+.legalSection {
+  padding: 2rem 0 4rem;
+}
+
+.legalNotice {
+  background-color: rgba(20, 43, 69, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+}
+
+.legalTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.legalText {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Benefits */
+.benefitsSection {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+  background-color: rgba(20, 43, 69, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.bCard {
+  background-color: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2rem;
+}
+
+.bIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(8, 13, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.bTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.bDesc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 992px) {
+  .profilesGrid {
+    grid-template-columns: 1fr;
+  }
+  .nexusStrip {
+    margin: 1rem 0;
+  }
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}

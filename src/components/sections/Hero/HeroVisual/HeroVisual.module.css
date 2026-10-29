@@ -1,0 +1,97 @@
+.heroVisualContainer {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+/* Ambient Radial Light Halo matching the image */
+.ambientCoreGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20, 43, 69, 0.75) 0%, rgba(8, 13, 25, 0.4) 55%, transparent 75%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.outerOrbitTrack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 90%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.platformsContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Tablet Scaling */
+@media (max-width: 1200px) {
+  .heroVisualContainer {
+    height: 600px;
+    transform: scale(0.92);
+  }
+}
+
+@media (max-width: 992px) {
+  .heroVisualContainer {
+    height: 540px;
+    transform: scale(0.85);
+    margin-top: 1.5rem;
+  }
+}
+
+/* Mobile specific responsive behavior:
+   Dedicated structured layout preventing text collision and overlapping */
+@media (max-width: 680px) {
+  .heroVisualContainer {
+    position: relative;
+    height: auto;
+    min-height: auto;
+    max-width: 100%;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.25rem;
+    padding: 1rem 0;
+  }
+
+  .outerOrbitTrack,
+  .ambientCoreGlow {
+    display: none;
+  }
+
+  .platformsContainer {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    pointer-events: auto;
+    padding: 0 0.5rem;
+  }
+}

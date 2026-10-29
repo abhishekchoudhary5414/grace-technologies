@@ -1,69 +1,50 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react';
+import type { Metadata } from 'next';
+import Hero from '@/components/sections/Hero/Hero';
+import CompanyIntro from '@/components/sections/CompanyIntro/CompanyIntro';
+import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
+import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
+import HowWeWork from '@/components/sections/HowWeWork/HowWeWork';
+import PartnershipSection from '@/components/sections/PartnershipSection/PartnershipSection';
+import Industries from '@/components/sections/Industries/Industries';
+import HomeContactSection from '@/components/sections/HomeContactSection/HomeContactSection';
+import GlobalOffices from '@/components/sections/GlobalOffices/GlobalOffices';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Grace Technologies | Technology That Moves Business Forward',
+  description:
+    'Grace Technologies is a premier UK technology and business services consultancy strategically partnered with Ank Square Private Limited (India) to engineer scalable web architectures, merchant account operations, AI automation, and digital growth.',
+};
+
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      {/* SECTION 1 – CINEMATIC HERO */}
+      <Hero />
+
+      {/* SECTION 2 – COMPANY INTRODUCTION */}
+      <CompanyIntro />
+
+      {/* SECTION 3 – SERVICES OVERVIEW */}
+      <ServicesOverview />
+
+      {/* SECTION 4 – WHY GRACE TECHNOLOGIES */}
+      <WhyChooseUs />
+
+      {/* SECTION 5 – HOW WE WORK */}
+      <HowWeWork />
+
+      {/* SECTION 6 – UK–INDIA PARTNERSHIP */}
+      <PartnershipSection />
+
+      {/* SECTION 7 – INDUSTRIES WE SUPPORT */}
+      <Industries />
+
+      {/* SECTION 8 – CONTACT SECTION */}
+      <HomeContactSection />
+
+      {/* SECTION 10 – BILATERAL ADDRESS & INTERACTIVE COORDINATE GLOBE */}
+      <GlobalOffices />
+    </>
   );
 }

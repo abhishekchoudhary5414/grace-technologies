@@ -1,0 +1,48 @@
+{
+  "offices": {
+    "uk": {
+      "company": "Grace Technologies",
+      "country": "United Kingdom",
+      "tag": "GLOBAL HEADQUARTERS",
+      "role": "Commercial Strategy & Strategic Advisory Lead",
+      "website": "https://gracetechnologies.uk",
+      "websiteDisplay": "gracetechnologies.uk",
+      "addressLines": [
+        "398 Whalebone Lane South",
+        "Romford, Greater London",
+        "RM6 6HP, England"
+      ],
+      "email": "contact@gracetechnologies.uk",
+      "phone": "+44 20 7946 0991",
+      "timezone": "GMT / BST (London)",
+      "jurisdiction": "England & Wales",
+      "coordinates": {
+        "lat": "51.5760° N",
+        "lng": "0.1480° E",
+        "label": "LONDON // ROMFORD"
+      }
+    },
+    "india": {
+      "company": "Ank Square Pvt. Ltd.",
+      "country": "India",
+      "tag": "STRATEGIC TECHNOLOGY PARTNER",
+      "role": "Strategic Technology & Implementation Partner",
+      "website": "https://anksquare.com",
+      "websiteDisplay": "anksquare.com",
+      "addressLines": [
+        "Ramjaipal Road, Opp. Gola Road",
+        "Near Hotel Magadh Palace",
+        "Patna, Bihar, India - 801503"
+      ],
+      "email": "contact@anksquare.com",
+      "phone": "+91-9939337638",
+      "timezone": "IST (UTC +5:30)",
+      "jurisdiction": "Patna, Bihar, India",
+      "coordinates": {
+        "lat": "25.5941° N",
+        "lng": "85.1376° E",
+        "label": "INDIA // PATNA"
+      }
+    }
+  }
+}

@@ -1,0 +1,341 @@
+.globeSystem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* Base Multi-tier Pedestal underneath the globe */
+.pedestalOuter {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0) rotateX(72deg);
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-secondary) 0%, rgba(8, 13, 25, 0.95) 75%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 50px rgba(20, 43, 69, 0.8), inset 0 0 30px rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.pedestalMid {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: radial-gradient(circle, rgba(20, 43, 69, 0.9) 0%, rgba(8, 13, 25, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pedestalInner {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pedestalGlow {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  filter: blur(10px);
+}
+
+/* Concentric rotating orbital rings */
+.orbitalRing {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.ring1 {
+  width: 260px;
+  height: 260px;
+  border: 1px dashed rgba(255, 255, 255, 0.22);
+  animation: rotateClockwise 36s linear infinite;
+}
+
+.ring2 {
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  animation: rotateCounter 48s linear infinite;
+}
+
+.ring3 {
+  width: 340px;
+  height: 340px;
+  border: 1px dotted rgba(255, 255, 255, 0.18);
+  animation: rotateClockwise 60s linear infinite;
+}
+
+.ringHorizontal {
+  width: 310px;
+  height: 110px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  transform: rotateX(68deg);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  animation: pulseRings 4s ease-in-out infinite alternate;
+}
+
+/* Globe Spherical Core */
+.globeSphere {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(20, 43, 69, 0.95) 0%, var(--color-primary) 70%, #000 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    0 0 40px rgba(20, 43, 69, 0.9),
+    0 0 80px rgba(255, 255, 255, 0.12),
+    inset 0 0 40px rgba(20, 43, 69, 0.9),
+    inset -10px -10px 30px rgba(0, 0, 0, 0.8),
+    inset 10px 10px 25px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hasActive .globeSphere {
+  box-shadow: 
+    0 0 60px rgba(20, 43, 69, 1),
+    0 0 100px rgba(255, 255, 255, 0.25),
+    inset 0 0 45px rgba(255, 255, 255, 0.4);
+}
+
+/* Latitude / Longitude lines */
+.gridLatLong {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-image: 
+    radial-gradient(circle, transparent 65%, rgba(255, 255, 255, 0.15) 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 18px, rgba(255, 255, 255, 0.1) 19px),
+    repeating-linear-gradient(90deg, transparent, transparent 18px, rgba(255, 255, 255, 0.1) 19px);
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+  animation: globeSpin 28s linear infinite;
+  opacity: 0.7;
+}
+
+.particleDots {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-size: 12px 12px;
+  animation: particleDrift 20s linear infinite;
+  opacity: 0.55;
+}
+
+.globeGlowInner {
+  position: absolute;
+  inset: 15%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(20, 43, 69, 0.8) 60%, transparent 80%);
+  filter: blur(12px);
+}
+
+/* Central Branding Inside Globe */
+.brandCore {
+  position: relative;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.65rem 1.1rem;
+  background: rgba(8, 13, 25, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+.logoMarkWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brandTitle {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  line-height: 1.1;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.brandSubWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+}
+
+.brandDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 4px #fff;
+}
+
+.brandSubtitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.52rem;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1;
+}
+
+.coronaGlow {
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(20, 43, 69, 0.4) 60%, transparent 75%);
+  filter: blur(15px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.rimLight {
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  right: 20px;
+  height: 25px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.45) 0%, transparent 80%);
+  pointer-events: none;
+  z-index: 7;
+}
+
+/* Satellites */
+.satellite {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px var(--color-accent);
+  z-index: 9;
+}
+
+.sat1 {
+  top: 15%;
+  left: 10%;
+  animation: satOrbit1 8s ease-in-out infinite;
+}
+
+.sat2 {
+  bottom: 20%;
+  right: 12%;
+  animation: satOrbit2 11s ease-in-out infinite;
+}
+
+.sat3 {
+  top: 70%;
+  left: 18%;
+  animation: satOrbit3 9s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes rotateClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounter {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes globeSpin {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes particleDrift {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseRings {
+  0% { opacity: 0.4; transform: rotateX(68deg) scale(0.97); }
+  100% { opacity: 0.9; transform: rotateX(68deg) scale(1.03); }
+}
+
+@keyframes satOrbit1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(15px, -12px); }
+}
+
+@keyframes satOrbit2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-18px, 14px); }
+}
+
+@keyframes satOrbit3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, -15px); }
+}
+
+/* Mobile specific styling: relatively placed at top, beautifully sized */
+@media (max-width: 680px) {
+  .globeSystem {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .globeSphere {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pedestalOuter {
+    width: 230px;
+    height: 230px;
+  }
+
+  .ring1 { width: 220px; height: 220px; }
+  .ring2 { width: 250px; height: 250px; }
+  .ring3 { width: 280px; height: 280px; }
+  .ringHorizontal { width: 260px; height: 90px; }
+}
