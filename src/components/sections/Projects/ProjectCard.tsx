@@ -206,7 +206,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <div className={styles.cardActionRow}>
           <button
             type="button"
-            className={styles.viewProjectLink}
+            className={styles.primaryAction}
             onClick={() => openEnquiryModal(category)}
           >
             <span>View Project</span>
@@ -215,11 +215,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
           <button
             type="button"
-            className={styles.actionCircle}
+            className={styles.secondaryAction}
             onClick={() => openEnquiryModal(category)}
-            aria-label={`Enquire about ${title}`}
+            aria-label={`Let’s talk about ${title}`}
           >
-            <ArrowForwardIcon />
+            Let&apos;s Talk
           </button>
         </div>
       </div>
