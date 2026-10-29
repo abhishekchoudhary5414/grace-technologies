@@ -70,12 +70,13 @@ export default function PartnershipPage() {
               {/* Official Logo Banner */}
               <div className={styles.logoBox}>
                 <Image
-                  src="/grace-technologies-logo.svg"
+                  src="/logo/logo.png"
                   alt="Grace Technologies Official Logo"
                   width={160}
                   height={48}
                   className={styles.officialLogo}
                 />
+                <p className={styles.logoName}>Grace Technologies</p>
               </div>
 
               <p className={styles.profileRole}>{uk.role}</p>
@@ -138,12 +139,13 @@ export default function PartnershipPage() {
               {/* Official Logo Banner */}
               <div className={styles.logoBox}>
                 <Image
-                  src="/ank-square-logo.svg"
+                  src="/logo/anksquarelogo.svg"
                   alt="Ank Square Private Limited Official Logo"
                   width={160}
                   height={48}
                   className={styles.officialLogo}
                 />
+                <p className={styles.logoName}>Ank Square Private Limited</p>
               </div>
 
               <p className={styles.profileRole}>{india.role}</p>

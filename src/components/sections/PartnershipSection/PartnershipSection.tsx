@@ -64,7 +64,7 @@ export default function PartnershipSection() {
                 height={48}
                 className={styles.officialLogo}
               />
-              <p>Grace Technologies</p>
+              <p className={styles.logoName}>Grace Technologies</p>
             </div>
 
             <h3 className={styles.companyName}>{uk.company}</h3>
@@ -139,12 +139,13 @@ export default function PartnershipSection() {
             {/* Official Logo Banner */}
             <div className={styles.logoBanner}>
               <Image
-                src="/ank-square-logo.svg"
+                src="/logo/anksquarelogo.svg"
                 alt="Ank Square Private Limited Official Logo"
                 width={160}
                 height={48}
                 className={styles.officialLogo}
               />
+              <p className={styles.logoName}>Ank Square Private Limited</p>
             </div>
 
             <h3 className={styles.companyName}>{india.company}</h3>

@@ -29,21 +29,24 @@
 }
 
 .logoMark {
-  width: 38px;
-  height: 38px;
-  background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-sm);
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
-.markG {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--color-accent);
+.logoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.08));
 }
 
 .brandText {

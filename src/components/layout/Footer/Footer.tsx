@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from '@/components/common/Container/Container';
 import officesData from '@/config/offices.json';
 import styles from './Footer.module.css';
@@ -17,7 +18,13 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logoLink}>
               <div className={styles.logoMark}>
-                <span className={styles.markG}>G</span>
+                <Image
+                  src="/logo/logo.png"
+                  alt="Grace Technologies Logo"
+                  width={38}
+                  height={38}
+                  className={styles.logoImage}
+                />
               </div>
               <div className={styles.brandText}>
                 <span className={styles.brandTitle}>GRACE</span>
