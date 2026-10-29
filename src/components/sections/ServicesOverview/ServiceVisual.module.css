@@ -1,0 +1,549 @@
+.visualContainer {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  background-color: rgba(20, 43, 69, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ambientGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20, 43, 69, 0.8) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* 01: Website Development Visual */
+.browserWindow {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(8, 13, 25, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.browserHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(20, 43, 69, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.browserUrl {
+  margin-left: auto;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.liveTag {
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  background: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  color: var(--color-accent);
+}
+
+.browserBody {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.codeBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: rgba(20, 43, 69, 0.4);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.codePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.speedScore {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mockupHero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(20, 43, 69, 0.3);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockupTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.lineH1 {
+  width: 65%;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+
+.lineP1 {
+  width: 85%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 2px;
+}
+
+.lineP2 {
+  width: 50%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.mockupCta {
+  width: 44px;
+  height: 24px;
+  border-radius: 4px;
+  background: var(--color-accent);
+}
+
+.mockupGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mockupCard {
+  background: rgba(20, 43, 69, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+}
+
+.miniBar {
+  width: 80%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+}
+
+.miniCircle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.miniSquare {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.floatingMobile {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 85px;
+  height: 150px;
+  background: rgba(8, 13, 25, 0.95);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileSpeaker {
+  width: 24px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.mobileScreen {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 43, 69, 0.6);
+  border-radius: 6px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobileHero {
+  width: 100%;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+.mobileBtn {
+  width: 60%;
+  height: 10px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* 02: Merchant Account Management Visual */
+.paymentCanvas {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.creditCard3D {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, rgba(8, 13, 25, 0.95) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.cardChip {
+  width: 34px;
+  height: 24px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.35);
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.cardNumber {
+  font-family: monospace;
+  font-size: 1.15rem;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.approvalPill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(8, 13, 25, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.checkIcon {
+  color: var(--color-accent);
+}
+
+.approvalTitle {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  display: block;
+}
+
+.approvalSub {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.securityShieldPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(20, 43, 69, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  align-self: flex-start;
+}
+
+/* 03: AI Automation Visual */
+.aiCanvas {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  gap: 16px;
+}
+
+.chipCoreWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, var(--color-secondary) 0%, rgba(8, 13, 25, 0.95) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.2);
+  margin-bottom: 8px;
+}
+
+.chipCores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent);
+}
+
+.aiProcessorIcon {
+  font-size: 2.5rem;
+}
+
+.chipTitle {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.chipPin {
+  position: absolute;
+  background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 3px, transparent 3px, transparent 8px);
+}
+
+.pinTop {
+  top: -8px;
+  left: 15px;
+  right: 15px;
+  height: 8px;
+}
+
+.pinBottom {
+  bottom: -8px;
+  left: 15px;
+  right: 15px;
+  height: 8px;
+}
+
+.pinLeft {
+  left: -8px;
+  top: 15px;
+  bottom: 15px;
+  width: 8px;
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 3px, transparent 3px, transparent 8px);
+}
+
+.pinRight {
+  right: -8px;
+  top: 15px;
+  bottom: 15px;
+  width: 8px;
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 3px, transparent 3px, transparent 8px);
+}
+
+.nodeBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 13, 25, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.pulseDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px #ffffff;
+}
+
+/* 04: Digital Marketing Visual */
+.marketingCanvas {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(8, 13, 25, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.dashHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.growthBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  background: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.chartArea {
+  padding: 15px 0 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chartBarsGroup {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  height: 110px;
+}
+
+.cBar {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6px;
+  transition: height var(--transition-normal);
+}
+
+.cb1 { height: 45%; }
+.cb2 { height: 70%; }
+.cb3 { height: 55%; }
+.cb4 { height: 85%; background: rgba(255, 255, 255, 0.5); }
+.cb5 { height: 100%; background: var(--color-accent); box-shadow: 0 0 12px rgba(255, 255, 255, 0.6); }
+
+.barLabel {
+  font-family: var(--font-heading);
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.campaignPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .visualContainer {
+    min-height: 300px;
+    padding: 1.25rem;
+  }
+  .floatingMobile {
+    display: none;
+  }
+}
+
