@@ -2,9 +2,10 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
-import ProjectCard, { ProjectItem } from '@/components/sections/ProjectsSection/ProjectCard';
-import CTASection from '@/components/common/CTASection/CTASection';
-import projectsData from '@/config/projects.json';
+import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
+import ProjectsClientView from './ProjectsClientView';
+import projectsConfig from '@/config/projects.json';
+import { ProjectItem } from '@/data/projects';
 import styles from './projects.module.css';
 
 export const metadata: Metadata = {
@@ -14,7 +15,8 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  const allProjects = projectsData.projects as ProjectItem[];
+  // Pass project data directly from the centralized JSON configuration
+  const projectsData = projectsConfig.projects as ProjectItem[];
 
   return (
     <div className={styles.page}>
@@ -22,33 +24,27 @@ export default function ProjectsPage() {
       <section className={styles.heroSection}>
         <Container size="wide">
           <SectionHeading
-            label="PROVEN COMMERCIAL EXCELLENCE"
-            title="Featured Projects & Case Studies."
-            description="A showcase of technical excellence, bespoke software architectures, multi-currency merchant ecosystems, and automated intelligence engineered for ambitious enterprises."
+            label="OUR PORTFOLIO"
+            title="Ideas Into Real Digital Solutions."
+            description="Explore our proven digital architectures, multi-currency merchant ecosystems, automated AI systems, and precision growth marketing implementations."
             align="center"
           />
         </Container>
       </section>
 
-      {/* Grid section */}
+      {/* Interactive Filterable Projects Grid */}
       <section className={styles.gridSection}>
-        <Container size="wide">
-          <div className={styles.projectsGrid}>
-            {allProjects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
-          </div>
-        </Container>
+        <ProjectsClientView initialProjects={projectsData} />
       </section>
 
-      {/* Conversion CTA */}
-      <CTASection
+      {/* Conversion CTA with modal trigger */}
+      <ServiceCTASection
         title="Have an Ambitious Project in Mind?"
         description="Connect with our UK consulting team to discuss your architectural roadmap, specifications, and commercial timeline."
         primaryCtaText="Initiate Project Discovery"
-        primaryCtaHref="/contact"
+        secondaryCtaText="Explore Capabilities"
+        secondaryCtaHref="/services"
       />
     </div>
   );
 }
-
