@@ -3,13 +3,13 @@
 import React from 'react';
 import Link from 'next/link';
 import CodeIcon from '@mui/icons-material/Code';
-import SecurityIcon from '@mui/icons-material/Security';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import MemoryIcon from '@mui/icons-material/Memory';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LanguageIcon from '@mui/icons-material/Language';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import styles from './ServicePlatform.module.css';
 
 export interface ServicePlatformData {
@@ -45,7 +45,7 @@ export default function ServicePlatform({
                 <span className={styles.bDot} />
                 <span className={styles.bDot} />
                 <span className={styles.bDot} />
-                <span className={styles.urlBar}>gracetechnologies.co.uk</span>
+                <span className={styles.urlBar}>gracetechnologies.uk</span>
               </div>
               <div className={styles.browserBody}>
                 <div className={styles.miniHeroStrip}>
@@ -70,26 +70,28 @@ export default function ServicePlatform({
       case 'merchant-account-management':
         return (
           <div className={styles.visualCanvas}>
-            {/* Merchant Payment Cards & Dashboard */}
-            <div className={styles.paymentDeck}>
-              <div className={styles.creditCardVisual}>
-                <div className={styles.cardChip} />
-                <div className={styles.cardHeader}>
-                  <CreditCardIcon fontSize="small" />
-                  <span className={styles.cardBrand}>PAYMENT CORE</span>
+            {/* Merchant Account & Product Catalog Management Mockup */}
+            <div className={styles.merchantMiniFrame}>
+              <div className={styles.merchantMiniHeader}>
+                <StorefrontIcon fontSize="small" />
+                <span className={styles.merchantStoreTag}>MERCHANT CONSOLE</span>
+                <span className={styles.merchantActiveDot} />
+              </div>
+
+              {/* Product Listing Row Mini */}
+              <div className={styles.productMiniRow}>
+                <Inventory2Icon fontSize="inherit" className={styles.prodMiniIcon} />
+                <div className={styles.prodMiniMeta}>
+                  <span className={styles.prodMiniTitle}>Product SKU #8924</span>
+                  <span className={styles.prodMiniSub}>Catalog Sync: Active</span>
                 </div>
-                <div className={styles.cardNumberMask}>•••• •••• •••• 8842</div>
+                <span className={styles.prodPriceTag}>£499</span>
               </div>
 
-              {/* Transaction Approved Badge */}
-              <div className={styles.approvedPill}>
-                <CheckCircleIcon className={styles.checkIcon} fontSize="inherit" />
-                <span>Payment Approved</span>
-              </div>
-
-              <div className={styles.secureBadge}>
-                <SecurityIcon fontSize="inherit" />
-                <span>PCI-DSS Validated</span>
+              {/* Verification & Integration Status */}
+              <div className={styles.merchantVerifyPill}>
+                <CheckCircleIcon fontSize="inherit" className={styles.checkIconMini} />
+                <span>Account Verified • Multi-Store Active</span>
               </div>
             </div>
           </div>
@@ -186,4 +188,3 @@ export default function ServicePlatform({
     </div>
   );
 }
-

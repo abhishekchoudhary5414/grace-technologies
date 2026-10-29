@@ -108,94 +108,94 @@ export const SERVICES_DATA: ServiceDetail[] = [
     id: 'merchant-account-management',
     number: '02',
     title: 'Merchant Account Management',
-    shortTitle: 'Merchant Accounts',
-    tagline: 'Payment Operations. Made Simpler.',
-    headline: 'Helping Businesses Navigate Merchant Account Management.',
+    shortTitle: 'Merchant Operations',
+    tagline: 'Merchant Account Creation & Product Catalog Operations.',
+    headline: 'End-to-End Merchant Onboarding, Account Setup & Product Catalog Management.',
     description:
-      'Support businesses with merchant account processes, onboarding guidance and ongoing merchant account management.',
+      'We manage the entire lifecycle of merchant store operations — from initial merchant account creation and verification to complete digital product listing, catalog taxonomy, inventory synchronization, and ongoing payment operations.',
     route: '/services/merchant-account-management',
     capabilities: [
       {
-        title: 'Merchant Onboarding Support',
-        description: 'Strategic consultation to help you assemble, structure, and submit compliant underwriting documentation.',
+        title: 'Merchant Account Creation & Onboarding',
+        description: 'Complete setup and verification of merchant portals across leading international acquiring and commerce platforms.',
       },
       {
-        title: 'Application Documentation Guidance',
-        description: 'Expert advisory on meeting stringent KYC, AML, processing history, and compliance standards.',
+        title: 'Product Catalog & Listing Architecture',
+        description: 'Professional product data ingestion, high-resolution media structuring, SKU classification, and SEO-optimized title formatting.',
       },
       {
-        title: 'Merchant Account Coordination',
-        description: 'Liaising with acquiring partners and payment service providers to streamline technical and operational setup.',
+        title: 'Multi-Channel Inventory Synchronization',
+        description: 'Real-time synchronization of product stock quantities, pricing tiers, variants, and localized currencies across multiple stores.',
       },
       {
-        title: 'Payment Operations Support',
-        description: 'Assisting your operational teams with transaction flows, reconciliation clarity, and gateway configurations.',
+        title: 'Payment Gateway & Checkout Integration',
+        description: 'Technical configuration of multi-currency processing, fraud prevention thresholds, and frictionless 1-click checkouts.',
       },
       {
-        title: 'Account Management',
-        description: 'Continuous oversight, operational troubleshooting, and ongoing administrative account facilitation.',
+        title: 'Documentation & KYC Compliance Advisory',
+        description: 'Advising on compliance dossiers, identity verification, anti-fraud guidelines, and banking underwriting requirements.',
       },
       {
-        title: 'Ongoing Operational Assistance',
-        description: 'Responsive operational assistance for processing adjustments, fee transparency checks, and technical inquiries.',
+        title: 'Ongoing Merchant Store Administration',
+        description: 'Daily operational maintenance, dispute mitigation, fee reconciliation, and product catalog promotions management.',
       },
     ],
     benefits: [
       {
-        title: 'Streamlined Compliance Paths',
-        description: 'Avoid unnecessary underwriting friction by preparing comprehensive, accurate documentation from day one.',
+        title: 'Frictionless Account Launch',
+        description: 'Bypass technical and administrative roadblocks with turnkey merchant account registration and rapid verification.',
       },
       {
-        title: 'Operational Peace of Mind',
-        description: 'Dedicated guidance navigating acquirer criteria, risk tiers, and gateway integration workflows.',
+        title: 'Optimized Product Discovery',
+        description: 'Structured product listings with rich metadata, high search visibility, and conversion-focused product descriptions.',
       },
       {
-        title: 'Clear Financial Visibility',
-        description: 'Better transparency across processing fees, settlement schedules, and operational merchant balances.',
+        title: 'Eliminated Operational Bottlenecks',
+        description: 'Free your executive team from daily catalog updates, inventory reconciliations, and underwriting paperwork.',
       },
       {
-        title: 'Professional Advocacy',
-        description: 'Experienced coordinators standing alongside your team to communicate with payment providers effectively.',
+        title: 'Global Multi-Currency Readiness',
+        description: 'Accept payments internationally with configured localized checkout currencies and streamlined settlement paths.',
       },
     ],
     process: [
       {
         step: '01',
-        title: 'Business Audit',
-        description: 'Reviewing your commercial model, processing history, and regulatory standing to determine requirements.',
+        title: 'Account Creation & Verification',
+        description: 'Submitting corporate registration, underwriting dossiers, and verifying merchant business portals.',
       },
       {
         step: '02',
-        title: 'Documentation Preparation',
-        description: 'Structuring compliance dossiers, anti-fraud policies, and technical integration checklists.',
+        title: 'Store & Gateway Configuration',
+        description: 'Configuring payment gateways, currencies, shipping policies, and dispute handling workflows.',
       },
       {
         step: '03',
-        title: 'Provider Liaison',
-        description: 'Submitting dossiers and coordinating with banking and acquiring partners throughout review phases.',
+        title: 'Product Ingestion & Catalog Setup',
+        description: 'Formatting SKUs, uploading assets, writing optimized descriptions, and configuring inventory sync.',
       },
       {
         step: '04',
-        title: 'Ongoing Operational Support',
-        description: 'Delivering continuous operational assistance, monitoring gateway performance, and resolving inquiries.',
+        title: 'Live Launch & Daily Management',
+        description: 'Monitoring live transactions, updating stock listings, managing catalog additions, and optimizing operations.',
       },
     ],
     faqs: [
       {
+        question: 'Do you manage product listings across platforms like Shopify, Amazon, and Stripe?',
+        answer: 'Yes. We handle merchant account creation, verification, and product catalog management across Shopify, Stripe, Amazon, WooCommerce, and custom headless enterprise commerce architectures.',
+      },
+      {
         question: 'Are you a bank or payment processor?',
-        answer: 'No. Grace Technologies is a business and technology consultancy providing merchant account management and onboarding advisory. We are neither a bank, financial institution, nor payment processor.',
+        answer: 'No. Grace Technologies is a business and technology consultancy providing merchant account setup, product catalog listing management, and operational advisory. We are neither a bank, financial institution, nor payment processor.',
       },
       {
-        question: 'Do you guarantee merchant account approvals?',
-        answer: 'We do not guarantee approval, as all underwriting and risk decisions rest solely with independent acquiring banks and licensed payment service providers. We optimize and streamline your documentation to maximize success.',
+        question: 'How do you handle bulk product imports and SKU updates?',
+        answer: 'We deploy automated data transformation pipelines and headless APIs to ingest thousands of SKUs, format specifications, and maintain real-time inventory synchronization.',
       },
       {
-        question: 'Can you assist international companies operating in the UK?',
-        answer: 'Yes, we frequently guide cross-border and multinational businesses setting up payment operations and establishing compliant accounts within the UK and European economic zones.',
-      },
-      {
-        question: 'How do you assist with ongoing merchant management?',
-        answer: 'We provide operational liaison, transaction reconciliation support, dispute review preparation, and ongoing coordination with your payment partners.',
+        question: 'Do you help with ongoing store operations after account setup?',
+        answer: 'Yes. We offer continuous merchant management retainers that cover new product launches, catalog revisions, transaction reconciliations, and ongoing provider liaison.',
       },
     ],
   },
@@ -454,4 +454,3 @@ export const HOW_WE_WORK_STEPS: StepItem[] = [
     description: 'We provide ongoing technical support, continuous performance monitoring, and iterative enhancements as you scale.',
   },
 ];
-

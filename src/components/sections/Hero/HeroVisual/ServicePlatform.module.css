@@ -27,21 +27,10 @@
 }
 
 /* Floating animation with slight phase offsets */
-.top-left {
-  animation: floatSlow1 7s ease-in-out infinite alternate;
-}
-
-.top-right {
-  animation: floatSlow2 8s ease-in-out 0.8s infinite alternate;
-}
-
-.bottom-left {
-  animation: floatSlow3 7.5s ease-in-out 1.5s infinite alternate;
-}
-
-.bottom-right {
-  animation: floatSlow4 8.5s ease-in-out 0.4s infinite alternate;
-}
+.top-left { animation: floatSlow1 7s ease-in-out infinite alternate; }
+.top-right { animation: floatSlow2 8s ease-in-out 0.8s infinite alternate; }
+.bottom-left { animation: floatSlow3 7.5s ease-in-out 1.5s infinite alternate; }
+.bottom-right { animation: floatSlow4 8.5s ease-in-out 0.4s infinite alternate; }
 
 .interactiveCard {
   display: flex;
@@ -54,7 +43,7 @@
   text-decoration: none;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow:
+  box-shadow: 
     0 15px 35px rgba(0, 0, 0, 0.7),
     0 0 25px rgba(20, 43, 69, 0.5),
     inset 0 1px 1px rgba(255, 255, 255, 0.2);
@@ -67,7 +56,7 @@
 .active .interactiveCard {
   transform: translateY(-8px) scale(1.02);
   border-color: rgba(255, 255, 255, 0.5);
-  box-shadow:
+  box-shadow: 
     0 25px 50px rgba(0, 0, 0, 0.9),
     0 0 40px rgba(255, 255, 255, 0.25),
     inset 0 1px 1px rgba(255, 255, 255, 0.4);
@@ -214,78 +203,99 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* 02: Merchant Payment Mockup */
-.paymentDeck {
+/* 02: Merchant Operations & Product Catalog Mockup */
+.merchantMiniFrame {
   width: 100%;
+  background: rgba(8, 13, 25, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-sm);
+  padding: 7px 9px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-.creditCardVisual {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, rgba(8, 13, 25, 0.9) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 6px;
-  padding: 8px 10px;
-  position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.cardChip {
-  width: 16px;
-  height: 12px;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.4);
-  margin-bottom: 6px;
-}
-
-.cardHeader {
+.merchantMiniHeader {
   display: flex;
   align-items: center;
   gap: 5px;
   color: var(--color-accent);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.cardBrand {
+.merchantStoreTag {
   font-family: var(--font-heading);
-  font-size: 0.55rem;
-  font-weight: 700;
   letter-spacing: 0.1em;
 }
 
-.cardNumberMask {
-  font-family: monospace;
+.merchantActiveDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 6px #ffffff;
+  margin-left: auto;
+}
+
+.productMiniRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(20, 43, 69, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+
+.prodMiniIcon {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.prodMiniMeta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.prodMiniTitle {
   font-size: 0.62rem;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.12em;
-  margin-top: 4px;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.1;
 }
 
-.approvedPill {
+.prodMiniSub {
+  font-size: 0.52rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.prodPriceTag {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.merchantVerifyPill {
   display: flex;
   align-items: center;
   gap: 4px;
-  align-self: flex-start;
-  padding: 2px 7px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.54rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(20, 43, 69, 0.3);
+  padding: 2px 5px;
   border-radius: var(--radius-full);
-  font-size: 0.6rem;
-  font-weight: 600;
-  color: var(--color-accent);
 }
 
-.checkIcon {
-  font-size: 0.75rem;
+.checkIconMini {
   color: var(--color-accent);
-}
-
-.secureBadge {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.55rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
 }
 
 /* 03: AI Automation Mockup */
@@ -346,6 +356,22 @@
   left: 10px;
   right: 10px;
   height: 5px;
+}
+
+.pinsLeft {
+  left: -5px;
+  top: 10px;
+  bottom: 10px;
+  width: 5px;
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 2px, transparent 2px, transparent 6px);
+}
+
+.pinsRight {
+  right: -5px;
+  top: 10px;
+  bottom: 10px;
+  width: 5px;
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 2px, transparent 2px, transparent 6px);
 }
 
 .nodeBadge {
@@ -417,28 +443,11 @@
   transition: height var(--transition-fast);
 }
 
-.bar1 {
-  height: 40%;
-}
-
-.bar2 {
-  height: 65%;
-}
-
-.bar3 {
-  height: 50%;
-}
-
-.bar4 {
-  height: 85%;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.bar5 {
-  height: 100%;
-  background: var(--color-accent);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
+.bar1 { height: 40%; }
+.bar2 { height: 65%; }
+.bar3 { height: 50%; }
+.bar4 { height: 85%; background: rgba(255, 255, 255, 0.6); }
+.bar5 { height: 100%; background: var(--color-accent); box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
 
 .campaignBadge {
   display: flex;
@@ -512,57 +521,28 @@
 
 /* Floating Animations */
 @keyframes floatSlow1 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-
-  100% {
-    transform: translateY(-7px) translateX(4px);
-  }
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-7px) translateX(4px); }
 }
 
 @keyframes floatSlow2 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-
-  100% {
-    transform: translateY(-9px) translateX(-5px);
-  }
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-9px) translateX(-5px); }
 }
 
 @keyframes floatSlow3 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-
-  100% {
-    transform: translateY(8px) translateX(5px);
-  }
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(8px) translateX(5px); }
 }
 
 @keyframes floatSlow4 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-
-  100% {
-    transform: translateY(7px) translateX(-4px);
-  }
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(7px) translateX(-4px); }
 }
 
 @keyframes pulseNode {
-
-  0%,
-  100% {
-    opacity: 0.6;
-    transform: scale(0.9);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
+  0%, 100% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 
 /* Mobile specific styles: relative flow, full card width, no overlap */

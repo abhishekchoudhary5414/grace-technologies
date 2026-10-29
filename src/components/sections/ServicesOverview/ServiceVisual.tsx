@@ -3,9 +3,11 @@
 import React from 'react';
 import CodeIcon from '@mui/icons-material/Code';
 import LanguageIcon from '@mui/icons-material/Language';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
-import SecurityIcon from '@mui/icons-material/Security';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import MemoryIcon from '@mui/icons-material/Memory';
 import HubIcon from '@mui/icons-material/Hub';
 import BarChartIcon from '@mui/icons-material/BarChart';
@@ -85,35 +87,88 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
       return (
         <div className={styles.visualContainer}>
           <div className={styles.ambientGlow} />
-          {/* Main Payment Terminal & Transactions Canvas */}
-          <div className={styles.paymentCanvas}>
-            {/* Holographic Credit Card Deck */}
-            <div className={styles.creditCard3D}>
-              <div className={styles.cardChip} />
-              <div className={styles.cardHeader}>
-                <CreditCardIcon fontSize="small" />
-                <span>ENTERPRISE MERCHANT</span>
+          {/* Merchant Portal Dashboard Visual */}
+          <div className={styles.merchantPortalFrame}>
+            {/* Portal Navigation & Account Status */}
+            <div className={styles.portalHeader}>
+              <div className={styles.merchantStoreBrand}>
+                <StorefrontIcon fontSize="small" className={styles.storeIcon} />
+                <div>
+                  <span className={styles.storeName}>GLOBAL MERCHANT CONSOLE</span>
+                  <span className={styles.storeStatus}>Account ID: MC-892410 // ACTIVE</span>
+                </div>
               </div>
-              <div className={styles.cardNumber}>•••• •••• •••• 8842</div>
-              <div className={styles.cardFooter}>
-                <span>SETTLEMENT: INSTANT</span>
-                <span>PCI-DSS LEVEL 1</span>
-              </div>
-            </div>
-
-            {/* Approval Notification Pill */}
-            <div className={styles.approvalPill}>
-              <CheckCircleIcon className={styles.checkIcon} fontSize="small" />
-              <div>
-                <span className={styles.approvalTitle}>Application Pre-Underwritten</span>
-                <span className={styles.approvalSub}>Approved across UK & International Tiers</span>
+              <div className={styles.verifiedBadge}>
+                <VerifiedUserIcon fontSize="inherit" />
+                <span>KYC VERIFIED</span>
               </div>
             </div>
 
-            {/* Security Badge */}
-            <div className={styles.securityShieldPill}>
-              <SecurityIcon fontSize="small" />
-              <span>Multi-Currency Acquiring Direct Gateway</span>
+            {/* Product Catalog Management Table */}
+            <div className={styles.catalogDeck}>
+              <div className={styles.catalogToolbar}>
+                <span className={styles.catalogHeading}>
+                  <Inventory2Icon fontSize="inherit" /> Product Catalog (1,420 Active SKUs)
+                </span>
+                <span className={styles.syncStatus}>• Real-time Inventory Sync</span>
+              </div>
+
+              {/* Product Listing Items */}
+              <div className={styles.productList}>
+                <div className={styles.productRow}>
+                  <div className={styles.prodThumb}>
+                    <AddShoppingCartIcon fontSize="inherit" />
+                  </div>
+                  <div className={styles.prodDetails}>
+                    <span className={styles.prodTitle}>Enterprise SaaS Tier - Multi-Seat</span>
+                    <span className={styles.prodMeta}>SKU: GT-SaaS-001 • Category: Software • In Stock: 450</span>
+                  </div>
+                  <div className={styles.prodPrice}>
+                    <span className={styles.priceNum}>£499.00</span>
+                    <span className={styles.statusLive}>PUBLISHED</span>
+                  </div>
+                </div>
+
+                <div className={styles.productRow}>
+                  <div className={styles.prodThumb}>
+                    <AddShoppingCartIcon fontSize="inherit" />
+                  </div>
+                  <div className={styles.prodDetails}>
+                    <span className={styles.prodTitle}>Hardware Terminal Node Pro</span>
+                    <span className={styles.prodMeta}>SKU: GT-HW-089 • Category: Hardware • In Stock: 85</span>
+                  </div>
+                  <div className={styles.prodPrice}>
+                    <span className={styles.priceNum}>£1,250.00</span>
+                    <span className={styles.statusLive}>PUBLISHED</span>
+                  </div>
+                </div>
+
+                <div className={styles.productRow}>
+                  <div className={styles.prodThumb}>
+                    <AddShoppingCartIcon fontSize="inherit" />
+                  </div>
+                  <div className={styles.prodDetails}>
+                    <span className={styles.prodTitle}>Custom API Access Token License</span>
+                    <span className={styles.prodMeta}>SKU: GT-API-310 • Category: Digital • Unlimited</span>
+                  </div>
+                  <div className={styles.prodPrice}>
+                    <span className={styles.priceNum}>£199.00</span>
+                    <span className={styles.statusLive}>PUBLISHED</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Status footer pill */}
+              <div className={styles.portalFooter}>
+                <div className={styles.footItem}>
+                  <CheckCircleIcon fontSize="inherit" className={styles.footCheck} />
+                  <span>Multi-Currency Multi-Store Publishing</span>
+                </div>
+                <div className={styles.footItem}>
+                  <CheckCircleIcon fontSize="inherit" className={styles.footCheck} />
+                  <span>Stripe, Shopify & Amazon Integration</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -192,4 +247,3 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
       return null;
   }
 }
-

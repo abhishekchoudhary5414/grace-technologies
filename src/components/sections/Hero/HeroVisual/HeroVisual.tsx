@@ -18,8 +18,8 @@ const platforms: ServicePlatformData[] = [
   {
     id: 'merchant-account-management',
     number: '02',
-    title: 'MERCHANT ACCOUNT',
-    subtitle: 'Payment Operations & Security',
+    title: 'MERCHANT OPERATIONS',
+    subtitle: 'Account Creation & Product Listing',
     href: '/services/merchant-account-management',
     position: 'top-right',
   },
