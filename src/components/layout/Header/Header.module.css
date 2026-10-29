@@ -34,20 +34,27 @@
   align-items: center;
   gap: 0.875rem;
   text-decoration: none;
+  line-height: 1;
 }
 
 .logoMark {
-  width: 38px;
-  height: 38px;
-  background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-sm);
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
   transition: border-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.logoMark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .logoLink:hover .logoMark {

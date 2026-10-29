@@ -1,0 +1,77 @@
+{
+  "projects": [
+    {
+      "id": "vance-capital-portal",
+      "slug": "vance-capital-portal",
+      "title": "Vance Capital Institutional Web Architecture",
+      "category": "Website Development",
+      "client": "Vance Capital Partners",
+      "location": "London, United Kingdom",
+      "year": "2026",
+      "summary": "Engineered an institutional-grade Next.js web application with sub-second latency, headless CMS architecture, and strict accessibility for a London private equity firm.",
+      "metrics": "100% Core Web Vitals • 0.4s Global LCP",
+      "tags": ["Next.js 16", "TypeScript", "Tailored UI", "Headless CMS", "Technical SEO"],
+      "deliverables": [
+        "Bespoke component design system",
+        "Encrypted investor document vault",
+        "Sub-second global CDN delivery",
+        "Automated structured schema SEO"
+      ]
+    },
+    {
+      "id": "meridian-merchant-console",
+      "slug": "meridian-merchant-console",
+      "title": "Meridian Global Multi-Store Merchant Catalog",
+      "category": "Merchant Account Management",
+      "client": "Meridian Retail Group",
+      "location": "Edinburgh & Cross-Border",
+      "year": "2026",
+      "summary": "Turnkey merchant onboarding and multi-store product catalog management across Stripe, Shopify, and Amazon for 4,500+ synchronized SKUs with multi-currency settlement.",
+      "metrics": "4,500+ Active SKUs • 0% Inventory Mismatch",
+      "tags": ["Merchant Setup", "Catalog Taxonomy", "Inventory Sync", "Multi-Currency", "KYC/AML"],
+      "deliverables": [
+        "Rapid merchant gateway verification",
+        "Bulk automated SKU ingestion pipeline",
+        "Real-time cross-store stock sync",
+        "PCI-DSS compliant checkout flows"
+      ]
+    },
+    {
+      "id": "cogniflow-ai-automation",
+      "slug": "cogniflow-ai-automation",
+      "title": "CogniFlow Enterprise AI Operations Pipeline",
+      "category": "AI Automation",
+      "client": "Aethelgard Logistics",
+      "location": "Manchester, United Kingdom",
+      "year": "2026",
+      "summary": "Deployed autonomous multi-modal document extraction and agentic customer support routing that automated 1,200 hours of manual back-office tasks monthly.",
+      "metrics": "1,200 Hours Saved/Mo • 99.4% Parsing Precision",
+      "tags": ["Agentic AI", "OCR Pipeline", "Zero Data Retention", "ERP Integration", "Human-in-Loop"],
+      "deliverables": [
+        "Multi-modal invoice & customs PDF parser",
+        "Zero-data-retention embedding pipeline",
+        "Custom rule-based confidence gating",
+        "Instant ERP automated ledger updates"
+      ]
+    },
+    {
+      "id": "apex-growth-marketing",
+      "slug": "apex-growth-marketing",
+      "title": "Apex Wealth Multi-Channel Acquisition Engine",
+      "category": "Digital Marketing",
+      "client": "Apex Wealth Advisory",
+      "location": "Birmingham, United Kingdom",
+      "year": "2026",
+      "summary": "Executed precision technical SEO, geo-targeted authority engineering, and high-converting paid search funnels that scaled high-intent enterprise inbound leads.",
+      "metrics": "+340% ROAS • +280% Qualified Pipeline Growth",
+      "tags": ["Technical SEO", "High-ROAS PPC", "CRO Testing", "Attribution Analytics", "LinkedIn Ads"],
+      "deliverables": [
+        "Rank #1 positioning on commercial queries",
+        "High-intent PPC funnel architecture",
+        "Multivariate landing page conversion testing",
+        "Closed-loop revenue attribution dashboard"
+      ]
+    }
+  ]
+}
+

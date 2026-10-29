@@ -58,12 +58,13 @@ export default function PartnershipSection() {
             {/* Official Logo Banner */}
             <div className={styles.logoBanner}>
               <Image
-                src="/grace-technologies-logo.svg"
+                src="/logo/logo.png"
                 alt="Grace Technologies Official Logo"
                 width={160}
                 height={48}
                 className={styles.officialLogo}
               />
+              <p>Grace Technologies</p>
             </div>
 
             <h3 className={styles.companyName}>{uk.company}</h3>

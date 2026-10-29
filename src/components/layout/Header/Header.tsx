@@ -15,6 +15,8 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
 import styles from './Header.module.css';
+import Logo from '../../../../public/logo/logo.png';
+import Image from 'next/image';
 
 const servicesList = [
   {
@@ -74,7 +76,7 @@ export default function Header() {
           {/* Logo / Wordmark */}
           <Link href="/" className={styles.logoLink}>
             <div className={styles.logoMark}>
-              <span className={styles.markG}>G</span>
+              <Image src={Logo} alt="Grace Technologies Logo" />
             </div>
             <div className={styles.brandText}>
               <span className={styles.brandTitle}>GRACE</span>
@@ -163,6 +165,12 @@ export default function Header() {
             </div>
 
             <Link
+              href="/projects"
+              className={`${styles.navLink} ${pathname.startsWith('/project') ? styles.active : ''}`}
+            >
+              Projects
+            </Link>
+            <Link
               href="/partnership"
               className={`${styles.navLink} ${pathname === '/partnership' ? styles.active : ''}`}
             >
@@ -229,6 +237,9 @@ export default function Header() {
                     ))}
                   </div>
                 </div>
+                <Link href="/projects" className={styles.mobileLink}>
+                  Projects
+                </Link>
                 <Link href="/partnership" className={styles.mobileLink}>
                   UK–India Partnership
                 </Link>

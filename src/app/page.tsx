@@ -3,10 +3,12 @@ import type { Metadata } from 'next';
 import Hero from '@/components/sections/Hero/Hero';
 import CompanyIntro from '@/components/sections/CompanyIntro/CompanyIntro';
 import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
+import ProjectsSection from '@/components/sections/ProjectsSection/ProjectsSection';
 import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
 import HowWeWork from '@/components/sections/HowWeWork/HowWeWork';
 import PartnershipSection from '@/components/sections/PartnershipSection/PartnershipSection';
 import Industries from '@/components/sections/Industries/Industries';
+import CTASection from '@/components/common/CTASection/CTASection';
 import HomeContactSection from '@/components/sections/HomeContactSection/HomeContactSection';
 import GlobalOffices from '@/components/sections/GlobalOffices/GlobalOffices';
 
@@ -28,22 +30,35 @@ export default function HomePage() {
       {/* SECTION 3 – SERVICES OVERVIEW */}
       <ServicesOverview />
 
-      {/* SECTION 4 – WHY GRACE TECHNOLOGIES */}
+      {/* SECTION 4 – FEATURED PROJECTS & CASE STUDIES */}
+      <ProjectsSection />
+
+      {/* SECTION 5 – WHY GRACE TECHNOLOGIES */}
       <WhyChooseUs />
 
-      {/* SECTION 5 – HOW WE WORK */}
+      {/* SECTION 6 – HOW WE WORK */}
       <HowWeWork />
 
-      {/* SECTION 6 – UK–INDIA PARTNERSHIP */}
+      {/* SECTION 7 – UK–INDIA PARTNERSHIP */}
       <PartnershipSection />
 
-      {/* SECTION 7 – INDUSTRIES WE SUPPORT */}
+      {/* SECTION 8 – INDUSTRIES WE SUPPORT */}
       <Industries />
 
-      {/* SECTION 8 – CONTACT SECTION */}
+      {/* SECTION 9 – FINAL CTA */}
+      <CTASection
+        title="Your Next Move Starts With a Conversation."
+        description="Let's discuss your ideas, challenges and opportunities. Together, we can build something meaningful."
+        primaryCtaText="Start a Conversation"
+        primaryCtaHref="#contact-section"
+        secondaryCtaText="Explore Capabilities"
+        secondaryCtaHref="/services"
+      />
+
+      {/* SECTION 10 – CONTACT SECTION */}
       <HomeContactSection />
 
-      {/* SECTION 10 – BILATERAL ADDRESS & INTERACTIVE COORDINATE GLOBE */}
+      {/* SECTION 11 – BILATERAL ADDRESS & INTERACTIVE COORDINATE GLOBE */}
       <GlobalOffices />
     </>
   );
