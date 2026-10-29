@@ -1,0 +1,529 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(20, 43, 69, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(20, 43, 69, 0.7);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Corner bracket accents matching image */
+.bracketTL,
+.bracketBR {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.bracketTL {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.bracketBR {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Preview Visual Area */
+.previewArea {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  background-color: var(--color-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.previewGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(20, 43, 69, 0.8) 0%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Visual Mockups */
+.mockupContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .mockupContainer {
+  transform: scale(1.04);
+}
+
+/* 1. Website Development Laptop + Phone Frame */
+.laptopFrame {
+  width: 82%;
+  height: 82%;
+  background-color: #0c1626;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px 8px 3px 3px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.laptopTopBar {
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 4px;
+}
+
+.browserDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.laptopScreen {
+  flex: 1;
+  padding: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, rgba(20, 43, 69, 0.9), rgba(8, 13, 25, 0.95));
+}
+
+.schoolHeroTitle {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1.2;
+}
+
+.schoolHeroSub {
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+}
+
+.schoolBtnPill {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-size: 0.45rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+.schoolCardsRow {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.schoolCardMini {
+  flex: 1;
+  height: 22px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phoneMockup {
+  position: absolute;
+  right: 4%;
+  bottom: 8%;
+  width: 45px;
+  height: 75px;
+  background-color: #060912;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 7px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 2;
+}
+
+.phoneScreenContent {
+  flex: 1;
+  border-radius: 4px;
+  background-color: rgba(20, 43, 69, 0.85);
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  gap: 2px;
+}
+
+.phoneLine {
+  height: 2.5px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 2. Merchant Dashboard + Smart Card */
+.merchantCanvas {
+  position: relative;
+  width: 90%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.merchantDashboard {
+  width: 90%;
+  height: 85%;
+  background-color: #0c1626;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 0.65rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 4px;
+}
+
+.dashTitle {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.dashTag {
+  font-size: 0.4375rem;
+  color: var(--color-accent);
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.dashRows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 6px 0;
+}
+
+.dashRowItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.creditCard {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 95px;
+  height: 58px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(20, 43, 69, 0.95), rgba(8, 13, 25, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.cardChip {
+  width: 12px;
+  height: 9px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.cardNumber {
+  font-size: 0.45rem;
+  letter-spacing: 0.08em;
+  font-family: monospace;
+  color: var(--color-accent);
+}
+
+/* 3. AI Automation Diagram */
+.aiCanvas {
+  width: 90%;
+  height: 85%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aiCenterChip {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: var(--color-secondary);
+  border: 1.5px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+  z-index: 2;
+}
+
+.aiCenterChip span {
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: var(--color-accent);
+}
+
+.aiNodeGroupLeft,
+.aiNodeGroupRight {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aiNodeGroupLeft {
+  left: 0;
+}
+
+.aiNodeGroupRight {
+  right: 0;
+}
+
+.aiNodeItem {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: rgba(20, 43, 69, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.aiWaveBar {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 16px;
+  border-radius: 4px;
+  background-color: rgba(8, 13, 25, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 4px;
+}
+
+.waveIndicator {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), transparent);
+}
+
+/* 4. Digital Marketing Analytics Dashboard */
+.marketingCanvas {
+  width: 86%;
+  height: 82%;
+  background-color: #0c1626;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  padding: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mktHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mktTitle {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.mktCirclePill {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.45rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.mktStatsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.mktStatBox {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 3px;
+  text-align: center;
+}
+
+.mktStatVal {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.mktStatLbl {
+  font-size: 0.375rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Card Content Area */
+.cardContent {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.categoryLabel {
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.card:hover .projectTitle {
+  color: var(--color-accent);
+}
+
+.projectDescription {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.68);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+/* Card Action Area */
+.cardActionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.viewProjectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.viewProjectLink svg {
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .viewProjectLink svg {
+  transform: translateX(4px);
+}
+
+.actionCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.actionCircle svg {
+  font-size: 1.125rem;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .actionCircle {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.card:hover .actionCircle svg {
+  transform: translateX(2px);
+}
+

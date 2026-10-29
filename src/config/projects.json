@@ -1,14 +1,90 @@
 {
   "projects": [
     {
+      "id": "play-school-website",
+      "slug": "play-school-website",
+      "title": "Play School Website",
+      "category": "Website Development",
+      "client": "Bright Learning Academy",
+      "location": "London, UK",
+      "year": "2026",
+      "summary": "A modern, responsive digital platform designed to showcase educational services, simplify admissions, and improve parent engagement with sub-second performance.",
+      "metrics": "100% Core Web Vitals • 0.4s Global LCP",
+      "tags": ["Next.js 16", "TypeScript", "Responsive Design", "Interactive UI", "Technical SEO"],
+      "deliverables": [
+        "Bespoke educational component design system",
+        "Parent portal and interactive admissions workflow",
+        "Instant responsive mobile and desktop layouts",
+        "Structured educational schema SEO foundation"
+      ],
+      "visualType": "web"
+    },
+    {
+      "id": "merchant-management-portal",
+      "slug": "merchant-management-portal",
+      "title": "Payment & Merchant Portal",
+      "category": "Merchant Account Management",
+      "client": "Meridian Commerce Group",
+      "location": "Edinburgh, UK",
+      "year": "2026",
+      "summary": "A secure and scalable business portal designed to support merchant account operations, multi-store catalog taxonomy, and transparent payment settlement tracking.",
+      "metrics": "4,500+ Active SKUs • Multi-Store Synced",
+      "tags": ["Merchant Setup", "Catalog Taxonomy", "Inventory Sync", "Multi-Currency", "KYC/AML"],
+      "deliverables": [
+        "Rapid merchant gateway verification pipeline",
+        "Multi-currency processing and real-time ledger",
+        "Bulk automated SKU ingestion and product taxonomy",
+        "PCI-DSS compliant merchant console architecture"
+      ],
+      "visualType": "merchant"
+    },
+    {
+      "id": "intelligent-workflow-automation",
+      "slug": "intelligent-workflow-automation",
+      "title": "Business Automation System",
+      "category": "AI Automation",
+      "client": "Aethelgard Logistics",
+      "location": "Manchester, UK",
+      "year": "2026",
+      "summary": "An AI-powered workflow automation system designed to eliminate repetitive operational tasks, process unstructured documentation, and route intelligent actions.",
+      "metrics": "1,200 Hours Saved/Mo • 99.4% Parsing Precision",
+      "tags": ["Agentic AI", "OCR Pipeline", "Zero Data Retention", "ERP Integration", "Automation Nodes"],
+      "deliverables": [
+        "Multi-modal document and invoice parsing pipeline",
+        "Autonomous customer support classification & routing",
+        "Zero-data-retention enterprise privacy guarantees",
+        "Custom ERP webhook integration and trigger workflows"
+      ],
+      "visualType": "ai"
+    },
+    {
+      "id": "digital-growth-campaign",
+      "slug": "digital-growth-campaign",
+      "title": "Marketing & Growth Campaign",
+      "category": "Digital Marketing",
+      "client": "Luminary Enterprise Holdings",
+      "location": "Cambridge, UK",
+      "year": "2026",
+      "summary": "A strategic, data-driven digital marketing experience focused on improving online search visibility, audience engagement, and high-converting acquisition funnels.",
+      "metrics": "+340% ROAS • +240% Pipeline Growth",
+      "tags": ["Technical SEO", "High-ROAS Paid Media", "CRO Testing", "Attribution Analytics", "Audience Funnels"],
+      "deliverables": [
+        "Commercial keyword dominance and technical SEO audits",
+        "High-converting multi-stage paid search funnels",
+        "Data-driven CRO landing page enhancements",
+        "Closed-loop revenue attribution and analytics reporting"
+      ],
+      "visualType": "marketing"
+    },
+    {
       "id": "vance-capital-portal",
       "slug": "vance-capital-portal",
-      "title": "Vance Capital Institutional Web Architecture",
+      "title": "Vance Capital Web Architecture",
       "category": "Website Development",
       "client": "Vance Capital Partners",
       "location": "London, United Kingdom",
       "year": "2026",
-      "summary": "Engineered an institutional-grade Next.js web application with sub-second latency, headless CMS architecture, and strict accessibility for a London private equity firm.",
+      "summary": "Institutional-grade Next.js web application with sub-second latency, headless CMS architecture, and strict accessibility for a London private equity firm.",
       "metrics": "100% Core Web Vitals • 0.4s Global LCP",
       "tags": ["Next.js 16", "TypeScript", "Tailored UI", "Headless CMS", "Technical SEO"],
       "deliverables": [
@@ -16,12 +92,13 @@
         "Encrypted investor document vault",
         "Sub-second global CDN delivery",
         "Automated structured schema SEO"
-      ]
+      ],
+      "visualType": "web"
     },
     {
       "id": "meridian-merchant-console",
       "slug": "meridian-merchant-console",
-      "title": "Meridian Global Multi-Store Merchant Catalog",
+      "title": "Meridian Global Multi-Store Console",
       "category": "Merchant Account Management",
       "client": "Meridian Retail Group",
       "location": "Edinburgh & Cross-Border",
@@ -34,44 +111,8 @@
         "Bulk automated SKU ingestion pipeline",
         "Real-time cross-store stock sync",
         "PCI-DSS compliant checkout flows"
-      ]
-    },
-    {
-      "id": "cogniflow-ai-automation",
-      "slug": "cogniflow-ai-automation",
-      "title": "CogniFlow Enterprise AI Operations Pipeline",
-      "category": "AI Automation",
-      "client": "Aethelgard Logistics",
-      "location": "Manchester, United Kingdom",
-      "year": "2026",
-      "summary": "Deployed autonomous multi-modal document extraction and agentic customer support routing that automated 1,200 hours of manual back-office tasks monthly.",
-      "metrics": "1,200 Hours Saved/Mo • 99.4% Parsing Precision",
-      "tags": ["Agentic AI", "OCR Pipeline", "Zero Data Retention", "ERP Integration", "Human-in-Loop"],
-      "deliverables": [
-        "Multi-modal invoice & customs PDF parser",
-        "Zero-data-retention embedding pipeline",
-        "Custom rule-based confidence gating",
-        "Instant ERP automated ledger updates"
-      ]
-    },
-    {
-      "id": "apex-growth-marketing",
-      "slug": "apex-growth-marketing",
-      "title": "Apex Wealth Multi-Channel Acquisition Engine",
-      "category": "Digital Marketing",
-      "client": "Apex Wealth Advisory",
-      "location": "Birmingham, United Kingdom",
-      "year": "2026",
-      "summary": "Executed precision technical SEO, geo-targeted authority engineering, and high-converting paid search funnels that scaled high-intent enterprise inbound leads.",
-      "metrics": "+340% ROAS • +280% Qualified Pipeline Growth",
-      "tags": ["Technical SEO", "High-ROAS PPC", "CRO Testing", "Attribution Analytics", "LinkedIn Ads"],
-      "deliverables": [
-        "Rank #1 positioning on commercial queries",
-        "High-intent PPC funnel architecture",
-        "Multivariate landing page conversion testing",
-        "Closed-loop revenue attribution dashboard"
-      ]
+      ],
+      "visualType": "merchant"
     }
   ]
 }
-

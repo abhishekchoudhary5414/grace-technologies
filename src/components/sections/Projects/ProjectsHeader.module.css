@@ -1,0 +1,139 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.leftCol {
+  flex: 1 1 45%;
+}
+
+.labelWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.875rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.titleHighlight {
+  color: var(--color-accent);
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.45);
+}
+
+.centerCol {
+  flex: 1 1 35%;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding-left: 2rem;
+}
+
+.description {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.rightCol {
+  flex: 0 0 auto;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  background-color: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.viewAllBtn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.viewAllBtn svg {
+  font-size: 1.125rem;
+  transition: transform 0.25s ease;
+}
+
+.viewAllBtn:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .centerCol {
+    border-left: none;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .rightCol {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+
+  .viewAllBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

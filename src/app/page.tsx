@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Hero from '@/components/sections/Hero/Hero';
 import CompanyIntro from '@/components/sections/CompanyIntro/CompanyIntro';
 import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
-import ProjectsSection from '@/components/sections/ProjectsSection/ProjectsSection';
+import Projects from '@/components/sections/Projects/Projects';
 import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
 import HowWeWork from '@/components/sections/HowWeWork/HowWeWork';
 import PartnershipSection from '@/components/sections/PartnershipSection/PartnershipSection';
@@ -31,8 +31,8 @@ export default function HomePage() {
       {/* SECTION 3 – SERVICES OVERVIEW */}
       <ServicesOverview />
 
-      {/* SECTION 4 – FEATURED PROJECTS & CASE STUDIES */}
-      <ProjectsSection />
+      {/* SECTION 4 – FEATURED PROJECTS (REDESIGNED HORIZONTAL CAROUSEL & FILTERS) */}
+      <Projects />
 
       {/* SECTION 5 – WHY GRACE TECHNOLOGIES */}
       <WhyChooseUs />

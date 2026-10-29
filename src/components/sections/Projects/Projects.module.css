@@ -1,0 +1,34 @@
+.section {
+  position: relative;
+  padding: 6.5rem 0;
+  background-color: var(--color-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+/* Atmospheric futuristic backdrop */
+.backgroundDecor {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(20, 43, 69, 0.6) 0%, transparent 55%),
+    radial-gradient(circle at 90% 80%, rgba(20, 43, 69, 0.6) 0%, transparent 55%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 72px 72px, 72px 72px;
+  pointer-events: none;
+}
+
+.ambientOrbitalLine {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+

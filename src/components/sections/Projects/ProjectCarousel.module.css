@@ -1,0 +1,105 @@
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 0.5rem 0.25rem 1.5rem 0.25rem;
+}
+
+.track {
+  display: flex;
+  user-select: none;
+}
+
+.slide {
+  flex-shrink: 0;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+/* 4 cards on desktop */
+.col4 {
+  width: 25%;
+}
+
+@media (max-width: 1200px) {
+  .col4 {
+    width: 33.333333%;
+  }
+}
+
+@media (max-width: 900px) {
+  .col4 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .col4 {
+    width: 100%;
+  }
+}
+
+/* Bottom Controls */
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.navBtn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.navBtn:hover:not(:disabled) {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  width: 20px;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
