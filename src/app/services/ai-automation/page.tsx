@@ -4,7 +4,7 @@ import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDetailHero';
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
-import CTASection from '@/components/common/CTASection/CTASection';
+import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
@@ -22,6 +22,7 @@ export default function AiAutomationPage() {
       {/* Hero with Visual */}
       <ServiceDetailHero
         serviceId={service.id}
+        serviceTitle={service.title}
         number={service.number}
         tagline={service.tagline}
         headline={service.headline}
@@ -148,11 +149,11 @@ export default function AiAutomationPage() {
       </section>
 
       {/* Consultation CTA */}
-      <CTASection
+      <ServiceCTASection
         title="Ready to Automate Your Manual Operations?"
         description="Schedule a technical discovery session with our consultants to evaluate potential automation gains."
         primaryCtaText="Book an AI Consultation"
-        primaryCtaHref="/contact"
+        serviceTitle={service.title}
       />
     </div>
   );

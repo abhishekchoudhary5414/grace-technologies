@@ -8,6 +8,7 @@ import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
 import HowWeWork from '@/components/sections/HowWeWork/HowWeWork';
 import PartnershipSection from '@/components/sections/PartnershipSection/PartnershipSection';
 import Industries from '@/components/sections/Industries/Industries';
+import Testimonials from '@/components/sections/Testimonials/Testimonials';
 import CTASection from '@/components/common/CTASection/CTASection';
 import HomeContactSection from '@/components/sections/HomeContactSection/HomeContactSection';
 import GlobalOffices from '@/components/sections/GlobalOffices/GlobalOffices';
@@ -45,7 +46,10 @@ export default function HomePage() {
       {/* SECTION 8 – INDUSTRIES WE SUPPORT */}
       <Industries />
 
-      {/* SECTION 9 – FINAL CTA */}
+      {/* SECTION 9 – CLIENT TESTIMONIALS (INFINITE 3-CARD CAROUSEL) */}
+      <Testimonials />
+
+      {/* SECTION 10 – FINAL CTA */}
       <CTASection
         title="Your Next Move Starts With a Conversation."
         description="Let's discuss your ideas, challenges and opportunities. Together, we can build something meaningful."

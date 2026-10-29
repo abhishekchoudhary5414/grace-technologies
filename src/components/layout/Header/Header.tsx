@@ -14,6 +14,7 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
+import { openEnquiryModal } from '@/utils/modal';
 import styles from './Header.module.css';
 import Logo from '../../../../public/logo/logo.png';
 import Image from 'next/image';
@@ -186,7 +187,12 @@ export default function Header() {
 
           {/* Desktop Right CTA */}
           <div className={styles.desktopActions}>
-            <Button href="/contact" variant="primary" size="sm" icon>
+            <Button
+              variant="primary"
+              size="sm"
+              icon
+              onClick={() => openEnquiryModal()}
+            >
               Let&apos;s Talk
             </Button>
           </div>
@@ -247,7 +253,15 @@ export default function Header() {
                   Contact Us
                 </Link>
                 <div className={styles.mobileCtaWrapper}>
-                  <Button href="/contact" variant="primary" size="md" icon>
+                  <Button
+                    variant="primary"
+                    size="md"
+                    icon
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      openEnquiryModal();
+                    }}
+                  >
                     Let&apos;s Talk
                   </Button>
                 </div>

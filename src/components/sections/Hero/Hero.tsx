@@ -6,6 +6,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
 import HeroVisual from './HeroVisual/HeroVisual';
+import { openEnquiryModal } from '@/utils/modal';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -75,7 +76,11 @@ export default function Hero() {
               <Button href="/services" variant="primary" size="lg" icon>
                 Explore Our Services
               </Button>
-              <Button href="/contact" variant="outline" size="lg">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => openEnquiryModal()}
+              >
                 Let&apos;s Talk
               </Button>
             </motion.div>

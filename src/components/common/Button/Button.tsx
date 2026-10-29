@@ -9,7 +9,7 @@ import styles from './Button.module.css';
 interface ButtonProps {
   children: React.ReactNode;
   href?: string;
-  onClick?: () => void;
+  onClick?: (e?: React.MouseEvent) => void;
   type?: 'button' | 'submit' | 'reset';
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
@@ -44,7 +44,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={combinedClassName}>
+      <Link href={href} onClick={onClick} className={combinedClassName}>
         {content}
       </Link>
     );

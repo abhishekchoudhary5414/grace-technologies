@@ -7,6 +7,7 @@ import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import Button from '@/components/common/Button/Button';
 import { SERVICES_DATA } from '@/config/site';
 import ServiceVisual from './ServiceVisual';
+import { openEnquiryModal } from '@/utils/modal';
 import styles from './ServicesOverview.module.css';
 
 export default function ServicesOverview() {
@@ -59,10 +60,10 @@ export default function ServicesOverview() {
 
                   <div className={styles.actions}>
                     <Button
-                      href={`/contact?service=${encodeURIComponent(service.title)}`}
                       variant="primary"
                       size="md"
                       icon
+                      onClick={() => openEnquiryModal(service.title)}
                     >
                       Let's Talk
                     </Button>

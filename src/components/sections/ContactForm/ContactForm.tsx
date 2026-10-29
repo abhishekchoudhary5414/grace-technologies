@@ -28,7 +28,6 @@ export default function ContactForm() {
       phoneNumber: '',
       country: '',
       serviceInterestedIn: 'Website Development',
-      projectBudget: '',
       message: '',
       botCheck: '',
     },
@@ -198,30 +197,12 @@ export default function ContactForm() {
                   <option value="Merchant Account Management">Merchant Account Management</option>
                   <option value="AI Automation">AI Automation</option>
                   <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Other">Other Strategic Advisory</option>
+                  <option value="Other">Other</option>
                 </select>
                 {errors.serviceInterestedIn && (
                   <span className={styles.errorText}>{errors.serviceInterestedIn.message}</span>
                 )}
               </div>
-            </div>
-
-            <div className={styles.fieldGroup}>
-              <label htmlFor="projectBudget" className={styles.label}>
-                Project Budget Range (Optional)
-              </label>
-              <select
-                id="projectBudget"
-                className={styles.select}
-                {...register('projectBudget')}
-              >
-                <option value="">Select an approximate scope</option>
-                <option value="Under £10,000">Under £10,000</option>
-                <option value="£10,000 - £25,000">£10,000 – £25,000</option>
-                <option value="£25,000 - £50,000">£25,000 – £50,000</option>
-                <option value="£50,000+">£50,000+</option>
-                <option value="Ongoing Advisory Retainer">Ongoing Advisory Retainer</option>
-              </select>
             </div>
 
             <div className={styles.fieldGroup}>

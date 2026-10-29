@@ -4,7 +4,7 @@ import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDetailHero';
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
-import CTASection from '@/components/common/CTASection/CTASection';
+import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
@@ -23,6 +23,7 @@ export default function MerchantAccountManagementPage() {
       {/* Hero with Visual */}
       <ServiceDetailHero
         serviceId={service.id}
+        serviceTitle={service.title}
         number={service.number}
         tagline={service.tagline}
         headline={service.headline}
@@ -124,11 +125,11 @@ export default function MerchantAccountManagementPage() {
       </section>
 
       {/* Enquiry CTA */}
-      <CTASection
+      <ServiceCTASection
         title="Ready to Launch or Optimize Your Merchant Operations?"
         description="Speak with our UK advisory team today to discuss your store setup, catalog taxonomy, and platform onboarding."
         primaryCtaText="Consult With Our Team"
-        primaryCtaHref="/contact"
+        serviceTitle={service.title}
       />
     </div>
   );

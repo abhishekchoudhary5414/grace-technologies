@@ -11,6 +11,7 @@ interface CTASectionProps {
   description?: string;
   primaryCtaText?: string;
   primaryCtaHref?: string;
+  onPrimaryCtaClick?: () => void;
   secondaryCtaText?: string;
   secondaryCtaHref?: string;
   badge?: string;
@@ -21,6 +22,7 @@ export default function CTASection({
   description = "Let's discuss your ideas, challenges and opportunities. Together, we can build something meaningful.",
   primaryCtaText = 'Start a Conversation',
   primaryCtaHref = '/contact',
+  onPrimaryCtaClick,
   secondaryCtaText,
   secondaryCtaHref,
   badge = 'ELEVATE YOUR BUSINESS',
@@ -41,7 +43,13 @@ export default function CTASection({
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.description}>{description}</p>
           <div className={styles.actions}>
-            <Button href={primaryCtaHref} variant="primary" size="lg" icon>
+            <Button
+              href={onPrimaryCtaClick ? undefined : primaryCtaHref}
+              onClick={onPrimaryCtaClick}
+              variant="primary"
+              size="lg"
+              icon
+            >
               {primaryCtaText}
             </Button>
             {secondaryCtaText && secondaryCtaHref && (

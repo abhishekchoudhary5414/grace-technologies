@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
-import CTASection from '@/components/common/CTASection/CTASection';
+import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import styles from './services.module.css';
 
 export const metadata: Metadata = {
@@ -17,11 +17,10 @@ export default function ServicesPage() {
       <ServicesOverview />
 
       {/* Conversion CTA */}
-      <CTASection
+      <ServiceCTASection
         title="Ready to Transform Your Digital Infrastructure?"
         description="Speak with our strategic consulting team in the UK and discover how our collaborative approach accelerates delivery."
         primaryCtaText="Discuss Your Project"
-        primaryCtaHref="/contact"
         secondaryCtaText="Explore Case Studies"
         secondaryCtaHref="/projects"
       />

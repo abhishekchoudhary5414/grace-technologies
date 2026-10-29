@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
 import ServiceVisual from '@/components/sections/ServicesOverview/ServiceVisual';
+import { openEnquiryModal } from '@/utils/modal';
 import styles from './ServiceDetailHero.module.css';
 
 interface ServiceDetailHeroProps {
@@ -13,6 +14,7 @@ interface ServiceDetailHeroProps {
   tagline: string;
   headline: string;
   description: string;
+  serviceTitle?: string;
 }
 
 export default function ServiceDetailHero({
@@ -21,6 +23,7 @@ export default function ServiceDetailHero({
   tagline,
   headline,
   description,
+  serviceTitle,
 }: ServiceDetailHeroProps) {
   return (
     <section className={styles.hero}>
@@ -45,7 +48,12 @@ export default function ServiceDetailHero({
             <p className={styles.description}>{description}</p>
 
             <div className={styles.actions}>
-              <Button href="/contact" variant="primary" size="lg" icon>
+              <Button
+                variant="primary"
+                size="lg"
+                icon
+                onClick={() => openEnquiryModal(serviceTitle || tagline)}
+              >
                 Consult On This Service
               </Button>
               <Button href="#capabilities" variant="outline" size="lg">

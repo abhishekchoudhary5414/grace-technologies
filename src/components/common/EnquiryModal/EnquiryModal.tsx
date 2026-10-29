@@ -20,6 +20,7 @@ export default function EnquiryModal() {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<QuickEnquiryData>({
     resolver: zodResolver(quickEnquirySchema),
@@ -43,6 +44,24 @@ export default function EnquiryModal() {
       return () => clearTimeout(timer);
     }
   }, []);
+
+  useEffect(() => {
+    // Listen for custom trigger events to open the modal from buttons across the site
+    const handleOpenModal = (event: Event) => {
+      const customEvent = event as CustomEvent<{ serviceType?: string }>;
+      if (customEvent.detail?.serviceType) {
+        setValue('serviceType', customEvent.detail.serviceType as any);
+      }
+      setIsOpen(true);
+      setStatus('idle');
+      setResponseMsg('');
+    };
+
+    window.addEventListener('open-enquiry-modal', handleOpenModal);
+    return () => {
+      window.removeEventListener('open-enquiry-modal', handleOpenModal);
+    };
+  }, [setValue]);
 
   const handleClose = () => {
     setIsOpen(false);
