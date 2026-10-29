@@ -5,25 +5,25 @@
   pointer-events: auto;
 }
 
-/* 4 Proportional Coordinates with clean separation from the central globe */
+/* 4 Proportional Coordinates pushed outwards to prevent overlapping and provide generous gap */
 .top-left {
-  top: 0%;
-  left: 0%;
+  top: -4%;
+  left: -8%;
 }
 
 .top-right {
-  top: 0%;
-  right: 0%;
+  top: -4%;
+  right: -8%;
 }
 
 .bottom-left {
-  bottom: 0%;
-  left: 0%;
+  bottom: -4%;
+  left: -8%;
 }
 
 .bottom-right {
-  bottom: 0%;
-  right: 0%;
+  bottom: -4%;
+  right: -8%;
 }
 
 /* Floating animation with slight phase offsets */
@@ -35,11 +35,11 @@
 .interactiveCard {
   display: flex;
   flex-direction: column;
-  width: 235px;
+  width: 190px;
   background-color: rgba(20, 43, 69, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-md);
-  padding: 1rem;
+  padding: 0.75rem 0.8rem;
   text-decoration: none;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -545,27 +545,9 @@
   50% { opacity: 1; transform: scale(1.2); }
 }
 
-/* Mobile specific styles: relative flow, full card width, no overlap */
+/* Mobile specific styles: hide service platform cards completely in mobile view */
 @media (max-width: 680px) {
   .platformWrapper {
-    position: relative;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    animation: none !important;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .interactiveCard {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .pedestalBase {
-    display: none;
+    display: none !important;
   }
 }

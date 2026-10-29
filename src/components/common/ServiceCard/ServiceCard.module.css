@@ -1,5 +1,12 @@
 .cardWrapper {
   height: 100%;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    display: none !important;
+  }
 }
 
 .card {
@@ -8,7 +15,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
   background-color: var(--color-secondary);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
@@ -18,21 +25,21 @@
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(20, 43, 69, 0.5);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(20, 43, 69, 0.4);
 }
 
 .cardHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .number {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.4);
@@ -44,8 +51,8 @@
 }
 
 .iconWrapper {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
   background-color: rgba(8, 13, 25, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -63,7 +70,7 @@
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .cardBody {
@@ -72,34 +79,34 @@
 
 .tagline {
   font-family: var(--font-heading);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .title {
-  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--color-accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .description {
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .cardFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 

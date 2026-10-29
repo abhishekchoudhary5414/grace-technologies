@@ -72,11 +72,11 @@ export default function ServicePlatform({
           <div className={styles.visualCanvas}>
             {/* Merchant Account & Product Catalog Management Mockup */}
             <div className={styles.merchantMiniFrame}>
-              <div className={styles.merchantMiniHeader}>
+              {/* <div className={styles.merchantMiniHeader}>
                 <StorefrontIcon fontSize="small" />
                 <span className={styles.merchantStoreTag}>MERCHANT CONSOLE</span>
                 <span className={styles.merchantActiveDot} />
-              </div>
+              </div> */}
 
               {/* Product Listing Row Mini */}
               <div className={styles.productMiniRow}>
