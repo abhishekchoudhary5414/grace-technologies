@@ -69,7 +69,9 @@
           "type": "visitingCard",
           "title": "Premium Business Card & Professional Stationery",
           "description": "Professional business card design with premium finishes reflecting construction industry standards. Modern typography and sophisticated color palette create a memorable impression for client meetings and networking events.",
-          "images": []
+          "images": [
+            "/clients/sah-constructions/visitingcard.png"
+          ]
         },
         {
           "type": "profile",
