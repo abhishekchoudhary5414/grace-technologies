@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
+import ClientSection from '@/components/sections/ClientSection/ClientSection';
 import ProjectsClientView from './ProjectsClientView';
 import projectsConfig from '@/config/projects.json';
 import { ProjectItem } from '@/data/projects';
@@ -36,6 +37,13 @@ export default function ProjectsPage() {
       <section className={styles.gridSection}>
         <ProjectsClientView initialProjects={projectsData} />
       </section>
+
+      {/* Proven Client Case Studies Section with Logos & Full Detail Links */}
+      <ClientSection
+        label="VERIFIED CLIENT CASE STUDIES"
+        title="Enterprise Implementations & Deliverables"
+        description="Detailed project scopes, live web applications, presentations, and brand collateral delivered across corporate engineering and architecture sectors."
+      />
 
       {/* Conversion CTA with modal trigger */}
       <ServiceCTASection

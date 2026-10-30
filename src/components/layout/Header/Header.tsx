@@ -172,6 +172,12 @@ export default function Header() {
               Projects
             </Link>
             <Link
+              href="/client"
+              className={`${styles.navLink} ${pathname.startsWith('/client') ? styles.active : ''}`}
+            >
+              Clients
+            </Link>
+            <Link
               href="/partnership"
               className={`${styles.navLink} ${pathname === '/partnership' ? styles.active : ''}`}
             >
@@ -245,6 +251,9 @@ export default function Header() {
                 </div>
                 <Link href="/projects" className={styles.mobileLink}>
                   Projects
+                </Link>
+                <Link href="/client" className={styles.mobileLink}>
+                  Clients
                 </Link>
                 <Link href="/partnership" className={styles.mobileLink}>
                   UK–India Partnership

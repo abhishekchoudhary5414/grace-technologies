@@ -1,0 +1,41 @@
+.page {
+  background-color: var(--color-primary);
+  padding-top: calc(var(--header-height) + 2rem);
+  min-height: 100vh;
+}
+
+.heroSection {
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.gridSection {
+  padding-top: 1.5rem;
+  padding-bottom: var(--section-padding-y);
+}
+
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.statsWrapper {
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .clientsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .clientsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+

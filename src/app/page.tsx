@@ -4,6 +4,7 @@ import Hero from '@/components/sections/Hero/Hero';
 import CompanyIntro from '@/components/sections/CompanyIntro/CompanyIntro';
 import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
 import Projects from '@/components/sections/Projects/Projects';
+import ClientSection from '@/components/sections/ClientSection/ClientSection';
 import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
 import HowWeWork from '@/components/sections/HowWeWork/HowWeWork';
 import PartnershipSection from '@/components/sections/PartnershipSection/PartnershipSection';
@@ -33,6 +34,9 @@ export default function HomePage() {
 
       {/* SECTION 4 – FEATURED PROJECTS (REDESIGNED HORIZONTAL CAROUSEL & FILTERS) */}
       <Projects />
+
+      {/* SECTION 4B – PROVEN COMMERCIAL CLIENT ENGAGEMENTS */}
+      <ClientSection />
 
       {/* SECTION 5 – WHY GRACE TECHNOLOGIES */}
       <WhyChooseUs />

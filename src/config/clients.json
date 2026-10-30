@@ -1,0 +1,214 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Sharma Interiors",
+      "slug": "sharma-interiors",
+      "logo": "/clients/client1.png",
+      "category": "Corporate Office Interior Design & Branding",
+      "location": "New Delhi & Patna, India",
+      "project": "Corporate Office Interior Design & Branding Solutions",
+      "summary": "Complete brand identity and responsive digital portfolio architecture showcasing luxury corporate office interior design and turnkey architectural excellence.",
+      "testimonial": "Ank Square and Grace Technologies transformed our corporate office with sleek, functional design that perfectly reflects our brand identity. Their team understood our vision for a modern workspace and delivered professional branding solutions that elevated our business image. Exceptional execution and attention to detail throughout the entire process.",
+      "metrics": "100% Turnkey Delivery • High Performance Portfolio",
+      "workDone": [
+        {
+          "type": "logo",
+          "title": "Professional Brand Identity & Logo Design",
+          "description": "Custom logo design and complete brand identity system for Sharma Interiors. We created a modern, sophisticated visual identity that reflects the company's expertise in corporate interior design and architecture. The design emphasizes professionalism, precision, and innovation.",
+          "images": [
+            "/clients/client1.png"
+          ]
+        },
+        {
+          "type": "website",
+          "title": "Responsive Corporate Portfolio Website",
+          "description": "Fully responsive website designed to showcase Sharma Interiors' portfolio and expertise. Features an interactive project gallery, client testimonials section, service descriptions, and seamless navigation. Built with modern web technologies for optimal performance and search engine visibility.",
+          "images": [],
+          "url": "https://interiorssharma.com/"
+        },
+        {
+          "type": "profile",
+          "title": "Comprehensive Company Profile Presentation",
+          "description": "Professional company profile presentation showcasing Sharma Interiors' service, portfolio, achievements, and client success stories. Includes detailed service descriptions, project case studies, and company vision.",
+          "presentationUrl": "https://www.canva.com/design/DAGvBZodBng/_nXWUjFtxWzCTWjYi_ID_Q/view?embed"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sah Constructions",
+      "slug": "sah-constructions",
+      "logo": "/clients/client2.png",
+      "category": "Laboratory Infrastructure & Construction Branding",
+      "location": "Bihar & Eastern India",
+      "project": "Laboratory Infrastructure & Construction Branding",
+      "summary": "Specialized laboratory engineering and infrastructure corporate presence, technical capabilities documentation, and precision branding system.",
+      "testimonial": "Sah Constructions needed precision and compliance for their laboratory infrastructure project, and Ank Square delivered perfectly. The complete branding solution combined with professional digital presence created an efficient, modern, and future-ready business identity. Outstanding quality and attention to technical specifications.",
+      "metrics": "ISO Compliant Branding • Dynamic Portfolio",
+      "workDone": [
+        {
+          "type": "logo",
+          "title": "Construction Industry Professional Logo Design",
+          "description": "Strategic logo design for Sah Constructions emphasizing strength, reliability, and technical expertise in construction and infrastructure development. The design incorporates geometric elements representing precision and structural integrity, creating a strong professional presence.",
+          "images": [
+            "/clients/client2.png"
+          ]
+        },
+        {
+          "type": "website",
+          "title": "Dynamic Construction Portfolio Website",
+          "description": "Professional website development showcasing Sah Constructions' completed projects, construction capabilities, and technical expertise. Includes project galleries, detailed case studies, team information, and client testimonials. Optimized for search engines and mobile devices.",
+          "images": [],
+          "url": "https://www.sahconstructions.com"
+        },
+        {
+          "type": "visitingCard",
+          "title": "Premium Business Card & Professional Stationery",
+          "description": "Professional business card design with premium finishes reflecting construction industry standards. Modern typography and sophisticated color palette create a memorable impression for client meetings and networking events.",
+          "images": []
+        },
+        {
+          "type": "profile",
+          "title": "Professional Company Profile & Capabilities Document",
+          "description": "Comprehensive company profile presentation detailing Sah Constructions' experience, project portfolio, technical expertise, and construction capabilities. Designed to impress clients and partners with professional achievements and industry knowledge.",
+          "presentationUrl": "https://www.canva.com/design/DAGwgeklyeU/IlGwBotTtDGvBn16-HdYUQ/view?embed"
+        },
+        {
+          "type": "letterHead",
+          "title": "Professional Company Letterhead Design",
+          "description": "Custom-designed company letterhead featuring the Sah Constructions brand identity. Professional layout suitable for official correspondence, proposals, and formal documentation. Premium design that reinforces brand authority.",
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Achintya Enterprises",
+      "slug": "achintya-enterprises",
+      "logo": "/clients/client3.png",
+      "category": "Ayurvedic Manufacturing & Traditional Branding",
+      "location": "India",
+      "project": "Ayurvedic Manufacturing & Traditional Brand Identity",
+      "summary": "Herbal pharmaceutical and Ayurvedic wellness product catalog, custom heritage insignia design, and market-ready commercial product presentation.",
+      "testimonial": "Ank Square demonstrated remarkable understanding of our Ayurvedic manufacturing business, perfectly blending traditional heritage with modern aesthetics. The branding captures our commitment to authentic Ayurvedic wellness while maintaining contemporary market appeal. Exceptional creative work that resonates with our target audience.",
+      "metrics": "Authentic Heritage Identity • Comprehensive Catalog",
+      "workDone": [
+        {
+          "type": "logo",
+          "title": "Ayurvedic Brand Logo & Heritage Identity Design",
+          "description": "Bespoke logo and brand identity for Achintya Enterprises combining traditional Ayurvedic elements with modern design principles. The visual identity reflects natural wellness, authenticity, and pharmaceutical-grade purity.",
+          "images": [
+            "/clients/client3.png"
+          ]
+        },
+        {
+          "type": "visitingCard",
+          "title": "Professional Business Card & Corporate Stationery Package",
+          "description": "Comprehensive stationery package including executive business cards featuring herbal embossing and clean modern typography. Reinforces trust in healthcare and wellness distribution channels.",
+          "images": []
+        },
+        {
+          "type": "profile",
+          "title": "Comprehensive Ayurvedic Product Catalog Presentation",
+          "description": "Full product catalog detailing natural herbal extracts, manufacturing credentials, GMP compliance, and export capabilities for global pharmaceutical distributors.",
+          "presentationUrl": "https://www.canva.com/design/DAGwC4sC8zE/UW060n74lo-LIMRwoDsNWQ/view?embed"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "SL Engineerings",
+      "slug": "sl-engineerings",
+      "logo": "/clients/client4.png",
+      "category": "Healthcare Engineering & Architecture",
+      "location": "India",
+      "project": "Healthcare Office Interior Design & Engineering Branding",
+      "summary": "Specialized clinical engineering consultancy brand architecture, corporate identity, and hospital infrastructure capability portfolio.",
+      "testimonial": "SL Engineerings required specialized branding for our healthcare and clinical engineering consultancy. The team exceeded expectations by translating complex technical capabilities into a refined, authoritative brand presence. Outstanding precision.",
+      "metrics": "Clinical Grade Authority • Multi-Platform Collateral",
+      "workDone": [
+        {
+          "type": "logo",
+          "title": "Engineering Industry Professional Logo & Brand Identity",
+          "description": "Technical and precise logo design for SL Engineerings emphasizing innovation, reliability, and engineering excellence. Communicates technical authority in healthcare facility engineering.",
+          "images": [
+            "/clients/client4.png"
+          ]
+        },
+        {
+          "type": "visitingCard",
+          "title": "Professional Business Card & Executive Stationery Design",
+          "description": "Executive business cards and corporate stationery engineered for engineering and hospital administration client meetings.",
+          "images": []
+        },
+        {
+          "type": "profile",
+          "title": "Detailed Engineering Services & Business Profile",
+          "description": "Comprehensive business profile presentation showcasing technical capabilities, healthcare facility design case studies, and engineering accreditations.",
+          "presentationUrl": "https://www.canva.com/design/DAGwn1OnOZ0/oaWHELo73crylszVL19auQ/view?embed"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Rehas",
+      "slug": "rehas",
+      "logo": "",
+      "category": "Spiritual Wellness & Content Platform",
+      "location": "India & Global",
+      "project": "Spiritual Wellness Platform & Healing Content Branding",
+      "summary": "Calming, responsive digital platform for chakra meditation, holistic wellness education, and community mindful wellness consultation.",
+      "testimonial": "Rehas required a calm, meaningful, and spiritually aligned digital platform to share knowledge about chakras, healing, and wellness. Ank Square delivered a peaceful and modern website with clear content structure and strong branding. The final result created a powerful online presence that connects with people seeking mindfulness, spiritual growth, and holistic health.",
+      "metrics": "100% Custom Responsive UI • Structured Knowledge Base",
+      "workDone": [
+        {
+          "type": "logo",
+          "title": "Spiritual Brand Identity & Healing Logo Design",
+          "description": "Custom logo design and brand identity for Rehas focused on spiritual healing, chakra energy, and inner balance. Represents spiritual growth and mindfulness.",
+          "images": []
+        },
+        {
+          "type": "website",
+          "title": "Spiritual Wellness & Chakra Knowledge Website",
+          "description": "Designed and developed a modern spiritual wellness website for Rehas focused on chakra education, meditation guidance, and holistic healing practices with optimal user experience.",
+          "images": [],
+          "url": "https://rehas.in"
+        },
+        {
+          "type": "visitingCard",
+          "title": "Wellness Brand Business Card & Stationery Design",
+          "description": "Minimal and calming stationery design reflecting the Rehas spiritual wellness identity with soft geometry and clean typography.",
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Manish K Verma",
+      "slug": "manish-k-verma",
+      "logo": "",
+      "category": "Professional Digital Identity & Portfolio",
+      "location": "India",
+      "project": "Professional Personal Portfolio Website & Digital Identity",
+      "summary": "Impactful executive personal branding, custom domain digital identity, and responsive portfolio highlighting leadership achievements.",
+      "testimonial": "Manish K Verma wanted a professional online portfolio to present his work, skills, and achievements in a clean and impactful way. Ank Square created a modern portfolio platform that effectively highlights his projects, experience, and personal brand. The result is a professional digital presence that supports career growth and networking opportunities.",
+      "metrics": "Custom Next.js Portfolio • Clean UI Architecture",
+      "workDone": [
+        {
+          "type": "logo",
+          "title": "Personal Brand Identity & Logo Design",
+          "description": "Custom personal logo and brand identity design reflecting professionalism, creativity, and executive authority.",
+          "images": []
+        },
+        {
+          "type": "website",
+          "title": "Modern Personal Portfolio Website",
+          "description": "High-performance portfolio web application featuring responsive project showcases, career achievements, and direct engagement channels.",
+          "images": [],
+          "url": "https://manishkverma.in"
+        }
+      ]
+    }
+  ]
+}

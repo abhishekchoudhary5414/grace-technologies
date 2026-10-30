@@ -1,0 +1,222 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(20, 43, 69, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(20, 43, 69, 0.7);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Corner bracket accents matching the project card styling */
+.bracketTL,
+.bracketBR {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.bracketTL {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.bracketBR {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Preview Visual Area with Logo display */
+.previewArea {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.previewGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, rgba(20, 43, 69, 0.85) 0%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Logo container in center of preview */
+.logoContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  background-color: rgba(20, 43, 69, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.35s ease, border-color 0.35s ease;
+  z-index: 2;
+}
+
+.card:hover .logoContainer {
+  transform: scale(1.05);
+  border-color: var(--color-accent);
+}
+
+.logoImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logoPlaceholder {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+/* Top bar with location tag */
+.previewTopBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 0.6875rem;
+  font-family: var(--font-heading);
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(8, 13, 25, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  z-index: 3;
+}
+
+/* Content Area */
+.cardContent {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.categoryLabel {
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.4rem;
+}
+
+.clientName {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.68);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Action Area */
+.cardActionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.viewProjectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.viewProjectLink svg {
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .viewProjectLink svg {
+  transform: translateX(4px);
+}
+
+.actionCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.actionCircle svg {
+  font-size: 1.125rem;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .actionCircle {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.card:hover .actionCircle svg {
+  transform: translateX(2px);
+}
