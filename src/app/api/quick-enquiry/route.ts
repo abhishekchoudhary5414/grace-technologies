@@ -25,10 +25,8 @@ export async function POST(request: Request) {
       const { error: dbError } = await supabase.from('contact_enquiries').insert([
         {
           full_name: fullName,
-          business_email: email || 'Not Provided (Phone Only)',
-          company_name: 'Direct Website Popup Lead',
+          email: email || 'Not Provided (Phone Only)',
           phone_number: phone || 'Not Provided (Email Only)',
-          country: 'Inquiry Lead',
           service_interested_in: serviceType,
           message: `Quick enquiry received via opening popup modal for ${serviceType}. Contact via: ${phone || email}`,
         },
