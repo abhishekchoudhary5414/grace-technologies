@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS admin_users (
 
 -- ====================================================================
 -- TABLE 2: enquiries (Quick Popup Enquiries)
--- ====================================================================
+-- ===================================================================
 CREATE TABLE IF NOT EXISTS enquiries (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(150) NOT NULL,
