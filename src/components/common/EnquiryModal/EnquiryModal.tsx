@@ -135,12 +135,10 @@ export default function EnquiryModal() {
             <div className={styles.header}>
               <div className={styles.badgeWrap}>
                 <span className={styles.badgeDot} />
-                <span className={styles.badgeText}>GRACE TECHNOLOGIES // ENQUIRY</span>
+                <span className={styles.badgeText}>ENQUIRY</span>
               </div>
               <h2 className={styles.title}>Let&apos;s Discuss Your Project</h2>
-              <p className={styles.subtitle}>
-                Leave your details below and our UK commercial consulting team will reach out with solutions tailored to your business objectives.
-              </p>
+
             </div>
 
             {/* Content / Form */}
@@ -194,11 +192,6 @@ export default function EnquiryModal() {
                   </select>
                 </div>
 
-                {/* Contact Requirement Rule: Phone or Email */}
-                <div className={styles.contactNotice}>
-                  <span className={styles.noticeIcon}>ℹ</span>
-                  <span>Please provide at least <strong>Phone Number</strong> or <strong>Email Address</strong>:</span>
-                </div>
 
                 <div className={styles.row2}>
                   {/* Phone */}
@@ -269,7 +262,7 @@ export default function EnquiryModal() {
 
                 <div className={styles.privacyNote}>
                   <ShieldOutlinedIcon fontSize="inherit" />
-                  <span>Your privacy is protected under UK GDPR. Strictly no spam.</span>
+                  <span>No Spam.</span>
                 </div>
               </form>
             )}
