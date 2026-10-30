@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
@@ -20,9 +21,95 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const { title, category, summary, visualType, slug } = project;
+  const { title, category, summary, visualType, slug, clientSlug, logo, image, workType } = project;
+
+  const targetLink = clientSlug ? `/client/${clientSlug}` : `/projects`;
 
   const renderVisualMockup = () => {
+    // If it's a real client project with an image or logo
+    if (visualType === 'client') {
+      if (workType === 'website' && image) {
+        return (
+          <div className={styles.mockupContainer}>
+            <div className={styles.laptopFrame}>
+              <div className={styles.laptopTopBar}>
+                <span className={styles.browserDot} />
+                <span className={styles.browserDot} />
+                <span className={styles.browserDot} />
+              </div>
+              <div className={styles.laptopScreenImage}>
+                <Image
+                  src={image}
+                  alt={`${title} Preview`}
+                  width={600}
+                  height={380}
+                  className={styles.clientPreviewImg}
+                />
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      if (workType === 'visitingCard' && image) {
+        return (
+          <div className={styles.mockupContainer}>
+            <div className={styles.visitingCardFrame}>
+              <Image
+                src={image}
+                alt={`${title} Stationery`}
+                width={500}
+                height={300}
+                className={styles.visitingCardImg}
+              />
+            </div>
+          </div>
+        );
+      }
+
+      if (workType === 'profile') {
+        return (
+          <div className={styles.mockupContainer}>
+            <div className={styles.profileDeckFrame}>
+              <div className={styles.profileTopBadge}>Company Profile</div>
+              {logo && (
+                <div className={styles.profileLogoCircle}>
+                  <Image
+                    src={logo}
+                    alt={`${project.client} Logo`}
+                    width={48}
+                    height={48}
+                    className={styles.profileLogoImg}
+                  />
+                </div>
+              )}
+              <span className={styles.profileDocTitle}>{project.client}</span>
+              <span className={styles.profileDocSub}>Corporate Profile & Credentials</span>
+            </div>
+          </div>
+        );
+      }
+
+      // Default logo / branding
+      if (logo || image) {
+        return (
+          <div className={styles.mockupContainer}>
+            <div className={styles.logoBoxWrapper}>
+              <div className={styles.logoBoxInner}>
+                <Image
+                  src={image || logo || ''}
+                  alt={`${project.client} Brand Identity`}
+                  width={80}
+                  height={80}
+                  className={styles.logoBoxImg}
+                />
+              </div>
+            </div>
+          </div>
+        );
+      }
+    }
+
     switch (visualType) {
       case 'web':
         return (
@@ -191,39 +278,66 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Visual Preview Graphic */}
       <div className={styles.previewArea}>
         <div className={styles.previewGlow} />
+        {project.location && (
+          <span className={styles.previewLocationBadge}>{project.location}</span>
+        )}
         {renderVisualMockup()}
       </div>
 
       {/* Card Information */}
       <div className={styles.cardContent}>
         <div>
-          <span className={styles.categoryLabel}>{category}</span>
+          <div className={styles.categoryRow}>
+            <span className={styles.categoryLabel}>{category}</span>
+            {workType && (
+              <span className={styles.workTypeTag}>
+                {workType === 'visitingCard' ? 'Visiting Card' : workType}
+              </span>
+            )}
+          </div>
           <h3 className={styles.projectTitle}>{title}</h3>
           <p className={styles.projectDescription}>{summary}</p>
         </div>
 
         {/* Action Row */}
         <div className={styles.cardActionRow}>
-          <button
-            type="button"
-            className={styles.primaryAction}
-            onClick={() => openEnquiryModal(category)}
-          >
-            <span>View Project</span>
-            <ArrowForwardIcon />
-          </button>
-
-          <button
-            type="button"
-            className={styles.secondaryAction}
-            onClick={() => openEnquiryModal(category)}
-            aria-label={`Let’s talk about ${title}`}
-          >
-            Let&apos;s Talk
-          </button>
+          {clientSlug ? (
+            <>
+              <Link href={targetLink} className={styles.primaryAction}>
+                <span>View Details</span>
+                <ArrowForwardIcon />
+              </Link>
+              <button
+                type="button"
+                className={styles.secondaryAction}
+                onClick={() => openEnquiryModal(category)}
+                aria-label={`Let’s talk about ${title}`}
+              >
+                Let&apos;s Talk
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                type="button"
+                className={styles.primaryAction}
+                onClick={() => openEnquiryModal(category)}
+              >
+                <span>View Project</span>
+                <ArrowForwardIcon />
+              </button>
+              <button
+                type="button"
+                className={styles.secondaryAction}
+                onClick={() => openEnquiryModal(category)}
+                aria-label={`Let’s talk about ${title}`}
+              >
+                Let&apos;s Talk
+              </button>
+            </>
+          )}
         </div>
       </div>
     </motion.div>
   );
 }
-

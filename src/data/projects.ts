@@ -12,7 +12,12 @@ export interface ProjectItem {
   metrics: string;
   tags: string[];
   deliverables: string[];
-  visualType: 'web' | 'merchant' | 'ai' | 'marketing';
+  visualType: 'web' | 'merchant' | 'ai' | 'marketing' | 'client';
+  logo?: string;
+  image?: string;
+  presentationUrl?: string;
+  clientSlug?: string;
+  workType?: 'website' | 'logo' | 'visitingCard' | 'profile' | 'letterhead';
 }
 
 // All project records are loaded directly from src/config/projects.json

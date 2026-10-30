@@ -19,7 +19,7 @@ export default function Footer() {
     { label: 'Instagram', href: 'https://www.instagram.com/gracetechnologiesofficial/', icon: Instagram },
     { label: 'Facebook', href: 'https://www.facebook.com/share/1CKuqfF3Ef/', icon: Facebook },
     { label: 'YouTube', href: 'https://www.youtube.com/@Gracetechnologiesofficial', icon: YouTube },
-    { label: 'X', href: 'https://x.com/', icon: X },
+    { label: 'X', href: 'https://x.com/grace_Official4', icon: X },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: LinkedIn },
   ];
 
@@ -48,7 +48,7 @@ export default function Footer() {
             </p>
             <div className={styles.partnerBadge}>
               <span className={styles.partnerDot} />
-              <span>UK Business | Global Technology Partnership</span>
+              <span>Global Technology Partnership</span>
             </div>
 
             <div className={styles.socials}>

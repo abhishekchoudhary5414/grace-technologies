@@ -28,7 +28,7 @@ export default function Hero() {
             >
               <span className={styles.badgePulse} />
               <span className={styles.badgeText}>
-                UK BUSINESS | GLOBAL TECHNOLOGY PARTNERSHIP
+                GLOBAL TECHNOLOGY PARTNERSHIP
               </span>
             </motion.div>
 

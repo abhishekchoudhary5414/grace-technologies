@@ -1,23 +1,271 @@
 {
   "projects": [
     {
-      "id": "play-school-website",
-      "slug": "play-school-website",
-      "title": "Play School Website",
+      "id": "rehas-website",
+      "slug": "rehas",
+      "clientSlug": "rehas",
+      "title": "Rehas Spiritual Wellness Platform",
       "category": "Website Development",
-      "client": "Bright Learning Academy",
-      "location": "London, UK",
+      "client": "Rehas",
+      "location": "India & Global",
       "year": "2026",
-      "summary": "A modern, responsive digital platform designed to showcase educational services, simplify admissions, and improve parent engagement with sub-second performance.",
-      "metrics": "100% Core Web Vitals • 0.4s Global LCP",
-      "tags": ["Next.js 16", "TypeScript", "Responsive Design", "Interactive UI", "Technical SEO"],
+      "summary": "Modern, calming spiritual wellness platform engineered for chakra meditation, holistic guidance, and global digital wellness consultation.",
+      "metrics": "100% Custom Responsive UI • Structured Knowledge Base",
+      "tags": ["Next.js 16", "TypeScript", "Responsive UI", "Content Architecture", "Mindful UX"],
       "deliverables": [
-        "Bespoke educational component design system",
-        "Parent portal and interactive admissions workflow",
-        "Instant responsive mobile and desktop layouts",
-        "Structured educational schema SEO foundation"
+        "Calm, holistic spiritual wellness interface",
+        "Structured chakra and meditation directory",
+        "Optimized mobile and desktop responsiveness",
+        "Consultation booking and guidance funnels"
       ],
-      "visualType": "web"
+      "visualType": "client",
+      "workType": "website",
+      "logo": "/clients/rehas/logo.png",
+      "image": "/clients/rehas/website.png"
+    },
+    {
+      "id": "sah-constructions-website",
+      "slug": "sah-constructions",
+      "clientSlug": "sah-constructions",
+      "title": "Sah Constructions Enterprise Architecture",
+      "category": "Website Development",
+      "client": "Sah Constructions",
+      "location": "Bihar & Eastern India",
+      "year": "2026",
+      "summary": "High-performance construction portfolio showcasing infrastructure developments, laboratory engineering specs, and interactive case studies.",
+      "metrics": "ISO Compliant • Sub-Second Performance",
+      "tags": ["Corporate Engineering", "Project Showcase", "SEO Architecture", "Next.js", "Technical Specs"],
+      "deliverables": [
+        "Infrastructure and laboratory case studies",
+        "Dynamic technical capability documentation",
+        "SEO-engineered construction keywords",
+        "High-performance responsive portal"
+      ],
+      "visualType": "client",
+      "workType": "website",
+      "logo": "/clients/sah-constructions/logo.png",
+      "image": "/clients/sah-constructions/website.png"
+    },
+    {
+      "id": "aprajita-strategics-website",
+      "slug": "aprajita-strategics",
+      "clientSlug": "aprajita-strategics",
+      "title": "Aprajita Strategics Engineering Portal",
+      "category": "Website Development",
+      "client": "Aprajita Strategics",
+      "location": "India",
+      "year": "2026",
+      "summary": "Corporate digital presence showcasing architectural, structural engineering, and industrial infrastructure technical consultancy.",
+      "metrics": "Responsive UI • Corporate Engineering Showcase",
+      "tags": ["Consultancy Architecture", "Engineering Specs", "Mobile First", "High-Fidelity UI"],
+      "deliverables": [
+        "Comprehensive architectural service portfolios",
+        "Industrial infrastructure project showcases",
+        "Conversion-optimized technical consultation forms",
+        "Fast global CDN delivery"
+      ],
+      "visualType": "client",
+      "workType": "website",
+      "logo": "/clients/aprajita-strategics/logo.png",
+      "image": "/clients/aprajita-strategics/website.png"
+    },
+    {
+      "id": "rehas-brand-identity",
+      "slug": "rehas",
+      "clientSlug": "rehas",
+      "title": "Rehas Spiritual Brand Identity & Logo",
+      "category": "Digital Marketing",
+      "client": "Rehas",
+      "location": "India & Global",
+      "year": "2026",
+      "summary": "Bespoke brand insignia, spiritual wellness logo design, and corporate identity system communicating mindfulness and holistic healing.",
+      "metrics": "Vectorized Master Insignia • Digital Governance",
+      "tags": ["Logo Design", "Brand Identity", "Visual Harmony", "Digital Governance"],
+      "deliverables": [
+        "Bespoke chakra-aligned spiritual logo insignia",
+        "Full digital vector asset suite",
+        "Palette, typography, and identity guidelines"
+      ],
+      "visualType": "client",
+      "workType": "logo",
+      "logo": "/clients/rehas/logo.png",
+      "image": "/clients/rehas/logo.png"
+    },
+    {
+      "id": "rehas-stationery",
+      "slug": "rehas",
+      "clientSlug": "rehas",
+      "title": "Rehas Business Card & Executive Stationery",
+      "category": "Digital Marketing",
+      "client": "Rehas",
+      "location": "India & Global",
+      "year": "2026",
+      "summary": "Minimal, calming executive business card design and corporate print collateral reflecting the Rehas spiritual wellness identity.",
+      "metrics": "Premium Print Finishes • Refined Geometry",
+      "tags": ["Visiting Card", "Corporate Stationery", "Typography", "Print Ready"],
+      "deliverables": [
+        "Executive business card layouts",
+        "Premium print specifications and color codes",
+        "Unified brand stationery collateral"
+      ],
+      "visualType": "client",
+      "workType": "visitingCard",
+      "logo": "/clients/rehas/logo.png",
+      "image": "/clients/rehas/visitingcard.png"
+    },
+    {
+      "id": "sah-constructions-brand",
+      "slug": "sah-constructions",
+      "clientSlug": "sah-constructions",
+      "title": "Sah Constructions Brand Identity & Insignia",
+      "category": "Digital Marketing",
+      "client": "Sah Constructions",
+      "location": "Bihar & Eastern India",
+      "year": "2026",
+      "summary": "Strategic corporate logo design emphasizing structural integrity, engineering authority, and technical expertise in infrastructure.",
+      "metrics": "ISO Compliant Identity • Precision Vector",
+      "tags": ["Logo Design", "Corporate Identity", "Engineering Authority", "Brand Guidelines"],
+      "deliverables": [
+        "Precision geometric structural logo",
+        "Industrial color palette and font hierarchy",
+        "Official commercial vector collateral"
+      ],
+      "visualType": "client",
+      "workType": "logo",
+      "logo": "/clients/sah-constructions/logo.png",
+      "image": "/clients/sah-constructions/logo.png"
+    },
+    {
+      "id": "sah-constructions-stationery",
+      "slug": "sah-constructions",
+      "clientSlug": "sah-constructions",
+      "title": "Sah Constructions Business Card & Collateral",
+      "category": "Digital Marketing",
+      "client": "Sah Constructions",
+      "location": "Bihar & Eastern India",
+      "year": "2026",
+      "summary": "Professional business card and corporate stationery package engineered for construction enterprise standards and executive meetings.",
+      "metrics": "Corporate Print Standards • Embossed Finishes",
+      "tags": ["Visiting Card", "Letterhead", "Executive Stationery", "Brand Collateral"],
+      "deliverables": [
+        "Executive visiting cards with print specs",
+        "Official company letterhead architecture",
+        "Consistent brand collateral system"
+      ],
+      "visualType": "client",
+      "workType": "visitingCard",
+      "logo": "/clients/sah-constructions/logo.png",
+      "image": "/clients/sah-constructions/visitingcard.png"
+    },
+    {
+      "id": "sah-constructions-profile",
+      "slug": "sah-constructions",
+      "clientSlug": "sah-constructions",
+      "title": "Sah Constructions Company Profile Document",
+      "category": "Digital Marketing",
+      "client": "Sah Constructions",
+      "location": "Bihar & Eastern India",
+      "year": "2026",
+      "summary": "Comprehensive company profile presentation detailing laboratory project portfolios, technical credentials, and engineering achievements.",
+      "metrics": "Interactive Pitch Deck • Technical Credentialing",
+      "tags": ["Company Profile", "Investor Deck", "Digital Marketing", "Corporate Presentation"],
+      "deliverables": [
+        "Interactive Canva/PDF capabilities presentation",
+        "Accreditation and project case studies breakdown",
+        "Executive business development documentation"
+      ],
+      "visualType": "client",
+      "workType": "profile",
+      "logo": "/clients/sah-constructions/logo.png",
+      "presentationUrl": "https://www.canva.com/design/DAGwgeklyeU/IlGwBotTtDGvBn16-HdYUQ/view?embed"
+    },
+    {
+      "id": "achintya-enterprises-brand",
+      "slug": "achintya-enterprises",
+      "clientSlug": "achintya-enterprises",
+      "title": "Achintya Ayurvedic Brand Identity & Logo",
+      "category": "Digital Marketing",
+      "client": "Achintya Enterprises",
+      "location": "India",
+      "year": "2026",
+      "summary": "Heritage logo and brand identity combining traditional Ayurvedic wisdom with modern pharmaceutical-grade purity aesthetics.",
+      "metrics": "Authentic Heritage Identity • Herbal Branding",
+      "tags": ["Logo Design", "Herbal Branding", "Pharmaceutical Purity", "Visual Identity"],
+      "deliverables": [
+        "Traditional Ayurvedic insignia design",
+        "Pharmaceutical product branding guidelines",
+        "Master vectorized identity assets"
+      ],
+      "visualType": "client",
+      "workType": "logo",
+      "logo": "/clients/achintya-enterprises/logo.png",
+      "image": "/clients/achintya-enterprises/logo.png"
+    },
+    {
+      "id": "achintya-enterprises-stationery",
+      "slug": "achintya-enterprises",
+      "clientSlug": "achintya-enterprises",
+      "title": "Achintya Business Card & Stationery Suite",
+      "category": "Digital Marketing",
+      "client": "Achintya Enterprises",
+      "location": "India",
+      "year": "2026",
+      "summary": "Comprehensive stationery package including executive business cards and official corporate letterhead templates reinforcing healthcare distributor trust.",
+      "metrics": "Executive Print Specs • Healthcare Authority",
+      "tags": ["Visiting Card", "Letterhead", "Corporate Stationery", "Ayurvedic Collateral"],
+      "deliverables": [
+        "Embossed executive visiting cards",
+        "Official company letterhead layout",
+        "Health distribution stationery guidelines"
+      ],
+      "visualType": "client",
+      "workType": "visitingCard",
+      "logo": "/clients/achintya-enterprises/logo.png",
+      "image": "/clients/achintya-enterprises/visitingcard.png"
+    },
+    {
+      "id": "achintya-enterprises-profile",
+      "slug": "achintya-enterprises",
+      "clientSlug": "achintya-enterprises",
+      "title": "Achintya Ayurvedic Product Catalog & Profile",
+      "category": "Digital Marketing",
+      "client": "Achintya Enterprises",
+      "location": "India",
+      "year": "2026",
+      "summary": "Full company profile and product catalog detailing herbal extracts, GMP manufacturing credentials, and export specifications.",
+      "metrics": "Comprehensive Catalog • Global Export Presentation",
+      "tags": ["Product Catalog", "Company Profile", "Export Presentation", "Digital Marketing"],
+      "deliverables": [
+        "Digital product catalog presentation",
+        "GMP credentials and manufacturing specs",
+        "Global distribution trade documentation"
+      ],
+      "visualType": "client",
+      "workType": "profile",
+      "logo": "/clients/achintya-enterprises/logo.png",
+      "presentationUrl": "https://www.canva.com/design/DAGwC4sC8zE/UW060n74lo-LIMRwoDsNWQ/view?embed"
+    },
+    {
+      "id": "aprajita-strategics-brand",
+      "slug": "aprajita-strategics",
+      "clientSlug": "aprajita-strategics",
+      "title": "Aprajita Corporate Brand Logo & Insignia",
+      "category": "Digital Marketing",
+      "client": "Aprajita Strategics",
+      "location": "India",
+      "year": "2026",
+      "summary": "Bespoke corporate insignia and branding combining structural engineering elements with modern minimalism to reflect technical authority.",
+      "metrics": "Corporate Brand Identity • Engineering Authority",
+      "tags": ["Logo Design", "Brand Identity", "Engineering Insignia", "Visual Standards"],
+      "deliverables": [
+        "Corporate engineering logo insignia",
+        "Executive stationery color palettes",
+        "Scalable vector assets and guidelines"
+      ],
+      "visualType": "client",
+      "workType": "logo",
+      "logo": "/clients/aprajita-strategics/logo.png",
+      "image": "/clients/aprajita-strategics/logo.png"
     },
     {
       "id": "merchant-management-portal",
@@ -56,63 +304,6 @@
         "Custom ERP webhook integration and trigger workflows"
       ],
       "visualType": "ai"
-    },
-    {
-      "id": "digital-growth-campaign",
-      "slug": "digital-growth-campaign",
-      "title": "Marketing & Growth Campaign",
-      "category": "Digital Marketing",
-      "client": "Luminary Enterprise Holdings",
-      "location": "Cambridge, UK",
-      "year": "2026",
-      "summary": "A strategic, data-driven digital marketing experience focused on improving online search visibility, audience engagement, and high-converting acquisition funnels.",
-      "metrics": "+340% ROAS • +240% Pipeline Growth",
-      "tags": ["Technical SEO", "High-ROAS Paid Media", "CRO Testing", "Attribution Analytics", "Audience Funnels"],
-      "deliverables": [
-        "Commercial keyword dominance and technical SEO audits",
-        "High-converting multi-stage paid search funnels",
-        "Data-driven CRO landing page enhancements",
-        "Closed-loop revenue attribution and analytics reporting"
-      ],
-      "visualType": "marketing"
-    },
-    {
-      "id": "vance-capital-portal",
-      "slug": "vance-capital-portal",
-      "title": "Vance Capital Web Architecture",
-      "category": "Website Development",
-      "client": "Vance Capital Partners",
-      "location": "London, United Kingdom",
-      "year": "2026",
-      "summary": "Institutional-grade Next.js web application with sub-second latency, headless CMS architecture, and strict accessibility for a London private equity firm.",
-      "metrics": "100% Core Web Vitals • 0.4s Global LCP",
-      "tags": ["Next.js 16", "TypeScript", "Tailored UI", "Headless CMS", "Technical SEO"],
-      "deliverables": [
-        "Bespoke component design system",
-        "Encrypted investor document vault",
-        "Sub-second global CDN delivery",
-        "Automated structured schema SEO"
-      ],
-      "visualType": "web"
-    },
-    {
-      "id": "meridian-merchant-console",
-      "slug": "meridian-merchant-console",
-      "title": "Meridian Global Multi-Store Console",
-      "category": "Merchant Account Management",
-      "client": "Meridian Retail Group",
-      "location": "Edinburgh & Cross-Border",
-      "year": "2026",
-      "summary": "Turnkey merchant onboarding and multi-store product catalog management across Stripe, Shopify, and Amazon for 4,500+ synchronized SKUs with multi-currency settlement.",
-      "metrics": "4,500+ Active SKUs • 0% Inventory Mismatch",
-      "tags": ["Merchant Setup", "Catalog Taxonomy", "Inventory Sync", "Multi-Currency", "KYC/AML"],
-      "deliverables": [
-        "Rapid merchant gateway verification",
-        "Bulk automated SKU ingestion pipeline",
-        "Real-time cross-store stock sync",
-        "PCI-DSS compliant checkout flows"
-      ],
-      "visualType": "merchant"
     }
   ]
 }

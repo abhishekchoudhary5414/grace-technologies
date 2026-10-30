@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Grace Technologies | Technology That Moves Business Forward',
     description:
-      'UK Business Vision. Global Technology Partnership. Intelligent engineering and digital transformation.',
+      'Global Technology Partnership. Intelligent engineering and digital transformation.',
   },
   robots: {
     index: true,
