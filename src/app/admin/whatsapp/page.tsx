@@ -4,7 +4,7 @@ import WhatsAppClient from '@/components/admin/whatsapp/WhatsAppClient';
 
 export default function AdminWhatsAppPage() {
   return (
-    <AdminLayout activePath="/admin/whatsapp" title="WhatsApp Telemetry & Analytics">
+    <AdminLayout activePath="/admin/whatsapp" title="WhatsApp Analytics">
       <WhatsAppClient />
     </AdminLayout>
   );

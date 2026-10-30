@@ -4,7 +4,7 @@ import ContactsClient from '@/components/admin/contacts/ContactsClient';
 
 export default function AdminContactsPage() {
   return (
-    <AdminLayout activePath="/admin/contacts" title="Contact Form Submissions">
+    <AdminLayout activePath="/admin/contacts" title="Contact Dashboard">
       <ContactsClient />
     </AdminLayout>
   );
