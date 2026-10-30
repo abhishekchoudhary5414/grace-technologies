@@ -1,6 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import {
+  Facebook,
+  Instagram,
+  LinkedIn,
+  X,
+  YouTube,
+} from '@mui/icons-material';
 import Container from '@/components/common/Container/Container';
 import officesData from '@/config/offices.json';
 import styles from './Footer.module.css';
@@ -8,6 +15,13 @@ import styles from './Footer.module.css';
 export default function Footer() {
   const currentYear = 2026;
   const { uk, india } = officesData.offices;
+  const socialLinks = [
+    { label: 'Instagram', href: 'https://www.instagram.com/gracetechnologiesofficial/', icon: Instagram },
+    { label: 'Facebook', href: 'https://www.facebook.com/share/1CKuqfF3Ef/', icon: Facebook },
+    { label: 'YouTube', href: 'https://www.youtube.com/@Gracetechnologiesofficial', icon: YouTube },
+    { label: 'X', href: 'https://x.com/', icon: X },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: LinkedIn },
+  ];
 
   return (
     <footer className={styles.footer}>
@@ -35,6 +49,29 @@ export default function Footer() {
             <div className={styles.partnerBadge}>
               <span className={styles.partnerDot} />
               <span>UK Business | Global Technology Partnership</span>
+            </div>
+
+            <div className={styles.socials}>
+              <span className={styles.socialLabel}>Follow us</span>
+              <div className={styles.socialLinks}>
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.socialLink}
+                      aria-label={social.label}
+                      title={social.label}
+                    >
+                      <Icon fontSize="small" />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
