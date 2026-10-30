@@ -14,7 +14,7 @@ export default function Industries() {
         <SectionHeading
           label="SECTOR EXPERTISE"
           title="Solutions Across Business Landscapes."
-          description="We engineer tailored digital, payment, and automation platforms across high-demand business environments."
+          description="We engineer tailored digital, payments, and automation platforms for demanding business environments."
           align="left"
         />
 

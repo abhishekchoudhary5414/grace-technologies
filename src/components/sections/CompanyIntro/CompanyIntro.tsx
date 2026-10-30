@@ -41,7 +41,7 @@ export default function CompanyIntro() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Grace Technologies combines digital expertise, business understanding, and technical innovation to help ambitious companies solve complex operational challenges.
+              Grace Technologies brings together digital expertise, business understanding, and innovative technology to help ambitious companies overcome complex challenges and achieve sustainable growth
             </motion.p>
 
             <motion.div
@@ -76,7 +76,7 @@ export default function CompanyIntro() {
               <div className={styles.cardContent}>
                 <h3 className={styles.cardHeading}>Engineered for Measurable Commercial Impact</h3>
                 <p className={styles.cardText}>
-                  Rather than treating software development as an isolated commodity, we integrate enterprise engineering disciplines with commercial strategy. Every project is planned in the United Kingdom and developed through our high-calibre technical delivery hub at Ank Square Private Limited, India.
+                 Software should do more than work—it should drive business results. We combine enterprise-grade engineering with commercial strategy to deliver technology that creates measurable value. Every project is planned in the United Kingdom and developed through our high-calibre technical delivery hub, Ank Square Private Limited, in India.
                 </p>
 
                 <div className={styles.valuesList}>
@@ -84,21 +84,21 @@ export default function CompanyIntro() {
                     <div className={styles.valueCheck}>✓</div>
                     <div>
                       <h4 className={styles.valTitle}>Strategic Clarity</h4>
-                      <p className={styles.valDesc}>Aligning technical architecture directly to commercial outcomes.</p>
+                      <p className={styles.valDesc}>Technical architecture aligned directly with your commercial goals.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
                       <h4 className={styles.valTitle}>Bespoke Engineering</h4>
-                      <p className={styles.valDesc}>Zero generic templates. Modular, maintainable TypeScript systems.</p>
+                      <p className={styles.valDesc}>Tailored, modular, and maintainable TypeScript systems—never generic templates.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
                       <h4 className={styles.valTitle}>Transparent Delivery</h4>
-                      <p className={styles.valDesc}>Collaborative milestones, agile governance, and accountable support.</p>
+                      <p className={styles.valDesc}>Collaborative milestones, agile governance, and reliable, accountable support.</p>
                     </div>
                   </div>
                 </div>

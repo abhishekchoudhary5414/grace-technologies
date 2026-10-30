@@ -33,9 +33,10 @@
 .bottom-right { animation: floatSlow4 8.5s ease-in-out 0.4s infinite alternate; }
 
 .interactiveCard {
-  display: flex;
-  flex-direction: column;
-  width: 190px;
+ display: flex;
+ flex-direction: column;
+ width: 240px;
+ min-height: 220px;
   background-color: rgba(20, 43, 69, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-md);
@@ -86,11 +87,12 @@
 
 /* Display Deck */
 .displayDeck {
-  height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.75rem;
+ width: 100%;
+ height: 110px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 0.75rem;
 }
 
 .visualCanvas {
@@ -460,6 +462,7 @@
 
 /* Metadata Footer on Card */
 .platformMeta {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -486,14 +489,14 @@
 
 .platformTitle {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-accent);
   line-height: 1.2;
 }
 
 .platformSubtitle {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.2;
 }

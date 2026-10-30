@@ -84,6 +84,34 @@
   color: var(--color-accent);
 }
 
+.indiaFlag {
+  width: 22px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.indiaFlag span {
+  flex: 1;
+}
+
+.indiaFlag span:nth-child(1) {
+  background-color: #ff9933;
+}
+
+.indiaFlag span:nth-child(2) {
+  background: radial-gradient(circle, #000080 0 12%, #fff 13% 100%);
+}
+
+.indiaFlag span:nth-child(3) {
+  background-color: #138808;
+}
+
 .websitePill {
   display: inline-flex;
   align-items: center;

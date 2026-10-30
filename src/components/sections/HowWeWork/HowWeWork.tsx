@@ -14,7 +14,7 @@ export default function HowWeWork() {
         <SectionHeading
           label="OUR METHODOLOGY"
           title="From First Conversation to Lasting Impact."
-          description="A disciplined, transparent delivery methodology structured for velocity, precision, and enduring commercial outcomes."
+          description="A disciplined, transparent delivery methodology built for velocity, precision, and enduring commercial outcomes."
           align="center"
         />
 

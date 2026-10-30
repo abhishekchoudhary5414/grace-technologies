@@ -9,7 +9,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     tagline: 'Digital Experiences. Built to Perform.',
     headline: 'Digital Experiences Designed to Make an Impact.',
     description:
-      'Build modern, responsive and scalable websites and web applications that strengthen business presence and create meaningful customer experiences.',
+      'We build modern, responsive, and scalable websites and web applications that strengthen your business presence and deliver meaningful customer experiences.',
     route: '/services/website-development',
     capabilities: [
       {
@@ -112,7 +112,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     tagline: 'Merchant Account Creation & Product Catalog Operations.',
     headline: 'End-to-End Merchant Onboarding, Account Setup & Product Catalog Management.',
     description:
-      'We manage the entire lifecycle of merchant store operations — from initial merchant account creation and verification to complete digital product listing, catalog taxonomy, inventory synchronization, and ongoing payment operations.',
+      'We handle every stage of merchant store operations, from account creation and verification to product listing, catalogue management, inventory synchronisation, and payment operations—so your business can sell with confidence.',
     route: '/services/merchant-account-management',
     capabilities: [
       {
@@ -202,12 +202,12 @@ export const SERVICES_DATA: ServiceDetail[] = [
   {
     id: 'ai-automation',
     number: '03',
-    title: 'AI Automation',
+    title: 'Agentic AI and Workflow Automation',
     shortTitle: 'AI Automation',
     tagline: 'Intelligence That Works for Your Business.',
     headline: 'Turn Repetitive Work Into Intelligent Workflows.',
     description:
-      'Automate repetitive operations, connect workflows and introduce practical AI-powered solutions.',
+      'Streamline operations, connect systems, and deploy practical AI-powered automation that saves time, reduces errors, and supports business growth.',
     route: '/services/ai-automation',
     capabilities: [
       {
@@ -306,7 +306,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     tagline: 'Visibility That Creates Opportunity.',
     headline: 'Make Your Business Impossible to Ignore.',
     description:
-      'Grow online visibility, reach relevant audiences and build measurable digital marketing strategies.',
+      'We help businesses increase online visibility, engage relevant audiences, and deliver measurable digital marketing strategies that support sustainable growth.',
     route: '/services/digital-marketing',
     capabilities: [
       {
@@ -400,53 +400,53 @@ export const SERVICES_DATA: ServiceDetail[] = [
 ];
 
 export const INDUSTRIES_DATA: IndustryItem[] = [
-  {
-    title: 'Professional Services',
-    description: 'Bespoke web architectures, automated client onboarding workflows, and authority-building digital strategies for consultancies and legal firms.',
-    stats: 'Authority & Scale',
-  },
-  {
-    title: 'Retail and E-commerce',
-    description: 'High-speed headless commerce platforms, seamless merchant payment coordination, and multi-channel acquisition campaigns.',
-    stats: 'Frictionless Sales',
-  },
-  {
-    title: 'Healthcare & Life Sciences',
-    description: 'Secure, privacy-conscious digital interfaces, intelligent scheduling automation, and accessible patient information portals.',
-    stats: 'Security & Trust',
-  },
-  {
-    title: 'Financial & Business Services',
-    description: 'Institutional-grade interfaces, merchant account operational support, and rigorous data protection compliance.',
-    stats: 'Operational Rigor',
-  },
-  {
-    title: 'Education & EdTech',
-    description: 'Dynamic learning platforms, administrative workflow automation, and student acquisition marketing funnels.',
-    stats: 'Engaging Reach',
-  },
-  {
-    title: 'Small and Medium Enterprises',
-    description: 'End-to-end digital transformation enabling ambitious mid-market enterprises to outmanoeuvre larger incumbents.',
-    stats: 'High Impact Growth',
-  },
+    {
+  title: 'Professional Services',
+  description: 'Bespoke web architectures, automated client-onboarding workflows, and authority-building digital strategies for consultancies and legal firms.',
+  stats: 'Authority & Scale',
+},
+{
+  title: 'Retail & E-commerce',
+  description: 'High-speed headless commerce platforms, seamless merchant payment coordination, and multi-channel customer acquisition campaigns.',
+  stats: 'Frictionless Sales',
+},
+{
+  title: 'Healthcare & Life Sciences',
+  description: 'Secure, privacy-conscious digital interfaces, intelligent scheduling automation, and accessible patient information portals.',
+  stats: 'Security & Trust',
+},
+{
+  title: 'Financial & Business Services',
+  description: 'Institutional-grade digital interfaces, merchant account operational support, and rigorous data-protection compliance.',
+  stats: 'Operational Rigour',
+},
+{
+  title: 'Education & EdTech',
+  description: 'Dynamic learning platforms, administrative workflow automation, and student acquisition marketing funnels.',
+  stats: 'Engaging Reach',
+},
+{
+  title: 'Small & Medium Enterprises',
+  description: 'End-to-end digital transformation that enables ambitious mid-market businesses to outmanoeuvre larger incumbents.',
+  stats: 'High-Impact Growth',
+},
 ];
 
 export const HOW_WE_WORK_STEPS: StepItem[] = [
   {
     number: '01',
     title: 'Discover',
-    description: 'We immerse ourselves into your commercial model, operational friction points, and overarching growth ambitions.',
+    description: 'We immerse ourselves in your commercial model, operational friction points, and long-term growth ambitions.',
   },
   {
     number: '02',
     title: 'Strategise',
-    description: 'We architect the precise technical blueprint, choosing the most effective frameworks, integrations, and milestones.',
+    description: 'We architect a precise technical blueprint—selecting the most effective frameworks, integrations, and delivery milestones.',
   },
   {
     number: '03',
     title: 'Deliver',
-    description: 'Our UK and Indian engineering teams build, test, and implement production-grade solutions with rigorous quality assurance.',
+    description: 'Our UK and India engineering teams build, test, and implement production-grade solutions with rigorous quality assurance.',
   },
   {
     number: '04',

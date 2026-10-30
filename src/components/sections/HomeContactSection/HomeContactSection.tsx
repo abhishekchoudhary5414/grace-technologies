@@ -25,43 +25,59 @@ export default function HomeContactSection() {
           >
             <span className={styles.badge}>EXECUTIVE CONSULTATION</span>
             <h2 className={styles.heading}>
-              Start Your Strategic Digital Transformation.
+                Start Your Strategic Digital Transformation
             </h2>
-            <p className={styles.subheading}>
-              Whether you need scalable Next.js engineering, merchant account advisory, AI automation pipelines, or data-driven digital growth, our senior team is ready to assist.
-            </p>
 
-            <div className={styles.benefitsList}>
-              <div className={styles.benefitItem}>
-                <div className={styles.iconCircle}>
-                  <CheckCircleIcon fontSize="small" />
-                </div>
-                <div>
-                  <h4 className={styles.benefitTitle}>Direct Senior Leadership Access</h4>
-                  <p className={styles.benefitDesc}>Consult directly with strategic advisors based in the United Kingdom.</p>
-                </div>
-              </div>
+<p className={styles.subheading}>
+  Whether you need scalable Next.js engineering, merchant account advisory,
+  AI automation pipelines, or data-driven digital growth, our senior team is
+  ready to help.
+</p>
 
-              <div className={styles.benefitItem}>
-                <div className={styles.iconCircle}>
-                  <SecurityOutlinedIcon fontSize="small" />
-                </div>
-                <div>
-                  <h4 className={styles.benefitTitle}>Confidentiality & Rigour</h4>
-                  <p className={styles.benefitDesc}>Commercial NDA protection and strict adherence to UK GDPR standards.</p>
-                </div>
-              </div>
+<div className={styles.benefitsList}>
+  <div className={styles.benefitItem}>
+    <div className={styles.iconCircle}>
+      <CheckCircleIcon fontSize="small" />
+    </div>
+    <div>
+      <h4 className={styles.benefitTitle}>
+        Direct Senior Leadership Access
+      </h4>
+      <p className={styles.benefitDesc}>
+        Consult directly with strategic advisors based in the UK.
+      </p>
+    </div>
+  </div>
 
-              <div className={styles.benefitItem}>
-                <div className={styles.iconCircle}>
-                  <EmailOutlinedIcon fontSize="small" />
-                </div>
-                <div>
-                  <h4 className={styles.benefitTitle}>Prompt Technical Evaluation</h4>
-                  <p className={styles.benefitDesc}>Comprehensive response and feasibility review within 24 business hours.</p>
-                </div>
-              </div>
-            </div>
+  <div className={styles.benefitItem}>
+    <div className={styles.iconCircle}>
+      <SecurityOutlinedIcon fontSize="small" />
+    </div>
+    <div>
+      <h4 className={styles.benefitTitle}>
+        Confidentiality & Rigour
+      </h4>
+      <p className={styles.benefitDesc}>
+        Commercial NDA protection and strict adherence to UK GDPR standards.
+      </p>
+    </div>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <div className={styles.iconCircle}>
+      <EmailOutlinedIcon fontSize="small" />
+    </div>
+    <div>
+      <h4 className={styles.benefitTitle}>
+        Prompt Technical Evaluation
+      </h4>
+      <p className={styles.benefitDesc}>
+        Receive a comprehensive response and feasibility review within 24
+        business hours.
+      </p>
+    </div>
+  </div>
+</div>
           </motion.div>
 
           {/* Right Column: Contact Form */}

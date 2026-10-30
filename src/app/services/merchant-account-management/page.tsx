@@ -63,7 +63,7 @@ export default function MerchantAccountManagementPage() {
           />
 
           <div className={styles.capabilitiesGrid}>
-            {service.capabilities.map((cap) => (
+            {service.capabilities.slice(0, 4).map((cap) => (
               <div key={cap.title} className={styles.capCard}>
                 <div className={styles.capHeader}>
                   <div className={styles.capIconBullet} />

@@ -18,32 +18,20 @@ export const quickEnquirySchema = z
         message: 'Please choose a service',
       }
     ),
-    email: z
-      .string()
-      .trim()
-      .optional()
-      .refine(
-        (val) => !val || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
-        { message: 'Please enter a valid email address' }
-      ),
-    phone: z
-      .string()
-      .trim()
-      .optional()
-      .refine(
-        (val) => !val || val.length >= 6,
-        { message: 'Please enter a valid phone number' }
-      ),
+    contact: z.string().trim().min(1, {
+      message: 'Please enter your email address or phone number',
+    }),
   })
   .refine(
     (data) => {
-      const hasEmail = Boolean(data.email && data.email.length > 0);
-      const hasPhone = Boolean(data.phone && data.phone.length > 0);
-      return hasEmail || hasPhone;
+      const value = data.contact;
+      const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      const isPhone = /^[+()\d\s.-]{6,}$/.test(value) && value.replace(/\D/g, '').length >= 6;
+      return isEmail || isPhone;
     },
     {
-      message: 'Please provide at least either your Phone Number or Email Address so our team can reach you.',
-      path: ['email'], // Points to email so standard field typing matches seamlessly
+      message: 'Please enter a valid email address or phone number.',
+      path: ['contact'],
     }
   );
 

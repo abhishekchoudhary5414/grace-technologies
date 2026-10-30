@@ -9,7 +9,6 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import PublicIcon from '@mui/icons-material/Public';
 import LanguageIcon from '@mui/icons-material/Language';
-import HubIcon from '@mui/icons-material/Hub';
 import officesData from '@/config/offices.json';
 import styles from './GlobalOffices.module.css';
 
@@ -163,7 +162,11 @@ export default function GlobalOffices() {
           >
             <div className={styles.cardHeader}>
               <div className={styles.flagIconWrap}>
-                <HubIcon />
+                <span className={styles.indiaFlag} role="img" aria-label="India flag">
+                  <span />
+                  <span />
+                  <span />
+                </span>
               </div>
               <div>
                 <span className={styles.locationTag}>{india.tag}</span>

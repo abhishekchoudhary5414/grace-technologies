@@ -55,6 +55,33 @@
   color: var(--color-accent);
 }
 
+.indiaFlag {
+  width: 28px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.indiaFlag span {
+  flex: 1;
+}
+
+.indiaFlag span:nth-child(1) {
+  background-color: #ff9933;
+}
+
+.indiaFlag span:nth-child(2) {
+  background: radial-gradient(circle, #000080 0 14%, #fff 15% 100%);
+}
+
+.indiaFlag span:nth-child(3) {
+  background-color: #138808;
+}
+
 .locationTag {
   font-family: var(--font-heading);
   font-size: 0.65rem;

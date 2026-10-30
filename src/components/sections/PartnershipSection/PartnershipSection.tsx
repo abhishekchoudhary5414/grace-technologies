@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
 import LanguageIcon from '@mui/icons-material/Language';
-import HubIcon from '@mui/icons-material/Hub';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import officesData from '@/config/offices.json';
@@ -25,7 +24,7 @@ export default function PartnershipSection() {
             Indian Technology Expertise.
           </h2>
           <p className={styles.description}>
-            A strategic partnership combining United Kingdom commercial leadership and strategic client governance with world-class engineering execution from Ank Square Private Limited, India.
+           A strategic bilateral partnership combining United Kingdom commercial leadership and client governance with Ank Square Private Limited’s world-class engineering execution in India
           </p>
         </div>
 
@@ -122,7 +121,11 @@ export default function PartnershipSection() {
           >
             <div className={styles.cardTopRow}>
               <div className={styles.partnerBadge}>
-                <HubIcon fontSize="small" />
+                <span className={styles.indiaFlag} role="img" aria-label="India flag">
+                  <span />
+                  <span />
+                  <span />
+                </span>
                 <span>{india.country}</span>
               </div>
               <a

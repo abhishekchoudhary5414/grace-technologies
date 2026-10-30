@@ -27,8 +27,7 @@ export default function EnquiryModal() {
     defaultValues: {
       fullName: '',
       serviceType: 'Website Development',
-      email: '',
-      phone: '',
+      contact: '',
     },
   });
 
@@ -193,48 +192,21 @@ export default function EnquiryModal() {
                 </div>
 
 
-                <div className={styles.row2}>
-                  {/* Phone */}
-                  <div className={styles.field}>
-                    <label htmlFor="popup-phone" className={styles.label}>
-                      Phone Number
-                    </label>
-                    <input
-                      id="popup-phone"
-                      type="tel"
-                      placeholder="+44 20 7946 0991"
-                      className={`${styles.input} ${errors.phone ? styles.inputError : ''}`}
-                      {...register('phone')}
-                    />
-                    {errors.phone && (
-                      <span className={styles.errorMsg}>{errors.phone.message}</span>
-                    )}
-                  </div>
-
-                  {/* Email */}
-                  <div className={styles.field}>
-                    <label htmlFor="popup-email" className={styles.label}>
-                      Email Address
-                    </label>
-                    <input
-                      id="popup-email"
-                      type="email"
-                      placeholder="name@company.com"
-                      className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
-                      {...register('email')}
-                    />
-                    {errors.email && (
-                      <span className={styles.errorMsg}>{errors.email.message}</span>
-                    )}
-                  </div>
+                <div className={styles.field}>
+                  <label htmlFor="popup-contact" className={styles.label}>
+                    Email or Phone <span className={styles.required}>*</span>
+                  </label>
+                  <input
+                    id="popup-contact"
+                    type="text"
+                    placeholder="Email address or phone number"
+                    className={`${styles.input} ${errors.contact ? styles.inputError : ''}`}
+                    {...register('contact')}
+                  />
+                  {errors.contact && (
+                    <span className={styles.errorMsg}>{errors.contact.message}</span>
+                  )}
                 </div>
-
-                {/* Combined Contact Requirement Validation Error */}
-                {errors.email && !errors.phone && (
-                  <div className={styles.contactRequirementError}>
-                    <span>{errors.email.message}</span>
-                  </div>
-                )}
 
                 {status === 'error' && (
                   <div className={styles.errorBanner}>
@@ -262,7 +234,7 @@ export default function EnquiryModal() {
 
                 <div className={styles.privacyNote}>
                   <ShieldOutlinedIcon fontSize="inherit" />
-                  <span>No Spam.</span>
+                  <span>Your privacy is our priority.</span>
                 </div>
               </form>
             )}

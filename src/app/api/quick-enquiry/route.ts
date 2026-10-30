@@ -17,7 +17,10 @@ export async function POST(request: Request) {
       );
     }
 
-    const { fullName, serviceType, email, phone } = validation.data;
+    const { fullName, serviceType, contact } = validation.data;
+    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+    const email = isEmail ? contact : undefined;
+    const phone = isEmail ? undefined : contact;
 
     // Connect to Supabase if configured
     const supabase = createServerSupabaseClient();

@@ -17,38 +17,43 @@ const strengths = [
     icon: BusinessCenterIcon,
     number: '01',
     title: 'Business-Focused Solutions',
-    description: 'We prioritize commercial objectives, operational efficiency, and tangible ROI rather than technology for its own sake.',
+    description: 'We focus on commercial outcomes, operational efficiency, and measurable ROI, ensuring technology supports real business priorities.',
   },
-  {
-    icon: MemoryIcon,
-    number: '02',
-    title: 'Modern Technology',
-    description: 'Built on Next.js, TypeScript, cloud microservices, and leading enterprise AI frameworks with zero technical debt.',
-  },
-  {
-    icon: HubIcon,
-    number: '03',
-    title: 'Scalable Systems',
-    description: 'Architectures engineered to expand smoothly from early adoption to high-load international transaction volumes.',
-  },
-  {
-    icon: PsychologyIcon,
-    number: '04',
-    title: 'Intelligent Automation',
-    description: 'Practical automation that orchestrates multi-system processes, removes repetitive manual toil, and elevates accuracy.',
-  },
-  {
-    icon: ViewQuiltIcon,
-    number: '05',
-    title: 'Integrated Digital Capabilities',
-    description: 'Unified cross-functional capability covering web engineering, payment operations, data automation, and digital reach.',
-  },
-  {
-    icon: PublicIcon,
-    number: '06',
-    title: 'International Collaboration',
-    description: 'Bilateral excellence combining British corporate advisory and relationship management with Indian engineering prowess.',
-  },
+    {
+  icon:  MemoryIcon,
+  number: '02',
+  title: 'Modern Technology Stack',
+  description:
+    'Built on Next.js, TypeScript, cloud-native microservices and leading enterprise AI frameworks—with zero technical debt.',
+},
+{
+  icon: HubIcon,
+  number: '03',
+  title: 'Scalable Systems',
+  description:
+    'Architectures designed to scale seamlessly from early adoption to high-volume international transactions.',
+},
+{
+  icon: PsychologyIcon,
+  number: '04',
+  title: 'Intelligent Automation',
+  description:
+    'Practical automation that orchestrates multi-system workflows, eliminates repetitive manual tasks and improves accuracy.',
+},
+{
+  icon: ViewQuiltIcon,
+  number: '05',
+  title: 'Integrated Digital Capabilities',
+  description:
+    'A unified, cross-functional capability spanning web engineering, payment operations, data automation and digital growth.',
+},
+{
+  icon: PublicIcon,
+  number: '06',
+  title: 'Global Collaboration',
+  description:
+    'A powerful partnership combining British corporate advisory and relationship management with world-class Indian engineering expertise.',
+},
 ];
 
 export default function WhyChooseUs() {
@@ -58,7 +63,7 @@ export default function WhyChooseUs() {
         <SectionHeading
           label="THE GRACE ADVANTAGE"
           title="Technology With a Business-First Mindset."
-          description="We bridge the gap between high-level business strategy and rigorous engineering execution."
+          description="We connect business strategy with precise engineering execution to deliver technology that creates real commercial value."
           align="left"
         />
 
@@ -78,7 +83,6 @@ export default function WhyChooseUs() {
                   <div className={styles.iconCircle}>
                     <Icon className={styles.icon} />
                   </div>
-                  <span className={styles.cardNumber}>{item.number}</span>
                 </div>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDescription}>{item.description}</p>
