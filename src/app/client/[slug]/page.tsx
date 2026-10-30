@@ -13,6 +13,7 @@ import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCT
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import clientsConfig from '@/config/clients.json';
 import { ClientItem } from '@/components/sections/ClientSection/ClientCard';
+import ClientWorkTabs from './ClientWorkTabs';
 import styles from './client-detail.module.css';
 
 interface Props {
@@ -130,64 +131,7 @@ export default async function ClientDetailPage({ params }: Props) {
             align="left"
           />
 
-          <div className={styles.workGrid}>
-            {client.workDone.map((work, index) => (
-              <article key={index} className={styles.workItemCard}>
-                <span className={styles.workTypeBadge}>{work.type}</span>
-                <h2 className={styles.workTitle}>{work.title}</h2>
-                <p className={styles.workDesc}>{work.description}</p>
-
-                {/* Live External Website Link */}
-                {work.url && (
-                  <div className={styles.workActionRow}>
-                    <a
-                      href={work.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.liveWebsiteBtn}
-                    >
-                      <span>Visit Live Website</span>
-                      <LaunchIcon fontSize="small" />
-                    </a>
-                  </div>
-                )}
-
-                {/* Embedded Presentation Profile (Canva or interactive document) */}
-                {work.presentationUrl && (
-                  <div className={styles.presentationEmbedWrapper}>
-                    <iframe
-                      loading="lazy"
-                      src={work.presentationUrl}
-                      title={`${work.title} Presentation`}
-                      className={styles.presentationIframe}
-                      allowFullScreen
-                    />
-                  </div>
-                )}
-
-                {/* Logo Artwork Showcase */}
-                {work.images && work.images.length > 0 && work.type === 'logo' && (
-                  <div className={styles.logoDisplayBox}>
-                    <Image
-                      src={work.images[0]}
-                      alt={`${client.name} Brand Mark`}
-                      width={100}
-                      height={100}
-                      className={styles.logoDisplayImg}
-                    />
-                    <div>
-                      <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-accent)', marginBottom: '0.35rem' }}>
-                        Official Brand Identity Asset
-                      </h3>
-                      <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)' }}>
-                        Vectorized master symbol, corporate stationery palette, and digital brand governance guide.
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </article>
-            ))}
-          </div>
+          <ClientWorkTabs workItems={client.workDone} />
         </section>
       </Container>
 

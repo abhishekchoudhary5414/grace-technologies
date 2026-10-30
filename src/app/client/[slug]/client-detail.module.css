@@ -190,6 +190,41 @@
   margin-bottom: 5rem;
 }
 
+.filterTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.filterTab {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.72);
+  border-radius: 9999px;
+  padding: 0.7rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filterTab:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--color-accent);
+}
+
+.filterTabActive {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.18);
+}
+
 .workGrid {
   display: flex;
   flex-direction: column;
