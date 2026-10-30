@@ -62,7 +62,7 @@
           "type": "website",
           "title": "Dynamic Construction Portfolio Website",
           "description": "Professional website development showcasing Sah Constructions' completed projects, construction capabilities, and technical expertise. Includes project galleries, detailed case studies, team information, and client testimonials. Optimized for search engines and mobile devices.",
-          "images": [],
+          "images": ["/clients/sah-constructions/website.png"],
           "url": "https://www.sahconstructions.com"
         },
         {
@@ -76,12 +76,6 @@
           "title": "Professional Company Profile & Capabilities Document",
           "description": "Comprehensive company profile presentation detailing Sah Constructions' experience, project portfolio, technical expertise, and construction capabilities. Designed to impress clients and partners with professional achievements and industry knowledge.",
           "presentationUrl": "https://www.canva.com/design/DAGwgeklyeU/IlGwBotTtDGvBn16-HdYUQ/view?embed"
-        },
-        {
-          "type": "letterHead",
-          "title": "Professional Company Letterhead Design",
-          "description": "Custom-designed company letterhead featuring the Sah Constructions brand identity. Professional layout suitable for official correspondence, proposals, and formal documentation. Premium design that reinforces brand authority.",
-          "images": []
         }
       ]
     },
