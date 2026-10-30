@@ -144,6 +144,21 @@
   transform: translateX(4px);
 }
 
+.adminPortalLink {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+  display: inline-block;
+  transition: all var(--transition-fast);
+}
+
+.adminPortalLink:hover {
+  color: var(--color-accent);
+  transform: translateX(3px);
+}
+
 .contactCol {
   display: flex;
   flex-direction: column;

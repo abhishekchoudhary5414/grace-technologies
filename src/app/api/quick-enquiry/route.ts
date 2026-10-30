@@ -19,25 +19,23 @@ export async function POST(request: Request) {
 
     const { fullName, serviceType, email, phone } = validation.data;
 
-    // Connect to Supabase if configured
+    // Connect to Supabase and persist directly into enquiries table
     const supabase = createServerSupabaseClient();
     if (supabase) {
-      const { error: dbError } = await supabase.from('contact_enquiries').insert([
+      const { error: dbError } = await supabase.from('enquiries').insert([
         {
-          full_name: fullName,
+          name: fullName,
+          service: serviceType,
           email: email || 'Not Provided (Phone Only)',
-          phone_number: phone || 'Not Provided (Email Only)',
-          service_interested_in: serviceType,
-          message: `Quick enquiry received via opening popup modal for ${serviceType}. Contact via: ${phone || email}`,
+          phone: phone || 'Not Provided (Email Only)',
+          status: 'New',
+          notes: null,
         },
       ]);
 
       if (dbError) {
-        console.error('Supabase popup lead insert error:', dbError);
+        console.error('Supabase enquiry insert error:', dbError);
       }
-    } else {
-      console.log('--- QUICK ENQUIRY POPUP SUBMISSION ---');
-      console.log({ fullName, serviceType, email, phone });
     }
 
     return NextResponse.json({
@@ -49,10 +47,9 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: false,
-        message: 'Unable to submit enquiry at this time. Please try again.',
+        message: 'Something went wrong while submitting. Please try again.',
       },
       { status: 500 }
     );
   }
 }
-

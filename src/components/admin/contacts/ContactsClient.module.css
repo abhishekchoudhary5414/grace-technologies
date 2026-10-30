@@ -1,0 +1,396 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.controlsBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(20, 43, 69, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 14px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: var(--color-accent);
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.selectInput {
+  background: rgba(20, 43, 69, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: var(--color-accent);
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectInput option {
+  background: #080d19;
+  color: #ffffff;
+}
+
+.refreshBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--color-accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.refreshBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.tableCard {
+  background: rgba(20, 43, 69, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 14px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(8, 13, 25, 0.3);
+}
+
+.table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dateCol {
+  white-space: nowrap;
+}
+
+.dateText {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.clientCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.clientName {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.emailLink {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.emailLink:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+.phoneCol {
+  white-space: nowrap;
+}
+
+.phoneText {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.serviceBadge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+.messageCol {
+  max-width: 180px;
+}
+
+.messagePreviewBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4px;
+  text-align: left;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.messagePreviewBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-accent);
+}
+
+.messageSnippet {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.statusSelect {
+  background: rgba(8, 13, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: var(--color-accent);
+  outline: none;
+  cursor: pointer;
+}
+
+.statusSelect option {
+  background: #080d19;
+  color: #ffffff;
+}
+
+.notesCol {
+  white-space: nowrap;
+}
+
+.notesButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notesButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--color-accent);
+}
+
+.notesButtonActive {
+  background: rgba(20, 43, 69, 0.6);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--color-accent);
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.actionsCol {
+  text-align: right;
+}
+
+.actionButtons {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.iconActionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.iconActionBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-accent);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.paginationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pageInfo {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pageSizeSelect {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pageSizeSelect select {
+  background: rgba(8, 13, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--color-accent);
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: var(--color-accent);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pageBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 4px;
+}
+
+.loadingCell,
+.emptyCell {
+  text-align: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+}
+

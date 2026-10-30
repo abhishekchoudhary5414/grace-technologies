@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -109,6 +107,11 @@ export default function Footer() {
                   Terms & Conditions
                 </Link>
               </li>
+              <li>
+                <Link href="/admin/login" className={styles.adminPortalLink}>
+                  Staff / Admin Login →
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -151,6 +154,10 @@ export default function Footer() {
             <span className={styles.separator}>•</span>
             <Link href="/contact" className={styles.legalLink}>
               Support
+            </Link>
+            <span className={styles.separator}>•</span>
+            <Link href="/admin/login" className={styles.legalLink}>
+              Admin
             </Link>
           </div>
         </div>

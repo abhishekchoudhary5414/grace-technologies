@@ -25,46 +25,41 @@ export async function POST(request: Request) {
 
     const data = validationResult.data;
 
-    // 3. Connect to Supabase if credentials are provided
+    // 3. Connect to Supabase and persist into contact_submissions table
     const supabase = createServerSupabaseClient();
     if (supabase) {
-      const { error: dbError } = await supabase.from('contact_enquiries').insert([
+      const { error: dbError } = await supabase.from('contact_submissions').insert([
         {
-          full_name: data.fullName,
-          business_email: data.businessEmail,
-          company_name: data.companyName,
+          name: data.fullName,
+          email: data.businessEmail,
           phone_number: data.phoneNumber,
-          country: data.country,
-          service_interested_in: data.serviceInterestedIn,
-          project_budget: data.projectBudget || null,
-          message: data.message,
+          service: data.serviceInterestedIn,
+          messages: data.message,
+          status: 'New',
+          notes: data.companyName ? `Company: ${data.companyName} | Budget: ${data.projectBudget || 'Not specified'}` : null,
         },
       ]);
 
       if (dbError) {
-        console.error('Supabase insert error:', dbError);
-        // Fallback or bubble error
+        console.error('Supabase contact_submissions insert error:', dbError);
       }
-    } else {
-      // In development or if supabase keys are yet to be set in environment variables,
-      // log to server console gracefully so submissions never drop
-      console.log('--- NEW CONTACT ENQUIRY RECEIVED ---');
-      console.log(JSON.stringify(data, null, 2));
     }
 
-    return NextResponse.json({
-      success: true,
-      message: 'Thank you for contacting Grace Technologies. A member of our executive consulting team will review your inquiry and reach out shortly.',
-    });
-  } catch (err: unknown) {
-    console.error('Server error submitting contact form:', err);
+    return NextResponse.json(
+      {
+        success: true,
+        message: 'Thank you! Your inquiry has been transmitted to our executive consulting team. We will review your requirements and respond within one business day.',
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error('Contact submission error:', error);
     return NextResponse.json(
       {
         success: false,
-        message: 'An unexpected error occurred while processing your request. Please try again.',
+        message: 'An internal error occurred while transmitting your request. Please email us directly at contact@gracetechnologies.uk.',
       },
       { status: 500 }
     );
   }
 }
-

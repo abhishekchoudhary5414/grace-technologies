@@ -1,0 +1,231 @@
+.sidebar {
+  width: 260px;
+  background-color: rgba(8, 13, 25, 0.98);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.sidebarCollapsed {
+  width: 72px;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandArea {
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 64px;
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.brandLogo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: -0.01em;
+}
+
+.brandTag {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mobileCloseBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.collapseToggleRow {
+  padding: 0.75rem 0.75rem 0.25rem;
+}
+
+.collapseToggleBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.collapseToggleBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-accent);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.collapseToggleText {
+  white-space: nowrap;
+}
+
+.navSection {
+  padding: 0.75rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.navItem:hover {
+  color: var(--color-accent);
+  background-color: rgba(20, 43, 69, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navItemActive {
+  color: var(--color-accent);
+  background-color: var(--color-secondary);
+  border-color: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navItemCollapsed {
+  justify-content: center;
+  padding: 0.75rem 0;
+  gap: 0;
+}
+
+.iconSlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footerArea {
+  padding: 1rem 0.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logoutBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.logoutBtn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-accent);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.logoutBtnCollapsed {
+  justify-content: center;
+  padding: 0.75rem 0;
+  gap: 0;
+}
+
+/* Tablet & Mobile responsive handling */
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 260px !important;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .mobileCloseBtn {
+    display: flex;
+  }
+
+  .collapseToggleRow {
+    display: none;
+  }
+
+  .navItemCollapsed {
+    justify-content: flex-start;
+    padding: 0.75rem 0.85rem;
+    gap: 0.875rem;
+  }
+
+  .logoutBtnCollapsed {
+    justify-content: flex-start;
+    padding: 0.75rem 0.85rem;
+    gap: 0.75rem;
+  }
+}

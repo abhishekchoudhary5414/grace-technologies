@@ -1,0 +1,53 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--color-accent);
+}
+
+.new {
+  background-color: var(--color-secondary);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.confirmed {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.contacted {
+  background-color: rgba(20, 43, 69, 0.7);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--color-accent);
+}
+
+.resolved {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.spam {
+  background-color: rgba(8, 13, 25, 0.8);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
