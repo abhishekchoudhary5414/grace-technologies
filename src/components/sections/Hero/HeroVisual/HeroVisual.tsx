@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import CentralGlobe from './CentralGlobe';
-import ServicePlatform, { ServicePlatformData } from './ServicePlatform';
-import ConnectionLines from './ConnectionLines';
+import DigitalGlobe from './DigitalGlobe';
+import ServiceOrbitNode, { OrbitNodeData } from './ServiceOrbitNode';
+import GlobeOrbitalSystem from './GlobeOrbitalSystem';
+import EnergyPlatform from './EnergyPlatform';
 import styles from './HeroVisual.module.css';
 
-const platforms: ServicePlatformData[] = [
+const orbitNodes: OrbitNodeData[] = [
   {
     id: 'website-development',
     number: '01',
@@ -16,27 +17,27 @@ const platforms: ServicePlatformData[] = [
     position: 'top-left',
   },
   {
-    id: 'merchant-account-management',
+    id: 'digital-marketing',
     number: '02',
-    title: 'MERCHANT OPERATIONS',
-    subtitle: 'Account Creation & Product Listing',
-    href: '/services/merchant-account-management',
+    title: 'DIGITAL MARKETING',
+    subtitle: 'Growth & Performance',
+    href: '/services/digital-marketing',
     position: 'top-right',
   },
   {
-    id: 'ai-automation',
+    id: 'merchant-account-management',
     number: '03',
-    title: 'AI AUTOMATION',
-    subtitle: 'Intelligent Workflows & Logic',
-    href: '/services/ai-automation',
+    title: 'MERCHANT MANAGEMENT',
+    subtitle: 'Payments & Business Operations',
+    href: '/services/merchant-account-management',
     position: 'bottom-left',
   },
   {
-    id: 'digital-marketing',
+    id: 'ai-automation',
     number: '04',
-    title: 'DIGITAL MARKETING',
-    subtitle: 'Growth & Precision Analytics',
-    href: '/services/digital-marketing',
+    title: 'AI AUTOMATION',
+    subtitle: 'Intelligent Workflows',
+    href: '/services/ai-automation',
     position: 'bottom-right',
   },
 ];
@@ -45,24 +46,30 @@ export default function HeroVisual() {
   const [activePlatform, setActivePlatform] = useState<string | null>(null);
 
   return (
-    <div className={styles.heroVisualContainer} aria-label="Grace Technologies Interactive Technology Universe">
-      {/* Background ambient light fields */}
+    <div
+      className={styles.heroVisualContainer}
+      aria-label="Grace Technologies Interactive 3D Digital Globe Ecosystem"
+    >
+      {/* Background Deep Cosmic Radial Light & Space Atmosphere */}
       <div className={styles.ambientCoreGlow} />
       <div className={styles.outerOrbitTrack} />
 
-      {/* SVG Connecting Cables with Animated Traveling Light Photons */}
-      <ConnectionLines activePlatform={activePlatform} />
+      {/* SVG Interconnecting Orbital Lines & Traveling Photons */}
+      <GlobeOrbitalSystem activePlatform={activePlatform} />
 
-      {/* Center Spherical Globe */}
-      <CentralGlobe activePlatform={activePlatform} />
+      {/* High-Tech Circular Energy Platform beneath Earth */}
+      <EnergyPlatform activePlatform={activePlatform} />
 
-      {/* 4 Interactive Surrounding Platforms */}
+      {/* Center 3D Digital Earth Globe with Equatorial Ring & Lighting */}
+      <DigitalGlobe activePlatform={activePlatform} />
+
+      {/* 4 Circular Holographic Orbiting Service Nodes */}
       <div className={styles.platformsContainer}>
-        {platforms.map((platform) => (
-          <ServicePlatform
-            key={platform.id}
-            data={platform}
-            isActive={activePlatform === platform.id}
+        {orbitNodes.map((node) => (
+          <ServiceOrbitNode
+            key={node.id}
+            data={node}
+            isActive={activePlatform === node.id}
             onHover={setActivePlatform}
           />
         ))}

@@ -1,8 +1,8 @@
 .heroVisualContainer {
   position: relative;
   width: 100%;
-  height: 680px;
-  max-width: 860px;
+  height: 640px;
+  max-width: 820px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -10,30 +10,35 @@
   user-select: none;
 }
 
-/* Ambient Radial Light Halo matching the image */
+/* Deep Ambient Radial Glow behind globe */
 .ambientCoreGlow {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 580px;
-  height: 580px;
+  width: 540px;
+  height: 540px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(20, 43, 69, 0.75) 0%, rgba(8, 13, 25, 0.4) 55%, transparent 75%);
-  filter: blur(40px);
+  background: radial-gradient(
+    circle,
+    rgba(20, 43, 69, 0.85) 0%,
+    rgba(8, 13, 25, 0.5) 55%,
+    transparent 75%
+  );
+  filter: blur(45px);
   pointer-events: none;
   z-index: 2;
 }
 
 .outerOrbitTrack {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95%;
-  height: 90%;
+  width: 90%;
+  height: 85%;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   pointer-events: none;
   z-index: 1;
 }
@@ -49,39 +54,41 @@
 /* Tablet Scaling */
 @media (max-width: 1200px) {
   .heroVisualContainer {
-    height: 600px;
+    height: 580px;
     transform: scale(0.92);
   }
 }
 
 @media (max-width: 992px) {
   .heroVisualContainer {
-    height: 540px;
+    height: 520px;
     transform: scale(0.85);
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 }
 
 /* Mobile specific responsive behavior:
-   Hide floating service cards on mobile so the hero stays clean and focused */
+   Do not show the 4 service icons or names on mobile; show ONLY the clean 3D digital Earth globe and energy platform */
 @media (max-width: 680px) {
   .heroVisualContainer {
     position: relative;
-    height: 320px;
-    min-height: auto;
-    max-width: 100%;
-    transform: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
+    height: 360px;
+    min-height: unset;
+    margin: 1.5rem auto 0;
+    overflow: visible;
   }
 
-  .outerOrbitTrack,
   .ambientCoreGlow {
+    width: 290px;
+    height: 290px;
+    filter: blur(35px);
+  }
+
+  .outerOrbitTrack {
     display: none;
   }
 
+  /* Completely hide all 4 orbiting service icons & names on mobile */
   .platformsContainer {
     display: none !important;
   }

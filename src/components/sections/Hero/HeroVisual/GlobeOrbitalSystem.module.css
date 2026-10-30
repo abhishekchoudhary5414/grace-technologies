@@ -1,0 +1,41 @@
+.orbitalSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.orbitalLine {
+  stroke: rgba(255, 255, 255, 0.28);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 6;
+  transition: all 0.4s ease;
+}
+
+.activeLine {
+  stroke: var(--color-accent);
+  stroke-width: 2.2;
+  stroke-dasharray: none;
+  filter: url(#orbitalGlow);
+}
+
+.directBeam {
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 1.2;
+  transition: all 0.4s ease;
+}
+
+.activeBeam {
+  stroke: #ffffff;
+  stroke-width: 2;
+  filter: url(#orbitalGlow);
+}
+
+@media (max-width: 680px) {
+  /* Hide the outer connecting node beams on mobile since service nodes are hidden */
+  .orbitalSvg {
+    display: none !important;
+  }
+}
