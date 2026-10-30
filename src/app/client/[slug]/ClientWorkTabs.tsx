@@ -77,6 +77,38 @@ export default function ClientWorkTabs({ workItems }: { workItems: ClientItem['w
               </div>
             )}
 
+            {work.images && work.images.length > 0 && work.type === 'website' && (
+              <div className={styles.projectPreviewCard}>
+                <Image
+                  src={work.images[0]}
+                  alt={`${work.title} Website Preview`}
+                  width={1200}
+                  height={800}
+                  className={styles.projectPreviewImage}
+                />
+                <div className={styles.previewMeta}>
+                  <h3>Website Preview</h3>
+                  <p>Responsive interface and user experience highlighted in the live digital experience.</p>
+                </div>
+              </div>
+            )}
+
+            {work.images && work.images.length > 0 && work.type === 'visitingCard' && (
+              <div className={styles.projectPreviewCard}>
+                <Image
+                  src={work.images[0]}
+                  alt={`${work.title} Visiting Card Preview`}
+                  width={1200}
+                  height={800}
+                  className={styles.projectPreviewImage}
+                />
+                <div className={styles.previewMeta}>
+                  <h3>Stationery Preview</h3>
+                  <p>Premium print-ready identity system and branded collateral presented in use.</p>
+                </div>
+              </div>
+            )}
+
             {work.images && work.images.length > 0 && work.type === 'logo' && (
               <div className={styles.logoDisplayBox}>
                 <Image

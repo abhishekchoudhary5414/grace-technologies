@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -46,7 +46,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ClientDetailPage({ params }: Props) {
+export default function ClientDetailPage({ params }: Props) {
+  return (
+    <Suspense
+      fallback={
+        <div className={styles.page}>
+          <div className={styles.heroDecor} />
+        </div>
+      }
+    >
+      <ClientDetailContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ClientDetailContent({ params }: Props) {
   const { slug } = await params;
   const clients = clientsConfig.clients as ClientItem[];
   const client = clients.find((c) => c.slug === slug);
@@ -65,7 +79,6 @@ export default async function ClientDetailPage({ params }: Props) {
     <div className={styles.page}>
       <div className={styles.heroDecor} />
 
-      {/* Universal Breadcrumb with Back Link */}
       <Breadcrumb
         items={[
           { label: 'Clients', href: '/client' },
@@ -76,7 +89,6 @@ export default async function ClientDetailPage({ params }: Props) {
       />
 
       <Container size="wide">
-        {/* Hero Header */}
         <header className={styles.clientHero}>
           <div className={styles.heroLeft}>
             <div className={styles.tagRow}>
@@ -108,7 +120,6 @@ export default async function ClientDetailPage({ params }: Props) {
           </div>
         </header>
 
-        {/* Client Testimonial / Feedback */}
         {client.testimonial && (
           <section className={styles.testimonialSection} aria-label="Client Feedback">
             <div className={styles.quoteHeader}>
@@ -122,7 +133,6 @@ export default async function ClientDetailPage({ params }: Props) {
           </section>
         )}
 
-        {/* Scope of Work & Deliverables */}
         <section className={styles.workSection}>
           <SectionHeading
             label="PROJECT DELIVERABLES"
@@ -135,7 +145,6 @@ export default async function ClientDetailPage({ params }: Props) {
         </section>
       </Container>
 
-      {/* Conversion Consultation CTA */}
       <ServiceCTASection
         title={`Ready to Deliver Similar Results for Your Business?`}
         description="Speak directly with our UK–India delivery architects to evaluate your technical scope, branding identity, and timeline."

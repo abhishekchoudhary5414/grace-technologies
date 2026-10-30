@@ -226,18 +226,22 @@
 }
 
 .workGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
 }
 
 .workItemCard {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(20, 43, 69, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
-  padding: 2.5rem;
+  padding: 1.25rem;
   transition: border-color 0.3s ease;
+  width: 100%;
+  min-height: 100%;
 }
 
 .workItemCard:hover {
@@ -261,17 +265,17 @@
 
 .workTitle {
   font-family: var(--font-heading);
-  font-size: 1.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .workDesc {
-  font-size: 0.9375rem;
-  line-height: 1.7;
+  font-size: 0.8rem;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   max-width: 850px;
 }
 
@@ -286,12 +290,12 @@
 .liveWebsiteBtn {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.75rem 1.5rem;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
   border-radius: 9999px;
   background-color: var(--color-accent);
   color: var(--color-primary);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -315,6 +319,41 @@
   width: 100%;
   height: 480px;
   border: none;
+}
+
+.projectPreviewCard {
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: var(--color-primary);
+}
+
+.projectPreviewImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.previewMeta {
+  padding: 1.25rem 1.5rem;
+}
+
+.previewMeta h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.previewMeta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
 
 .logoDisplayBox {
@@ -348,12 +387,36 @@
     padding: 2rem;
   }
 
+  .workGrid {
+    grid-template-columns: 1fr;
+  }
+
   .workItemCard {
     padding: 1.75rem;
   }
 
   .presentationIframe {
     height: 340px;
+  }
+
+  .projectPreviewCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logoDisplayBox {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .logoDisplayImg {
+    width: 84px;
+    height: 84px;
   }
 }
 
