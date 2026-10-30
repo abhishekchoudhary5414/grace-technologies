@@ -45,13 +45,7 @@ export default function ProjectsPage() {
         <ProjectsClientView initialProjects={projectsData} />
       </section>
 
-      {/* Proven Client Case Studies Section with Logos & Full Detail Links */}
-      <ClientSection
-        label="VERIFIED CLIENT CASE STUDIES"
-        title="Enterprise Implementations & Deliverables"
-        description="Detailed project scopes, live web applications, presentations, and brand collateral delivered across corporate engineering and architecture sectors."
-      />
-
+ 
       {/* Conversion CTA with modal trigger */}
       <ServiceCTASection
         title="Have an Ambitious Project in Mind?"
