@@ -30,13 +30,13 @@ export async function POST(request: Request) {
     if (supabase) {
       const { error: dbError } = await supabase.from('contact_submissions').insert([
         {
-          name: data.fullName,
-          email: data.businessEmail,
-          phone_number: data.phoneNumber,
-          service: data.serviceInterestedIn,
+          name: data.name,
+          email: data.email,
+          phone_number: data.phone_number,
+          service: data.service,
           messages: data.message,
           status: 'New',
-          notes: data.companyName ? `Company: ${data.companyName} | Budget: ${data.projectBudget || 'Not specified'}` : null,
+          notes: null,
         },
       ]);
 

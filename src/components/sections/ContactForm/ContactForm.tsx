@@ -22,12 +22,10 @@ export default function ContactForm() {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      fullName: '',
-      businessEmail: '',
-      companyName: '',
-      phoneNumber: '',
-      country: '',
-      serviceInterestedIn: 'Website Development',
+      name: '',
+      email: '',
+      phone_number: '',
+      service: 'Website Development',
       message: '',
       botCheck: '',
     },
@@ -90,7 +88,6 @@ export default function ContactForm() {
           </motion.div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className={styles.form} noValidate>
-            {/* Honeypot anti-spam field (hidden from genuine users) */}
             <input
               type="text"
               {...register('botCheck')}
@@ -101,97 +98,59 @@ export default function ContactForm() {
 
             <div className={styles.grid2}>
               <div className={styles.fieldGroup}>
-                <label htmlFor="fullName" className={styles.label}>
-                  Full Name <span className={styles.required}>*</span>
+                <label htmlFor="name" className={styles.label}>
+                  Name <span className={styles.required}>*</span>
                 </label>
                 <input
-                  id="fullName"
+                  id="name"
                   type="text"
                   placeholder="e.g. Alistair Vance"
-                  className={`${styles.input} ${errors.fullName ? styles.inputError : ''}`}
-                  {...register('fullName')}
+                  className={`${styles.input} ${errors.name ? styles.inputError : ''}`}
+                  {...register('name')}
                 />
-                {errors.fullName && (
-                  <span className={styles.errorText}>{errors.fullName.message}</span>
-                )}
+                {errors.name && <span className={styles.errorText}>{errors.name.message}</span>}
               </div>
 
               <div className={styles.fieldGroup}>
-                <label htmlFor="businessEmail" className={styles.label}>
-                  Business Email <span className={styles.required}>*</span>
+                <label htmlFor="email" className={styles.label}>
+                  Email <span className={styles.required}>*</span>
                 </label>
                 <input
-                  id="businessEmail"
+                  id="email"
                   type="email"
                   placeholder="e.g. a.vance@company.co.uk"
-                  className={`${styles.input} ${errors.businessEmail ? styles.inputError : ''}`}
-                  {...register('businessEmail')}
+                  className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
+                  {...register('email')}
                 />
-                {errors.businessEmail && (
-                  <span className={styles.errorText}>{errors.businessEmail.message}</span>
-                )}
+                {errors.email && <span className={styles.errorText}>{errors.email.message}</span>}
               </div>
             </div>
 
             <div className={styles.grid2}>
               <div className={styles.fieldGroup}>
-                <label htmlFor="companyName" className={styles.label}>
-                  Company Name <span className={styles.required}>*</span>
-                </label>
-                <input
-                  id="companyName"
-                  type="text"
-                  placeholder="e.g. Vance Capital Ltd"
-                  className={`${styles.input} ${errors.companyName ? styles.inputError : ''}`}
-                  {...register('companyName')}
-                />
-                {errors.companyName && (
-                  <span className={styles.errorText}>{errors.companyName.message}</span>
-                )}
-              </div>
-
-              <div className={styles.fieldGroup}>
-                <label htmlFor="phoneNumber" className={styles.label}>
+                <label htmlFor="phone_number" className={styles.label}>
                   Phone Number <span className={styles.required}>*</span>
                 </label>
                 <input
-                  id="phoneNumber"
+                  id="phone_number"
                   type="tel"
                   placeholder="+44 20 7946 0991"
-                  className={`${styles.input} ${errors.phoneNumber ? styles.inputError : ''}`}
-                  {...register('phoneNumber')}
+                  className={`${styles.input} ${errors.phone_number ? styles.inputError : ''}`}
+                  {...register('phone_number')}
                 />
-                {errors.phoneNumber && (
-                  <span className={styles.errorText}>{errors.phoneNumber.message}</span>
-                )}
-              </div>
-            </div>
-
-            <div className={styles.grid2}>
-              <div className={styles.fieldGroup}>
-                <label htmlFor="country" className={styles.label}>
-                  Country / Region <span className={styles.required}>*</span>
-                </label>
-                <input
-                  id="country"
-                  type="text"
-                  placeholder="e.g. United Kingdom"
-                  className={`${styles.input} ${errors.country ? styles.inputError : ''}`}
-                  {...register('country')}
-                />
-                {errors.country && (
-                  <span className={styles.errorText}>{errors.country.message}</span>
+                {errors.phone_number && (
+                  <span className={styles.errorText}>{errors.phone_number.message}</span>
                 )}
               </div>
 
               <div className={styles.fieldGroup}>
-                <label htmlFor="serviceInterestedIn" className={styles.label}>
-                  Service Interested In <span className={styles.required}>*</span>
+                <label htmlFor="service" className={styles.label}>
+                  Service <span className={styles.required}>*</span>
                 </label>
                 <select
-                  id="serviceInterestedIn"
-                  className={`${styles.select} ${errors.serviceInterestedIn ? styles.inputError : ''}`}
-                  {...register('serviceInterestedIn')}
+                  id="service"
+                  className={`${styles.select} ${errors.service ? styles.inputError : ''}`}
+                  {...register('service')}
                 >
                   <option value="Website Development">Website Development</option>
                   <option value="Merchant Account Management">Merchant Account Management</option>
@@ -199,26 +158,22 @@ export default function ContactForm() {
                   <option value="Digital Marketing">Digital Marketing</option>
                   <option value="Other">Other</option>
                 </select>
-                {errors.serviceInterestedIn && (
-                  <span className={styles.errorText}>{errors.serviceInterestedIn.message}</span>
-                )}
+                {errors.service && <span className={styles.errorText}>{errors.service.message}</span>}
               </div>
             </div>
 
             <div className={styles.fieldGroup}>
               <label htmlFor="message" className={styles.label}>
-                Message & Overview of Objectives <span className={styles.required}>*</span>
+                Message <span className={styles.required}>*</span>
               </label>
               <textarea
                 id="message"
                 rows={5}
-                placeholder="Please outline your commercial requirements, timeline, or current technical bottlenecks..."
+                placeholder="Please share your project or requirements..."
                 className={`${styles.textarea} ${errors.message ? styles.inputError : ''}`}
                 {...register('message')}
               />
-              {errors.message && (
-                <span className={styles.errorText}>{errors.message.message}</span>
-              )}
+              {errors.message && <span className={styles.errorText}>{errors.message.message}</span>}
             </div>
 
             {submissionStatus === 'error' && (
@@ -240,7 +195,7 @@ export default function ContactForm() {
                     <span>Submitting Enquiry...</span>
                   </span>
                 ) : (
-                  <span>Submit Commercial Enquiry →</span>
+                  <span>Submit Enquiry →</span>
                 )}
               </button>
             </div>
