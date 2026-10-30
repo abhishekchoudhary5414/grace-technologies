@@ -55,7 +55,7 @@
           "title": "Construction Industry Professional Logo Design",
           "description": "Strategic logo design for Sah Constructions emphasizing strength, reliability, and technical expertise in construction and infrastructure development. The design incorporates geometric elements representing precision and structural integrity, creating a strong professional presence.",
           "images": [
-            "/clients/client2.png"
+            "/clients/sah-constructions/logo.png"
           ]
         },
         {
@@ -98,14 +98,16 @@
           "title": "Ayurvedic Brand Logo & Heritage Identity Design",
           "description": "Bespoke logo and brand identity for Achintya Enterprises combining traditional Ayurvedic elements with modern design principles. The visual identity reflects natural wellness, authenticity, and pharmaceutical-grade purity.",
           "images": [
-            "/clients/client3.png"
+            "/clients/achintya-enterprises/logo.png"
           ]
         },
         {
           "type": "visitingCard",
           "title": "Professional Business Card & Corporate Stationery Package",
           "description": "Comprehensive stationery package including executive business cards featuring herbal embossing and clean modern typography. Reinforces trust in healthcare and wellness distribution channels.",
-          "images": []
+          "images": [
+            "/clients/achintya-enterprises/visitingcard.png"
+          ]
         },
         {
           "type": "profile",
