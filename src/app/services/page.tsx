@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import styles from './services.module.css';
 
 export const metadata: Metadata = {
@@ -13,6 +14,12 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[{ label: 'Services' }]}
+        backHref="/"
+        backLabel="Back to Home"
+      />
+
       {/* Alternating Services Showcase Matching the Homepage */}
       <ServicesOverview />
 

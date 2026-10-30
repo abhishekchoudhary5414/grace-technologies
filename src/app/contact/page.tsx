@@ -8,6 +8,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import officesData from '@/config/offices.json';
 import styles from './contact.module.css';
 
@@ -22,6 +23,12 @@ export default function ContactPage() {
 
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[{ label: 'Contact Us' }]}
+        backHref="/"
+        backLabel="Back to Home"
+      />
+
       <section className={styles.section}>
         <Container size="wide">
           <div className={styles.layout}>

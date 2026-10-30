@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Container from '@/components/common/Container/Container';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import styles from './legal.module.css';
 
 export const metadata: Metadata = {
@@ -11,6 +12,12 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[{ label: 'Privacy Policy' }]}
+        backHref="/"
+        backLabel="Back to Home"
+      />
+
       <Container size="narrow">
         <div className={styles.content}>
           <span className={styles.badge}>LEGAL GOVERNANCE</span>

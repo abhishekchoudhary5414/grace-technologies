@@ -12,6 +12,7 @@ import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SpeedIcon from '@mui/icons-material/Speed';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import officesData from '@/config/offices.json';
 import styles from './partnership.module.css';
 
@@ -26,6 +27,12 @@ export default function PartnershipPage() {
 
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[{ label: 'UK–India Partnership' }]}
+        backHref="/"
+        backLabel="Back to Home"
+      />
+
       {/* Hero */}
       <section className={styles.heroSection}>
         <Container size="wide">

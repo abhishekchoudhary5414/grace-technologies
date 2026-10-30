@@ -5,6 +5,7 @@ import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import Button from '@/components/common/Button/Button';
 import CTASection from '@/components/common/CTASection/CTASection';
 import AboutHeroVisual from '@/components/sections/AboutHeroVisual/AboutHeroVisual';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import styles from './about.module.css';
 
 export const metadata: Metadata = {
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[{ label: 'About Us' }]}
+        backHref="/"
+        backLabel="Back to Home"
+      />
+
       {/* Editorial Hero with 2-Column Visual Layout */}
       <section className={styles.heroSection}>
         <Container size="wide">

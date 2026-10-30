@@ -1,0 +1,124 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  z-index: 10;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Left: Back button */
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 9999px;
+  background-color: rgba(20, 43, 69, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.backButton:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  transform: translateX(-3px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+.backButton svg {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.backButton:hover svg {
+  transform: translateX(-2px);
+}
+
+/* Right: Breadcrumb list */
+.breadcrumbNav {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbList {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8125rem;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homeIcon {
+  font-size: 0.95rem !important;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s ease;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+.link:hover .homeIcon {
+  color: var(--color-accent);
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.current {
+  color: var(--color-accent);
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 680px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .backButton {
+    width: fit-content;
+  }
+}
+

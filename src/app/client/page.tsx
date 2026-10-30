@@ -5,6 +5,7 @@ import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import ClientCard, { ClientItem } from '@/components/sections/ClientSection/ClientCard';
 import ProjectStats from '@/components/sections/Projects/ProjectStats';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import clientsConfig from '@/config/clients.json';
 import styles from './client.module.css';
 
@@ -19,6 +20,12 @@ export default function ClientsIndexPage() {
 
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[{ label: 'Clients' }]}
+        backHref="/"
+        backLabel="Back to Home"
+      />
+
       {/* Header section */}
       <section className={styles.heroSection}>
         <Container size="wide">

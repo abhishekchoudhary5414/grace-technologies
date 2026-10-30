@@ -6,6 +6,7 @@ import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDe
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
@@ -20,6 +21,15 @@ export const metadata: Metadata = {
 export default function MerchantAccountManagementPage() {
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[
+          { label: 'Services', href: '/services' },
+          { label: 'Merchant Account Management' },
+        ]}
+        backHref="/services"
+        backLabel="Back to Services"
+      />
+
       {/* Hero with Visual */}
       <ServiceDetailHero
         serviceId={service.id}

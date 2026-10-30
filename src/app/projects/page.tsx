@@ -4,6 +4,7 @@ import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import ClientSection from '@/components/sections/ClientSection/ClientSection';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import ProjectsClientView from './ProjectsClientView';
 import projectsConfig from '@/config/projects.json';
 import { ProjectItem } from '@/data/projects';
@@ -21,6 +22,12 @@ export default function ProjectsPage() {
 
   return (
     <div className={styles.page}>
+      <Breadcrumb
+        items={[{ label: 'Projects' }]}
+        backHref="/"
+        backLabel="Back to Home"
+      />
+
       {/* Header section */}
       <section className={styles.heroSection}>
         <Container size="wide">

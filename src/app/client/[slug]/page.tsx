@@ -10,6 +10,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
+import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import clientsConfig from '@/config/clients.json';
 import { ClientItem } from '@/components/sections/ClientSection/ClientCard';
 import styles from './client-detail.module.css';
@@ -63,20 +64,17 @@ export default async function ClientDetailPage({ params }: Props) {
     <div className={styles.page}>
       <div className={styles.heroDecor} />
 
-      <Container size="wide">
-        {/* Breadcrumb Navigation */}
-        <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-          <Link href="/" className={styles.breadcrumbLink}>
-            Home
-          </Link>
-          <span>/</span>
-          <Link href="/projects" className={styles.breadcrumbLink}>
-            Projects
-          </Link>
-          <span>/</span>
-          <span className={styles.breadcrumbCurrent}>{client.name}</span>
-        </nav>
+      {/* Universal Breadcrumb with Back Link */}
+      <Breadcrumb
+        items={[
+          { label: 'Clients', href: '/client' },
+          { label: client.name },
+        ]}
+        backHref="/client"
+        backLabel="Back to Clients"
+      />
 
+      <Container size="wide">
         {/* Hero Header */}
         <header className={styles.clientHero}>
           <div className={styles.heroLeft}>
@@ -103,8 +101,8 @@ export default async function ClientDetailPage({ params }: Props) {
                 <div className={styles.heroLogoPlaceholder}>{initials}</div>
               )}
             </div>
-            <Link href="/projects" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.875rem', textDecoration: 'none' }}>
-              <ArrowBackIcon fontSize="small" /> Back to All Projects
+            <Link href="/client" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.875rem', textDecoration: 'none' }}>
+              <ArrowBackIcon fontSize="small" /> Back to All Clients
             </Link>
           </div>
         </header>
