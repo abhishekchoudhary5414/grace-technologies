@@ -25,7 +25,8 @@
           "title": "Spiritual Wellness & Chakra Knowledge Website",
           "description": "Designed and developed a modern spiritual wellness website for Rehas focused on chakra education, meditation guidance, and holistic healing practices with optimal user experience.",
           "images": [
-            "/clients/rehas/website.png"          ],
+            "/clients/rehas/website.png"
+          ],
           "url": "https://rehas.in"
         },
         {
@@ -62,7 +63,9 @@
           "type": "website",
           "title": "Dynamic Construction Portfolio Website",
           "description": "Professional website development showcasing Sah Constructions' completed projects, construction capabilities, and technical expertise. Includes project galleries, detailed case studies, team information, and client testimonials. Optimized for search engines and mobile devices.",
-          "images": ["/clients/sah-constructions/website.png"],
+          "images": [
+            "/clients/sah-constructions/website.png"
+          ],
           "url": "https://www.sahconstructions.com"
         },
         {
@@ -114,6 +117,37 @@
           "title": "Comprehensive Ayurvedic Product Catalog Presentation",
           "description": "Full product catalog detailing natural herbal extracts, manufacturing credentials, GMP compliance, and export capabilities for global pharmaceutical distributors.",
           "presentationUrl": "https://www.canva.com/design/DAGwC4sC8zE/UW060n74lo-LIMRwoDsNWQ/view?embed"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Aprajita Strategics",
+      "slug": "aprajita-strategics",
+      "logo": "/clients/aprajita-strategics/logo.png",
+      "category": "Ayurvedic Manufacturing & Traditional Branding",
+      "location": "India",
+      "project": "Ayurvedic Manufacturing & Traditional Brand Identity",
+      "summary": "Herbal pharmaceutical and Ayurvedic wellness product catalog, custom heritage insignia design, and market-ready commercial product presentation.",
+      "testimonial": "Ank Square demonstrated remarkable understanding of our Ayurvedic manufacturing business, perfectly blending traditional heritage with modern aesthetics. The branding captures our commitment to authentic Ayurvedic wellness while maintaining contemporary market appeal. Exceptional creative work that resonates with our target audience.",
+      "metrics": "Authentic Heritage Identity • Comprehensive Catalog",
+      "workDone": [
+        {
+          "type": "logo",
+          "title": "Ayurvedic Brand Logo & Heritage Identity Design",
+          "description": "Bespoke logo and brand identity for Achintya Enterprises combining traditional Ayurvedic elements with modern design principles. The visual identity reflects natural wellness, authenticity, and pharmaceutical-grade purity.",
+          "images": [
+            "/clients/aprajita-strategics/logo.png"
+          ]
+        },
+        {
+          "type": "website",
+          "title": "Professional Website Design & Development",
+          "description": "Modern, responsive website design for Aprajita Strategics, showcasing their Ayurvedic products and services with an emphasis on user experience and conversion optimization.",
+          "images": [
+            "/clients/aprajita-strategics/website.png"
+          ],
+          "url": "https://www.aprajitastrategics.com/"
         }
       ]
     }
