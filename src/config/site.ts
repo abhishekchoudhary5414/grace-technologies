@@ -124,14 +124,6 @@ export const SERVICES_DATA: ServiceDetail[] = [
         description: 'Professional product data ingestion, high-resolution media structuring, SKU classification, and SEO-optimized title formatting.',
       },
       {
-        title: 'Multi-Channel Inventory Synchronization',
-        description: 'Real-time synchronization of product stock quantities, pricing tiers, variants, and localized currencies across multiple stores.',
-      },
-      {
-        title: 'Payment Gateway & Checkout Integration',
-        description: 'Technical configuration of multi-currency processing, fraud prevention thresholds, and frictionless 1-click checkouts.',
-      },
-      {
         title: 'Documentation & KYC Compliance Advisory',
         description: 'Advising on compliance dossiers, identity verification, anti-fraud guidelines, and banking underwriting requirements.',
       },

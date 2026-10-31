@@ -8,6 +8,10 @@ import {
   X,
   YouTube,
 } from '@mui/icons-material';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
+import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
 import Container from '@/components/common/Container/Container';
 import officesData from '@/config/offices.json';
 import styles from './Footer.module.css';
@@ -151,24 +155,73 @@ export default function Footer() {
 
           <div className={styles.contactCol}>
             <h4 className={styles.colTitle}>Headquarters & Hub</h4>
+            
+            {/* UK Headquarters */}
             <div className={styles.locationItem}>
-              <span className={styles.locLabel}>{uk.company}</span>
-              <p className={styles.locDetail}>{uk.addressLines.join(', ')}</p>
-              <p className={styles.locSub}>{uk.email}</p>
-              <p className={styles.locSub}>{uk.phone}</p>
+              <span className={styles.locLabel}>
+                <BusinessOutlinedIcon sx={{ fontSize: 16 }} className={styles.locIcon} />
+                <span>{uk.company}</span>
+              </span>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${uk.company}, ${uk.addressLines.join(', ')}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.locLink}
+                title="View on Google Maps"
+              >
+                <LocationOnOutlinedIcon sx={{ fontSize: 15 }} className={styles.detailIcon} />
+                <span className={styles.locDetail}>{uk.addressLines.join(', ')}</span>
+              </a>
+              <a
+                href={`mailto:${uk.email}`}
+                className={styles.locLink}
+                title="Send Email"
+              >
+                <EmailOutlinedIcon sx={{ fontSize: 14 }} className={styles.subIcon} />
+                <span className={styles.locSub}>{uk.email}</span>
+              </a>
+              <a
+                href={`tel:${uk.phone.replace(/[^+\d]/g, '')}`}
+                className={styles.locLink}
+                title="Call Office"
+              >
+                <PhoneOutlinedIcon sx={{ fontSize: 14 }} className={styles.subIcon} />
+                <span className={styles.locSub}>{uk.phone}</span>
+              </a>
             </div>
 
+            {/* India Technology Hub */}
             <div className={styles.locationItem}>
-              <span className={styles.locLabel}>{india.company}</span>
-              <p className={styles.locDetail}>{india.addressLines.join(', ')}</p>
-              <p className={styles.locSub}>{india.email}</p>
-              <p className={styles.locSub}>{india.phone}</p>
-            </div>
-
-            <div className={styles.directContact}>
-              <Link href="/contact" className={styles.contactEmail}>
-                Initiate Enquiry →
-              </Link>
+              <span className={styles.locLabel}>
+                <BusinessOutlinedIcon sx={{ fontSize: 16 }} className={styles.locIcon} />
+                <span>{india.company}</span>
+              </span>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${india.company}, ${india.addressLines.join(', ')}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.locLink}
+                title="View on Google Maps"
+              >
+                <LocationOnOutlinedIcon sx={{ fontSize: 15 }} className={styles.detailIcon} />
+                <span className={styles.locDetail}>{india.addressLines.join(', ')}</span>
+              </a>
+              <a
+                href={`mailto:${india.email}`}
+                className={styles.locLink}
+                title="Send Email"
+              >
+                <EmailOutlinedIcon sx={{ fontSize: 14 }} className={styles.subIcon} />
+                <span className={styles.locSub}>{india.email}</span>
+              </a>
+              <a
+                href={`tel:${india.phone.replace(/[^+\d]/g, '')}`}
+                className={styles.locLink}
+                title="Call Office"
+              >
+                <PhoneOutlinedIcon sx={{ fontSize: 14 }} className={styles.subIcon} />
+                <span className={styles.locSub}>{india.phone}</span>
+              </a>
             </div>
           </div>
         </div>

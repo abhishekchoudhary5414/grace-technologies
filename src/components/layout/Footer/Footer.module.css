@@ -213,6 +213,9 @@
 
 .locationItem {
   margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .locLabel {
@@ -220,17 +223,67 @@
   font-size: 0.8125rem;
   font-weight: 700;
   color: var(--color-accent);
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.15rem;
+}
+
+.locIcon {
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.locLink {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  color: inherit;
+}
+
+.locLink:hover .locDetail {
+  color: var(--color-accent);
+}
+
+.locLink:hover .locSub {
+  color: var(--color-blue-dark);
+  text-decoration: underline;
+}
+
+.locLink:hover .detailIcon,
+.locLink:hover .subIcon {
+  color: var(--color-accent);
+  transform: translateX(1px);
+}
+
+.detailIcon {
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all var(--transition-fast);
+}
+
+.subIcon {
+  color: var(--color-blue);
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all var(--transition-fast);
 }
 
 .locDetail {
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   color: var(--color-text-primary);
+  line-height: 1.45;
+  transition: color var(--transition-fast);
 }
 
 .locSub {
   font-size: 0.75rem;
-  color: var(--color-text-subtle);
+  color: var(--color-blue);
+  line-height: 1.4;
+  transition: color var(--transition-fast);
 }
 
 .directContact {
