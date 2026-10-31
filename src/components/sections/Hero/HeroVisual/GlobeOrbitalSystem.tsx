@@ -24,14 +24,14 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         </filter>
 
         <linearGradient id="orbitalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.8" />
-          <stop offset="60%" stopColor="#FFFFFF" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#142B45" stopOpacity="0.15" />
+          <stop offset="0%" stopColor="var(--color-accent)" stopOpacity="0.8" />
+          <stop offset="60%" stopColor="var(--color-accent)" stopOpacity="0.3" />
+          <stop offset="100%" stopColor="var(--color-secondary)" stopOpacity="0.15" />
         </linearGradient>
 
         <linearGradient id="activeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
-          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.85" />
+          <stop offset="0%" stopColor="var(--color-accent)" stopOpacity="1" />
+          <stop offset="100%" stopColor="var(--color-accent)" stopOpacity="0.85" />
         </linearGradient>
       </defs>
 
@@ -46,7 +46,7 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         }`}
       />
       {/* Photon moving along path 1 */}
-      <circle r="3.5" fill="#FFFFFF" filter="url(#orbitalGlow)">
+      <circle r="3.5" fill="var(--color-accent)" filter="url(#orbitalGlow)">
         <animateMotion
           dur="5.5s"
           repeatCount="indefinite"
@@ -65,7 +65,7 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         }`}
       />
       {/* Photon moving along path 2 */}
-      <circle r="3.5" fill="#FFFFFF" filter="url(#orbitalGlow)">
+      <circle r="3.5" fill="var(--color-accent)" filter="url(#orbitalGlow)">
         <animateMotion
           dur="6s"
           repeatCount="indefinite"
@@ -78,7 +78,7 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         d="M 180 180 Q 290 280, 350 350"
         className={`${styles.directBeam} ${activePlatform === 'website-development' ? styles.activeBeam : ''}`}
       />
-      <circle r="3" fill="#FFFFFF" filter="url(#orbitalGlow)">
+      <circle r="3" fill="var(--color-accent)" filter="url(#orbitalGlow)">
         <animateMotion dur="3.2s" repeatCount="indefinite" path="M 180 180 Q 290 280, 350 350" />
       </circle>
 
@@ -87,7 +87,7 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         d="M 680 180 Q 570 280, 510 350"
         className={`${styles.directBeam} ${activePlatform === 'digital-marketing' ? styles.activeBeam : ''}`}
       />
-      <circle r="3" fill="#FFFFFF" filter="url(#orbitalGlow)">
+      <circle r="3" fill="var(--color-accent)" filter="url(#orbitalGlow)">
         <animateMotion dur="3.6s" repeatCount="indefinite" path="M 680 180 Q 570 280, 510 350" />
       </circle>
 
@@ -96,7 +96,7 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         d="M 160 520 Q 270 460, 350 420"
         className={`${styles.directBeam} ${activePlatform === 'merchant-account-management' ? styles.activeBeam : ''}`}
       />
-      <circle r="3" fill="#FFFFFF" filter="url(#orbitalGlow)">
+      <circle r="3" fill="var(--color-accent)" filter="url(#orbitalGlow)">
         <animateMotion dur="3.4s" repeatCount="indefinite" path="M 160 520 Q 270 460, 350 420" />
       </circle>
 
@@ -105,7 +105,7 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         d="M 710 520 Q 600 460, 510 420"
         className={`${styles.directBeam} ${activePlatform === 'ai-automation' ? styles.activeBeam : ''}`}
       />
-      <circle r="3" fill="#FFFFFF" filter="url(#orbitalGlow)">
+      <circle r="3" fill="var(--color-accent)" filter="url(#orbitalGlow)">
         <animateMotion dur="3.8s" repeatCount="indefinite" path="M 710 520 Q 600 460, 510 420" />
       </circle>
 
@@ -114,7 +114,7 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         cx="430"
         cy="380"
         r="280"
-        stroke="rgba(255, 255, 255, 0.12)"
+        stroke="var(--color-border-soft)"
         strokeDasharray="4 8"
         strokeWidth="1"
       />
@@ -122,16 +122,16 @@ export default function GlobeOrbitalSystem({ activePlatform }: GlobeOrbitalSyste
         cx="430"
         cy="380"
         r="340"
-        stroke="rgba(255, 255, 255, 0.08)"
+        stroke="var(--color-border-subtle)"
         strokeDasharray="2 12"
         strokeWidth="1"
       />
 
       {/* Illuminated Intersection Anchor Dots on Globe Horizon */}
-      <circle cx="340" cy="340" r="4" fill="#FFFFFF" filter="url(#orbitalGlow)" opacity="0.9" />
-      <circle cx="520" cy="340" r="4" fill="#FFFFFF" filter="url(#orbitalGlow)" opacity="0.9" />
-      <circle cx="340" cy="420" r="4" fill="#FFFFFF" filter="url(#orbitalGlow)" opacity="0.9" />
-      <circle cx="520" cy="420" r="4" fill="#FFFFFF" filter="url(#orbitalGlow)" opacity="0.9" />
+      <circle cx="340" cy="340" r="4" fill="var(--color-accent)" filter="url(#orbitalGlow)" opacity="0.9" />
+      <circle cx="520" cy="340" r="4" fill="var(--color-accent)" filter="url(#orbitalGlow)" opacity="0.9" />
+      <circle cx="340" cy="420" r="4" fill="var(--color-accent)" filter="url(#orbitalGlow)" opacity="0.9" />
+      <circle cx="520" cy="420" r="4" fill="var(--color-accent)" filter="url(#orbitalGlow)" opacity="0.9" />
     </svg>
   );
 }

@@ -18,7 +18,7 @@
 
 .capCard {
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-glass-medium);
   border-radius: var(--radius-md);
   padding: 1.75rem;
   display: flex;
@@ -28,7 +28,7 @@
 
 .capCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--color-text-dim);
 }
 
 .capHeader {
@@ -43,7 +43,7 @@
   height: 8px;
   border-radius: 50%;
   background-color: var(--color-accent);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 8px var(--color-border-highlight);
   flex-shrink: 0;
 }
 
@@ -56,16 +56,16 @@
 .capDesc {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 /* Benefits */
 .benefitsSection {
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
-  background-color: rgba(20, 43, 69, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--color-surface-subtle);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .benefitsGrid {
@@ -76,7 +76,7 @@
 
 .benefitCard {
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-glass-medium);
   border-radius: var(--radius-md);
   padding: 2rem 1.75rem;
 }
@@ -85,7 +85,7 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--color-text-subtle);
   display: block;
   margin-bottom: 1.25rem;
 }
@@ -100,7 +100,7 @@
 .benefitDesc {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 /* Process */
@@ -112,7 +112,7 @@
 
 .processCard {
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-glass-medium);
   border-radius: var(--radius-md);
   padding: 2rem 1.75rem;
   position: relative;
@@ -122,7 +122,7 @@
   font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-border-active);
   margin-bottom: 1rem;
 }
 
@@ -136,7 +136,7 @@
 .stepDesc {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 /* FAQs */

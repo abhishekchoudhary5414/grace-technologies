@@ -187,7 +187,7 @@ export default function ContactsClient() {
       {/* Filter / Search Controls Bar */}
       <div className={styles.controlsBar}>
         <div className={styles.searchBox}>
-          <SearchIcon sx={{ fontSize: 18, color: 'rgba(255, 255, 255, 0.4)' }} />
+          <SearchIcon sx={{ fontSize: 18, color: 'var(--color-border-active)' }} />
           <input
             type="text"
             placeholder="Search by name, email, or phone..."

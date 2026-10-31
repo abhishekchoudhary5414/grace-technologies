@@ -29,7 +29,7 @@
   color: var(--color-accent);
   padding: 0.35rem 0.875rem;
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-full);
   display: inline-block;
 }
@@ -44,13 +44,13 @@
 }
 
 .accentText {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-secondary);
 }
 
 .lead {
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-secondary);
   margin-bottom: 2.25rem;
   max-width: 580px;
 }
@@ -68,10 +68,10 @@
 .interactivePillarCard {
   position: relative;
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-lg);
   padding: clamp(2rem, 3.5vw, 3rem);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px var(--color-overlay-medium);
   overflow: hidden;
 }
 
@@ -81,14 +81,14 @@
   gap: 0.5rem;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-text-dim);
 }
 
 .systemTag {
@@ -96,7 +96,7 @@
   font-family: var(--font-heading);
   font-size: 0.6875rem;
   letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--color-text-subtle);
 }
 
 .cardHeading {
@@ -109,7 +109,7 @@
 .cardText {
   font-size: 0.9375rem;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   margin-bottom: 2rem;
 }
 
@@ -129,8 +129,8 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: rgba(8, 13, 25, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--color-panel-dark);
+  border: 1px solid var(--color-border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +149,7 @@
 
 .valDesc {
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-border-highlight);
   line-height: 1.5;
 }
 
@@ -159,7 +159,7 @@
   right: 0;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-glass-subtle) 0%, transparent 70%);
   pointer-events: none;
 }
 

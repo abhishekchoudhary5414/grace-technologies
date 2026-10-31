@@ -8,7 +8,7 @@
 }
 
 .baseLine {
-  stroke: rgba(255, 255, 255, 0.25);
+  stroke: var(--color-border-strong);
   stroke-width: 1.5;
   stroke-dasharray: 4 4;
   fill: none;
@@ -19,16 +19,16 @@
   stroke: var(--color-accent);
   stroke-width: 2.5;
   stroke-dasharray: none;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0 8px var(--color-text-primary));
 }
 
 .particle {
-  box-shadow: 0 0 10px #ffffff;
+  box-shadow: 0 0 10px var(--color-accent);
 }
 
 .nodePoint {
   fill: var(--color-accent);
-  filter: drop-shadow(0 0 6px #ffffff);
+  filter: drop-shadow(0 0 6px var(--color-accent));
   animation: pulsePoint 2s ease-in-out infinite;
 }
 

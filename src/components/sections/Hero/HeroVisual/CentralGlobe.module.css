@@ -21,9 +21,9 @@
   width: 290px;
   height: 290px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--color-secondary) 0%, rgba(8, 13, 25, 0.95) 75%);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 50px rgba(20, 43, 69, 0.8), inset 0 0 30px rgba(255, 255, 255, 0.15);
+  background: radial-gradient(circle, var(--color-secondary) 0%, var(--color-primary) 75%);
+  border: 2px solid var(--color-border-medium);
+  box-shadow: 0 0 50px var(--color-surface-strong), inset 0 0 30px var(--color-border-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,8 +34,8 @@
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
-  background: radial-gradient(circle, rgba(20, 43, 69, 0.9) 0%, rgba(8, 13, 25, 0.8) 100%);
+  border: 1.5px solid var(--color-border-strong);
+  background: radial-gradient(circle, var(--color-secondary) 0%, var(--color-panel-dark) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +45,7 @@
   width: 155px;
   height: 155px;
   border-radius: 50%;
-  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border: 1px dashed var(--color-border-active);
   background: var(--color-primary);
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-border-active) 0%, transparent 70%);
   filter: blur(10px);
 }
 
@@ -71,33 +71,33 @@
 .ring1 {
   width: 260px;
   height: 260px;
-  border: 1px dashed rgba(255, 255, 255, 0.22);
+  border: 1px dashed var(--color-border-strong);
   animation: rotateClockwise 36s linear infinite;
 }
 
 .ring2 {
   width: 300px;
   height: 300px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-top-color: rgba(255, 255, 255, 0.5);
-  border-bottom-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-border-soft);
+  border-top-color: var(--color-text-muted);
+  border-bottom-color: var(--color-text-muted);
   animation: rotateCounter 48s linear infinite;
 }
 
 .ring3 {
   width: 340px;
   height: 340px;
-  border: 1px dotted rgba(255, 255, 255, 0.18);
+  border: 1px dotted var(--color-border-medium);
   animation: rotateClockwise 60s linear infinite;
 }
 
 .ringHorizontal {
   width: 310px;
   height: 110px;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border: 1.5px solid var(--color-text-subtle);
   border-radius: 50%;
   transform: rotateX(68deg);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 20px var(--color-border-strong);
   animation: pulseRings 4s ease-in-out infinite alternate;
 }
 
@@ -107,14 +107,14 @@
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, rgba(20, 43, 69, 0.95) 0%, var(--color-primary) 70%, #000 100%);
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: radial-gradient(circle at 35% 35%, var(--color-secondary) 0%, var(--color-primary) 70%, var(--color-black) 100%);
+  border: 1.5px solid var(--color-text-subtle);
   box-shadow: 
-    0 0 40px rgba(20, 43, 69, 0.9),
-    0 0 80px rgba(255, 255, 255, 0.12),
-    inset 0 0 40px rgba(20, 43, 69, 0.9),
-    inset -10px -10px 30px rgba(0, 0, 0, 0.8),
-    inset 10px 10px 25px rgba(255, 255, 255, 0.3);
+    0 0 40px var(--color-secondary),
+    0 0 80px var(--color-border-soft),
+    inset 0 0 40px var(--color-secondary),
+    inset -10px -10px 30px var(--color-overlay-heavy),
+    inset 10px 10px 25px var(--color-text-dim);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,9 +125,9 @@
 
 .hasActive .globeSphere {
   box-shadow: 
-    0 0 60px rgba(20, 43, 69, 1),
-    0 0 100px rgba(255, 255, 255, 0.25),
-    inset 0 0 45px rgba(255, 255, 255, 0.4);
+    0 0 60px var(--color-secondary),
+    0 0 100px var(--color-border-strong),
+    inset 0 0 45px var(--color-border-active);
 }
 
 /* Latitude / Longitude lines */
@@ -136,9 +136,9 @@
   inset: 0;
   border-radius: 50%;
   background-image: 
-    radial-gradient(circle, transparent 65%, rgba(255, 255, 255, 0.15) 100%),
-    repeating-linear-gradient(0deg, transparent, transparent 18px, rgba(255, 255, 255, 0.1) 19px),
-    repeating-linear-gradient(90deg, transparent, transparent 18px, rgba(255, 255, 255, 0.1) 19px);
+    radial-gradient(circle, transparent 65%, var(--color-border-soft) 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 18px, var(--color-glass-medium) 19px),
+    repeating-linear-gradient(90deg, transparent, transparent 18px, var(--color-glass-medium) 19px);
   background-size: 100% 100%, 100% 100%, 100% 100%;
   animation: globeSpin 28s linear infinite;
   opacity: 0.7;
@@ -148,7 +148,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-image: radial-gradient(var(--color-text-subtle) 1px, transparent 1px);
   background-size: 12px 12px;
   animation: particleDrift 20s linear infinite;
   opacity: 0.55;
@@ -158,7 +158,7 @@
   position: absolute;
   inset: 15%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(20, 43, 69, 0.8) 60%, transparent 80%);
+  background: radial-gradient(circle, var(--color-border-medium) 0%, var(--color-surface-strong) 60%, transparent 80%);
   filter: blur(12px);
 }
 
@@ -172,12 +172,12 @@
   justify-content: center;
   text-align: center;
   padding: 0.65rem 1.1rem;
-  background: rgba(8, 13, 25, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--color-panel);
+  border: 1px solid var(--color-text-dim);
   border-radius: var(--radius-sm);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px var(--color-overlay-heavy), 0 0 15px var(--color-border-soft);
 }
 
 .logoMarkWrapper {
@@ -193,7 +193,7 @@
   letter-spacing: 0.18em;
   color: var(--color-accent);
   line-height: 1.1;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 12px var(--color-text-primary);
 }
 
 .brandSubWrapper {
@@ -208,7 +208,7 @@
   height: 3px;
   border-radius: 50%;
   background-color: var(--color-accent);
-  box-shadow: 0 0 4px #fff;
+  box-shadow: 0 0 4px var(--color-accent);
 }
 
 .brandSubtitle {
@@ -216,7 +216,7 @@
   font-weight: 600;
   font-size: 0.52rem;
   letter-spacing: 0.28em;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-primary);
   line-height: 1;
 }
 
@@ -224,7 +224,7 @@
   position: absolute;
   inset: -15px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(20, 43, 69, 0.4) 60%, transparent 75%);
+  background: radial-gradient(circle, var(--color-border-soft) 0%, var(--color-surface) 60%, transparent 75%);
   filter: blur(15px);
   z-index: 2;
   pointer-events: none;
@@ -237,7 +237,7 @@
   right: 20px;
   height: 25px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.45) 0%, transparent 80%);
+  background: radial-gradient(ellipse at top, var(--color-text-subtle) 0%, transparent 80%);
   pointer-events: none;
   z-index: 7;
 }

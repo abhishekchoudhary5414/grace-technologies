@@ -9,8 +9,8 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-glass-light);
   color: var(--color-accent);
 }
 
@@ -21,27 +21,27 @@
 }
 
 .confirmed {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color-border-soft);
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
 
 .contacted {
-  background-color: rgba(20, 43, 69, 0.7);
-  border-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-surface-strong);
+  border-color: var(--color-text-dim);
   color: var(--color-accent);
 }
 
 .resolved {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-border-medium);
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
 
 .spam {
-  background-color: rgba(8, 13, 25, 0.8);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--color-panel-dark);
+  border-color: var(--color-border-medium);
+  color: var(--color-text-muted);
 }
 
 .dot {

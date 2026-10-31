@@ -2,15 +2,15 @@
   position: relative;
   width: 100%;
   min-height: 400px;
-  background-color: rgba(20, 43, 69, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-lg);
   padding: clamp(1.25rem, 3vw, 2.25rem);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 45px var(--color-overlay-medium), inset 0 1px 1px var(--color-border-soft);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -23,7 +23,7 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(20, 43, 69, 0.8) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-surface-strong) 0%, transparent 70%);
   filter: blur(50px);
   pointer-events: none;
 }
@@ -32,11 +32,11 @@
 .browserWindow {
   width: 100%;
   max-width: 440px;
-  background: rgba(8, 13, 25, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--color-panel-dark);
+  border: 1px solid var(--color-border-medium);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 35px var(--color-overlay-medium);
   position: relative;
   z-index: 2;
 }
@@ -46,8 +46,8 @@
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: rgba(20, 43, 69, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-surface-hover);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .dots {
@@ -60,14 +60,14 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--color-border-active);
 }
 
 .browserUrl {
   margin-left: auto;
   font-family: var(--font-heading);
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-border-highlight);
 }
 
 .liveTag {
@@ -76,7 +76,7 @@
   letter-spacing: 0.1em;
   padding: 2px 6px;
   background: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-border-medium);
   border-radius: 3px;
   color: var(--color-accent);
 }
@@ -93,9 +93,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 6px 10px;
-  background: rgba(20, 43, 69, 0.4);
+  background: var(--color-surface);
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .codePill {
@@ -109,7 +109,7 @@
 
 .speedScore {
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 .mockupHero {
@@ -117,9 +117,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  background: rgba(20, 43, 69, 0.3);
+  background: var(--color-surface);
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .mockupTextGroup {
@@ -139,14 +139,14 @@
 .lineP1 {
   width: 85%;
   height: 4px;
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--color-text-subtle);
   border-radius: 2px;
 }
 
 .lineP2 {
   width: 50%;
   height: 4px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-text-dim);
   border-radius: 2px;
 }
 
@@ -164,8 +164,8 @@
 }
 
 .mockupCard {
-  background: rgba(20, 43, 69, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 4px;
   padding: 12px 10px;
   display: flex;
@@ -178,7 +178,7 @@
 .miniBar {
   width: 80%;
   height: 4px;
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--color-text-subtle);
   border-radius: 2px;
 }
 
@@ -186,14 +186,14 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-text-dim);
 }
 
 .miniSquare {
   width: 18px;
   height: 18px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-text-dim);
 }
 
 .floatingMobile {
@@ -202,10 +202,10 @@
   bottom: 15px;
   width: 85px;
   height: 150px;
-  background: rgba(8, 13, 25, 0.95);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: var(--color-primary);
+  border: 1.5px solid var(--color-text-dim);
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px var(--color-overlay-heavy);
   z-index: 4;
   padding: 8px 6px;
   display: flex;
@@ -216,7 +216,7 @@
 .mobileSpeaker {
   width: 24px;
   height: 3px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-text-dim);
   border-radius: 2px;
   margin-bottom: 8px;
 }
@@ -224,7 +224,7 @@
 .mobileScreen {
   width: 100%;
   height: 100%;
-  background: rgba(20, 43, 69, 0.6);
+  background: var(--color-surface-hover);
   border-radius: 6px;
   padding: 6px;
   display: flex;
@@ -235,7 +235,7 @@
 .mobileHero {
   width: 100%;
   height: 45px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--color-border-soft);
   border-radius: 3px;
 }
 
@@ -250,11 +250,11 @@
 .merchantPortalFrame {
   width: 100%;
   max-width: 480px;
-  background: rgba(8, 13, 25, 0.92);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-panel-dark);
+  border: 1.5px solid var(--color-border-medium);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 40px var(--color-overlay-heavy);
   position: relative;
   z-index: 2;
 }
@@ -264,8 +264,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  background: rgba(20, 43, 69, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface-strong);
+  border-bottom: 1px solid var(--color-glass-medium);
 }
 
 .merchantStoreBrand {
@@ -289,7 +289,7 @@
 
 .storeStatus {
   font-size: 0.62rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-border-highlight);
   display: block;
 }
 
@@ -297,8 +297,8 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--color-border-soft);
+  border: 1px solid var(--color-text-dim);
   border-radius: var(--radius-full);
   padding: 3px 8px;
   font-size: 0.58rem;
@@ -319,7 +319,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .catalogHeading {
@@ -334,7 +334,7 @@
 
 .syncStatus {
   font-size: 0.62rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-secondary);
 }
 
 .productList {
@@ -347,24 +347,24 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(20, 43, 69, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 6px;
   padding: 10px 12px;
   transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .productRow:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(20, 43, 69, 0.65);
+  border-color: var(--color-text-dim);
+  background: var(--color-surface-hover);
 }
 
 .prodThumb {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  background: rgba(8, 13, 25, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -389,7 +389,7 @@
 
 .prodMeta {
   font-size: 0.64rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--color-text-muted);
 }
 
 .prodPrice {
@@ -411,7 +411,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   padding: 1px 4px;
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--color-border-soft);
   border-radius: 2px;
   color: var(--color-accent);
 }
@@ -421,7 +421,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-border-subtle);
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -431,7 +431,7 @@
   align-items: center;
   gap: 5px;
   font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-secondary);
 }
 
 .footCheck {
@@ -454,13 +454,13 @@
   position: relative;
   width: 120px;
   height: 120px;
-  background: radial-gradient(circle, var(--color-secondary) 0%, rgba(8, 13, 25, 0.95) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: radial-gradient(circle, var(--color-secondary) 0%, var(--color-primary) 100%);
+  border: 2px solid var(--color-border-active);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 35px var(--color-border-soft), inset 0 0 20px var(--color-border-medium);
   margin-bottom: 8px;
 }
 
@@ -485,7 +485,7 @@
 
 .chipPin {
   position: absolute;
-  background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 3px, transparent 3px, transparent 8px);
+  background-image: repeating-linear-gradient(90deg, var(--color-border-active), var(--color-border-active) 3px, transparent 3px, transparent 8px);
 }
 
 .pinTop {
@@ -507,7 +507,7 @@
   top: 15px;
   bottom: 15px;
   width: 8px;
-  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 3px, transparent 3px, transparent 8px);
+  background-image: repeating-linear-gradient(0deg, var(--color-border-active), var(--color-border-active) 3px, transparent 3px, transparent 8px);
 }
 
 .pinRight {
@@ -515,15 +515,15 @@
   top: 15px;
   bottom: 15px;
   width: 8px;
-  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 3px, transparent 3px, transparent 8px);
+  background-image: repeating-linear-gradient(0deg, var(--color-border-active), var(--color-border-active) 3px, transparent 3px, transparent 8px);
 }
 
 .nodeBox {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(8, 13, 25, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--color-panel-dark);
+  border: 1px solid var(--color-border-medium);
   border-radius: var(--radius-full);
   padding: 8px 16px;
   font-size: 0.78rem;
@@ -536,15 +536,15 @@
   height: 6px;
   border-radius: 50%;
   background: var(--color-accent);
-  box-shadow: 0 0 8px #ffffff;
+  box-shadow: 0 0 8px var(--color-accent);
 }
 
 /* 04: Digital Marketing Visual */
 .marketingCanvas {
   width: 100%;
   max-width: 440px;
-  background: rgba(8, 13, 25, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--color-panel-dark);
+  border: 1px solid var(--color-border-medium);
   border-radius: var(--radius-md);
   padding: 20px;
   display: flex;
@@ -575,7 +575,7 @@
   gap: 4px;
   padding: 3px 8px;
   background: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-text-dim);
   border-radius: var(--radius-full);
   font-size: 0.7rem;
   font-weight: 700;
@@ -584,7 +584,7 @@
 
 .chartArea {
   padding: 15px 0 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-glass-medium);
 }
 
 .chartBarsGroup {
@@ -597,7 +597,7 @@
 
 .cBar {
   flex: 1;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-border-medium);
   border-radius: 4px 4px 0 0;
   display: flex;
   align-items: flex-end;
@@ -609,8 +609,8 @@
 .cb1 { height: 45%; }
 .cb2 { height: 70%; }
 .cb3 { height: 55%; }
-.cb4 { height: 85%; background: rgba(255, 255, 255, 0.5); }
-.cb5 { height: 100%; background: var(--color-accent); box-shadow: 0 0 12px rgba(255, 255, 255, 0.6); }
+.cb4 { height: 85%; background: var(--color-text-muted); }
+.cb5 { height: 100%; background: var(--color-accent); box-shadow: 0 0 12px var(--color-border-highlight); }
 
 .barLabel {
   font-family: var(--font-heading);

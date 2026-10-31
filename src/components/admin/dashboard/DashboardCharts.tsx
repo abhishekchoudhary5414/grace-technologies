@@ -22,10 +22,10 @@ interface DashboardChartsProps {
 }
 
 const STATUS_COLORS: Record<string, string> = {
-  New: 'rgba(255, 255, 255, 0.95)',
-  Confirmed: 'rgba(255, 255, 255, 0.7)',
-  Contacted: 'rgba(255, 255, 255, 0.45)',
-  Spam: 'rgba(255, 255, 255, 0.2)',
+  New: 'var(--color-accent)',
+  Confirmed: 'var(--color-text-secondary)',
+  Contacted: 'var(--color-text-subtle)',
+  Spam: 'var(--color-border-medium)',
 };
 
 export const DashboardCharts: React.FC<DashboardChartsProps> = ({
@@ -75,20 +75,20 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
             <AreaChart data={displayTrends} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="primaryGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.4} />
-                  <stop offset="95%" stopColor="#142B45" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="var(--color-accent)" stopOpacity={0.4} />
+                  <stop offset="95%" stopColor="var(--color-secondary)" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.07)" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border-subtle)" vertical={false} />
               <XAxis
                 dataKey="date"
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
               />
               <YAxis
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -97,7 +97,7 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
               <Tooltip
                 contentStyle={{
                   backgroundColor: 'var(--color-primary)',
-                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                  borderColor: 'var(--color-border-soft)',
                   borderRadius: '8px',
                   color: 'var(--color-accent)',
                   fontSize: '12px',
@@ -138,14 +138,14 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
                 {displayStatuses.map((entry, index) => (
                   <Cell
                     key={`cell-${index}`}
-                    fill={STATUS_COLORS[entry.name] || 'rgba(255, 255, 255, 0.3)'}
+                    fill={STATUS_COLORS[entry.name] || 'var(--color-text-dim)'}
                   />
                 ))}
               </Pie>
               <Tooltip
                 contentStyle={{
                   backgroundColor: 'var(--color-primary)',
-                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                  borderColor: 'var(--color-border-soft)',
                   borderRadius: '8px',
                   color: 'var(--color-accent)',
                   fontSize: '12px',
@@ -158,7 +158,7 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
               <div key={idx} className={styles.legendItem}>
                 <span
                   className={styles.legendDot}
-                  style={{ backgroundColor: STATUS_COLORS[item.name] || 'rgba(255, 255, 255, 0.3)' }}
+                  style={{ backgroundColor: STATUS_COLORS[item.name] || 'var(--color-text-dim)' }}
                 />
                 <span className={styles.legendLabel}>{item.name}</span>
                 <span className={styles.legendValue}>{item.value}</span>
@@ -179,10 +179,10 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
         <div className={styles.chartBody}>
           <ResponsiveContainer width="100%" height={240}>
             <BarChart data={displayServices} margin={{ top: 10, right: 10, left: -20, bottom: 20 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.07)" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border-subtle)" vertical={false} />
               <XAxis
                 dataKey="name"
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -191,7 +191,7 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
                 textAnchor="end"
               />
               <YAxis
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -200,13 +200,13 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
               <Tooltip
                 contentStyle={{
                   backgroundColor: 'var(--color-primary)',
-                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                  borderColor: 'var(--color-border-soft)',
                   borderRadius: '8px',
                   color: 'var(--color-accent)',
                   fontSize: '12px',
                 }}
               />
-              <Bar dataKey="value" fill="rgba(255, 255, 255, 0.75)" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="value" fill="var(--color-text-secondary)" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>

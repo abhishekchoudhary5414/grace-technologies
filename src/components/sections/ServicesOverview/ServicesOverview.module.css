@@ -49,7 +49,7 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-border-active);
 }
 
 .taglineText {
@@ -73,7 +73,7 @@
 .serviceDescription {
   font-size: 1.05rem;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-secondary);
   margin-bottom: 2rem;
 }
 
@@ -83,8 +83,8 @@
   gap: 0.75rem;
   margin-bottom: 2.25rem;
   padding: 1.25rem 1.5rem;
-  background-color: rgba(20, 43, 69, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-md);
 }
 
@@ -102,7 +102,7 @@
 
 .capName {
   font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-primary);
   font-weight: 500;
 }
 

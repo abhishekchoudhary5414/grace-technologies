@@ -2,8 +2,8 @@
   position: relative;
   padding: 7rem 0;
   background-color: var(--color-primary);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
   overflow: hidden;
 }
 
@@ -11,10 +11,10 @@
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(20, 43, 69, 0.5) 0%, transparent 60%),
-    radial-gradient(circle at 85% 50%, rgba(20, 43, 69, 0.5) 0%, transparent 60%),
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 15% 50%, var(--color-surface) 0%, transparent 60%),
+    radial-gradient(circle at 85% 50%, var(--color-surface) 0%, transparent 60%),
+    linear-gradient(var(--color-glass-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-glass-subtle) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
   pointer-events: none;
 }
@@ -36,7 +36,7 @@
   height: 3.25rem;
   border-radius: 50%;
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border-soft);
   color: var(--color-accent);
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 10;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px var(--color-overlay-light);
 }
 
 .navButton:hover {
@@ -52,7 +52,7 @@
   color: var(--color-primary);
   border-color: var(--color-accent);
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 25px var(--color-border-strong);
 }
 
 .navButton:active {
@@ -108,8 +108,8 @@
 /* Review Card Styling conforming strictly to 3 brand colors */
 .card {
   position: relative;
-  background-color: rgba(20, 43, 69, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-glass-medium);
   border-radius: 12px;
   padding: 2.25rem 2rem;
   height: 100%;
@@ -118,14 +118,14 @@
   justify-content: space-between;
   backdrop-filter: blur(12px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px var(--color-overlay-light);
 }
 
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.35);
-  background-color: rgba(20, 43, 69, 0.7);
+  border-color: var(--color-text-subtle);
+  background-color: var(--color-surface-strong);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 40px var(--color-overlay-medium), 0 0 20px var(--color-glass-subtle);
 }
 
 .cardHeader {
@@ -147,8 +147,8 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent);
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: var(--color-border-subtle);
+  border: 1px solid var(--color-border-soft);
   padding: 0.25rem 0.625rem;
   border-radius: 9999px;
 }
@@ -157,12 +157,12 @@
   font-size: 2.5rem;
   line-height: 1;
   font-family: serif;
-  color: rgba(255, 255, 255, 0.15);
+  color: var(--color-border-soft);
   margin-bottom: -0.75rem;
 }
 
 .quoteContent {
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--color-text-primary);
   font-size: 0.9375rem;
   line-height: 1.65;
   margin-bottom: 2rem;
@@ -175,7 +175,7 @@
   align-items: center;
   gap: 1rem;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .avatar {
@@ -183,7 +183,7 @@
   height: 2.75rem;
   border-radius: 50%;
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--color-border-strong);
   color: var(--color-accent);
   display: flex;
   align-items: center;
@@ -211,7 +211,7 @@
 
 .authorRole {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-border-highlight);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -221,7 +221,7 @@
 .authorCompany {
   font-size: 0.75rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-primary);
   margin-top: 0.125rem;
 }
 
@@ -238,7 +238,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-border-medium);
   border: none;
   cursor: pointer;
   padding: 0;
@@ -248,7 +248,7 @@
 .dotActive {
   width: 1.75rem;
   background-color: var(--color-accent);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px var(--color-border-active);
 }
 
 /* Responsive adjustments */

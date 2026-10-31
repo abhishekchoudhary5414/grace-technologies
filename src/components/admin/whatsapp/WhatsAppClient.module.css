@@ -14,8 +14,8 @@
 
 .rangeButtons {
   display: inline-flex;
-  background: rgba(20, 43, 69, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-glass-medium);
   border-radius: 8px;
   padding: 4px;
   gap: 4px;
@@ -28,7 +28,7 @@
   padding: 8px 16px;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -38,14 +38,14 @@
 }
 
 .rangeBtnActive {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--color-border-soft);
   color: var(--color-accent);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px var(--color-overlay-light);
 }
 
 .refreshBtn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-glass-subtle);
+  border: 1px solid var(--color-glass-medium);
   border-radius: 8px;
   padding: 8px;
   color: var(--color-accent);
@@ -57,7 +57,7 @@
 }
 
 .refreshBtn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--color-border-soft);
 }
 
 .statsGrid {
@@ -86,16 +86,16 @@
 }
 
 .tableCard {
-  background: rgba(20, 43, 69, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px var(--color-overlay-light);
 }
 
 .cardHeader {
   padding: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--color-glass-light);
 }
 
 .title {
@@ -107,7 +107,7 @@
 
 .subtitle {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -127,16 +127,16 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(8, 13, 25, 0.3);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border-subtle);
+  background: var(--color-panel-subtle);
 }
 
 .table td {
   padding: 14px 16px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-glass-subtle);
   vertical-align: middle;
 }
 
@@ -145,7 +145,7 @@
 }
 
 .table tr:hover td {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--color-glass-subtle);
 }
 
 .dateCol {
@@ -154,7 +154,7 @@
 
 .dateText {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }
 
 .pathCol {
@@ -165,25 +165,25 @@
   font-family: monospace;
   font-size: 12px;
   color: var(--color-accent);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-glass-subtle);
   padding: 3px 6px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .deviceBadge {
   font-size: 11px;
   padding: 3px 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-glass-subtle);
+  border: 1px solid var(--color-glass-medium);
   border-radius: 4px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-primary);
 }
 
 .browserCol,
 .osCol {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 .refCol {
@@ -192,7 +192,7 @@
 
 .refText {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -204,14 +204,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--color-glass-light);
   flex-wrap: wrap;
   gap: 12px;
 }
 
 .pageInfo {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }
 
 .navButtons {
@@ -221,8 +221,8 @@
 }
 
 .pageBtn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-glass-subtle);
+  border: 1px solid var(--color-glass-medium);
   border-radius: 6px;
   padding: 5px 10px;
   font-size: 12px;
@@ -235,7 +235,7 @@
 }
 
 .pageBtn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--color-border-soft);
 }
 
 .pageBtn:disabled {
@@ -245,7 +245,7 @@
 
 .pageNumber {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   padding: 0 4px;
 }
 
@@ -253,7 +253,7 @@
 .emptyCell {
   text-align: center;
   padding: 40px;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-border-active);
   font-size: 13px;
 }
 

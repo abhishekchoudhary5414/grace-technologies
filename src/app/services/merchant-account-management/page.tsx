@@ -41,11 +41,11 @@ export default function MerchantAccountManagementPage() {
       />
 
       {/* Mandatory Advisory Notice / Regulatory Disclaimer */}
-      <div style={{ backgroundColor: 'rgba(20, 43, 69, 0.5)', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', padding: '1.25rem 0' }}>
+      <div style={{ backgroundColor: 'var(--color-surface)', borderBottom: '1px solid var(--color-glass-medium)', padding: '1.25rem 0' }}>
         <Container size="wide">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
             <InfoOutlinedIcon style={{ color: 'var(--color-accent)', flexShrink: 0 }} />
-            <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.8)', margin: 0 }}>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-primary)', margin: 0 }}>
               <strong>Advisory & Management Disclaimer:</strong> Grace Technologies provides strategic consulting, onboarding guidance, product catalog listing management, and merchant account administrative coordination. We are not a bank, payment processor, or regulated financial institution, and do not guarantee merchant account approvals. All approval determinations remain solely with independent acquiring institutions.
             </p>
           </div>

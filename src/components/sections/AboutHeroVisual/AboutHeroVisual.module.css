@@ -18,7 +18,7 @@
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(20, 43, 69, 0.85) 0%, rgba(8, 13, 25, 0.3) 60%, transparent 75%);
+  background: radial-gradient(circle, var(--color-surface-strong) 0%, var(--color-panel-subtle) 60%, transparent 75%);
   filter: blur(50px);
   pointer-events: none;
   z-index: 1;
@@ -32,7 +32,7 @@
   width: 440px;
   height: 440px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-subtle);
   pointer-events: none;
   z-index: 2;
 }
@@ -45,7 +45,7 @@
   width: 480px;
   height: 480px;
   border-radius: 50%;
-  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border: 1px dashed var(--color-border-soft);
   animation: rotateSlow 60s linear infinite;
   pointer-events: none;
   z-index: 2;
@@ -56,14 +56,14 @@
   position: relative;
   z-index: 5;
   width: 100%;
-  background: rgba(20, 43, 69, 0.65);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: var(--color-surface-hover);
+  border: 1.5px solid var(--color-border-medium);
   border-radius: var(--radius-lg);
   padding: 1.5rem 1.75rem;
   box-shadow: 
-    0 25px 60px rgba(0, 0, 0, 0.7),
-    0 0 35px rgba(20, 43, 69, 0.6),
-    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    0 25px 60px var(--color-overlay-heavy),
+    0 0 35px var(--color-surface-hover),
+    inset 0 1px 1px var(--color-border-strong);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
@@ -76,7 +76,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0.85rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-glass-medium);
 }
 
 .windowControls {
@@ -88,14 +88,14 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--color-text-subtle);
 }
 
 .terminalTag {
   font-family: var(--font-heading);
   font-size: 0.68rem;
   letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-secondary);
   font-weight: 700;
 }
 
@@ -104,8 +104,8 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   padding: 2px 7px;
-  background: rgba(8, 13, 25, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--color-panel-dark);
+  border: 1px solid var(--color-text-dim);
   border-radius: var(--radius-full);
   color: var(--color-accent);
 }
@@ -126,8 +126,8 @@
   height: 68px;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, var(--color-secondary) 0%, var(--color-primary) 90%);
-  border: 1.5px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25), inset 0 0 15px rgba(255, 255, 255, 0.2);
+  border: 1.5px solid var(--color-text-subtle);
+  box-shadow: 0 0 25px var(--color-border-strong), inset 0 0 15px var(--color-border-medium);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,7 +147,7 @@
   font-family: var(--font-heading);
   font-size: 0.5rem;
   letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   margin-top: 2px;
 }
 
@@ -155,7 +155,7 @@
   position: absolute;
   inset: -6px;
   border-radius: 50%;
-  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border: 1px dashed var(--color-text-dim);
   animation: rotateSlow 24s linear infinite;
 }
 
@@ -163,7 +163,7 @@
   position: absolute;
   inset: -14px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border-soft);
   animation: pulseRingsAnim 3s ease-in-out infinite alternate;
 }
 
@@ -179,15 +179,15 @@
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  background: rgba(8, 13, 25, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .nodeCard:hover {
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: var(--color-text-subtle);
   transform: translateX(3px);
 }
 
@@ -195,8 +195,8 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(20, 43, 69, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-surface-strong);
+  border: 1px solid var(--color-border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,7 +221,7 @@
 
 .nodeDesc {
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-secondary);
 }
 
 .connectingLine {
@@ -229,7 +229,7 @@
   height: 14px;
   margin: -0.35rem 0 -0.35rem 2.25rem;
   width: 2px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(180deg, var(--color-border-active), var(--color-glass-medium));
 }
 
 .photon {
@@ -240,7 +240,7 @@
   height: 6px;
   border-radius: 50%;
   background: var(--color-accent);
-  box-shadow: 0 0 8px #ffffff;
+  box-shadow: 0 0 8px var(--color-accent);
   animation: photonTravel 2s ease-in-out infinite;
 }
 
@@ -250,7 +250,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .metricItem {
@@ -267,13 +267,13 @@
 
 .metricLbl {
   font-size: 0.62rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--color-text-muted);
 }
 
 .metricDivider {
   width: 1px;
   height: 24px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-glass-medium);
 }
 
 /* Floating Badges */
@@ -284,14 +284,14 @@
   align-items: center;
   gap: 6px;
   padding: 0.35rem 0.85rem;
-  background: rgba(8, 13, 25, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--color-panel-dark);
+  border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
   font-size: 0.68rem;
   font-weight: 600;
   color: var(--color-accent);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 25px var(--color-overlay-medium);
 }
 
 .chipDot {
@@ -299,7 +299,7 @@
   height: 5px;
   border-radius: 50%;
   background: var(--color-accent);
-  box-shadow: 0 0 6px #ffffff;
+  box-shadow: 0 0 6px var(--color-accent);
 }
 
 .chip1 {

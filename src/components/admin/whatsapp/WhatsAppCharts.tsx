@@ -22,10 +22,10 @@ interface WhatsAppChartsProps {
 }
 
 const DEVICE_COLORS = [
-  'rgba(255, 255, 255, 0.95)',
-  'rgba(255, 255, 255, 0.65)',
-  'rgba(255, 255, 255, 0.35)',
-  'rgba(255, 255, 255, 0.15)',
+  'var(--color-accent)',
+  'var(--color-text-secondary)',
+  'var(--color-text-subtle)',
+  'var(--color-border-soft)',
 ];
 
 export const WhatsAppCharts: React.FC<WhatsAppChartsProps> = ({
@@ -77,20 +77,20 @@ export const WhatsAppCharts: React.FC<WhatsAppChartsProps> = ({
             <AreaChart data={displayTrends} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="waGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.4} />
-                  <stop offset="95%" stopColor="#142B45" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="var(--color-accent)" stopOpacity={0.4} />
+                  <stop offset="95%" stopColor="var(--color-secondary)" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.07)" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border-subtle)" vertical={false} />
               <XAxis
                 dataKey="date"
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
               />
               <YAxis
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -99,7 +99,7 @@ export const WhatsAppCharts: React.FC<WhatsAppChartsProps> = ({
               <Tooltip
                 contentStyle={{
                   backgroundColor: 'var(--color-primary)',
-                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                  borderColor: 'var(--color-border-soft)',
                   borderRadius: '8px',
                   color: 'var(--color-accent)',
                   fontSize: '12px',
@@ -147,7 +147,7 @@ export const WhatsAppCharts: React.FC<WhatsAppChartsProps> = ({
               <Tooltip
                 contentStyle={{
                   backgroundColor: 'var(--color-primary)',
-                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                  borderColor: 'var(--color-border-soft)',
                   borderRadius: '8px',
                   color: 'var(--color-accent)',
                   fontSize: '12px',
@@ -181,16 +181,16 @@ export const WhatsAppCharts: React.FC<WhatsAppChartsProps> = ({
         <div className={styles.chartBody}>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={displayBrowsers} margin={{ top: 10, right: 10, left: -20, bottom: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.07)" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border-subtle)" vertical={false} />
               <XAxis
                 dataKey="name"
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
               />
               <YAxis
-                stroke="rgba(255, 255, 255, 0.4)"
+                stroke="var(--color-border-active)"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -199,13 +199,13 @@ export const WhatsAppCharts: React.FC<WhatsAppChartsProps> = ({
               <Tooltip
                 contentStyle={{
                   backgroundColor: 'var(--color-primary)',
-                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                  borderColor: 'var(--color-border-soft)',
                   borderRadius: '8px',
                   color: 'var(--color-accent)',
                   fontSize: '12px',
                 }}
               />
-              <Bar dataKey="value" fill="rgba(255, 255, 255, 0.75)" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="value" fill="var(--color-text-secondary)" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>

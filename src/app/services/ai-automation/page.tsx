@@ -40,10 +40,10 @@ export default function AiAutomationPage() {
       />
 
       {/* Interactive Workflow Visual Section */}
-      <section style={{ backgroundColor: 'rgba(20, 43, 69, 0.4)', padding: '3.5rem 0', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+      <section style={{ backgroundColor: 'var(--color-surface)', padding: '3.5rem 0', borderBottom: '1px solid var(--color-glass-medium)' }}>
         <Container size="wide">
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-            <span style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-accent)', padding: '0.25rem 0.75rem', background: 'var(--color-secondary)', borderRadius: '9999px', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
+            <span style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-accent)', padding: '0.25rem 0.75rem', background: 'var(--color-secondary)', borderRadius: '9999px', border: '1px solid var(--color-border-soft)' }}>
               INTELLIGENT PIPELINE ARCHITECTURE
             </span>
             <h3 style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-accent)', marginTop: '1rem' }}>
@@ -52,25 +52,25 @@ export default function AiAutomationPage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem' }}>
-            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.75rem', fontWeight: 700 }}>01 // INGESTION</span>
+            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--color-glass-medium)' }}>
+              <span style={{ color: 'var(--color-text-muted)', fontSize: '0.75rem', fontWeight: 700 }}>01 // INGESTION</span>
               <h4 style={{ color: 'var(--color-accent)', fontSize: '1.1rem', margin: '0.5rem 0' }}>Multi-Modal Inputs</h4>
-              <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.7)', margin: 0 }}>PDFs, invoices, emails, webhook payloads, CRM events and database logs.</p>
+              <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-secondary)', margin: 0 }}>PDFs, invoices, emails, webhook payloads, CRM events and database logs.</p>
             </div>
-            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.75rem', fontWeight: 700 }}>02 // PARSING & EMBEDDING</span>
+            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--color-glass-medium)' }}>
+              <span style={{ color: 'var(--color-text-muted)', fontSize: '0.75rem', fontWeight: 700 }}>02 // PARSING & EMBEDDING</span>
               <h4 style={{ color: 'var(--color-accent)', fontSize: '1.1rem', margin: '0.5rem 0' }}>Semantic Vectorization</h4>
-              <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.7)', margin: 0 }}>Zero-data-retention embedding models index and structure unstructured business text.</p>
+              <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-secondary)', margin: 0 }}>Zero-data-retention embedding models index and structure unstructured business text.</p>
             </div>
-            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.75rem', fontWeight: 700 }}>03 // REASONING & VALIDATION</span>
+            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--color-glass-medium)' }}>
+              <span style={{ color: 'var(--color-text-muted)', fontSize: '0.75rem', fontWeight: 700 }}>03 // REASONING & VALIDATION</span>
               <h4 style={{ color: 'var(--color-accent)', fontSize: '1.1rem', margin: '0.5rem 0' }}>Agentic Logic</h4>
-              <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.7)', margin: 0 }}>Configured business rules evaluate confidence thresholds with human oversight gates.</p>
+              <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-secondary)', margin: 0 }}>Configured business rules evaluate confidence thresholds with human oversight gates.</p>
             </div>
-            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.75rem', fontWeight: 700 }}>04 // ACTION</span>
+            <div style={{ background: 'var(--color-secondary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--color-glass-medium)' }}>
+              <span style={{ color: 'var(--color-text-muted)', fontSize: '0.75rem', fontWeight: 700 }}>04 // ACTION</span>
               <h4 style={{ color: 'var(--color-accent)', fontSize: '1.1rem', margin: '0.5rem 0' }}>Automated Dispatch</h4>
-              <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.7)', margin: 0 }}>Instant database updates, ERP transactions, customer notifications and reports.</p>
+              <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-secondary)', margin: 0 }}>Instant database updates, ERP transactions, customer notifications and reports.</p>
             </div>
           </div>
         </Container>

@@ -8,7 +8,7 @@
 }
 
 .orbitalLine {
-  stroke: rgba(255, 255, 255, 0.28);
+  stroke: var(--color-border-strong);
   stroke-width: 1.5;
   stroke-dasharray: 6 6;
   transition: all 0.4s ease;
@@ -22,13 +22,13 @@
 }
 
 .directBeam {
-  stroke: rgba(255, 255, 255, 0.22);
+  stroke: var(--color-border-strong);
   stroke-width: 1.2;
   transition: all 0.4s ease;
 }
 
 .activeBeam {
-  stroke: #ffffff;
+  stroke: var(--color-accent);
   stroke-width: 2;
   filter: url(#orbitalGlow);
 }

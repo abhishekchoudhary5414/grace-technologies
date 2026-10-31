@@ -17,7 +17,7 @@
   left: 5%;
   right: 5%;
   height: 2px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(90deg, var(--color-glass-medium), var(--color-border-active), var(--color-glass-medium));
   z-index: 1;
 }
 
@@ -45,11 +45,11 @@
   height: 72px;
   border-radius: 50%;
   background-color: var(--color-secondary);
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid var(--color-border-strong);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px var(--color-overlay-medium);
   transition: all var(--transition-normal);
 }
 
@@ -72,8 +72,8 @@
 }
 
 .cardContent {
-  background-color: rgba(20, 43, 69, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-md);
   padding: 1.75rem;
   height: 100%;
@@ -81,7 +81,7 @@
 }
 
 .stepCard:hover .cardContent {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: var(--color-border-strong);
   transform: translateY(-4px);
 }
 
@@ -95,7 +95,7 @@
 .stepDescription {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 @media (max-width: 992px) {

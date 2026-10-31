@@ -28,30 +28,30 @@
 .primary:hover {
   background-color: transparent;
   color: var(--color-accent);
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 24px var(--color-border-soft);
 }
 
 .secondary {
   background-color: var(--color-secondary);
   color: var(--color-accent);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border-soft);
 }
 
 .secondary:hover {
-  background-color: rgba(20, 43, 69, 0.8);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-surface-strong);
+  border-color: var(--color-text-subtle);
+  box-shadow: 0 4px 20px var(--color-overlay-light);
 }
 
 .outline {
   background-color: transparent;
   color: var(--color-accent);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--color-border-strong);
 }
 
 .outline:hover {
   border-color: var(--color-accent);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-glass-subtle);
 }
 
 .ghost {

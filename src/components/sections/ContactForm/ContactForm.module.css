@@ -1,9 +1,9 @@
 .formCard {
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-lg);
   padding: clamp(2rem, 4vw, 3rem);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 25px 60px var(--color-overlay-medium);
   position: relative;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .required {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }
 
 .input,
@@ -42,8 +42,8 @@
 .textarea {
   width: 100%;
   padding: 0.875rem 1rem;
-  background-color: rgba(8, 13, 25, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: var(--color-panel);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-sm);
   color: var(--color-accent);
   font-family: var(--font-body);
@@ -56,12 +56,12 @@
 .select:focus,
 .textarea:focus {
   border-color: var(--color-accent);
-  background-color: rgba(8, 13, 25, 0.95);
+  background-color: var(--color-primary);
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--color-text-subtle);
 }
 
 .select {
@@ -79,13 +79,13 @@
 }
 
 .inputError {
-  border-color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(8, 13, 25, 0.9);
+  border-color: var(--color-text-secondary);
+  background-color: var(--color-panel-dark);
 }
 
 .errorText {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-primary);
   font-weight: 500;
 }
 
@@ -94,8 +94,8 @@
   align-items: center;
   gap: 0.625rem;
   padding: 0.875rem 1rem;
-  background-color: rgba(8, 13, 25, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--color-panel-dark);
+  border: 1px solid var(--color-text-dim);
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
   color: var(--color-accent);
@@ -125,7 +125,7 @@
 .submitButton:hover:not(:disabled) {
   background-color: transparent;
   color: var(--color-accent);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px var(--color-border-medium);
 }
 
 .submitButton:disabled {
@@ -152,7 +152,7 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: rgba(8, 13, 25, 0.6);
+  background-color: var(--color-panel);
   border: 2px solid var(--color-accent);
   display: flex;
   align-items: center;
@@ -175,7 +175,7 @@
 .successDesc {
   font-size: 1rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-secondary);
   max-width: 520px;
   margin-bottom: 2rem;
 }

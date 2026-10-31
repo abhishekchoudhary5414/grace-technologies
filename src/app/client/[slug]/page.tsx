@@ -114,7 +114,7 @@ async function ClientDetailContent({ params }: Props) {
                 <div className={styles.heroLogoPlaceholder}>{initials}</div>
               )}
             </div>
-            <Link href="/client" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.875rem', textDecoration: 'none' }}>
+            <Link href="/client" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-secondary)', fontSize: '0.875rem', textDecoration: 'none' }}>
               <ArrowBackIcon fontSize="small" /> Back to All Clients
             </Link>
           </div>

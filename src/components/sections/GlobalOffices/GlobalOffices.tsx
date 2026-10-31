@@ -130,7 +130,7 @@ export default function GlobalOffices() {
                   d="M 100 80 Q 150 35, 205 110"
                   className={styles.bridgePath}
                 />
-                <circle r="3" fill="#FFFFFF" className={styles.bridgeParticle}>
+                <circle r="3" fill="var(--color-accent)" className={styles.bridgeParticle}>
                   <animateMotion
                     dur="3s"
                     repeatCount="indefinite"

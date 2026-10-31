@@ -2,8 +2,8 @@
   position: relative;
   padding: 6.5rem 0;
   background-color: var(--color-primary);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
   overflow: hidden;
 }
 
@@ -11,10 +11,10 @@
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 15% 25%, rgba(20, 43, 69, 0.6) 0%, transparent 60%),
-    radial-gradient(circle at 85% 75%, rgba(20, 43, 69, 0.6) 0%, transparent 60%),
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 15% 25%, var(--color-surface-hover) 0%, transparent 60%),
+    radial-gradient(circle at 85% 75%, var(--color-surface-hover) 0%, transparent 60%),
+    linear-gradient(var(--color-glass-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-glass-subtle) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 72px 72px, 72px 72px;
   pointer-events: none;
 }
@@ -27,6 +27,6 @@
   width: 1200px;
   height: 600px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-glass-subtle);
   pointer-events: none;
 }

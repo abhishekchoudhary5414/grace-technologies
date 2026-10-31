@@ -222,7 +222,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
               {/* Bottom Stream Wave Bar */}
               <div className={styles.aiWaveBar}>
-                <span style={{ fontSize: '0.45rem', color: 'rgba(255,255,255,0.7)' }}>Pipeline</span>
+                <span style={{ fontSize: '0.45rem', color: 'var(--color-text-secondary)' }}>Pipeline</span>
                 <div className={styles.waveIndicator} />
                 <span style={{ fontSize: '0.45rem', color: 'var(--color-accent)' }}>Active</span>
               </div>
@@ -238,7 +238,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               <div className={styles.mktHeader}>
                 <div>
                   <div className={styles.mktTitle}>Digital Growth</div>
-                  <div style={{ fontSize: '0.45rem', color: 'rgba(255,255,255,0.6)' }}>Real Results</div>
+                  <div style={{ fontSize: '0.45rem', color: 'var(--color-border-highlight)' }}>Real Results</div>
                 </div>
                 <div className={styles.mktCirclePill}>85%</div>
               </div>

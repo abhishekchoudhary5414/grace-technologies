@@ -122,7 +122,7 @@ export default function ClientWorkTabs({ workItems }: { workItems: ClientItem['w
                   <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-accent)', marginBottom: '0.35rem' }}>
                     Official Brand Identity Asset
                   </h3>
-                  <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)' }}>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary)' }}>
                     Vectorized master symbol, corporate stationery palette, and digital brand governance guide.
                   </p>
                 </div>

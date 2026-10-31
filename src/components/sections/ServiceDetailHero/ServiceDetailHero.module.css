@@ -7,15 +7,15 @@
   padding-bottom: 5rem;
   background-color: var(--color-primary);
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .gridOverlay {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(20, 43, 69, 0.35) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(20, 43, 69, 0.35) 1px, transparent 1px);
+    linear-gradient(to right, var(--color-surface) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-surface) 1px, transparent 1px);
   background-size: 70px 70px;
   pointer-events: none;
 }
@@ -27,7 +27,7 @@
   transform: translate(-50%, -50%);
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(20, 43, 69, 0.6) 0%, transparent 65%);
+  background: radial-gradient(circle, var(--color-surface-hover) 0%, transparent 65%);
   filter: blur(90px);
   pointer-events: none;
 }
@@ -73,7 +73,7 @@
   color: var(--color-accent);
   padding: 0.35rem 0.875rem;
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-full);
 }
 
@@ -83,7 +83,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-border-highlight);
 }
 
 .headline {
@@ -98,7 +98,7 @@
 .description {
   font-size: clamp(1rem, 1.6vw, 1.18rem);
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-secondary);
   margin-bottom: 2.25rem;
   max-width: 640px;
 }

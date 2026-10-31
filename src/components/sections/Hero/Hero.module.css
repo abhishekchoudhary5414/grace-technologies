@@ -14,8 +14,8 @@
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(20, 43, 69, 0.4) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(20, 43, 69, 0.4) 1px, transparent 1px);
+    linear-gradient(to right, var(--color-surface) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-surface) 1px, transparent 1px);
   background-size: 80px 80px;
   mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
@@ -29,7 +29,7 @@
   transform: translate(-50%, -50%);
   width: 900px;
   height: 900px;
-  background: radial-gradient(circle, rgba(20, 43, 69, 0.6) 0%, transparent 65%);
+  background: radial-gradient(circle, var(--color-surface-hover) 0%, transparent 65%);
   filter: blur(100px);
   pointer-events: none;
 }
@@ -70,7 +70,7 @@
   gap: 0.625rem;
   padding: 0.375rem 0.875rem;
   background-color: var(--color-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-full);
   margin-bottom: 1.5rem;
   align-self: flex-start;
@@ -81,7 +81,7 @@
   height: 6px;
   border-radius: 50%;
   background-color: var(--color-accent);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 8px var(--color-text-primary);
 }
 
 .badgeText {
@@ -105,14 +105,14 @@
 .highlightText {
   color: var(--color-accent);
   text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.3);
+  text-decoration-color: var(--color-text-dim);
   text-underline-offset: 8px;
 }
 
 .supportingText {
   font-size: clamp(1rem, 1.4vw, 1.15rem);
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.76);
+  color: var(--color-text-secondary);
   margin-bottom: 2.25rem;
   max-width: 540px;
 }
@@ -130,7 +130,7 @@
   align-items: center;
   gap: 1.5rem;
   padding-top: 1.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-glass-medium);
   flex-wrap: wrap;
 }
 
@@ -149,14 +149,14 @@
 
 .metricLabel {
   font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
   letter-spacing: 0.02em;
 }
 
 .metricDivider {
   width: 1px;
   height: 28px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-glass-medium);
 }
 
 /* Scroll indicator */
@@ -168,7 +168,7 @@
   align-items: center;
   gap: 0.75rem;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
   transition: color var(--transition-fast);
   outline: none;
 }
@@ -188,7 +188,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
