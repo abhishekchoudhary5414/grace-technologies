@@ -49,7 +49,7 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
                 <span className={styles.dot} />
                 <span className={styles.dot} />
               </div>
-              <span className={styles.browserUrl}>gracetechnologies.uk/platform</span>
+              <span className={styles.browserUrl}>www.gracetechnologies.uk</span>
               <div className={styles.liveTag}>PRODUCTION</div>
             </div>
 
