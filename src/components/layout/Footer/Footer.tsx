@@ -146,11 +146,6 @@ export default function Footer() {
                   Terms & Conditions
                 </Link>
               </li>
-              <li>
-                <Link href="/admin/login" className={styles.adminPortalLink}>
-                  Staff / Admin Login →
-                </Link>
-              </li>
             </ul>
           </div>
 
