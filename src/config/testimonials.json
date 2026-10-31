@@ -18,7 +18,7 @@
       "company": "Meridian Retail Group",
       "location": "Edinburgh, UK",
       "rating": 5,
-      "service": "Merchant Account Management",
+      "service": "Account Management",
       "avatarInitial": "ES",
       "content": "Managing over 4,500 active SKUs across cross-border channels was a headache before partnering with Grace Technologies. Their merchant account setup and catalog taxonomy synchronization went live with zero downtime."
     },
@@ -62,7 +62,7 @@
       "company": "Beacon Global Trade",
       "location": "Birmingham, UK",
       "rating": 5,
-      "service": "Merchant Account Management",
+      "service": "Account Management",
       "avatarInitial": "CB",
       "content": "Their proactive management of our merchant gateways and multi-currency processing enabled seamless expansion into European and North American marketplaces without transactional bottlenecks."
     }

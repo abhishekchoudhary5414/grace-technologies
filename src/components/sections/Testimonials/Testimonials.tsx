@@ -107,7 +107,6 @@ export default function Testimonials() {
       onMouseLeave={() => setIsPaused(false)}
       aria-label="Client Testimonials and Reviews"
     >
-      <div className={styles.backgroundDecor} />
 
       <Container size="wide">
         <SectionHeading

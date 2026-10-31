@@ -47,8 +47,7 @@ export default function HomePage() {
       {/* SECTION 7 – UK–INDIA PARTNERSHIP */}
       <PartnershipSection />
 
-      {/* SECTION 8 – INDUSTRIES WE SUPPORT */}
-      <Industries />
+
 
       {/* SECTION 9 – CLIENT TESTIMONIALS (INFINITE 3-CARD CAROUSEL) */}
       <Testimonials />
