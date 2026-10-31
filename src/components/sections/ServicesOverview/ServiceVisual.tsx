@@ -24,6 +24,11 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import BoltIcon from '@mui/icons-material/Bolt';
 import TerminalIcon from '@mui/icons-material/Terminal';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import AdsClickIcon from '@mui/icons-material/AdsClick';
+import PublicIcon from '@mui/icons-material/Public';
 import styles from './ServiceVisual.module.css';
 
 interface ServiceVisualProps {
@@ -381,32 +386,126 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
       return (
         <div className={styles.visualContainer}>
           <div className={styles.ambientGlow} />
-          {/* Performance Dashboard */}
-          <div className={styles.marketingCanvas}>
-            <div className={styles.dashHeader}>
-              <div className={styles.dashTitle}>
-                <BarChartIcon fontSize="small" />
-                <span>Conversion Velocity</span>
+
+          {/* Omnichannel Marketing Ad Command Deck */}
+          <div className={styles.mktCommandDeck}>
+            {/* Header: Ad Performance & ROAS Status */}
+            <div className={styles.mktHeader}>
+              <div className={styles.mktTitleBox}>
+                <div className={styles.mktLivePulse} />
+                <div>
+                  <span className={styles.mktHeading}>OMNICHANNEL AD ACCELERATOR</span>
+                  <span className={styles.mktSubHeading}>Multi-Network Campaign Engine Active</span>
+                </div>
               </div>
-              <div className={styles.growthBadge}>
-                <TrendingUpIcon fontSize="inherit" />
-                <span>+340% ROAS</span>
+              <div className={styles.mktRoasBadge}>
+                <TrendingUpIcon sx={{ fontSize: 13 }} />
+                <span>+340% Blended ROAS</span>
               </div>
             </div>
 
-            <div className={styles.chartArea}>
-              <div className={styles.chartBarsGroup}>
-                <div className={`${styles.cBar} ${styles.cb1}`}><span className={styles.barLabel}>SEO</span></div>
-                <div className={`${styles.cBar} ${styles.cb2}`}><span className={styles.barLabel}>PPC</span></div>
-                <div className={`${styles.cBar} ${styles.cb3}`}><span className={styles.barLabel}>CRO</span></div>
-                <div className={`${styles.cBar} ${styles.cb4}`}><span className={styles.barLabel}>GEO</span></div>
-                <div className={`${styles.cBar} ${styles.cb5}`}><span className={styles.barLabel}>PIPE</span></div>
+            {/* Central Animated Omnichannel Platform Grid */}
+            <div className={styles.channelBadgeRow}>
+              {/* Meta (Facebook + Instagram) */}
+              <div className={`${styles.channelCard} ${styles.chanMeta}`}>
+                <div className={styles.chanIconWrapper}>
+                  <svg className={styles.metaSvg} viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+                  </svg>
+                </div>
+                <div className={styles.chanInfo}>
+                  <span className={styles.chanName}>Meta Ads</span>
+                  <span className={styles.chanMetric}>ROAS 4.8x</span>
+                </div>
+                <span className={styles.chanActivePing} />
+              </div>
+
+              {/* Instagram */}
+              <div className={`${styles.channelCard} ${styles.chanInstagram}`}>
+                <div className={styles.chanIconWrapper}>
+                  <InstagramIcon sx={{ fontSize: 17 }} />
+                </div>
+                <div className={styles.chanInfo}>
+                  <span className={styles.chanName}>Instagram</span>
+                  <span className={styles.chanMetric}>248k Reach</span>
+                </div>
+                <span className={styles.chanActivePing} />
+              </div>
+
+              {/* YouTube */}
+              <div className={`${styles.channelCard} ${styles.chanYoutube}`}>
+                <div className={styles.chanIconWrapper}>
+                  <YouTubeIcon sx={{ fontSize: 18 }} />
+                </div>
+                <div className={styles.chanInfo}>
+                  <span className={styles.chanName}>YouTube</span>
+                  <span className={styles.chanMetric}>78% VTR</span>
+                </div>
+                <span className={styles.chanActivePing} />
+              </div>
+
+              {/* Google AdSense / Google Ads */}
+              <div className={`${styles.channelCard} ${styles.chanAdsense}`}>
+                <div className={styles.chanIconWrapper}>
+                  <AdsClickIcon sx={{ fontSize: 17 }} />
+                </div>
+                <div className={styles.chanInfo}>
+                  <span className={styles.chanName}>Google Ads</span>
+                  <span className={styles.chanMetric}>12.4k Clicks</span>
+                </div>
+                <span className={styles.chanActivePing} />
               </div>
             </div>
 
-            <div className={styles.campaignPill}>
-              <CampaignIcon fontSize="small" />
-              <span>Targeted Pipeline Acquisition Active</span>
+            {/* Live Real-Time Conversion & Wave Chart */}
+            <div className={styles.mktChartCard}>
+              <div className={styles.mktChartHeader}>
+                <div className={styles.mktChartTitleGroup}>
+                  <BarChartIcon sx={{ fontSize: 15, color: 'var(--color-blue)' }} />
+                  <span>Real-Time Ingestion: Meta, Google, YouTube & Adsense</span>
+                </div>
+                <span className={styles.mktLiveBadge}>● LIVE STREAM</span>
+              </div>
+
+              {/* Animated Growth Bars */}
+              <div className={styles.dynamicWaveGrid}>
+                <div className={styles.mktBarCol}>
+                  <div className={`${styles.animatedBar} ${styles.barMeta}`} />
+                  <span className={styles.barColLabel}>Meta</span>
+                </div>
+                <div className={styles.mktBarCol}>
+                  <div className={`${styles.animatedBar} ${styles.barInsta}`} />
+                  <span className={styles.barColLabel}>Insta</span>
+                </div>
+                <div className={styles.mktBarCol}>
+                  <div className={`${styles.animatedBar} ${styles.barYt}`} />
+                  <span className={styles.barColLabel}>YouTube</span>
+                </div>
+                <div className={styles.mktBarCol}>
+                  <div className={`${styles.animatedBar} ${styles.barGoogle}`} />
+                  <span className={styles.barColLabel}>Google</span>
+                </div>
+                <div className={styles.mktBarCol}>
+                  <div className={`${styles.animatedBar} ${styles.barAdsense}`} />
+                  <span className={styles.barColLabel}>AdSense</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Campaign Optimization Footer */}
+            <div className={styles.mktFooterStrip}>
+              <div className={styles.mktFootItem}>
+                <CampaignIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                <span>Pixel & CAPI Synced</span>
+              </div>
+              <div className={styles.mktFootItem}>
+                <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                <span>Cross-Channel Attribution</span>
+              </div>
+              <div className={styles.mktFootItem}>
+                <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                <span>AI Creative Optimization</span>
+              </div>
             </div>
           </div>
         </div>
