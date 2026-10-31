@@ -272,10 +272,49 @@ export default function ClientWorkTabs({ workItems }: { workItems: ClientItem['w
                         </div>
                         <div className={styles.logoSpecItem}>
                           <span className={styles.specLabel}>Color Model</span>
-                          <span className={styles.specVal}>CMYK + RGB RGB</span>
+                          <span className={styles.specVal}>CMYK + RGB</span>
                         </div>
                         <span className={styles.logoExpandHint}>
                           <ZoomInIcon fontSize="small" /> View Master Mark
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Visiting Card Visual Stage */}
+                  {isVisitingCard && work.images && work.images.length > 0 && (
+                    <div
+                      className={styles.visitingCardStageFrame}
+                      onClick={() =>
+                        openPreview(work.title, 'Business Stationery & Card', work.images![0], 'visitingCard')
+                      }
+                      title="Click to view business card"
+                    >
+                      <div className={styles.visitingCardStageCard}>
+                        <Image
+                          src={work.images[0]}
+                          alt={`${work.title} Business Card`}
+                          width={600}
+                          height={380}
+                          className={styles.visitingCardStageImg}
+                          priority
+                        />
+                        <div className={styles.visualOverlayHint}>
+                          <ZoomInIcon />
+                          <span>Click to Expand Stationery</span>
+                        </div>
+                      </div>
+                      <div className={styles.logoStageFooter}>
+                        <div className={styles.logoSpecItem}>
+                          <span className={styles.specLabel}>Dimension Spec</span>
+                          <span className={styles.specVal}>3.5" x 2.0" Standard</span>
+                        </div>
+                        <div className={styles.logoSpecItem}>
+                          <span className={styles.specLabel}>Print Production</span>
+                          <span className={styles.specVal}>350 GSM Matte Finish</span>
+                        </div>
+                        <span className={styles.logoExpandHint}>
+                          <ZoomInIcon fontSize="small" /> Zoom Card
                         </span>
                       </div>
                     </div>
