@@ -18,6 +18,7 @@ export interface ProjectItem {
   presentationUrl?: string;
   clientSlug?: string;
   workType?: 'website' | 'logo' | 'visitingCard' | 'profile' | 'letterhead';
+  websiteUrl?: string;
 }
 
 // All project records are loaded directly from src/config/projects.json

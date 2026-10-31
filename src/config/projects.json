@@ -21,7 +21,8 @@
       "visualType": "client",
       "workType": "website",
       "logo": "/clients/rehas/logo.png",
-      "image": "/clients/rehas/website.png"
+      "image": "/clients/rehas/website.png",
+      "websiteUrl": "https://rehas.in"
     },
     {
       "id": "sah-constructions-website",
@@ -44,7 +45,8 @@
       "visualType": "client",
       "workType": "website",
       "logo": "/clients/sah-constructions/logo.png",
-      "image": "/clients/sah-constructions/website.png"
+      "image": "/clients/sah-constructions/website.png",
+      "websiteUrl": "https://www.sahconstructions.com"
     },
     {
       "id": "aprajita-strategics-website",
@@ -67,7 +69,8 @@
       "visualType": "client",
       "workType": "website",
       "logo": "/clients/aprajita-strategics/logo.png",
-      "image": "/clients/aprajita-strategics/website.png"
+      "image": "/clients/aprajita-strategics/website.png",
+      "websiteUrl": "https://aprajitastrategics.com"
     },
     {
       "id": "rehas-brand-identity",

@@ -1,18 +1,19 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
-import LanguageIcon from '@mui/icons-material/Language';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
 import { ProjectItem } from '@/data/projects';
 import { openEnquiryModal } from '@/utils/modal';
+import MediaPreviewModal from './MediaPreviewModal';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -21,12 +22,28 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const { title, category, summary, visualType, slug, clientSlug, logo, image, workType } = project;
+  const { title, category, summary, visualType, clientSlug, logo, image, workType, websiteUrl } = project;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const targetLink = clientSlug ? `/client/${clientSlug}` : `/projects`;
+  // Determine media asset for popup modal
+  const previewAsset = image || logo || '';
+
+  // Determine action type:
+  // 1. If it's a website project with an external URL -> Open external website in new tab
+  // 2. If it's a logo or visiting card with an image/logo -> Open asset in modal popup
+  // 3. If it has a client slug -> Navigate to client case study page
+  const isWebsite = workType === 'website' && Boolean(websiteUrl);
+  const isPopupMedia = (workType === 'logo' || workType === 'visitingCard') && Boolean(previewAsset);
+
+  const handlePrimaryClick = (e: React.MouseEvent) => {
+    if (isPopupMedia) {
+      e.preventDefault();
+      setIsModalOpen(true);
+    }
+  };
 
   const renderVisualMockup = () => {
-    // If it's a real client project with an image or logo
+    // Client projects
     if (visualType === 'client') {
       if (workType === 'website' && image) {
         return (
@@ -36,14 +53,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <span className={styles.browserDot} />
                 <span className={styles.browserDot} />
                 <span className={styles.browserDot} />
+                <span className={styles.browserUrlText}>{websiteUrl || 'https://client-portal.com'}</span>
               </div>
               <div className={styles.laptopScreenImage}>
                 <Image
                   src={image}
                   alt={`${title} Preview`}
-                  width={600}
-                  height={380}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className={styles.clientPreviewImg}
+                  priority={index < 3}
                 />
               </div>
             </div>
@@ -53,15 +72,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
       if (workType === 'visitingCard' && image) {
         return (
-          <div className={styles.mockupContainer}>
+          <div className={styles.mockupContainer} onClick={() => setIsModalOpen(true)}>
             <div className={styles.visitingCardFrame}>
               <Image
                 src={image}
                 alt={`${title} Stationery`}
-                width={500}
-                height={300}
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
                 className={styles.visitingCardImg}
               />
+              <div className={styles.zoomHoverBadge}>
+                <ZoomInIcon sx={{ fontSize: '1.1rem' }} />
+                <span>Click to Expand</span>
+              </div>
             </div>
           </div>
         );
@@ -93,16 +116,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       // Default logo / branding
       if (logo || image) {
         return (
-          <div className={styles.mockupContainer}>
+          <div className={styles.mockupContainer} onClick={() => setIsModalOpen(true)}>
             <div className={styles.logoBoxWrapper}>
               <div className={styles.logoBoxInner}>
                 <Image
                   src={image || logo || ''}
                   alt={`${project.client} Brand Identity`}
-                  width={80}
-                  height={80}
+                  width={96}
+                  height={96}
                   className={styles.logoBoxImg}
                 />
+              </div>
+              <div className={styles.zoomHoverBadge}>
+                <ZoomInIcon sx={{ fontSize: '1.1rem' }} />
+                <span>View Logo</span>
               </div>
             </div>
           </div>
@@ -264,80 +291,106 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   };
 
   return (
-    <motion.div
-      className={styles.card}
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-30px' }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-    >
-      {/* Corner Bracket Tech Accents */}
-      <span className={styles.bracketTL} />
-      <span className={styles.bracketBR} />
+    <>
+      <motion.div
+        className={styles.card}
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-30px' }}
+        transition={{ duration: 0.5, delay: index * 0.08 }}
+      >
+        {/* Corner Bracket Tech Accents */}
+        <span className={styles.bracketTL} />
+        <span className={styles.bracketBR} />
 
-      {/* Visual Preview Graphic */}
-      <div className={styles.previewArea}>
-        <div className={styles.previewGlow} />
-        {project.location && (
-          <span className={styles.previewLocationBadge}>{project.location}</span>
-        )}
-        {renderVisualMockup()}
-      </div>
-
-      {/* Card Information */}
-      <div className={styles.cardContent}>
-        <div>
-          <div className={styles.categoryRow}>
-            <span className={styles.categoryLabel}>{category}</span>
-            {workType && (
-              <span className={styles.workTypeTag}>
-                {workType === 'visitingCard' ? 'Visiting Card' : workType}
-              </span>
-            )}
-          </div>
-          <h3 className={styles.projectTitle}>{title}</h3>
-          <p className={styles.projectDescription}>{summary}</p>
+        {/* Visual Preview Graphic */}
+        <div className={styles.previewArea}>
+          <div className={styles.previewGlow} />
+          {project.location && (
+            <span className={styles.previewLocationBadge}>{project.location}</span>
+          )}
+          {renderVisualMockup()}
         </div>
 
-        {/* Action Row */}
-        <div className={styles.cardActionRow}>
-          {clientSlug ? (
-            <>
-              <Link href={targetLink} className={styles.primaryAction}>
-                <span>View</span>
-                <ArrowForwardIcon />
-              </Link>
+        {/* Card Information */}
+        <div className={styles.cardContent}>
+          <div>
+            <div className={styles.categoryRow}>
+              <span className={styles.categoryLabel}>{category}</span>
+              {workType && (
+                <span className={styles.workTypeTag}>
+                  {workType === 'visitingCard' ? 'Visiting Card' : workType}
+                </span>
+              )}
+            </div>
+            <h3 className={styles.projectTitle}>{title}</h3>
+            <p className={styles.projectDescription}>{summary}</p>
+          </div>
+
+          {/* Action Row */}
+          <div className={styles.cardActionRow}>
+            {/* Primary Action Button */}
+            {isWebsite && websiteUrl ? (
+              <a
+                href={websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.primaryAction}
+                aria-label={`Open ${title} live website in new tab`}
+              >
+                <span>Website</span>
+                <OpenInNewIcon fontSize="small" />
+              </a>
+            ) : isPopupMedia ? (
               <button
                 type="button"
-                className={styles.secondaryAction}
-                onClick={() => openEnquiryModal(category)}
-                aria-label={`Let’s talk about ${title}`}
+                className={styles.primaryAction}
+                onClick={handlePrimaryClick}
+                aria-label={`Preview ${title} asset popup`}
               >
-                Let&apos;s Talk
+                <span>View {workType === 'logo' ? 'Logo' : 'Card'}</span>
+                <ZoomInIcon fontSize="small" />
               </button>
-            </>
-          ) : (
-            <>
+            ) : clientSlug ? (
+              <Link href={`/client/${clientSlug}`} className={styles.primaryAction}>
+                <span>View Case Study</span>
+                <ArrowForwardIcon fontSize="small" />
+              </Link>
+            ) : (
               <button
                 type="button"
                 className={styles.primaryAction}
                 onClick={() => openEnquiryModal(category)}
               >
                 <span>View Project</span>
-                <ArrowForwardIcon />
+                <ArrowForwardIcon fontSize="small" />
               </button>
-              <button
-                type="button"
-                className={styles.secondaryAction}
-                onClick={() => openEnquiryModal(category)}
-                aria-label={`Let’s talk about ${title}`}
-              >
-                Let&apos;s Talk
-              </button>
-            </>
-          )}
+            )}
+
+            {/* Secondary Action Button */}
+            <button
+              type="button"
+              className={styles.secondaryAction}
+              onClick={() => openEnquiryModal(category)}
+              aria-label={`Let’s talk about ${title}`}
+            >
+              Let&apos;s Talk
+            </button>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+
+      {/* High-Resolution Media Popup Modal */}
+      {previewAsset && (
+        <MediaPreviewModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title={title}
+          category={category}
+          imageSrc={previewAsset}
+          type={workType === 'logo' ? 'logo' : 'image'}
+        />
+      )}
+    </>
   );
 }
