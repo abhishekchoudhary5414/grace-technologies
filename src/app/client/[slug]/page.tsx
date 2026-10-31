@@ -4,9 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import LaunchIcon from '@mui/icons-material/Launch';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import BusinessIcon from '@mui/icons-material/Business';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import VerifiedIcon from '@mui/icons-material/Verified';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
@@ -41,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${client.name} - ${client.project} | Grace Technologies`,
+    title: `${client.name} - ${client.project} | Grace Technologies Case Study`,
     description: client.testimonial,
   };
 }
@@ -75,9 +79,14 @@ async function ClientDetailContent({ params }: Props) {
     .slice(0, 2)
     .join('');
 
+  // Find live website deliverable if available
+  const websiteDeliverable = client.workDone?.find((item) => item.type === 'website');
+
   return (
     <div className={styles.page}>
+      {/* Ambient background architectural grid */}
       <div className={styles.heroDecor} />
+      <div className={styles.ambientGlowSpot} />
 
       <Breadcrumb
         items={[
@@ -89,55 +98,127 @@ async function ClientDetailContent({ params }: Props) {
       />
 
       <Container size="wide">
-        <header className={styles.clientHero}>
-          <div className={styles.heroLeft}>
-            <div className={styles.tagRow}>
-              <span className={styles.badge}>{client.category}</span>
-              <span className={styles.locationTag}>{client.location}</span>
-            </div>
-            <h1 className={styles.clientTitle}>{client.name}</h1>
-            <p className={styles.projectSubtitle}>{client.project}</p>
-            <p className={styles.clientSummary}>{client.summary}</p>
-          </div>
+        {/* Modernized Case Study Hero Section */}
+        <header className={styles.clientHeroBanner}>
+          <div className={styles.heroContentGrid}>
+            {/* Left Column: Client Identity & Executive Narrative */}
+            <div className={styles.heroInfoCol}>
+              <div className={styles.badgeRow}>
+                <span className={styles.categoryBadge}>{client.category}</span>
+                <span className={styles.verifiedTag}>
+                  <VerifiedIcon sx={{ fontSize: '0.85rem', color: 'var(--color-blue)' }} />
+                  Verified Case Study
+                </span>
+              </div>
 
-          <div className={styles.heroRight}>
-            <div className={styles.heroLogoBox}>
-              {client.logo ? (
-                <Image
-                  src={client.logo}
-                  alt={`${client.name} Logo`}
-                  width={100}
-                  height={100}
-                  className={styles.heroLogoImg}
-                />
-              ) : (
-                <div className={styles.heroLogoPlaceholder}>{initials}</div>
-              )}
+              <h1 className={styles.clientMainTitle}>{client.name}</h1>
+              <p className={styles.projectSubtitle}>{client.project}</p>
+              <p className={styles.clientSummaryParagraph}>{client.summary}</p>
+
+              {/* Quick Meta Stats / Attributes */}
+              <div className={styles.metaSpecsGrid}>
+                <div className={styles.metaSpecCard}>
+                  <LocationOnIcon className={styles.metaSpecIcon} />
+                  <div>
+                    <span className={styles.metaSpecLabel}>Region / Scope</span>
+                    <span className={styles.metaSpecVal}>{client.location}</span>
+                  </div>
+                </div>
+
+                <div className={styles.metaSpecCard}>
+                  <BusinessIcon className={styles.metaSpecIcon} />
+                  <div>
+                    <span className={styles.metaSpecLabel}>Industry Domain</span>
+                    <span className={styles.metaSpecVal}>{client.category.split(',')[0]}</span>
+                  </div>
+                </div>
+
+                <div className={styles.metaSpecCard}>
+                  <CalendarMonthIcon className={styles.metaSpecIcon} />
+                  <div>
+                    <span className={styles.metaSpecLabel}>Delivery Period</span>
+                    <span className={styles.metaSpecVal}>Q1 2026 Production</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Actions */}
+              <div className={styles.heroActionRow}>
+                {websiteDeliverable?.url && (
+                  <a
+                    href={websiteDeliverable.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.heroPrimaryBtn}
+                  >
+                    <span>Launch Production Website</span>
+                    <OpenInNewIcon fontSize="small" />
+                  </a>
+                )}
+                <Link href="/client" className={styles.heroBackLink}>
+                  <ArrowBackIcon fontSize="small" />
+                  <span>All Client Studies</span>
+                </Link>
+              </div>
             </div>
-            <Link href="/client" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-secondary)', fontSize: '0.875rem', textDecoration: 'none' }}>
-              <ArrowBackIcon fontSize="small" /> Back to All Clients
-            </Link>
+
+            {/* Right Column: Hero Visual Monogram / Brand Emblem Card */}
+            <div className={styles.heroBrandCardCol}>
+              <div className={styles.brandGlassContainer}>
+                <div className={styles.brandLogoFrame}>
+                  {client.logo ? (
+                    <Image
+                      src={client.logo}
+                      alt={`${client.name} Brand Mark`}
+                      width={160}
+                      height={160}
+                      className={styles.heroLogoImg}
+                      priority
+                    />
+                  ) : (
+                    <div className={styles.heroLogoPlaceholder}>{initials}</div>
+                  )}
+                </div>
+
+                <div className={styles.brandCardFooter}>
+                  <span className={styles.brandCardClientName}>{client.name}</span>
+                  <span className={styles.brandCardTypeBadge}>Enterprise Technical Partner</span>
+                </div>
+              </div>
+            </div>
           </div>
         </header>
 
+        {/* Executive Endorsement Testimonial */}
         {client.testimonial && (
-          <section className={styles.testimonialSection} aria-label="Client Feedback">
-            <div className={styles.quoteHeader}>
-              <FormatQuoteIcon sx={{ color: 'var(--color-accent)', fontSize: '1.75rem', transform: 'rotate(180deg)' }} />
-              <span className={styles.quoteLabel}>Executive Endorsement</span>
+          <section className={styles.executiveTestimonialCard} aria-label="Client Feedback">
+            <div className={styles.quoteDecorativeIcon}>
+              <FormatQuoteIcon sx={{ fontSize: '3rem', color: 'var(--color-blue)', opacity: 0.35 }} />
             </div>
-            <blockquote className={styles.quoteText}>
-              &ldquo;{client.testimonial}&rdquo;
-            </blockquote>
-            <p className={styles.quoteAuthor}>— Leadership Team, {client.name}</p>
+            <div className={styles.quoteBody}>
+              <span className={styles.quotePill}>Executive Endorsement</span>
+              <blockquote className={styles.quoteText}>
+                &ldquo;{client.testimonial}&rdquo;
+              </blockquote>
+              <div className={styles.quoteAuthorRow}>
+                <div className={styles.authorAvatarCircle}>
+                  <span>{initials}</span>
+                </div>
+                <div>
+                  <span className={styles.authorName}>Executive Leadership</span>
+                  <span className={styles.authorRole}>{client.name}</span>
+                </div>
+              </div>
+            </div>
           </section>
         )}
 
+        {/* Deliverables Section with Modern Tabs & Media Preview */}
         <section className={styles.workSection}>
           <SectionHeading
-            label="PROJECT DELIVERABLES"
-            title="Scope of Work & Technical Execution."
-            description={`Comprehensive breakdown of solutions, digital assets, and brand infrastructure engineered for ${client.name}.`}
+            label="TECHNICAL EXECUTION"
+            title="Scope of Work & Architectural Deliverables."
+            description={`Detailed breakdown of technical solutions, branding systems, and digital infrastructure engineered for ${client.name}.`}
             align="left"
           />
 
@@ -145,9 +226,10 @@ async function ClientDetailContent({ params }: Props) {
         </section>
       </Container>
 
+      {/* Conversion CTA */}
       <ServiceCTASection
-        title={`Ready to Deliver Similar Results for Your Business?`}
-        description="Speak directly with our UK–India delivery architects to evaluate your technical scope, branding identity, and timeline."
+        title={`Scale Your Engineering & Digital Architecture with Grace Technologies`}
+        description="Schedule a technical roadmap discussion with our lead engineering architects to evaluate your digital platform requirements."
         primaryCtaText="Consult With Our Architects"
         secondaryCtaText="Explore All Projects"
         secondaryCtaHref="/projects"
