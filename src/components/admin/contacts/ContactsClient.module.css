@@ -60,7 +60,7 @@
 }
 
 .searchInput::placeholder {
-  color: var(--color-border-active);
+  color: var(--color-text-muted);
 }
 
 .filterGroup {
@@ -170,7 +170,7 @@
 
 .emailLink {
   font-size: 12px;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   text-decoration: none;
 }
 
@@ -185,7 +185,7 @@
 
 .phoneText {
   font-size: 12px;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
 }
 
 .serviceBadge {
@@ -261,7 +261,7 @@
   border-radius: 6px;
   background: var(--color-glass-subtle);
   border: 1px solid var(--color-glass-medium);
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -339,7 +339,7 @@
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
 }
 
 .pageSizeSelect select {
@@ -390,7 +390,7 @@
 .emptyCell {
   text-align: center;
   padding: 40px;
-  color: var(--color-border-active);
+  color: var(--color-text-muted);
   font-size: 13px;
 }
 

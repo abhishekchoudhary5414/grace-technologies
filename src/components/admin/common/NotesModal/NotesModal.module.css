@@ -42,7 +42,7 @@
 .closeBtn {
   background: transparent;
   border: none;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   cursor: pointer;
   display: flex;
   align-items: center;

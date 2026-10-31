@@ -148,7 +148,7 @@
 
 .satelliteDisc:hover .labelPlate,
 .activeDisc .labelPlate {
-  border-color: var(--color-border-active);
+  border-color: var(--color-text-muted);
   background: var(--color-secondary);
   box-shadow: var(--shadow-md), var(--shadow-glow-sm);
 }

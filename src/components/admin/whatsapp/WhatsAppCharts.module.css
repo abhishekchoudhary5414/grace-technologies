@@ -96,7 +96,7 @@
 }
 
 .legendLabel {
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
 }
 
 .legendValue {

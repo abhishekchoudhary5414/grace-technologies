@@ -37,7 +37,7 @@
 
 .activeBtn {
   color: var(--color-accent) !important;
-  border-color: var(--color-border-active) !important;
+  border-color: var(--color-text-muted) !important;
   font-weight: 600;
 }
 

@@ -280,7 +280,7 @@
 }
 
 .separator {
-  color: var(--color-border-medium);
+  color: var(--color-text-subtle);
   font-size: 0.75rem;
 }
 

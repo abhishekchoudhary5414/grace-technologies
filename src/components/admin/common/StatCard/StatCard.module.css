@@ -29,7 +29,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   margin-bottom: 0.35rem;
 }
 

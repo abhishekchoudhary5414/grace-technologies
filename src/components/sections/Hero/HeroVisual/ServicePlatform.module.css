@@ -494,7 +494,7 @@
 
 .platformSubtitle {
   font-size: 0.68rem;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   line-height: 1.2;
 }
 

@@ -13,6 +13,18 @@
   --color-black: rgb(var(--color-black-rgb));
 
   /* ----------------------------------------------------
+     GLOBE PALETTE & VISUAL SYSTEM TOKENS
+     ---------------------------------------------------- */
+  --color-globe-core: var(--color-primary);
+  --color-globe-secondary: var(--color-secondary);
+  --color-globe-accent: var(--color-accent);
+  --color-globe-corona: var(--color-secondary);
+  --color-globe-atmosphere: var(--color-surface);
+  --color-globe-rim: var(--color-border-highlight);
+  --color-globe-grid: var(--color-glass-subtle);
+  --color-globe-ring-glow: var(--color-border-active);
+
+  /* ----------------------------------------------------
      TYPOGRAPHY & TEXT
      ---------------------------------------------------- */
   --color-text-main: var(--color-accent);

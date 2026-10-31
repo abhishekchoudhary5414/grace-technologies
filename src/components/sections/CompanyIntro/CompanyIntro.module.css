@@ -149,7 +149,7 @@
 
 .valDesc {
   font-size: 0.8125rem;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   line-height: 1.5;
 }
 

@@ -15,7 +15,7 @@
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: var(--color-border-active);
+  border-color: var(--color-text-muted);
   background-color: var(--color-surface-strong);
   box-shadow: 
     0 20px 45px var(--color-overlay-medium),
@@ -157,7 +157,7 @@
 
 .schoolHeroSub {
   font-size: 0.5rem;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   margin-top: 2px;
 }
 
@@ -183,7 +183,7 @@
   flex: 1;
   height: 22px;
   border-radius: 3px;
-  background-color: var(--color-border-subtle);
+  background-color: var(--color-text-dim);
   border: 1px solid var(--color-glass-medium);
 }
 
@@ -217,7 +217,7 @@
 .phoneLine {
   height: 2.5px;
   border-radius: 2px;
-  background-color: var(--color-border-active);
+  background-color: var(--color-text-muted);
 }
 
 .previewLocationBadge {
@@ -373,7 +373,7 @@
 .dashTag {
   font-size: 0.4375rem;
   color: var(--color-accent);
-  background-color: var(--color-border-soft);
+  background-color: var(--color-text-dim);
   padding: 1px 4px;
   border-radius: 3px;
 }
@@ -581,7 +581,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   margin-bottom: 0.5rem;
 }
 
@@ -637,7 +637,7 @@
   padding: 0.75rem 1rem;
   background: linear-gradient(135deg, var(--color-border-soft), var(--color-glass-subtle));
   color: var(--color-accent);
-  border-color: var(--color-border-soft);
+  border-color: var(--color-text-dim);
 }
 
 .primaryAction svg {
@@ -656,7 +656,7 @@
   padding: 0.75rem 1rem;
   background: transparent;
   color: var(--color-accent);
-  border-color: var(--color-border-medium);
+  border-color: var(--color-text-subtle);
 }
 
 .primaryAction:hover,

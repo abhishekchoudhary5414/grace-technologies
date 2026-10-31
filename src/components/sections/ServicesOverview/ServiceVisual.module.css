@@ -67,7 +67,7 @@
   margin-left: auto;
   font-family: var(--font-heading);
   font-size: 0.68rem;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
 }
 
 .liveTag {
@@ -289,7 +289,7 @@
 
 .storeStatus {
   font-size: 0.62rem;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   display: block;
 }
 

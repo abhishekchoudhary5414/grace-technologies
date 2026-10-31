@@ -32,7 +32,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
 }
 
 .title {

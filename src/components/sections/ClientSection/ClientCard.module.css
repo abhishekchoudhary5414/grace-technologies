@@ -15,7 +15,7 @@
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: var(--color-border-active);
+  border-color: var(--color-text-muted);
   background-color: var(--color-surface-strong);
   box-shadow: 
     0 20px 45px var(--color-overlay-medium),
@@ -133,7 +133,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   margin-bottom: 0.4rem;
 }
 

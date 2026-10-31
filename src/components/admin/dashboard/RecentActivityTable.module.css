@@ -50,7 +50,7 @@
 .viewLink:hover {
   background: var(--color-glass-medium);
   color: var(--color-accent);
-  border-color: var(--color-border-medium);
+  border-color: var(--color-text-subtle);
 }
 
 .tableContainer {
@@ -148,6 +148,6 @@
   padding: 40px 20px;
   text-align: center;
   font-size: 13px;
-  color: var(--color-border-active);
+  color: var(--color-text-muted);
 }
 

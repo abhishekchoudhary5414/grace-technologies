@@ -21,7 +21,7 @@
 }
 
 .confirmed {
-  background-color: var(--color-border-soft);
+  background-color: var(--color-text-dim);
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
@@ -33,14 +33,14 @@
 }
 
 .resolved {
-  background-color: var(--color-border-medium);
+  background-color: var(--color-text-subtle);
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
 
 .spam {
   background-color: var(--color-panel-dark);
-  border-color: var(--color-border-medium);
+  border-color: var(--color-text-subtle);
   color: var(--color-text-muted);
 }
 

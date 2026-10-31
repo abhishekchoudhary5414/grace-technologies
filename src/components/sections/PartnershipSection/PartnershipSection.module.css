@@ -148,7 +148,7 @@
 
 .entityRole {
   font-size: 0.875rem;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--color-border-subtle);
@@ -234,7 +234,7 @@
   font-family: var(--font-heading);
   font-size: 0.5rem;
   letter-spacing: 0.2em;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   margin-top: 2px;
 }
 
@@ -254,7 +254,7 @@
 .disclaimerText {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
   margin-bottom: 1.75rem;
   max-width: 800px;
 }

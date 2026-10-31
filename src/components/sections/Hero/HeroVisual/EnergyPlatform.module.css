@@ -80,7 +80,7 @@
   width: 480px;
   height: 480px;
   border-width: 1px;
-  border-color: var(--color-border-medium);
+  border-color: var(--color-text-subtle);
   box-shadow: 0 0 25px var(--color-surface-strong), inset 0 0 25px var(--color-surface-strong);
   animation: platformSpinSlow 60s linear infinite;
 }

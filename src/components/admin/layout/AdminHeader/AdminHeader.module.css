@@ -54,7 +54,7 @@
 
 .dateDisplay {
   font-size: 0.8125rem;
-  color: var(--color-border-highlight);
+  color: var(--color-text-secondary);
 }
 
 .userProfile {
