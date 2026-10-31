@@ -623,105 +623,454 @@
   color: var(--color-accent);
 }
 
-/* 03: AI Automation Visual */
-.aiCanvas {
+/* 03: AI Automation Visual - Animated Autonomous AI Bot */
+.aiBotStage {
   width: 100%;
   max-width: 440px;
+  background: var(--color-panel-dark);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   z-index: 2;
-  gap: 16px;
+  box-shadow: 0 20px 45px var(--color-overlay-heavy), 0 0 30px var(--color-border-soft);
+  overflow: hidden;
 }
 
-.chipCoreWrapper {
+.aiHeaderPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  font-size: 0.62rem;
+  margin-bottom: 20px;
+}
+
+.aiStatusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  box-shadow: 0 0 8px var(--color-blue);
+  animation: pulseAiStatus 2s infinite ease-in-out;
+}
+
+@keyframes pulseAiStatus {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+.aiStatusText {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-text-main);
+}
+
+.aiLatencyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-blue);
+  font-weight: 700;
+  border-left: 1px solid var(--color-border-subtle);
+  padding-left: 8px;
+}
+
+/* Futuristic Bot Container */
+.botContainer {
   position: relative;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, var(--color-secondary) 0%, var(--color-primary) 100%);
-  border: 2px solid var(--color-border-active);
-  border-radius: 12px;
+  width: 100%;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 35px var(--color-border-soft), inset 0 0 20px var(--color-border-medium);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.chipCores {
+.auraRingOuter {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px dashed rgba(59, 130, 246, 0.25);
+  animation: spinOuterRing 20s linear infinite;
+  pointer-events: none;
+}
+
+.auraRingInner {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.12);
+  pointer-events: none;
+}
+
+@keyframes spinOuterRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bot Chassis Assembly */
+.botChassis {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  color: var(--color-accent);
+  animation: floatBotBob 3.5s ease-in-out infinite alternate;
+  z-index: 3;
 }
 
-.aiProcessorIcon {
-  font-size: 2.5rem;
+@keyframes floatBotBob {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+.botAntenna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.antennaTip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  box-shadow: 0 0 10px var(--color-blue);
+  animation: antennaGlow 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes antennaGlow {
+  0% {
+    box-shadow: 0 0 5px var(--color-blue);
+  }
+  100% {
+    box-shadow: 0 0 15px var(--color-blue), 0 0 25px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.antennaBeam {
+  width: 2px;
+  height: 10px;
+  background: var(--color-border-active);
+}
+
+.botHead {
+  position: relative;
+  width: 74px;
+  height: 52px;
+  background: linear-gradient(145deg, var(--color-surface-hover), var(--color-panel-dark));
+  border: 2px solid var(--color-border-strong);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px var(--color-overlay-heavy);
+}
+
+.earNode {
+  position: absolute;
+  width: 6px;
+  height: 14px;
+  border-radius: 3px;
+  background: var(--color-blue);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.earLeft {
+  left: -5px;
+}
+
+.earRight {
+  right: -5px;
+}
+
+.botVisor {
+  position: relative;
+  width: 54px;
+  height: 28px;
+  background: #000000;
+  border-radius: 12px;
+  border: 1px solid var(--color-border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.9);
+}
+
+.botEye {
+  width: 10px;
+  height: 12px;
+  background: var(--color-blue);
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 10px var(--color-blue);
+  animation: eyeBlink 4s infinite ease-in-out;
+}
+
+.eyeGleam {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 3px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes eyeBlink {
+  0%, 45%, 55%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+}
+
+.visorScanLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.7), transparent);
+  animation: scanVisor 2.4s ease-in-out infinite;
+}
+
+@keyframes scanVisor {
+  0% {
+    top: -2px;
+  }
+  100% {
+    top: 28px;
+  }
+}
+
+.botTorso {
+  width: 48px;
+  height: 36px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 8px 8px 14px 14px;
+  margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  position: relative;
+}
+
+.coreReactor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-blue) 0%, rgba(59, 130, 246, 0.2) 100%);
+  border: 1px solid var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--color-blue);
+}
+
+.coreSparkle {
+  animation: spinSparkle 4s linear infinite;
+}
+
+@keyframes spinSparkle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circuitLines {
+  display: flex;
+  gap: 8px;
+}
+
+.cLine {
+  width: 10px;
+  height: 2px;
+  background: var(--color-border-active);
+  border-radius: 1px;
+}
+
+.botThrusterGlow {
+  width: 26px;
+  height: 10px;
+  background: radial-gradient(ellipse at top, var(--color-blue) 0%, transparent 70%);
+  filter: blur(3px);
+  margin-top: 2px;
+  animation: thrusterPulse 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes thrusterPulse {
+  0% {
+    opacity: 0.5;
+    transform: scaleX(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1.3);
+  }
+}
+
+/* Thought Speech Bubble */
+.botSpeechBubble {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  box-shadow: 0 8px 20px var(--color-overlay-heavy);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 4;
+  animation: bubbleSlightBob 3s ease-in-out infinite alternate;
+}
+
+@keyframes bubbleSlightBob {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+.speechHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.speechCode {
+  font-family: monospace;
+  font-size: 0.6rem;
+  color: var(--color-text-main);
+  background: var(--color-panel-dark);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* Satellite Chips */
+.satelliteChip {
+  position: absolute;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 8px 18px var(--color-overlay-heavy);
+  z-index: 4;
+}
+
+.satelliteLeft {
+  left: 6px;
+  bottom: 24px;
+  animation: leftChipFloat 4s ease-in-out infinite alternate;
+}
+
+@keyframes leftChipFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.satelliteRight {
+  right: 6px;
+  bottom: 24px;
+  animation: rightChipFloat 3.8s ease-in-out infinite alternate;
+}
+
+@keyframes rightChipFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.chipMeta {
+  display: flex;
+  flex-direction: column;
 }
 
 .chipTitle {
   font-family: var(--font-heading);
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-text-main);
 }
 
-.chipPin {
-  position: absolute;
-  background-image: repeating-linear-gradient(90deg, var(--color-border-active), var(--color-border-active) 3px, transparent 3px, transparent 8px);
+.chipVal {
+  font-size: 0.52rem;
+  color: var(--color-text-secondary);
 }
 
-.pinTop {
-  top: -8px;
-  left: 15px;
-  right: 15px;
-  height: 8px;
-}
-
-.pinBottom {
-  bottom: -8px;
-  left: 15px;
-  right: 15px;
-  height: 8px;
-}
-
-.pinLeft {
-  left: -8px;
-  top: 15px;
-  bottom: 15px;
-  width: 8px;
-  background-image: repeating-linear-gradient(0deg, var(--color-border-active), var(--color-border-active) 3px, transparent 3px, transparent 8px);
-}
-
-.pinRight {
-  right: -8px;
-  top: 15px;
-  bottom: 15px;
-  width: 8px;
-  background-image: repeating-linear-gradient(0deg, var(--color-border-active), var(--color-border-active) 3px, transparent 3px, transparent 8px);
-}
-
-.nodeBox {
+/* Capability Bottom Strip */
+.aiCapabilityStrip {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: var(--color-panel-dark);
-  border: 1px solid var(--color-border-medium);
-  border-radius: var(--radius-full);
-  padding: 8px 16px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--color-accent);
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 10px;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.pulseDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  box-shadow: 0 0 8px var(--color-accent);
+.capItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
 }
 
 /* 04: Digital Marketing Visual */

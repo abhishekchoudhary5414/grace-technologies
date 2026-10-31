@@ -19,6 +19,11 @@ import MemoryIcon from '@mui/icons-material/Memory';
 import HubIcon from '@mui/icons-material/Hub';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CampaignIcon from '@mui/icons-material/Campaign';
+import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
+import BoltIcon from '@mui/icons-material/Bolt';
+import TerminalIcon from '@mui/icons-material/Terminal';
 import styles from './ServiceVisual.module.css';
 
 interface ServiceVisualProps {
@@ -264,31 +269,109 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
       return (
         <div className={styles.visualContainer}>
           <div className={styles.ambientGlow} />
-          {/* Central Neural Chip & Automation Nodes */}
-          <div className={styles.aiCanvas}>
-            <div className={styles.chipCoreWrapper}>
-              <div className={styles.chipCores}>
-                <MemoryIcon className={styles.aiProcessorIcon} />
-                <span className={styles.chipTitle}>NEURAL ENGINE</span>
-              </div>
-              <div className={`${styles.chipPin} ${styles.pinTop}`} />
-              <div className={`${styles.chipPin} ${styles.pinBottom}`} />
-              <div className={`${styles.chipPin} ${styles.pinLeft}`} />
-              <div className={`${styles.chipPin} ${styles.pinRight}`} />
+
+          {/* AI Autonomous Bot & Neural Automation Stage */}
+          <div className={styles.aiBotStage}>
+            {/* Top Status Capsule */}
+            <div className={styles.aiHeaderPill}>
+              <div className={styles.aiStatusDot} />
+              <span className={styles.aiStatusText}>AUTONOMOUS AGENT ACTIVE</span>
+              <span className={styles.aiLatencyBadge}>
+                <BoltIcon sx={{ fontSize: 12 }} /> 4ms Response
+              </span>
             </div>
 
-            {/* Floating Pipeline Processors */}
-            <div className={`${styles.nodeBox} ${styles.node1}`}>
-              <HubIcon fontSize="inherit" />
-              <span>Multi-modal Ingestion</span>
+            {/* Futuristic Animated AI Bot Character */}
+            <div className={styles.botContainer}>
+              {/* Floating Holographic Aura Rings */}
+              <div className={styles.auraRingOuter} />
+              <div className={styles.auraRingInner} />
+
+              {/* Bot Body Chassis */}
+              <div className={styles.botChassis}>
+                {/* Bot Head Antennas */}
+                <div className={styles.botAntenna}>
+                  <div className={styles.antennaBeam} />
+                  <div className={styles.antennaTip} />
+                </div>
+
+                {/* Bot Head Display */}
+                <div className={styles.botHead}>
+                  {/* Visor Screen with Animated Glowing Eyes */}
+                  <div className={styles.botVisor}>
+                    <div className={styles.botEye}>
+                      <span className={styles.eyeGleam} />
+                    </div>
+                    <div className={styles.botEye}>
+                      <span className={styles.eyeGleam} />
+                    </div>
+                    {/* Scanning Beam Sweep */}
+                    <div className={styles.visorScanLine} />
+                  </div>
+                  {/* Neural Ear Nodes */}
+                  <span className={`${styles.earNode} ${styles.earLeft}`} />
+                  <span className={`${styles.earNode} ${styles.earRight}`} />
+                </div>
+
+                {/* Bot Torso & Core Processor */}
+                <div className={styles.botTorso}>
+                  <div className={styles.coreReactor}>
+                    <AutoAwesomeIcon sx={{ fontSize: 16 }} className={styles.coreSparkle} />
+                  </div>
+                  <div className={styles.circuitLines}>
+                    <span className={styles.cLine} />
+                    <span className={styles.cLine} />
+                  </div>
+                </div>
+
+                {/* Bot Floating Repulsor Thruster Base */}
+                <div className={styles.botThrusterGlow} />
+              </div>
+
+              {/* Floating Thought / Reasoning Bubble */}
+              <div className={styles.botSpeechBubble}>
+                <div className={styles.speechHeader}>
+                  <PsychologyOutlinedIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                  <span>Agent Reasoning</span>
+                </div>
+                <div className={styles.speechCode}>
+                  <code>&gt; Analyzing workflow... 100% automated</code>
+                </div>
+              </div>
+
+              {/* Satellite Node 1: Multi-modal Pipeline */}
+              <div className={`${styles.satelliteChip} ${styles.satelliteLeft}`}>
+                <TerminalIcon sx={{ fontSize: 14, color: 'var(--color-blue)' }} />
+                <div className={styles.chipMeta}>
+                  <span className={styles.chipTitle}>Self-Learning</span>
+                  <span className={styles.chipVal}>Zero Human Loop</span>
+                </div>
+              </div>
+
+              {/* Satellite Node 2: Real-time Execution */}
+              <div className={`${styles.satelliteChip} ${styles.satelliteRight}`}>
+                <SmartToyOutlinedIcon sx={{ fontSize: 14, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                <div className={styles.chipMeta}>
+                  <span className={styles.chipTitle}>24/7 Execution</span>
+                  <span className={styles.chipVal}>99.98% Precision</span>
+                </div>
+              </div>
             </div>
-            <div className={`${styles.nodeBox} ${styles.node2}`}>
-              <CheckCircleIcon fontSize="inherit" />
-              <span>Agentic Reasoning</span>
-            </div>
-            <div className={`${styles.nodeBox} ${styles.node3}`}>
-              <span className={styles.pulseDot} />
-              <span>Zero-Data-Retention</span>
+
+            {/* Bottom Capability Footer Strip */}
+            <div className={styles.aiCapabilityStrip}>
+              <div className={styles.capItem}>
+                <CheckCircleIcon sx={{ fontSize: 12, color: 'var(--color-blue)' }} />
+                <span>Autonomous LLM Agents</span>
+              </div>
+              <div className={styles.capItem}>
+                <CheckCircleIcon sx={{ fontSize: 12, color: 'var(--color-blue)' }} />
+                <span>Enterprise API Tool-Use</span>
+              </div>
+              <div className={styles.capItem}>
+                <CheckCircleIcon sx={{ fontSize: 12, color: 'var(--color-blue)' }} />
+                <span>Self-Healing Workflows</span>
+              </div>
             </div>
           </div>
         </div>
