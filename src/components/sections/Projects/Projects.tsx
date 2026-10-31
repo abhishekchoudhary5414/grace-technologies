@@ -48,7 +48,7 @@ export default function Projects({ initialProjects = PROJECTS_DATA }: ProjectsPr
         <ProjectCarousel projects={filteredProjects} />
 
         {/* Bottom Refined Information Strip */}
-        <ProjectStats />
+        {/* <ProjectStats /> */}
       </Container>
     </section>
   );

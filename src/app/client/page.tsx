@@ -47,9 +47,9 @@ export default function ClientsIndexPage() {
             ))}
           </div>
 
-          <div className={styles.statsWrapper}>
+          {/* <div className={styles.statsWrapper}>
             <ProjectStats />
-          </div>
+          </div> */}
         </Container>
       </section>
 

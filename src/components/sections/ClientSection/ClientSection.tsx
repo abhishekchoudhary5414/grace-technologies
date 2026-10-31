@@ -48,7 +48,7 @@ export default function ClientSection({
         <ClientCarousel clients={clients} />
 
         {/* Bottom Refined Information Strip */}
-        <ProjectStats />
+        {/* <ProjectStats /> */}
       </Container>
     </section>
   );

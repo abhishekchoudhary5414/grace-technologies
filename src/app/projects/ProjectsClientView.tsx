@@ -42,9 +42,9 @@ export default function ProjectsClientView({ initialProjects }: ProjectsClientVi
       </div>
 
       {/* Trust & Delivery Pillars Strip */}
-      <div className={styles.statsWrapper}>
+      {/* <div className={styles.statsWrapper}>
         <ProjectStats />
-      </div>
+      </div> */}
     </Container>
   );
 }
