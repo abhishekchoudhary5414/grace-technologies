@@ -30,8 +30,8 @@ export default function CompanyIntro() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Beyond Technology. <br />
-              <span className={styles.accentText}>Building What&apos;s Next.</span>
+              More Than Technology. <br />
+              <span className={styles.accentText}>Your Partner in Growth.</span>
             </motion.h2>
 
             <motion.p
@@ -41,7 +41,7 @@ export default function CompanyIntro() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Grace Technologies combines digital expertise, business understanding, and technical innovation to help ambitious companies solve complex operational challenges.
+              Grace TechnoloGrace Technologies brings together technology and business expertise to help companies grow and succeed. We provide website and mobile app development, digital marketing, AI automation, merchant account management, and IT solutions to simplify business operations and support long-term growth.gies combines digital expertise, business understanding, and technical innovation to help ambitious companies solve complex operational challenges.
             </motion.p>
 
             <motion.div
@@ -74,31 +74,29 @@ export default function CompanyIntro() {
               </div>
 
               <div className={styles.cardContent}>
-                <h3 className={styles.cardHeading}>Engineered for Measurable Commercial Impact</h3>
+                <h3 className={styles.cardHeading}>Technology That Delivers Real Results.</h3>
                 <p className={styles.cardText}>
-                  Rather than treating software development as an isolated commodity, we integrate enterprise engineering disciplines with commercial strategy. Every project is planned in the United Kingdom and developed through our high-calibre technical delivery hub at Ank Square Private Limited, India.
-                </p>
-
+                  At Grace Technologies, we combine strategic business insight with technical excellence to deliver solutions that create lasting value. From software and mobile application development to AI automation and digital services, every project is strategically managed in the United Kingdom and executed by our dedicated technology delivery partner, Ank Square Private Limited, India. This approach enables us to deliver scalable, efficient, and high-quality solutions aligned with our clients' business objectives.                </p>
                 <div className={styles.valuesList}>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <h4 className={styles.valTitle}>Strategic Clarity</h4>
-                      <p className={styles.valDesc}>Aligning technical architecture directly to commercial outcomes.</p>
+                      <h4 className={styles.valTitle}>Strategic Business Alignment</h4>
+                      <p className={styles.valDesc}>Connecting technology decisions with business goals to deliver meaningful results.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <h4 className={styles.valTitle}>Bespoke Engineering</h4>
-                      <p className={styles.valDesc}>Zero generic templates. Modular, maintainable TypeScript systems.</p>
+                      <h4 className={styles.valTitle}>Tailored Technology Solutions</h4>
+                      <p className={styles.valDesc}>Developing custom, scalable, and maintainable solutions designed around your business needs.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <h4 className={styles.valTitle}>Transparent Delivery</h4>
-                      <p className={styles.valDesc}>Collaborative milestones, agile governance, and accountable support.</p>
+                      <h4 className={styles.valTitle}>Reliable Project Delivery</h4>
+                      <p className={styles.valDesc}>Ensuring transparent communication, structured project management, timely delivery, and ongoing support.</p>
                     </div>
                   </div>
                 </div>

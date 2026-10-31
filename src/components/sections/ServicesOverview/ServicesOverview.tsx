@@ -16,8 +16,8 @@ export default function ServicesOverview() {
       <Container size="wide">
         <SectionHeading
           label="CORE CAPABILITIES"
-          title="Four Capabilities. One Vision for Growth."
-          description="A cohesive portfolio of digital engineering, payment operations, intelligent automation and market visibility tailored for forward-thinking enterprises."
+          title="Integrated Solutions. A Unified Vision for Growth."
+          description="Integrated technology and business solutions that simplify operations, strengthen digital presence, and drive sustainable business growth."
           align="center"
         />
 

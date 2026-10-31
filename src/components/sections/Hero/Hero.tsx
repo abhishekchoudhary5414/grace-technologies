@@ -48,8 +48,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
             >
-              We help ambitious businesses grow through seamless digital experiences, intelligent automation, secure payment solutions, and strategic technology services.            </motion.p>
-
+              We provide smart technology solutions, including software development, AI automation, digital marketing, merchant account management, and IT consulting to help businesses grow and succeed.            </motion.p>
             <motion.div
               className={styles.actions}
               initial={{ opacity: 0, y: 20 }}
