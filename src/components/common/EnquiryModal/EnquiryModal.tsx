@@ -185,7 +185,7 @@ export default function EnquiryModal() {
                     {...register('serviceType')}
                   >
                     <option value="Website Development">Website Development</option>
-                    <option value="Merchant Account Management">Merchant Account Management & Listing</option>
+                    <option value="Merchant Account Management">Merchant Account Management.</option>
                     <option value="AI Automation">AI Automation</option>
                     <option value="Digital Marketing">Digital Marketing</option>
                     <option value="Other Consultation">Other Strategic Advisory</option>
@@ -262,7 +262,7 @@ export default function EnquiryModal() {
 
                 <div className={styles.privacyNote}>
                   <ShieldOutlinedIcon fontSize="inherit" />
-                  <span>Your privacy is our priority.</span>
+                  <span>Your privacy is our priority. We do not spam.</span>
                 </div>
               </form>
             )}
