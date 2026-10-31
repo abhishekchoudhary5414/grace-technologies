@@ -9,6 +9,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import HubIcon from '@mui/icons-material/Hub';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { UkFlag, IndiaFlag } from '@/components/common/Flags/CountryFlags';
 import officesData from '@/config/offices.json';
 import styles from './PartnershipSection.module.css';
 import Logo from '../../../../public/logo/logo.png';
@@ -43,7 +44,7 @@ export default function PartnershipSection() {
           >
             <div className={styles.cardTopRow}>
               <div className={styles.partnerBadge}>
-                <LanguageIcon fontSize="small" />
+                <UkFlag className={styles.flagIcon} width={22} height={14} />
                 <span>{uk.country}</span>
               </div>
               <a
@@ -124,7 +125,7 @@ export default function PartnershipSection() {
           >
             <div className={styles.cardTopRow}>
               <div className={styles.partnerBadge}>
-                <HubIcon fontSize="small" />
+                <IndiaFlag className={styles.flagIcon} width={22} height={14} />
                 <span>{india.country}</span>
               </div>
               <a

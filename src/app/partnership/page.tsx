@@ -13,6 +13,7 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import { UkFlag, IndiaFlag } from '@/components/common/Flags/CountryFlags';
 import officesData from '@/config/offices.json';
 import styles from './partnership.module.css';
 import Logo from "../../../public/logo/logo.png"
@@ -57,8 +58,8 @@ export default function PartnershipPage() {
             {/* Grace Technologies UK */}
             <div className={styles.profileCard}>
               <div className={styles.profileHeader}>
-                <div className={styles.profileIconWrap}>
-                  <LanguageIcon />
+                <div className={styles.profileIconWrap} title="United Kingdom">
+                  <UkFlag className={styles.flagSvg} width={44} height={28} />
                 </div>
                 <div>
                   <span className={styles.profileCountry}>{uk.country}</span>
@@ -126,8 +127,8 @@ export default function PartnershipPage() {
             {/* Ank Square India */}
             <div className={styles.profileCard}>
               <div className={styles.profileHeader}>
-                <div className={styles.profileIconWrap}>
-                  <HubIcon />
+                <div className={styles.profileIconWrap} title="India">
+                  <IndiaFlag className={styles.flagSvg} width={44} height={28} />
                 </div>
                 <div>
                   <span className={styles.profileCountry}>{india.country}</span>
