@@ -9,8 +9,7 @@ import MarkEmailReadOutlinedIcon from '@mui/icons-material/MarkEmailReadOutlined
 import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from './AdminSidebar.module.css';
 
@@ -27,6 +26,11 @@ const navItems = [
     href: '/admin/dashboard',
     icon: <DashboardOutlinedIcon fontSize="small" />,
   },
+    {
+    label: 'WhatsApp Dashboard',
+    href: '/admin/whatsapp',
+    icon: <WhatsAppIcon fontSize="small" />,
+  },
   {
     label: 'Enquiry Dashboard',
     href: '/admin/enquiries',
@@ -36,11 +40,6 @@ const navItems = [
     label: 'Contact Dashboard',
     href: '/admin/contacts',
     icon: <ContactMailOutlinedIcon fontSize="small" />,
-  },
-  {
-    label: 'WhatsApp Dashboard',
-    href: '/admin/whatsapp',
-    icon: <WhatsAppIcon fontSize="small" />,
   },
 ];
 
@@ -112,10 +111,10 @@ export default function AdminSidebar({
             aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
             {isCollapsed ? (
-              <ChevronRightIcon sx={{ fontSize: 18 }} />
+              <MenuIcon sx={{ fontSize: 18 }} />
             ) : (
               <>
-                <ChevronLeftIcon sx={{ fontSize: 18 }} />
+                <CloseIcon sx={{ fontSize: 18 }} />
                 <span className={styles.collapseToggleText}>Collapse View</span>
               </>
             )}
