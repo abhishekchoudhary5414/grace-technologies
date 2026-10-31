@@ -262,7 +262,7 @@ export default function EnquiryModal() {
 
                 <div className={styles.privacyNote}>
                   <ShieldOutlinedIcon fontSize="inherit" />
-                  <span>No Spam.</span>
+                  <span>Your privacy is our priority.</span>
                 </div>
               </form>
             )}

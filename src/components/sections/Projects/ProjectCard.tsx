@@ -304,7 +304,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           {clientSlug ? (
             <>
               <Link href={targetLink} className={styles.primaryAction}>
-                <span>View Details</span>
+                <span>View</span>
                 <ArrowForwardIcon />
               </Link>
               <button

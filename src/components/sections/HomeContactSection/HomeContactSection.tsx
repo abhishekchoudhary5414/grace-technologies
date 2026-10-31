@@ -38,7 +38,7 @@ export default function HomeContactSection() {
                 </div>
                 <div>
                   <h4 className={styles.benefitTitle}>Direct Senior Leadership Access</h4>
-                  <p className={styles.benefitDesc}>Consult directly with strategic advisors based in the United Kingdom.</p>
+                  <p className={styles.benefitDesc}>Consult directly with strategic advisors based in the UK.</p>
                 </div>
               </div>
 
@@ -58,7 +58,8 @@ export default function HomeContactSection() {
                 </div>
                 <div>
                   <h4 className={styles.benefitTitle}>Prompt Technical Evaluation</h4>
-                  <p className={styles.benefitDesc}>Comprehensive response and feasibility review within 24 business hours.</p>
+                  <p className={styles.benefitDesc}>Receive a comprehensive response and feasibility review within 24
+                    business hours.</p>
                 </div>
               </div>
             </div>

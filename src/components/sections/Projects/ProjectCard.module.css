@@ -86,7 +86,6 @@
 .laptopFrame {
   width: 82%;
   height: 82%;
-  background-color: var(--color-card-dark);
   border: 1px solid var(--color-border-medium);
   border-radius: 8px 8px 3px 3px;
   display: flex;
@@ -193,7 +192,6 @@
   bottom: 8%;
   width: 45px;
   height: 75px;
-  background-color: var(--color-card-deep);
   border: 1.5px solid var(--color-text-subtle);
   border-radius: 7px;
   box-shadow: 0 8px 20px var(--color-overlay-deep);
@@ -275,7 +273,7 @@
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
   background: var(--color-surface);
-  color: var(--color-card-copy);
+  color: var(--color-primary);
   font-size: 0.45rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -295,7 +293,7 @@
 }
 
 .profileDocTitle {
-  color: var(--color-card-copy);
+  color: var(--color-primary);
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -346,7 +344,6 @@
 .merchantDashboard {
   width: 90%;
   height: 85%;
-  background-color: var(--color-card-dark);
   border: 1px solid var(--color-border-medium);
   border-radius: 8px;
   padding: 0.65rem;
@@ -400,7 +397,6 @@
   width: 95px;
   height: 58px;
   border-radius: 6px;
-  background: linear-gradient(135deg, rgba(var(--color-secondary-rgb), 0.95), rgba(var(--color-primary-rgb), 0.9));
   border: 1px solid var(--color-text-subtle);
   box-shadow: 0 10px 25px var(--color-overlay-deep);
   padding: 5px;
@@ -506,7 +502,6 @@
 .marketingCanvas {
   width: 86%;
   height: 82%;
-  background-color: var(--color-card-dark);
   border: 1px solid var(--color-border-medium);
   border-radius: 8px;
   box-shadow: 0 10px 30px var(--color-overlay-heavy);

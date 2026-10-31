@@ -15,6 +15,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import officesData from '@/config/offices.json';
 import styles from './partnership.module.css';
+import Logo from "../../../public/logo/logo.png"
 
 export const metadata: Metadata = {
   title: 'UK–India Strategic Partnership | Grace Technologies & Ank Square',
@@ -77,7 +78,7 @@ export default function PartnershipPage() {
               {/* Official Logo Banner */}
               <div className={styles.logoBox}>
                 <Image
-                  src="/logo/logo.png"
+                  src={Logo}
                   alt="Grace Technologies Official Logo"
                   width={160}
                   height={48}

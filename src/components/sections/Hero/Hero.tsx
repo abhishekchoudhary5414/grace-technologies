@@ -48,8 +48,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
             >
-              Empowering ambitious businesses through digital experiences, intelligent automation, payment solutions and strategic technology services.
-            </motion.p>
+              We help ambitious businesses grow through seamless digital experiences, intelligent automation, secure payment solutions, and strategic technology services.            </motion.p>
 
             <motion.div
               className={styles.actions}
@@ -65,7 +64,7 @@ export default function Hero() {
                 size="lg"
                 onClick={() => openEnquiryModal()}
               >
-                Let&apos;s Talk
+                Book a Free Consultation
               </Button>
             </motion.div>
 
@@ -105,7 +104,7 @@ export default function Hero() {
           </div>
         </div>
 
-      
+
       </Container>
     </section>
   );

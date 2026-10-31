@@ -11,6 +11,8 @@ import {
 import Container from '@/components/common/Container/Container';
 import officesData from '@/config/offices.json';
 import styles from './Footer.module.css';
+import Logo from '../../../../public/logo/logo.png';
+
 
 export default function Footer() {
   const currentYear = 2026;
@@ -31,7 +33,7 @@ export default function Footer() {
             <Link href="/" className={styles.logoLink}>
               <div className={styles.logoMark}>
                 <Image
-                  src="/logo/logo.png"
+                  src={Logo}
                   alt="Grace Technologies Logo"
                   width={38}
                   height={38}

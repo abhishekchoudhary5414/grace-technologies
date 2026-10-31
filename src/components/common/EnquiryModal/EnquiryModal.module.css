@@ -11,9 +11,14 @@
 .backdrop {
   position: absolute;
   inset: 0;
-  background-color: var(--color-panel-dark);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.22),
+      rgba(255, 255, 255, 0.06));
+  background-color: rgba(23, 43, 61, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
 }
 
 .modalCard {
@@ -24,10 +29,6 @@
   border: 1px solid var(--color-border-medium);
   border-radius: var(--radius-lg);
   padding: clamp(1.75rem, 4vw, 2.5rem);
-  box-shadow: 
-    0 25px 60px var(--color-overlay-heavy),
-    0 0 40px var(--color-surface-strong),
-    inset 0 1px 1px var(--color-border-strong);
   z-index: 2001;
   overflow: hidden;
 }
@@ -302,4 +303,3 @@
     gap: 0.75rem;
   }
 }
-

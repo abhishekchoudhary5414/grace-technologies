@@ -1,103 +1,93 @@
 :root {
+
   /* ----------------------------------------------------
-     BASE 3-COLOR SYSTEM
-     ---------------------------------------------------- */
-  --color-primary-rgb: 8, 13, 25;
-  --color-secondary-rgb: 20, 43, 69;
-  --color-accent-rgb: 255, 255, 255;
-  --color-black-rgb: 0, 0, 0;
+   BASE 3-COLOR SYSTEM
+---------------------------------------------------- */
+  --color-primary-rgb: 255, 255, 255;
+  --color-secondary-rgb: 234, 244, 252;
+  --color-accent-rgb: 36, 124, 193;
+  --color-black-rgb: 23, 43, 61;
 
   --color-primary: rgb(var(--color-primary-rgb));
   --color-secondary: rgb(var(--color-secondary-rgb));
   --color-accent: rgb(var(--color-accent-rgb));
   --color-black: rgb(var(--color-black-rgb));
 
-  /* ----------------------------------------------------
-     GLOBE PALETTE & VISUAL SYSTEM TOKENS
-     ---------------------------------------------------- */
-  --color-globe-core: var(--color-primary);
-  --color-globe-secondary: var(--color-secondary);
-  --color-globe-accent: var(--color-accent);
-  --color-globe-corona: var(--color-secondary);
-  --color-globe-atmosphere: var(--color-surface);
-  --color-globe-rim: var(--color-border-highlight);
-  --color-globe-grid: var(--color-glass-subtle);
-  --color-globe-ring-glow: var(--color-border-active);
+  /* Royal Blue Accents */
+  --color-blue: #247CC1;
+  --color-blue-light: #4A96D1;
+  --color-blue-dark: #185F98;
+
+  --color-indigo: #286FA8;
+  --color-indigo-light: #72B5E8;
+  --color-indigo-dark: #194F7C;
+
+  --color-lavender: #B9D9F2;
+  --color-lavender-light: #EAF4FC;
+  --color-lavender-dark: #8FC1E5;
 
   /* ----------------------------------------------------
-     TYPOGRAPHY & TEXT
-     ---------------------------------------------------- */
-  --color-text-main: var(--color-accent);
-  --color-text-primary: rgba(var(--color-accent-rgb), 0.9);
-  --color-text-secondary: rgba(var(--color-accent-rgb), 0.7);
-  --color-text-muted: rgba(var(--color-accent-rgb), 0.5);
-  --color-text-subtle: rgba(var(--color-accent-rgb), 0.35);
-  --color-text-dim: rgba(var(--color-accent-rgb), 0.2);
-
-  /* Preserved aliases for consistency */
-  --color-white-strong: var(--color-text-primary);
-  --color-white-soft: var(--color-text-secondary);
-  --color-white-muted: var(--color-text-muted);
-  --color-white-subtle: var(--color-text-subtle);
+   GLOBE PALETTE & VISUAL SYSTEM TOKENS
+---------------------------------------------------- */
+  --color-globe-core: #EAF4FC;
+  --color-globe-secondary: #247CC1;
+  --color-globe-accent: #FFFFFF;
+  --color-globe-corona: #72B5E8;
+  --color-globe-atmosphere: rgba(36, 124, 193, 0.16);
+  --color-globe-rim: rgba(36, 124, 193, 0.40);
+  --color-globe-grid: rgba(36, 124, 193, 0.12);
+  --color-globe-ring-glow: rgba(36, 124, 193, 0.25);
 
   /* ----------------------------------------------------
-     SURFACES & BACKGROUNDS
-     ---------------------------------------------------- */
-  --color-surface-subtle: rgba(var(--color-secondary-rgb), 0.2);
-  --color-surface: rgba(var(--color-secondary-rgb), 0.45);
-  --color-surface-hover: rgba(var(--color-secondary-rgb), 0.65);
-  --color-surface-strong: rgba(var(--color-secondary-rgb), 0.85);
+   TYPOGRAPHY & TEXT
+---------------------------------------------------- */
+  --color-text-primary: rgba(23, 43, 61, 0.96);
+  --color-text-secondary: rgba(47, 70, 91, 0.85);
+  --color-text-muted: rgba(75, 99, 119, 0.72);
+  --color-text-subtle: rgba(75, 99, 119, 0.48);
+  --color-text-dim: rgba(75, 99, 119, 0.30);
 
-  --color-panel-subtle: rgba(var(--color-primary-rgb), 0.3);
-  --color-panel: rgba(var(--color-primary-rgb), 0.7);
-  --color-panel-dark: rgba(var(--color-primary-rgb), 0.9);
-
-  --color-glass-subtle: rgba(var(--color-accent-rgb), 0.03);
-  --color-glass-light: rgba(var(--color-accent-rgb), 0.06);
-  --color-glass-medium: rgba(var(--color-accent-rgb), 0.1);
-
-  --color-card-dark: #0c1626;
-  --color-card-deep: #060912;
-  --color-card-copy: #1b2434;
-
-  --color-whatsapp-green: #25d366;
-  --color-whatsapp-green-strong: #1ebc59;
+  --color-white-soft: #F8FBFE;
+  --color-white-subtle: #E3EDF5;
 
   /* ----------------------------------------------------
-     BORDERS
-     ---------------------------------------------------- */
-  --color-border-subtle: rgba(var(--color-accent-rgb), 0.08);
-  --color-border-soft: rgba(var(--color-accent-rgb), 0.12);
-  --color-border-medium: rgba(var(--color-accent-rgb), 0.18);
-  --color-border-strong: rgba(var(--color-accent-rgb), 0.25);
-  --color-border-active: rgba(var(--color-accent-rgb), 0.4);
-  --color-border-highlight: rgba(var(--color-accent-rgb), 0.6);
-  --color-border-accent: var(--color-accent);
+   SURFACES & BACKGROUNDS
+---------------------------------------------------- */
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F5FAFE;
+  --color-surface-strong: #EAF4FC;
+
+  --color-panel-subtle: #F8FBFE;
+  --color-panel: #FFFFFF;
+  --color-panel-dark: #fff;
+  --color-surface-subtle: rgba(var(--color-primary-rgb), 0.5);
+  --color-glass-strong: rgba(0, 0, 0, 0.5);
+
+
+
+  --color-glass-subtle: rgba(255, 255, 255, 0.35);
+  --color-glass-light: rgba(255, 255, 255, 0.65);
+  --color-glass-medium: rgba(255, 255, 255, 0.85);
+
+  --color-whatsapp-green: #25D366;
 
   /* ----------------------------------------------------
-     OVERLAYS & SHADOWS
-     ---------------------------------------------------- */
-  --color-overlay-light: rgba(var(--color-black-rgb), 0.3);
-  --color-overlay-medium: rgba(var(--color-black-rgb), 0.6);
-  --color-overlay-heavy: rgba(var(--color-black-rgb), 0.8);
-  --color-overlay-deep: rgba(var(--color-black-rgb), 0.92);
+   BORDERS
+---------------------------------------------------- */
+  --color-border-subtle: rgba(36, 124, 193, 0.06);
+  --color-border-soft: rgba(36, 124, 193, 0.10);
+  --color-border-medium: rgba(36, 124, 193, 0.16);
+  --color-border-strong: rgba(36, 124, 193, 0.23);
+  --color-border-active: rgba(36, 124, 193, 0.50);
+  --color-border-highlight: rgba(74, 150, 209, 0.55);
 
-  --shadow-sm: 0 2px 8px var(--color-overlay-light);
-  --shadow-md: 0 4px 20px var(--color-overlay-medium);
-  --shadow-lg: 0 10px 30px var(--color-overlay-heavy);
-  --shadow-xl: 0 20px 50px var(--color-overlay-deep);
-  --shadow-modal: 0 25px 60px rgba(var(--color-black-rgb), 0.9), 0 0 40px rgba(var(--color-secondary-rgb), 0.4);
-
-  --shadow-glow-subtle: 0 0 15px rgba(var(--color-accent-rgb), 0.12);
-  --shadow-glow-sm: 0 0 15px rgba(var(--color-accent-rgb), 0.2);
-  --shadow-glow-md: 0 0 25px rgba(var(--color-accent-rgb), 0.35);
-  --shadow-glow-lg: 0 0 35px rgba(var(--color-accent-rgb), 0.5);
-  --shadow-secondary-glow: 0 0 30px rgba(var(--color-secondary-rgb), 0.7);
-
-  --color-shadow-dark: rgba(var(--color-primary-rgb), 0.9);
-  --color-shadow-deep: rgba(var(--color-primary-rgb), 0.95);
-  --color-shadow-glow: rgba(var(--color-accent-rgb), 0.18);
-
+  /* ----------------------------------------------------
+   OVERLAYS & SHADOWS
+---------------------------------------------------- */
+  --color-overlay-light: rgba(23, 43, 61, 0.04);
+  --color-overlay-medium: rgba(23, 43, 61, 0.08);
+  --color-overlay-heavy: rgba(23, 43, 61, 0.14);
+  --color-overlay-deep: rgba(23, 43, 61, 0.22);
   /* ----------------------------------------------------
      TYPOGRAPHY & LAYOUT SETTINGS
      ---------------------------------------------------- */
@@ -121,7 +111,9 @@
   --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -147,7 +139,12 @@ body {
   flex-direction: column;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--color-accent);
   font-weight: 700;
@@ -172,11 +169,13 @@ button {
   background: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -210,8 +209,8 @@ img, svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-whatsapp-green) 0%, var(--color-whatsapp-green-strong) 100%);
-  color: var(--color-accent);
+  background: var(--color-whatsapp-green);
+  color: var(--color-primary);
   box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
   z-index: 1200;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
@@ -231,7 +230,10 @@ img, svg {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

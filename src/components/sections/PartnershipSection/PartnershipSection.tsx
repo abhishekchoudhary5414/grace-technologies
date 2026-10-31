@@ -11,6 +11,8 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import officesData from '@/config/offices.json';
 import styles from './PartnershipSection.module.css';
+import Logo from '../../../../public/logo/logo.png';
+
 
 export default function PartnershipSection() {
   const { uk, india } = officesData.offices;
@@ -58,7 +60,7 @@ export default function PartnershipSection() {
             {/* Official Logo Banner */}
             <div className={styles.logoBanner}>
               <Image
-                src="/logo/logo.png"
+                src={Logo}
                 alt="Grace Technologies Official Logo"
                 width={160}
                 height={48}
