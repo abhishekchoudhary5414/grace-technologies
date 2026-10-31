@@ -7,12 +7,18 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
+import CurrencyPoundIcon from '@mui/icons-material/CurrencyPound';
+import ShowChartIcon from '@mui/icons-material/ShowChart';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import MemoryIcon from '@mui/icons-material/Memory';
 import HubIcon from '@mui/icons-material/Hub';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CampaignIcon from '@mui/icons-material/Campaign';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import styles from './ServiceVisual.module.css';
 
 interface ServiceVisualProps {
@@ -87,88 +93,168 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
       return (
         <div className={styles.visualContainer}>
           <div className={styles.ambientGlow} />
-          {/* Merchant Portal Dashboard Visual */}
-          <div className={styles.merchantPortalFrame}>
-            {/* Portal Navigation & Account Status */}
-            <div className={styles.portalHeader}>
-              <div className={styles.merchantStoreBrand}>
-                <StorefrontIcon fontSize="small" className={styles.storeIcon} />
-                <div>
-                  <span className={styles.storeName}>GLOBAL MERCHANT CONSOLE</span>
-                  <span className={styles.storeStatus}>Account ID: MC-892410 // ACTIVE</span>
-                </div>
+
+          {/* Realistic Merchant Laptop Stage */}
+          <div className={styles.laptopStage}>
+            {/* Laptop Screen Body */}
+            <div className={styles.laptopDisplay}>
+              {/* Laptop Camera & Bezel Top */}
+              <div className={styles.laptopBezelTop}>
+                <span className={styles.laptopWebcam} />
               </div>
-              <div className={styles.verifiedBadge}>
-                <VerifiedUserIcon fontSize="inherit" />
-                <span>KYC VERIFIED</span>
+
+              {/* Laptop Screen Viewport */}
+              <div className={styles.laptopScreenViewport}>
+                {/* Store Top Navigation Bar */}
+                <div className={styles.laptopBrowserBar}>
+                  <div className={styles.laptopDots}>
+                    <span className={styles.lDot} />
+                    <span className={styles.lDot} />
+                    <span className={styles.lDot} />
+                  </div>
+                  <div className={styles.laptopUrlBar}>
+                    <span className={styles.laptopLock}>🔒</span>
+                    <span>merchant.gracetechnologies.uk</span>
+                  </div>
+                  <div className={styles.laptopLivePill}>
+                    <span className={styles.pulseDot} />
+                    <span>LIVE STORE</span>
+                  </div>
+                </div>
+
+                {/* Merchant Operating Console Screen Content */}
+                <div className={styles.laptopConsoleBody}>
+                  {/* Top Stats Overview: Balance & Cart Volumes */}
+                  <div className={styles.consoleKpiRow}>
+                    {/* KPI 1: Gross Sales in Pounds (£) */}
+                    <div className={styles.consoleKpiCard}>
+                      <div className={styles.kpiIconPound}>
+                        <CurrencyPoundIcon fontSize="small" />
+                      </div>
+                      <div className={styles.kpiInfo}>
+                        <span className={styles.kpiLabel}>Net Settlement</span>
+                        <span className={styles.kpiValue}>
+                          <CurrencyPoundIcon sx={{ fontSize: '1rem', verticalAlign: '-1px' }} />
+                          84,920.50
+                        </span>
+                      </div>
+                      <div className={styles.kpiGrowthBadge}>
+                        <ArrowUpwardIcon sx={{ fontSize: 11 }} />
+                        <span>+32.6%</span>
+                      </div>
+                    </div>
+
+                    {/* KPI 2: Live Cart Orders */}
+                    <div className={styles.consoleKpiCard}>
+                      <div className={styles.kpiIconCart}>
+                        <ShoppingCartOutlinedIcon fontSize="small" />
+                      </div>
+                      <div className={styles.kpiInfo}>
+                        <span className={styles.kpiLabel}>Cart Volume</span>
+                        <span className={styles.kpiValue}>1,428 Orders</span>
+                      </div>
+                      <div className={styles.kpiGrowthBadge}>
+                        <ArrowUpwardIcon sx={{ fontSize: 11 }} />
+                        <span>+18.4%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Merchant Live Growth Graph Area */}
+                  <div className={styles.chartVisualBlock}>
+                    <div className={styles.chartHeader}>
+                      <div className={styles.chartTitleGroup}>
+                        <ShowChartIcon fontSize="small" className={styles.chartTrendIcon} />
+                        <span className={styles.chartTitle}>Revenue Velocity & Multi-Store Trajectory</span>
+                      </div>
+                      <span className={styles.chartTimeframe}>Last 30 Days (GBP £)</span>
+                    </div>
+
+                    {/* Interactive SVG Growth Graph with Area Fill */}
+                    <div className={styles.svgGraphWrapper}>
+                      <svg
+                        viewBox="0 0 380 90"
+                        className={styles.growthSvg}
+                        preserveAspectRatio="none"
+                      >
+                        <defs>
+                          <linearGradient id="growthGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stopColor="var(--color-blue)" stopOpacity="0.45" />
+                            <stop offset="100%" stopColor="var(--color-blue)" stopOpacity="0.0" />
+                          </linearGradient>
+                        </defs>
+                        {/* Horizontal Gridlines */}
+                        <line x1="0" y1="20" x2="380" y2="20" stroke="var(--color-border-subtle)" strokeDasharray="4 4" />
+                        <line x1="0" y1="50" x2="380" y2="50" stroke="var(--color-border-subtle)" strokeDasharray="4 4" />
+                        <line x1="0" y1="80" x2="380" y2="80" stroke="var(--color-border-subtle)" />
+
+                        {/* Shaded Area under Curve */}
+                        <path
+                          d="M 0 75 Q 40 68, 80 58 T 160 48 T 240 32 T 320 20 T 380 10 L 380 90 L 0 90 Z"
+                          fill="url(#growthGrad)"
+                        />
+
+                        {/* Bold Growth Trajectory Line */}
+                        <path
+                          d="M 0 75 Q 40 68, 80 58 T 160 48 T 240 32 T 320 20 T 380 10"
+                          fill="none"
+                          stroke="var(--color-blue)"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                        />
+
+                        {/* Key Milestones on Growth Curve */}
+                        <circle cx="80" cy="58" r="3.5" fill="var(--color-surface)" stroke="var(--color-blue)" strokeWidth="2" />
+                        <circle cx="160" cy="48" r="3.5" fill="var(--color-surface)" stroke="var(--color-blue)" strokeWidth="2" />
+                        <circle cx="240" cy="32" r="3.5" fill="var(--color-surface)" stroke="var(--color-blue)" strokeWidth="2" />
+                        <circle cx="320" cy="20" r="3.5" fill="var(--color-surface)" stroke="var(--color-blue)" strokeWidth="2" />
+                        <circle cx="380" cy="10" r="4.5" fill="var(--color-blue)" stroke="#ffffff" strokeWidth="2" />
+                      </svg>
+
+                      {/* Floating Peak Label */}
+                      <div className={styles.floatingPeakPill}>
+                        <CurrencyPoundIcon sx={{ fontSize: 11 }} />
+                        <span>Peak: £12.4k/day</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Multi-Channel Merchant Channel Footer */}
+                  <div className={styles.merchantChannelFooter}>
+                    <div className={styles.channelItem}>
+                      <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                      <span>Shopify & WooCommerce Sync</span>
+                    </div>
+                    <div className={styles.channelItem}>
+                      <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                      <span>Amazon & Stripe GBP Gateways</span>
+                    </div>
+                    <div className={styles.channelItem}>
+                      <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                      <span>Instant KYC Settlement</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Product Catalog Management Table */}
-            <div className={styles.catalogDeck}>
-              <div className={styles.catalogToolbar}>
-                <span className={styles.catalogHeading}>
-                  <Inventory2Icon fontSize="inherit" /> Product Catalog (1,420 Active SKUs)
-                </span>
-                <span className={styles.syncStatus}>• Real-time Inventory Sync</span>
-              </div>
+            {/* Realistic Laptop Base & Trackpad */}
+            <div className={styles.laptopBase}>
+              <div className={styles.laptopNotch} />
+            </div>
+            <div className={styles.laptopBottomLip} />
+          </div>
 
-              {/* Product Listing Items */}
-              <div className={styles.productList}>
-                <div className={styles.productRow}>
-                  <div className={styles.prodThumb}>
-                    <AddShoppingCartIcon fontSize="inherit" />
-                  </div>
-                  <div className={styles.prodDetails}>
-                    <span className={styles.prodTitle}>Enterprise SaaS Tier - Multi-Seat</span>
-                    <span className={styles.prodMeta}>SKU: GT-SaaS-001 • Category: Software • In Stock: 450</span>
-                  </div>
-                  <div className={styles.prodPrice}>
-                    <span className={styles.priceNum}>£499.00</span>
-                    <span className={styles.statusLive}>PUBLISHED</span>
-                  </div>
-                </div>
-
-                <div className={styles.productRow}>
-                  <div className={styles.prodThumb}>
-                    <AddShoppingCartIcon fontSize="inherit" />
-                  </div>
-                  <div className={styles.prodDetails}>
-                    <span className={styles.prodTitle}>Hardware Terminal Node Pro</span>
-                    <span className={styles.prodMeta}>SKU: GT-HW-089 • Category: Hardware • In Stock: 85</span>
-                  </div>
-                  <div className={styles.prodPrice}>
-                    <span className={styles.priceNum}>£1,250.00</span>
-                    <span className={styles.statusLive}>PUBLISHED</span>
-                  </div>
-                </div>
-
-                <div className={styles.productRow}>
-                  <div className={styles.prodThumb}>
-                    <AddShoppingCartIcon fontSize="inherit" />
-                  </div>
-                  <div className={styles.prodDetails}>
-                    <span className={styles.prodTitle}>Custom API Access Token License</span>
-                    <span className={styles.prodMeta}>SKU: GT-API-310 • Category: Digital • Unlimited</span>
-                  </div>
-                  <div className={styles.prodPrice}>
-                    <span className={styles.priceNum}>£199.00</span>
-                    <span className={styles.statusLive}>PUBLISHED</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Status footer pill */}
-              <div className={styles.portalFooter}>
-                <div className={styles.footItem}>
-                  <CheckCircleIcon fontSize="inherit" className={styles.footCheck} />
-                  <span>Multi-Currency Multi-Store Publishing</span>
-                </div>
-                <div className={styles.footItem}>
-                  <CheckCircleIcon fontSize="inherit" className={styles.footCheck} />
-                  <span>Stripe, Shopify & Amazon Integration</span>
-                </div>
-              </div>
+          {/* Floating Companion Badge: Live Cart Checkout */}
+          <div className={styles.floatingCartBadge}>
+            <div className={styles.cartBadgeIcon}>
+              <ShoppingCartOutlinedIcon fontSize="small" />
+            </div>
+            <div className={styles.cartBadgeText}>
+              <span className={styles.cartBadgeTitle}>Live Cart Conversion</span>
+              <span className={styles.cartBadgeSub}>
+                Avg Basket: <strong>£68.50</strong>
+              </span>
             </div>
           </div>
         </div>
