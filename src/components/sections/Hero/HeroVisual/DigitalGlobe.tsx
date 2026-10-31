@@ -1,8 +1,14 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import styles from './DigitalGlobe.module.css';
+
+// Dynamically import Earth3DCanvas with SSR disabled to avoid any WebGL window/DOM hydration mismatch
+const Earth3DCanvas = dynamic(() => import('./Earth3DCanvas'), {
+  ssr: false,
+  loading: () => <div className={styles.canvasPlaceholder} />,
+});
 
 interface DigitalGlobeProps {
   activePlatform: string | null;
@@ -23,19 +29,10 @@ export default function DigitalGlobe({ activePlatform }: DigitalGlobeProps) {
       {/* Secondary Counter-Rotating Orbital Ring */}
       <div className={styles.secondaryOrbitRing} />
 
-      {/* Main 3D Spherical Earth Container */}
+      {/* Main 3D WebGL Spherical Earth Container */}
       <div className={styles.sphereContainer}>
-        {/* Realistic Earth Night-Lights & Continents Texture */}
-        <div className={styles.earthTextureWrapper}>
-          <Image
-            src="/images/earth-sphere-texture.png"
-            alt="Grace Technologies 3D Digital Earth"
-            width={380}
-            height={380}
-            priority
-            className={styles.earthImage}
-          />
-        </div>
+        {/* Real Interactive Three.js 3D Globe with Dynamic globals.css Color Binding */}
+        <Earth3DCanvas />
 
         {/* Dynamic Holographic Sphere Overlays */}
         {/* 1. Luminous Atmospheric Rim Gradient */}
@@ -58,4 +55,3 @@ export default function DigitalGlobe({ activePlatform }: DigitalGlobeProps) {
     </div>
   );
 }
-
