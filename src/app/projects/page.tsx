@@ -5,23 +5,41 @@ import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import ClientSection from '@/components/sections/ClientSection/ClientSection';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import ProjectsClientView from './ProjectsClientView';
 import projectsConfig from '@/config/projects.json';
 import { ProjectItem } from '@/data/projects';
 import styles from './projects.module.css';
 
-export const metadata: Metadata = {
-  title: 'Our Projects & Client Case Studies | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Our Projects & Case Studies | Grace Technologies',
   description:
-    'Explore featured case studies and production deployments delivered by Grace Technologies and Ank Square Private Limited across Web Development, Merchant Operations, AI Automation, and Digital Marketing.',
-};
+    'Explore featured case studies and production deployments delivered by Grace Technologies across Web Development, Merchant Operations, AI Automation, and Digital Marketing.',
+  canonicalPath: '/projects',
+  keywords: [
+    'Grace Technologies projects',
+    'Web development case studies',
+    'Merchant management case studies',
+    'AI automation examples UK',
+    'Digital transformation portfolio',
+  ],
+});
 
 export default function ProjectsPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Projects', url: `${SEO_CONFIG.siteUrl}/projects` },
+  ]);
+
   // Pass project data directly from the centralized JSON configuration
   const projectsData = projectsConfig.projects as ProjectItem[];
 
   return (
     <div className={styles.page}>
+      <JsonLd data={breadcrumbSchema} />
       <Breadcrumb
         items={[{ label: 'Projects' }]}
         backHref="/"

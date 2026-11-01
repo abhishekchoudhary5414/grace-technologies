@@ -2,12 +2,14 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Container from '@/components/common/Container/Container';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import { constructMetadata } from '@/lib/seo/metadata';
 import styles from './legal.module.css';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Privacy Policy',
   description: 'Privacy Policy and data governance principles of Grace Technologies.',
-};
+  canonicalPath: '/privacy-policy',
+});
 
 export default function PrivacyPolicyPage() {
   return (

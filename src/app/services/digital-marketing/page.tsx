@@ -6,20 +6,52 @@ import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDe
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getServiceSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
 const service = SERVICES_DATA[3]; // Digital Marketing
 
-export const metadata: Metadata = {
-  title: 'Digital Marketing | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Digital Marketing & SEO Services UK',
   description:
-    'Make Your Business Impossible to Ignore. Search engine optimisation, local SEO, social media marketing, content marketing, paid advertising, and conversion rate optimisation.',
-};
+    'Improve online visibility with digital marketing, search engine optimisation and data-driven growth strategies from Grace Technologies.',
+  canonicalPath: '/services/digital-marketing',
+  keywords: [
+    'Digital marketing agency UK',
+    'SEO services UK',
+    'Search engine optimisation',
+    'Digital marketing for SMEs',
+    'Organic growth strategy',
+    'Online brand visibility',
+  ],
+});
 
 export default function DigitalMarketingPage() {
+  const serviceSchema = getServiceSchema({
+    name: 'Digital Marketing & Search Engine Optimisation Services',
+    description:
+      'Omnichannel search engine optimisation, Generative Engine Optimisation (GEO), content strategy, paid acquisition, and conversion rate optimisation.',
+    url: `${SEO_CONFIG.siteUrl}/services/digital-marketing`,
+    serviceType: 'Digital Marketing & SEO',
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Services', url: `${SEO_CONFIG.siteUrl}/services` },
+    { name: 'Digital Marketing', url: `${SEO_CONFIG.siteUrl}/services/digital-marketing` },
+  ]);
+
+  const faqSchema = getFaqSchema(
+    service.faqs ? service.faqs.map((f) => ({ question: f.question, answer: f.answer })) : []
+  );
+
   return (
     <div className={styles.page}>
+      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
       <Breadcrumb
         items={[
           { label: 'Services', href: '/services' },

@@ -6,20 +6,36 @@ import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCT
 import ClientCard, { ClientItem } from '@/components/sections/ClientSection/ClientCard';
 import ProjectStats from '@/components/sections/Projects/ProjectStats';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import clientsConfig from '@/config/clients.json';
 import styles from './client.module.css';
 
-export const metadata: Metadata = {
-  title: 'Our Clients & Commercial Partnerships | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Client Partnerships & Case Studies | Grace Technologies',
   description:
-    'Discover visionary corporate clients, startups, and institutions partnered with Grace Technologies and Ank Square for turnkey branding, websites, architecture, and technology.',
-};
+    'Discover visionary corporate clients, startups, and institutions partnered with Grace Technologies for turnkey branding, websites, architecture, and technology.',
+  canonicalPath: '/client',
+  keywords: [
+    'Grace Technologies clients',
+    'Commercial case studies UK',
+    'Enterprise technology delivery',
+    'Client partnerships',
+  ],
+});
 
 export default function ClientsIndexPage() {
   const clients = clientsConfig.clients as ClientItem[];
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Clients', url: `${SEO_CONFIG.siteUrl}/client` },
+  ]);
 
   return (
     <div className={styles.page}>
+      <JsonLd data={breadcrumbSchema} />
       <Breadcrumb
         items={[{ label: 'Clients' }]}
         backHref="/"

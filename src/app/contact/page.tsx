@@ -9,20 +9,37 @@ import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import officesData from '@/config/offices.json';
 import styles from './contact.module.css';
 
-export const metadata: Metadata = {
-  title: 'Contact Us & Executive Consultation | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Contact Grace Technologies | Discuss Your Project',
   description:
-    'Start a conversation with Grace Technologies. Submit your commercial enquiry for website development, merchant account management, AI automation, or digital marketing.',
-};
+    'Discuss your business goals with Grace Technologies. Contact our team to explore website development, AI automation and digital solutions.',
+  canonicalPath: '/contact',
+  keywords: [
+    'Contact technology company UK',
+    'Grace Technologies contact',
+    'Website development consultation',
+    'AI automation enquiry',
+    'Digital solutions consultation UK',
+  ],
+});
 
 export default function ContactPage() {
   const { uk, india } = officesData.offices;
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Contact Us', url: `${SEO_CONFIG.siteUrl}/contact` },
+  ]);
 
   return (
     <div className={styles.page}>
+      <JsonLd data={breadcrumbSchema} />
       <Breadcrumb
         items={[{ label: 'Contact Us' }]}
         backHref="/"

@@ -13,22 +13,39 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import { UkFlag, IndiaFlag } from '@/components/common/Flags/CountryFlags';
 import officesData from '@/config/offices.json';
 import styles from './partnership.module.css';
 import Logo from "../../../public/logo/logo.png"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: 'UK–India Strategic Partnership | Grace Technologies & Ank Square',
   description:
-    'Discover the strategic cross-border partnership between Grace Technologies (United Kingdom) and Ank Square Private Limited (India). Uniting British commercial strategy with high-velocity engineering excellence.',
-};
+    'Discover the strategic cross-border partnership between Grace Technologies (United Kingdom) and Ank Square Private Limited (India), combining British commercial leadership with Indian engineering execution.',
+  canonicalPath: '/partnership',
+  keywords: [
+    'UK India technology partnership',
+    'Bilateral technology alliance',
+    'Grace Technologies and Ank Square',
+    'Cross-border digital transformation',
+    'UK technology consultancy India delivery',
+  ],
+});
 
 export default function PartnershipPage() {
   const { uk, india } = officesData.offices;
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'UK–India Partnership', url: `${SEO_CONFIG.siteUrl}/partnership` },
+  ]);
 
   return (
     <div className={styles.page}>
+      <JsonLd data={breadcrumbSchema} />
       <Breadcrumb
         items={[{ label: 'UK–India Partnership' }]}
         backHref="/"

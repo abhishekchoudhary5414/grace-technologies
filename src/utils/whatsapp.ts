@@ -1,6 +1,13 @@
+import { trackEvent } from '@/lib/seo/analytics';
+
 // Non-blocking public WhatsApp click tracker
 export function trackAndOpenWhatsApp(href: string, serviceTitle?: string) {
   if (typeof window === 'undefined') return;
+
+  // Track event in unified SEO/Conversion analytics
+  trackEvent('click_whatsapp', {
+    service_name: serviceTitle || 'General',
+  });
 
   // 1. Collect client telemetry
   const ua = window.navigator.userAgent;

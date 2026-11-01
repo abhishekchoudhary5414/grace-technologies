@@ -2,12 +2,14 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Container from '@/components/common/Container/Container';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import { constructMetadata } from '@/lib/seo/metadata';
 import styles from './legal.module.css';
 
-export const metadata: Metadata = {
-  title: 'Terms & Conditions | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Terms & Conditions',
   description: 'Terms and Conditions governing the use of Grace Technologies services and web platforms.',
-};
+  canonicalPath: '/terms-and-conditions',
+});
 
 export default function TermsAndConditionsPage() {
   return (

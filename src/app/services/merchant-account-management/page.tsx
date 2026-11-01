@@ -7,20 +7,52 @@ import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getServiceSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
 const service = SERVICES_DATA[1]; // Merchant Account Management
 
-export const metadata: Metadata = {
-  title: 'Merchant Account Management & Store Catalog Operations | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Merchant Account Management Services',
   description:
-    'End-to-End Merchant Onboarding, Account Setup, Product Catalog Taxonomy, Inventory Sync & Ongoing Store Management.',
-};
+    'Explore merchant account management, onboarding assistance and payment operations support designed for growing businesses.',
+  canonicalPath: '/services/merchant-account-management',
+  keywords: [
+    'Merchant account management services',
+    'Merchant account support',
+    'Merchant onboarding assistance',
+    'Payment operations management',
+    'Payment integration support',
+    'E-commerce payment management',
+  ],
+});
 
 export default function MerchantAccountManagementPage() {
+  const serviceSchema = getServiceSchema({
+    name: 'Merchant Account Management & Operational Support',
+    description:
+      'Strategic onboarding assistance, multi-currency payment operations advisory, product catalog management, and payment gateway coordination.',
+    url: `${SEO_CONFIG.siteUrl}/services/merchant-account-management`,
+    serviceType: 'Merchant Operations Management',
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Services', url: `${SEO_CONFIG.siteUrl}/services` },
+    { name: 'Merchant Account Management', url: `${SEO_CONFIG.siteUrl}/services/merchant-account-management` },
+  ]);
+
+  const faqSchema = getFaqSchema(
+    service.faqs ? service.faqs.map((f) => ({ question: f.question, answer: f.answer })) : []
+  );
+
   return (
     <div className={styles.page}>
+      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
       <Breadcrumb
         items={[
           { label: 'Services', href: '/services' },

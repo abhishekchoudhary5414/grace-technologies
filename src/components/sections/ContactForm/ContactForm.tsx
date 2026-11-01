@@ -8,6 +8,7 @@ import { CheckCircleOutlined, ErrorOutlined } from '@mui/icons-material';
 import CircularProgress from '@mui/material/CircularProgress';
 import { contactFormSchema, ContactFormData } from '@/schemas/contact';
 import Button from '@/components/common/Button/Button';
+import { trackEvent } from '@/lib/seo/analytics';
 import styles from './ContactForm.module.css';
 
 export default function ContactForm() {
@@ -47,6 +48,11 @@ export default function ContactForm() {
       if (response.ok && resData.success) {
         setSubmissionStatus('success');
         setResponseMessage(resData.message);
+        // Track successful lead generation
+        trackEvent('generate_lead', {
+          service_name: data.service,
+          source: 'Contact Page Form',
+        });
         reset();
       } else {
         setSubmissionStatus('error');

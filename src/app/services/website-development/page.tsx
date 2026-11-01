@@ -6,20 +6,52 @@ import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDe
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getServiceSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
 const service = SERVICES_DATA[0]; // Website Development
 
-export const metadata: Metadata = {
-  title: 'Website Development | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Website Development Company UK',
   description:
-    'Digital Experiences Designed to Make an Impact. Bespoke business websites, e-commerce, custom web applications, responsive engineering, and technical SEO foundations.',
-};
+    'Build a professional digital presence with custom website development, e-commerce solutions and web applications from Grace Technologies.',
+  canonicalPath: '/services/website-development',
+  keywords: [
+    'Website development company UK',
+    'Custom website development UK',
+    'Business website development',
+    'E-commerce website development',
+    'Web application development',
+    'Next.js development services',
+  ],
+});
 
 export default function WebsiteDevelopmentPage() {
+  const serviceSchema = getServiceSchema({
+    name: 'Website Development Services UK',
+    description:
+      'Custom website development, scalable e-commerce solutions, web application engineering, and technical SEO architecture.',
+    url: `${SEO_CONFIG.siteUrl}/services/website-development`,
+    serviceType: 'Website Development',
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Services', url: `${SEO_CONFIG.siteUrl}/services` },
+    { name: 'Website Development', url: `${SEO_CONFIG.siteUrl}/services/website-development` },
+  ]);
+
+  const faqSchema = getFaqSchema(
+    service.faqs ? service.faqs.map((f) => ({ question: f.question, answer: f.answer })) : []
+  );
+
   return (
     <div className={styles.page}>
+      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
       <Breadcrumb
         items={[
           { label: 'Services', href: '/services' },

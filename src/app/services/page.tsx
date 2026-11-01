@@ -3,17 +3,35 @@ import type { Metadata } from 'next';
 import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import styles from './services.module.css';
 
-export const metadata: Metadata = {
-  title: 'Our Services & Capabilities | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'Technology & Digital Services',
   description:
-    'Explore the four core capabilities of Grace Technologies: Website Development, Merchant Account Management, AI Automation, and Digital Marketing.',
-};
+    'Comprehensive business technology services including custom website development, AI automation, merchant account management, and strategic digital marketing.',
+  canonicalPath: '/services',
+  keywords: [
+    'Business technology services UK',
+    'Technology solutions UK',
+    'Custom software development',
+    'Enterprise digital services',
+    'AI automation solutions',
+  ],
+});
 
 export default function ServicesPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Services', url: `${SEO_CONFIG.siteUrl}/services` },
+  ]);
+
   return (
     <div className={styles.page}>
+      <JsonLd data={breadcrumbSchema} />
       <Breadcrumb
         items={[{ label: 'Services' }]}
         backHref="/"

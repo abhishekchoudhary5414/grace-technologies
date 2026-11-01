@@ -14,11 +14,23 @@ import CTASection from '@/components/common/CTASection/CTASection';
 import HomeContactSection from '@/components/sections/HomeContactSection/HomeContactSection';
 import GlobalOffices from '@/components/sections/GlobalOffices/GlobalOffices';
 
-export const metadata: Metadata = {
-  title: 'Grace Technologies | Technology That Moves Business Forward',
+import { constructMetadata } from '@/lib/seo/metadata';
+
+export const metadata: Metadata = constructMetadata({
+  title: 'Digital & Technology Solutions UK',
   description:
-    'Grace Technologies is a premier UK technology and business services consultancy strategically partnered with Ank Square Private Limited (India) to engineer scalable web architectures, merchant account operations, AI automation, and digital growth.',
-};
+    'A UK-led technology partner delivering website development, merchant account management, AI automation and digital marketing solutions for growing businesses.',
+  canonicalPath: '/',
+  keywords: [
+    'Technology company UK',
+    'Digital solutions company',
+    'Business technology services',
+    'Website development UK',
+    'AI automation services UK',
+    'Merchant account management',
+    'Digital marketing agency UK',
+  ],
+});
 
 export default function HomePage() {
   return (

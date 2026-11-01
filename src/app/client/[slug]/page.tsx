@@ -18,6 +18,10 @@ import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import clientsConfig from '@/config/clients.json';
 import { ClientItem } from '@/components/sections/ClientSection/ClientCard';
 import ClientWorkTabs from './ClientWorkTabs';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import styles from './client-detail.module.css';
 
 interface Props {
@@ -39,15 +43,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const client = clients.find((c) => c.slug === slug);
 
   if (!client) {
-    return {
-      title: 'Client Project | Grace Technologies',
-    };
+    return constructMetadata({
+      title: 'Client Case Study',
+      description: 'Explore commercial case studies and digital deliveries by Grace Technologies.',
+      noIndex: true,
+    });
   }
 
-  return {
-    title: `${client.name} - ${client.project} | Grace Technologies Case Study`,
-    description: client.testimonial,
-  };
+  return constructMetadata({
+    title: `${client.name} Case Study | ${client.project}`,
+    description: client.summary || client.testimonial,
+    canonicalPath: `/client/${client.slug}`,
+    keywords: [
+      `${client.name} case study`,
+      `${client.category}`,
+      'Grace Technologies client project',
+      'Technology delivery case study',
+    ],
+  });
 }
 
 export default function ClientDetailPage({ params }: Props) {
@@ -82,8 +95,15 @@ async function ClientDetailContent({ params }: Props) {
   // Find live website deliverable if available
   const websiteDeliverable = client.workDone?.find((item) => item.type === 'website');
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Clients', url: `${SEO_CONFIG.siteUrl}/client` },
+    { name: client.name, url: `${SEO_CONFIG.siteUrl}/client/${client.slug}` },
+  ]);
+
   return (
     <div className={styles.page}>
+      <JsonLd data={breadcrumbSchema} />
       {/* Ambient background architectural grid */}
       <div className={styles.heroDecor} />
       <div className={styles.ambientGlowSpot} />

@@ -9,6 +9,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CircularProgress from '@mui/material/CircularProgress';
 import ShieldOutlinedIcon from '@mui/icons-material/ShieldOutlined';
 import { quickEnquirySchema, QuickEnquiryData } from '@/schemas/enquiryModal';
+import { trackEvent } from '@/lib/seo/analytics';
 import styles from './EnquiryModal.module.css';
 
 export default function EnquiryModal() {
@@ -84,6 +85,11 @@ export default function EnquiryModal() {
       if (res.ok && resData.success) {
         setStatus('success');
         setResponseMsg(resData.message);
+        // Track lead event
+        trackEvent('generate_lead', {
+          service_name: data.serviceType,
+          source: 'Quick Enquiry Modal',
+        });
         reset();
         setTimeout(() => {
           handleClose();

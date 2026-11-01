@@ -6,20 +6,52 @@ import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDe
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getServiceSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
 const service = SERVICES_DATA[2]; // AI Automation
 
-export const metadata: Metadata = {
-  title: 'AI Automation | Grace Technologies',
+export const metadata: Metadata = constructMetadata({
+  title: 'AI Automation Services UK',
   description:
-    'Turn Repetitive Work Into Intelligent Workflows. Business process automation, AI-powered customer support, document processing, data automation, and custom enterprise AI solutions.',
-};
+    'Streamline business operations with AI automation, intelligent workflows and practical technology integration from Grace Technologies.',
+  canonicalPath: '/services/ai-automation',
+  keywords: [
+    'AI automation services UK',
+    'Business process automation',
+    'AI workflow automation',
+    'AI integration services',
+    'Intelligent business automation',
+    'Custom AI solutions',
+  ],
+});
 
 export default function AiAutomationPage() {
+  const serviceSchema = getServiceSchema({
+    name: 'AI Automation & Intelligent Workflow Services',
+    description:
+      'Enterprise business process automation, autonomous agentic reasoning, CRM integration, and intelligent predictive data workflows.',
+    url: `${SEO_CONFIG.siteUrl}/services/ai-automation`,
+    serviceType: 'AI Automation',
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'Services', url: `${SEO_CONFIG.siteUrl}/services` },
+    { name: 'AI Automation', url: `${SEO_CONFIG.siteUrl}/services/ai-automation` },
+  ]);
+
+  const faqSchema = getFaqSchema(
+    service.faqs ? service.faqs.map((f) => ({ question: f.question, answer: f.answer })) : []
+  );
+
   return (
     <div className={styles.page}>
+      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
       <Breadcrumb
         items={[
           { label: 'Services', href: '/services' },

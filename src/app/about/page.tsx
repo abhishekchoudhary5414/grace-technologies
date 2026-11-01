@@ -6,17 +6,35 @@ import Button from '@/components/common/Button/Button';
 import CTASection from '@/components/common/CTASection/CTASection';
 import AboutHeroVisual from '@/components/sections/AboutHeroVisual/AboutHeroVisual';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import JsonLd from '@/components/seo/JsonLd';
+import { constructMetadata } from '@/lib/seo/metadata';
+import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 import styles from './about.module.css';
 
-export const metadata: Metadata = {
-  title: 'About Grace Technologies | UK Business Vision & Technology Innovation',
+export const metadata: Metadata = constructMetadata({
+  title: 'About Grace Technologies | Our Expertise & Approach',
   description:
-    'Grace Technologies is a British corporate technology consultancy partnered strategically with Ank Square Private Limited (India) to empower ambitious companies with intelligent systems and exceptional digital experiences.',
-};
+    'Learn about Grace Technologies, a UK-led technology solutions partner delivering website development, AI automation, and merchant management in strategic partnership with Ank Square India.',
+  canonicalPath: '/about',
+  keywords: [
+    'UK technology company',
+    'Technology solutions company',
+    'UK technology partner',
+    'Digital engineering services',
+    'UK India technology partnership',
+  ],
+});
 
 export default function AboutPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: SEO_CONFIG.siteUrl },
+    { name: 'About Us', url: `${SEO_CONFIG.siteUrl}/about` },
+  ]);
+
   return (
     <div className={styles.page}>
+      <JsonLd data={breadcrumbSchema} />
       <Breadcrumb
         items={[{ label: 'About Us' }]}
         backHref="/"
