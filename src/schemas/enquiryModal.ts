@@ -4,8 +4,12 @@ export const quickEnquirySchema = z
   .object({
     fullName: z
       .string()
+      .trim()
       .min(2, { message: 'Please enter your name' })
-      .max(80, { message: 'Name is too long' }),
+      .max(80, { message: 'Name is too long' })
+      .refine((val) => /^[a-zA-Z\s.'-]+$/.test(val), {
+        message: 'Please enter a valid name using letters only',
+      }),
     serviceType: z.enum(
       [
         'Website Development',
@@ -23,7 +27,7 @@ export const quickEnquirySchema = z
       .trim()
       .optional()
       .refine(
-        (val) => !val || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
+        (val) => !val || /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(val),
         { message: 'Please enter a valid email address' }
       ),
     phone: z
@@ -31,7 +35,7 @@ export const quickEnquirySchema = z
       .trim()
       .optional()
       .refine(
-        (val) => !val || val.length >= 6,
+        (val) => !val || (/^[0-9+()\-\s]+$/.test(val) && val.replace(/\D/g, '').length >= 6),
         { message: 'Please enter a valid phone number' }
       ),
   })

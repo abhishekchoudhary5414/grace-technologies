@@ -148,10 +148,10 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
                           84,920.50
                         </span>
                       </div>
-                      <div className={styles.kpiGrowthBadge}>
+                      {/* <div className={styles.kpiGrowthBadge}>
                         <ArrowUpwardIcon sx={{ fontSize: 11 }} />
                         <span>+32.6%</span>
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* KPI 2: Live Cart Orders */}
@@ -163,10 +163,10 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
                         <span className={styles.kpiLabel}>Cart Volume</span>
                         <span className={styles.kpiValue}>1,428 Orders</span>
                       </div>
-                      <div className={styles.kpiGrowthBadge}>
+                      {/* <div className={styles.kpiGrowthBadge}>
                         <ArrowUpwardIcon sx={{ fontSize: 11 }} />
                         <span>+18.4%</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 

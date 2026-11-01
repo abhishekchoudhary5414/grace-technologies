@@ -50,7 +50,7 @@ export default function EnquiryModal() {
     const handleOpenModal = (event: Event) => {
       const customEvent = event as CustomEvent<{ serviceType?: string }>;
       if (customEvent.detail?.serviceType) {
-        setValue('serviceType', customEvent.detail.serviceType as any);
+        setValue('serviceType', customEvent.detail.serviceType as QuickEnquiryData['serviceType']);
       }
       setIsOpen(true);
       setStatus('idle');
@@ -167,7 +167,14 @@ export default function EnquiryModal() {
                     type="text"
                     placeholder="e.g. Alistair Vance"
                     className={`${styles.input} ${errors.fullName ? styles.inputError : ''}`}
-                    {...register('fullName')}
+                    {...register('fullName', {
+                      onChange: (event) => {
+                        const sanitizedValue = event.target.value.replace(/[^a-zA-Z\s.'-]/g, '');
+                        if (sanitizedValue !== event.target.value) {
+                          event.target.value = sanitizedValue;
+                        }
+                      },
+                    })}
                   />
                   {errors.fullName && (
                     <span className={styles.errorMsg}>{errors.fullName.message}</span>
@@ -181,15 +188,19 @@ export default function EnquiryModal() {
                   </label>
                   <select
                     id="popup-service"
-                    className={styles.select}
+                    className={`${styles.select} ${errors.serviceType ? styles.inputError : ''}`}
+                    aria-invalid={Boolean(errors.serviceType)}
                     {...register('serviceType')}
                   >
                     <option value="Website Development">Website Development</option>
-                    <option value="Merchant Account Management">Merchant Account Management.</option>
+                    <option value="Merchant Account Management">Merchant Account Management</option>
                     <option value="AI Automation">AI Automation</option>
                     <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Other Consultation">Other Strategic Advisory</option>
+                    <option value="Other Consultation">Other Consultation</option>
                   </select>
+                  {errors.serviceType && (
+                    <span className={styles.errorMsg}>{errors.serviceType.message}</span>
+                  )}
                 </div>
 
 
@@ -202,9 +213,18 @@ export default function EnquiryModal() {
                     <input
                       id="popup-phone"
                       type="tel"
+                      inputMode="numeric"
+                      pattern="[0-9+()\-\s]*"
                       placeholder="+44 20 7946 0991"
                       className={`${styles.input} ${errors.phone ? styles.inputError : ''}`}
-                      {...register('phone')}
+                      {...register('phone', {
+                        onChange: (event) => {
+                          const sanitizedValue = event.target.value.replace(/[^0-9+()\-\s]/g, '');
+                          if (sanitizedValue !== event.target.value) {
+                            event.target.value = sanitizedValue;
+                          }
+                        },
+                      })}
                     />
                     {errors.phone && (
                       <span className={styles.errorMsg}>{errors.phone.message}</span>
@@ -219,9 +239,17 @@ export default function EnquiryModal() {
                     <input
                       id="popup-email"
                       type="email"
+                      inputMode="email"
                       placeholder="name@company.com"
                       className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
-                      {...register('email')}
+                      {...register('email', {
+                        onChange: (event) => {
+                          const sanitizedValue = event.target.value.replace(/\s+/g, '');
+                          if (sanitizedValue !== event.target.value) {
+                            event.target.value = sanitizedValue;
+                          }
+                        },
+                      })}
                     />
                     {errors.email && (
                       <span className={styles.errorMsg}>{errors.email.message}</span>
