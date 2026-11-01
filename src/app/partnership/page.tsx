@@ -120,7 +120,6 @@ export default function PartnershipPage() {
             <div className={styles.nexusStrip}>
               <div className={styles.nexusCircle}>
                 <HandshakeIcon className={styles.nexusIcon} />
-                <span className={styles.nexusTag}>FORMAL ALLIANCE</span>
               </div>
             </div>
 

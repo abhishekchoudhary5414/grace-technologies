@@ -3,14 +3,24 @@ import { z } from 'zod';
 export const contactFormSchema = z.object({
   name: z
     .string()
+    .trim()
     .min(2, { message: 'Name must be at least 2 characters' })
-    .max(80, { message: 'Name must be under 80 characters' }),
+    .max(80, { message: 'Name must be under 80 characters' })
+    .refine((val) => /^[a-zA-Z\s.'-]+$/.test(val), {
+      message: 'Please enter a valid name using letters only',
+    }),
   email: z
     .string()
-    .email({ message: 'Please enter a valid email address' }),
+    .trim()
+    .refine((val) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(val), {
+      message: 'Please enter a valid email address',
+    }),
   phone_number: z
     .string()
-    .min(6, { message: 'Please provide a valid phone number' })
+    .trim()
+    .refine((val) => /^[0-9+()\-\s]+$/.test(val) && val.replace(/\D/g, '').length >= 6, {
+      message: 'Please provide a valid phone number',
+    })
     .max(25, { message: 'Phone number is too long' }),
   service: z.enum([
     'Website Development',

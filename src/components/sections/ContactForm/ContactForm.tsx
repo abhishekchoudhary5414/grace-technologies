@@ -106,7 +106,14 @@ export default function ContactForm() {
                   type="text"
                   placeholder="e.g. Alistair Vance"
                   className={`${styles.input} ${errors.name ? styles.inputError : ''}`}
-                  {...register('name')}
+                  {...register('name', {
+                    onChange: (event) => {
+                      const sanitizedValue = event.target.value.replace(/[^a-zA-Z\s.'-]/g, '');
+                      if (sanitizedValue !== event.target.value) {
+                        event.target.value = sanitizedValue;
+                      }
+                    },
+                  })}
                 />
                 {errors.name && <span className={styles.errorText}>{errors.name.message}</span>}
               </div>
@@ -118,9 +125,17 @@ export default function ContactForm() {
                 <input
                   id="email"
                   type="email"
+                  inputMode="email"
                   placeholder="e.g. a.vance@company.co.uk"
                   className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
-                  {...register('email')}
+                  {...register('email', {
+                    onChange: (event) => {
+                      const sanitizedValue = event.target.value.replace(/\s+/g, '');
+                      if (sanitizedValue !== event.target.value) {
+                        event.target.value = sanitizedValue;
+                      }
+                    },
+                  })}
                 />
                 {errors.email && <span className={styles.errorText}>{errors.email.message}</span>}
               </div>
@@ -134,9 +149,18 @@ export default function ContactForm() {
                 <input
                   id="phone_number"
                   type="tel"
+                  inputMode="numeric"
+                  pattern="[0-9+()\-\s]*"
                   placeholder="+44 20 7946 0991"
                   className={`${styles.input} ${errors.phone_number ? styles.inputError : ''}`}
-                  {...register('phone_number')}
+                  {...register('phone_number', {
+                    onChange: (event) => {
+                      const sanitizedValue = event.target.value.replace(/[^0-9+()\-\s]/g, '');
+                      if (sanitizedValue !== event.target.value) {
+                        event.target.value = sanitizedValue;
+                      }
+                    },
+                  })}
                 />
                 {errors.phone_number && (
                   <span className={styles.errorText}>{errors.phone_number.message}</span>
