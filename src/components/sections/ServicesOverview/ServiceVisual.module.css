@@ -28,222 +28,452 @@
   pointer-events: none;
 }
 
-/* 01: Website Development Visual */
-.browserWindow {
-  width: 100%;
-  max-width: 440px;
-  background: var(--color-panel-dark);
-  border: 1px solid var(--color-border-medium);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: 0 15px 35px var(--color-overlay-medium);
+/* 01: Website Development Visual - Animated Multi-Device Dev Environment */
+.webDevStage {
   position: relative;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 2;
 }
 
-.browserHeader {
+.desktopBrowserFrame {
+  width: 100%;
+  background: var(--color-panel-dark);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 45px var(--color-overlay-heavy), 0 0 25px var(--color-border-soft);
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background: var(--color-surface-hover);
-  border-bottom: 1px solid var(--color-border-subtle);
+  flex-direction: column;
 }
 
-.dots {
+.browserHeaderBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: var(--color-surface-hover);
+  border-bottom: 1px solid var(--color-border-subtle);
+  gap: 8px;
+}
+
+.browserDotsGroup {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.dot {
-  width: 7px;
-  height: 7px;
+.browserDotRed {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--color-border-active);
+  background: #ef4444;
 }
 
-.browserUrl {
-  margin-left: auto;
-  font-family: var(--font-heading);
-  font-size: 0.68rem;
+.browserDotYellow {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+
+.browserDotGreen {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.browserAddressField {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  padding: 3px 12px;
+  font-size: 0.62rem;
   color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  flex: 1;
+  max-width: 260px;
 }
 
-.liveTag {
-  font-size: 0.52rem;
+.browserUrlText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.liveProdBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.55rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
-  padding: 2px 6px;
-  background: var(--color-secondary);
-  border: 1px solid var(--color-border-medium);
-  border-radius: 3px;
-  color: var(--color-accent);
+  color: var(--color-whatsapp-green-strong, #22c55e);
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
 }
 
-.browserBody {
-  padding: 16px;
+.beaconPingDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-whatsapp-green-strong, #22c55e);
+  box-shadow: 0 0 6px var(--color-whatsapp-green-strong, #22c55e);
+  animation: pingGreenBeacon 1.8s infinite ease-in-out;
+}
+
+@keyframes pingGreenBeacon {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+.browserCanvas {
+  padding: 12px 14px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
+  background: var(--color-primary);
 }
 
-.codeBanner {
+/* Stack Banner */
+.techStackBanner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 6px 10px;
   background: var(--color-surface);
-  border-radius: 4px;
   border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  gap: 8px;
 }
 
-.codePill {
+.techPill {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.72rem;
+  gap: 6px;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: var(--color-accent);
+  color: var(--color-blue);
+  font-family: var(--font-heading);
 }
 
-.speedScore {
-  font-size: 0.68rem;
+.vitalsBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
   color: var(--color-text-secondary);
 }
 
-.mockupHero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  background: var(--color-surface);
-  border-radius: 6px;
-  border: 1px solid var(--color-border-subtle);
-}
-
-.mockupTextGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
-}
-
-.lineH1 {
-  width: 65%;
-  height: 8px;
-  background: var(--color-accent);
-  border-radius: 4px;
-}
-
-.lineP1 {
-  width: 85%;
-  height: 4px;
-  background: var(--color-text-subtle);
-  border-radius: 2px;
-}
-
-.lineP2 {
-  width: 50%;
-  height: 4px;
-  background: var(--color-text-dim);
-  border-radius: 2px;
-}
-
-.mockupCta {
-  width: 44px;
-  height: 24px;
-  border-radius: 4px;
-  background: var(--color-accent);
-}
-
-.mockupGrid3 {
+/* IDE Split Deck */
+.ideSplitDeck {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.15fr 1fr;
   gap: 10px;
 }
 
-.mockupCard {
+.codeTerminalPane {
+  background: var(--color-panel-dark);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: monospace;
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.6rem;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: 4px;
+}
+
+.codeSnippet {
+  margin: 0;
+  font-size: 0.58rem;
+  line-height: 1.45;
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+.cKeyword {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.cFunction {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.cTag {
+  color: #f43f5e;
+}
+
+.cAttr {
+  color: #fbbf24;
+}
+
+.cString {
+  color: #34d399;
+}
+
+.terminalCursorLine {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.55rem;
+  border-top: 1px dashed var(--color-border-subtle);
+  padding-top: 5px;
+}
+
+.promptArrow {
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+.buildSuccess {
+  color: var(--color-whatsapp-green-strong, #22c55e);
+  font-weight: 600;
+}
+
+/* Live UI Render Component Mockup */
+.liveRenderPane {
   background: var(--color-surface);
   border: 1px solid var(--color-border-subtle);
-  border-radius: 4px;
-  padding: 12px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--color-accent);
-}
-
-.miniBar {
-  width: 80%;
-  height: 4px;
-  background: var(--color-text-subtle);
-  border-radius: 2px;
-}
-
-.miniCircle {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--color-text-dim);
-}
-
-.miniSquare {
-  width: 18px;
-  height: 18px;
-  border-radius: 3px;
-  background: var(--color-text-dim);
-}
-
-.floatingMobile {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  width: 85px;
-  height: 150px;
-  background: var(--color-primary);
-  border: 1.5px solid var(--color-text-dim);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px var(--color-overlay-heavy);
-  z-index: 4;
-  padding: 8px 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mobileSpeaker {
-  width: 24px;
-  height: 3px;
-  background: var(--color-text-dim);
-  border-radius: 2px;
-  margin-bottom: 8px;
-}
-
-.mobileScreen {
-  width: 100%;
-  height: 100%;
-  background: var(--color-surface-hover);
-  border-radius: 6px;
-  padding: 6px;
+  border-radius: var(--radius-sm);
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 8px;
 }
 
-.mobileHero {
-  width: 100%;
-  height: 45px;
-  background: var(--color-border-soft);
-  border-radius: 3px;
+.renderHeroBox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.mobileBtn {
-  width: 60%;
-  height: 10px;
-  background: var(--color-accent);
+.renderH1Line {
+  width: 75%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-text-main);
+  animation: pulseWidthH1 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulseWidthH1 {
+  0% {
+    width: 65%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.renderSubLine {
+  width: 90%;
+  height: 4px;
   border-radius: 2px;
+  background: var(--color-border-active);
+}
+
+.renderCtaPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  margin-top: 4px;
+  background: var(--color-blue);
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.55rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px var(--color-overlay-light);
+  transition: transform 0.2s ease;
+}
+
+.renderMetricsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 6px;
+}
+
+.metricMiniCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-panel-dark);
+  padding: 4px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border-soft);
+}
+
+.metricVal {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-blue);
+}
+
+.metricLbl {
+  font-size: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+/* Floating Mobile Companion Device */
+.floatingMobileDevice {
+  position: absolute;
+  right: -8px;
+  bottom: 22px;
+  width: 82px;
+  height: 145px;
+  background: var(--color-panel-dark);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 12px;
+  box-shadow: 0 12px 35px var(--color-overlay-heavy);
+  z-index: 5;
+  padding: 6px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  animation: floatPhoneBob 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatPhoneBob {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+.mobileSpeakerBar {
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-border-active);
+}
+
+.mobileScreenGlass {
+  width: 100%;
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: 6px;
+  margin: 4px 0;
+  padding: 6px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.mobileTopNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileLogoDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-blue);
+}
+
+.mobileNavLine {
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color-border-active);
+}
+
+.mobileHeroBanner {
+  width: 100%;
+  height: 34px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--color-blue) 0%, rgba(59, 130, 246, 0.2) 100%);
+}
+
+.mobileContentLines {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mLine1 {
+  width: 85%;
+  height: 3px;
+  border-radius: 1px;
+  background: var(--color-text-main);
+}
+
+.mLine2 {
+  width: 60%;
+  height: 3px;
+  border-radius: 1px;
+  background: var(--color-border-active);
+}
+
+.mobileActionBtn {
+  width: 100%;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-blue);
+}
+
+.mobileHomeBar {
+  width: 28px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color-border-active);
+}
+
+/* Feature Capabilities Strip */
+.webDevFeatureStrip {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.webDevFeatureItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
 }
 
 /* 02: Merchant Account Management - Realistic Laptop & Live E-Commerce Visual */

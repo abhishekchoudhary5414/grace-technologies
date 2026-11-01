@@ -29,6 +29,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import AdsClickIcon from '@mui/icons-material/AdsClick';
 import PublicIcon from '@mui/icons-material/Public';
+import SpeedIcon from '@mui/icons-material/Speed';
+import DevicesIcon from '@mui/icons-material/Devices';
+import SecurityIcon from '@mui/icons-material/Security';
 import styles from './ServiceVisual.module.css';
 
 interface ServiceVisualProps {
@@ -41,59 +44,124 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
       return (
         <div className={styles.visualContainer}>
           <div className={styles.ambientGlow} />
-          {/* Main Browser Window */}
-          <div className={styles.browserWindow}>
-            <div className={styles.browserHeader}>
-              <div className={styles.dots}>
-                <span className={styles.dot} />
-                <span className={styles.dot} />
-                <span className={styles.dot} />
+
+          {/* Interactive Multi-Device Full-Stack Browser Stage */}
+          <div className={styles.webDevStage}>
+            {/* Main Desktop Browser Frame */}
+            <div className={styles.desktopBrowserFrame}>
+              <div className={styles.browserHeaderBar}>
+                <div className={styles.browserDotsGroup}>
+                  <span className={styles.browserDotRed} />
+                  <span className={styles.browserDotYellow} />
+                  <span className={styles.browserDotGreen} />
+                </div>
+                <div className={styles.browserAddressField}>
+                  <SecurityIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                  <span className={styles.browserUrlText}>https://gracetechnologies.uk/</span>
+                </div>
+                <div className={styles.liveProdBadge}>
+                  <span className={styles.beaconPingDot} />
+                  <span>EDGE PRODUCTION</span>
+                </div>
               </div>
-              <span className={styles.browserUrl}>www.gracetechnologies.uk</span>
-              <div className={styles.liveTag}>PRODUCTION</div>
+
+              {/* Browser Body with Code Stream & Interactive UI */}
+              <div className={styles.browserCanvas}>
+                {/* Tech & Performance Metric Bar */}
+                <div className={styles.techStackBanner}>
+                  <div className={styles.techPill}>
+                    <CodeIcon sx={{ fontSize: 14 }} />
+                    <span>Next.js 16 + React 19 + TypeScript</span>
+                  </div>
+                  <div className={styles.vitalsBadge}>
+                    <SpeedIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                    <span>100% Core Web Vitals</span>
+                  </div>
+                </div>
+
+                {/* Animated Code Terminal & Live Render Split */}
+                <div className={styles.ideSplitDeck}>
+                  {/* Left: Animated Code Stream Terminal */}
+                  <div className={styles.codeTerminalPane}>
+                    <div className={styles.terminalHeader}>
+                      <TerminalIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                      <span>page.tsx</span>
+                    </div>
+                    <pre className={styles.codeSnippet}>
+                      <code>
+                        <span className={styles.cKeyword}>export default function</span>{' '}
+                        <span className={styles.cFunction}>App</span>() &#123;{'\n'}
+                        {'  '}<span className={styles.cKeyword}>return</span> ({'\n'}
+                        {'    '}&lt;<span className={styles.cTag}>Hero</span> <span className={styles.cAttr}>mode</span>=<span className={styles.cString}>"edge"</span> /&gt;{'\n'}
+                        {'    '}&lt;<span className={styles.cTag}>DataStream</span> <span className={styles.cAttr}>live</span> /&gt;{'\n'}
+                        {'  '});{'\n'}
+                        &#125;
+                      </code>
+                    </pre>
+                    <div className={styles.terminalCursorLine}>
+                      <span className={styles.promptArrow}>&gt;</span>
+                      <span className={styles.buildSuccess}>Compiled in 240ms (Turbopack)</span>
+                    </div>
+                  </div>
+
+                  {/* Right: Live UI Mockup Component Preview */}
+                  <div className={styles.liveRenderPane}>
+                    <div className={styles.renderHeroBox}>
+                      <div className={styles.renderH1Line} />
+                      <div className={styles.renderSubLine} />
+                      <div className={styles.renderCtaPill}>
+                        <span>Explore Platform</span>
+                        <ArrowUpwardIcon sx={{ fontSize: 10, transform: 'rotate(45deg)' }} />
+                      </div>
+                    </div>
+
+                    <div className={styles.renderMetricsRow}>
+                      <div className={styles.metricMiniCard}>
+                        <span className={styles.metricVal}>0.2s</span>
+                        <span className={styles.metricLbl}>LCP Speed</span>
+                      </div>
+                      <div className={styles.metricMiniCard}>
+                        <span className={styles.metricVal}>99.9%</span>
+                        <span className={styles.metricLbl}>Uptime SLA</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className={styles.browserBody}>
-              <div className={styles.codeBanner}>
-                <div className={styles.codePill}>
-                  <CodeIcon fontSize="inherit" />
-                  <span>Next.js 16 + TypeScript</span>
+            {/* Floating Mobile Companion Device */}
+            <div className={styles.floatingMobileDevice}>
+              <div className={styles.mobileSpeakerBar} />
+              <div className={styles.mobileScreenGlass}>
+                <div className={styles.mobileTopNav}>
+                  <span className={styles.mobileLogoDot} />
+                  <span className={styles.mobileNavLine} />
                 </div>
-                <span className={styles.speedScore}>100% Core Web Vitals</span>
+                <div className={styles.mobileHeroBanner} />
+                <div className={styles.mobileContentLines}>
+                  <span className={styles.mLine1} />
+                  <span className={styles.mLine2} />
+                </div>
+                <div className={styles.mobileActionBtn} />
               </div>
-
-              <div className={styles.mockupHero}>
-                <div className={styles.mockupTextGroup}>
-                  <div className={styles.lineH1} />
-                  <div className={styles.lineP1} />
-                  <div className={styles.lineP2} />
-                </div>
-                <div className={styles.mockupCta} />
-              </div>
-
-              <div className={styles.mockupGrid3}>
-                <div className={styles.mockupCard}>
-                  <LanguageIcon fontSize="small" />
-                  <div className={styles.miniBar} />
-                </div>
-                <div className={styles.mockupCard}>
-                  <div className={styles.miniCircle} />
-                  <div className={styles.miniBar} />
-                </div>
-                <div className={styles.mockupCard}>
-                  <div className={styles.miniSquare} />
-                  <div className={styles.miniBar} />
-                </div>
-              </div>
+              <div className={styles.mobileHomeBar} />
             </div>
-          </div>
 
-          {/* Floating Mobile Preview Companion */}
-          <div className={styles.floatingMobile}>
-            <div className={styles.mobileSpeaker} />
-            <div className={styles.mobileScreen}>
-              <div className={styles.mobileHero} />
-              <div className={styles.mobileBtn} />
+            {/* Bottom Architecture Capabilities Strip */}
+            <div className={styles.webDevFeatureStrip}>
+              <div className={styles.webDevFeatureItem}>
+                <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                <span>Sub-Second Server Components</span>
+              </div>
+              <div className={styles.webDevFeatureItem}>
+                <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                <span>Responsive Viewport Synergy</span>
+              </div>
+              <div className={styles.webDevFeatureItem}>
+                <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
+                <span>Enterprise SEO Foundations</span>
+              </div>
             </div>
           </div>
         </div>
