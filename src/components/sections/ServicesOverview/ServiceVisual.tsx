@@ -57,7 +57,7 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
                 </div>
                 <div className={styles.browserAddressField}>
                   <SecurityIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
-                  <span className={styles.browserUrlText}>https://gracetechnologies.uk/</span>
+                  <span className={styles.browserUrlText}>https://www.gracetechnologies.uk/</span>
                 </div>
                 <div className={styles.liveProdBadge}>
                   <span className={styles.beaconPingDot} />
