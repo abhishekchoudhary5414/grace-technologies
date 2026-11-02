@@ -18,7 +18,7 @@ const service = SERVICES_DATA[0]; // Website Development
 export const metadata: Metadata = constructMetadata({
   title: 'Website Development Company UK',
   description:
-    'Build a professional digital presence with custom website development, e-commerce solutions and web applications from Grace Technologies.',
+    'Get website development in the UK, from business and e-commerce sites to web applications, creating digital experiences designed to make an impact.',
   canonicalPath: '/services/website-development',
   keywords: [
     'Website development company UK',

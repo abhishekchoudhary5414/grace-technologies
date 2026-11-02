@@ -19,7 +19,7 @@ const service = SERVICES_DATA[1]; // Merchant Account Management
 export const metadata: Metadata = constructMetadata({
   title: 'Merchant Account Management Services',
   description:
-    'Explore merchant account management, onboarding assistance and payment operations support designed for growing businesses.',
+    'Get UK merchant account management support, including onboarding, product catalogues and payment operations, from Grace Technologies for your business.',
   canonicalPath: '/services/merchant-account-management',
   keywords: [
     'Merchant account management services',

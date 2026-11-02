@@ -19,7 +19,7 @@ import { constructMetadata } from '@/lib/seo/metadata';
 export const metadata: Metadata = constructMetadata({
   title: 'Digital & Technology Solutions UK',
   description:
-    'A UK-led technology partner delivering website development, merchant account management, AI automation and digital marketing solutions for growing businesses.',
+    'UK-based Grace Technologies partners with Ank Square in India to deliver website development, merchant account management, AI automation and digital marketing.',
   canonicalPath: '/',
   keywords: [
     'Technology company UK',

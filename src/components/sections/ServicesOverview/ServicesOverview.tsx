@@ -10,7 +10,13 @@ import ServiceVisual from './ServiceVisual';
 import { openEnquiryModal } from '@/utils/modal';
 import styles from './ServicesOverview.module.css';
 
-export default function ServicesOverview() {
+interface ServicesOverviewProps {
+  headingLevel?: 'h1' | 'h2';
+}
+
+export default function ServicesOverview({
+  headingLevel = 'h2',
+}: ServicesOverviewProps) {
   return (
     <section id="services-overview" className={styles.section}>
       <Container size="wide">
@@ -19,6 +25,7 @@ export default function ServicesOverview() {
           title="Integrated Solutions. A Unified Vision for Growth."
           description="Integrated technology and business solutions that simplify operations, strengthen digital presence, and drive sustainable business growth."
           align="center"
+          headingLevel={headingLevel}
         />
 
         <div className={styles.servicesList}>

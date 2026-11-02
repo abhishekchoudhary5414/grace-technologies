@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     template: SEO_CONFIG.titleTemplate,
   },
   description: SEO_CONFIG.defaultDescription,
+  icons: {
+    apple: SEO_CONFIG.appleTouchIcon,
+  },
   alternates: {
     canonical: SEO_CONFIG.siteUrl,
   },

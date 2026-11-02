@@ -25,7 +25,7 @@ import Logo from "../../../public/logo/logo.png"
 export const metadata: Metadata = constructMetadata({
   title: 'UK–India Strategic Partnership | Grace Technologies & Ank Square',
   description:
-    'Discover the strategic cross-border partnership between Grace Technologies (United Kingdom) and Ank Square Private Limited (India), combining British commercial leadership with Indian engineering execution.',
+    'Learn how UK-based Grace Technologies partners with Ank Square in India, combining British business leadership with engineering delivery for UK clients.',
   canonicalPath: '/partnership',
   keywords: [
     'UK India technology partnership',
@@ -62,7 +62,7 @@ export default function PartnershipPage() {
               Indian Technology Expertise.
             </h1>
             <p className={styles.heroSubtitle}>
-              A formalized cross-border alliance between Grace Technologies (UK) and Ank Square Private Limited (India) structured to deliver institutional-grade digital systems and business transformation.
+              Grace Technologies is a UK-based service company partnered with Ank Square in India. Together, we bring British business vision and Indian technology expertise to deliver digital systems and business transformation for our clients.
             </p>
           </div>
         </Container>

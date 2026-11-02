@@ -9,7 +9,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     tagline: 'Digital Experiences. Built to Perform.',
     headline: 'Digital Experiences Designed to Make an Impact.',
     description:
-      'Build modern, responsive and scalable websites and web applications that strengthen business presence and create meaningful customer experiences.',
+      'Our website development service creates modern, responsive websites and web applications designed to make an impact and deliver meaningful customer experiences.',
     route: '/services/website-development',
     capabilities: [
       {
@@ -112,7 +112,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     tagline: 'Merchant Account Creation & Product Catalog Operations.',
     headline: 'End-to-End Merchant Onboarding, Account Setup & Product Catalog Management.',
     description:
-      'We manage the entire lifecycle of merchant store operations — from initial merchant account creation and verification to complete digital product listing, catalog taxonomy, inventory synchronization, and ongoing payment operations.',
+      'We manage merchant account onboarding, account setup and product catalogues, from verification and product listings to inventory updates and payment operations.',
     route: '/services/merchant-account-management',
     capabilities: [
       {
@@ -199,7 +199,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     tagline: 'Intelligence That Works for Your Business.',
     headline: 'Turn Repetitive Work Into Intelligent Workflows.',
     description:
-      'Automate repetitive operations, connect workflows and introduce practical AI-powered solutions.',
+      'Our AI automation service turns repetitive work into intelligent workflows by connecting business processes with practical AI-powered solutions.',
     route: '/services/ai-automation',
     capabilities: [
       {
@@ -298,7 +298,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     tagline: 'Visibility That Creates Opportunity.',
     headline: 'Make Your Business Impossible to Ignore.',
     description:
-      'Grow online visibility, reach relevant audiences and build measurable digital marketing strategies.',
+      'Our digital marketing services help make your business impossible to ignore online by building visibility, reaching relevant audiences and generating measurable growth.',
     route: '/services/digital-marketing',
     capabilities: [
       {

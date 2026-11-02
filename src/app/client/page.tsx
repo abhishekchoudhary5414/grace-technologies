@@ -16,7 +16,7 @@ import styles from './client.module.css';
 export const metadata: Metadata = constructMetadata({
   title: 'Client Partnerships & Case Studies | Grace Technologies',
   description:
-    'Discover visionary corporate clients, startups, and institutions partnered with Grace Technologies for turnkey branding, websites, architecture, and technology.',
+    'See how Grace Technologies has supported clients with brand identity, website development and digital projects for businesses in the UK and beyond.',
   canonicalPath: '/client',
   keywords: [
     'Grace Technologies clients',
@@ -48,8 +48,9 @@ export default function ClientsIndexPage() {
           <SectionHeading
             label="CLIENT PARTNERSHIPS"
             title="Trusted by Visionary Enterprises."
-            description="Explore our proven record of delivering corporate brand identities, dynamic web applications, and clinical engineering infrastructure."
+            description="Trusted by visionary enterprises, we deliver brand identities, website development and digital projects for businesses in the UK and beyond."
             align="center"
+            headingLevel="h1"
           />
         </Container>
       </section>
@@ -80,4 +81,3 @@ export default function ClientsIndexPage() {
     </div>
   );
 }
-

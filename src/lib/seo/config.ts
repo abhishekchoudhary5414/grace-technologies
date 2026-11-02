@@ -7,10 +7,11 @@ export const SEO_CONFIG = {
   siteName: 'Grace Technologies',
   legalName: 'Grace Technologies',
   siteUrl: 'https://www.gracetechnologies.uk',
+  appleTouchIcon: '/apple-touch-icon.png',
   defaultTitle: 'Grace Technologies | Digital & Technology Solutions',
   titleTemplate: '%s | Grace Technologies',
   defaultDescription:
-    'A UK-led technology partner delivering website development, merchant account management, AI automation and digital marketing solutions for growing businesses.',
+    'A UK-led technology partner offering website development, merchant account management, AI automation & digital marketing solutions for growing businesses.',
   defaultOgImage: 'https://www.gracetechnologies.uk/logo/logo.png',
   locale: 'en_GB',
   inLocale: 'en_IN',
@@ -92,4 +93,3 @@ export const SEO_CONFIG = {
     },
   ],
 } as const;
-

@@ -15,7 +15,7 @@ import styles from './about.module.css';
 export const metadata: Metadata = constructMetadata({
   title: 'About Grace Technologies | Our Expertise & Approach',
   description:
-    'Learn about Grace Technologies, a UK-led technology solutions partner delivering website development, AI automation, and merchant management in strategic partnership with Ank Square India.',
+    "Grace Technologies' UK team partners with Ank Square in India to deliver website development, merchant account management, AI automation and digital marketing.",
   canonicalPath: '/about',
   keywords: [
     'UK technology company',
@@ -52,7 +52,7 @@ export default function AboutPage() {
                 Combining British Corporate Elegance With Global Technology Prowess.
               </h1>
               <p className={styles.heroSubtitle}>
-                We empower ambitious enterprises to solve real commercial challenges through strategic consulting, modern engineering architectures, and disciplined international delivery.
+                Grace Technologies combines British corporate elegance with global technology prowess, partnering with Ank Square in India to deliver website development, merchant account management, AI automation and digital marketing.
               </p>
             </div>
 

@@ -7,7 +7,8 @@ import styles from './legal.module.css';
 
 export const metadata: Metadata = constructMetadata({
   title: 'Terms & Conditions',
-  description: 'Terms and Conditions governing the use of Grace Technologies services and web platforms.',
+  description:
+    'Review the terms for using Grace Technologies’ website and UK services, including website development, merchant account support and our Ank Square partnership.',
   canonicalPath: '/terms-and-conditions',
 });
 
@@ -65,4 +66,3 @@ export default function TermsAndConditionsPage() {
     </div>
   );
 }
-

@@ -8,6 +8,7 @@ interface SectionHeadingProps {
   label?: string;
   title: string;
   description?: string;
+  headingLevel?: 'h1' | 'h2';
   align?: 'left' | 'center';
   className?: string;
 }
@@ -16,9 +17,12 @@ export default function SectionHeading({
   label,
   title,
   description,
+  headingLevel = 'h2',
   align = 'left',
   className = '',
 }: SectionHeadingProps) {
+  const MotionHeading = headingLevel === 'h1' ? motion.h1 : motion.h2;
+
   return (
     <div
       className={`${styles.wrapper} ${align === 'center' ? styles.center : styles.left} ${className}`}
@@ -34,7 +38,7 @@ export default function SectionHeading({
           <span className={styles.label}>{label}</span>
         </motion.div>
       )}
-      <motion.h2
+      <MotionHeading
         className={styles.title}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +46,7 @@ export default function SectionHeading({
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         {title}
-      </motion.h2>
+      </MotionHeading>
       {description && (
         <motion.p
           className={styles.description}
@@ -57,4 +61,3 @@ export default function SectionHeading({
     </div>
   );
 }
-

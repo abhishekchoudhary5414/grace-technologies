@@ -12,7 +12,7 @@ import styles from './services.module.css';
 export const metadata: Metadata = constructMetadata({
   title: 'Technology & Digital Services',
   description:
-    'Comprehensive business technology services including custom website development, AI automation, merchant account management, and strategic digital marketing.',
+    'Explore website development, merchant account management, AI automation and digital marketing from Grace Technologies in the UK, with Ank Square in India.',
   canonicalPath: '/services',
   keywords: [
     'Business technology services UK',
@@ -39,7 +39,7 @@ export default function ServicesPage() {
       />
 
       {/* Alternating Services Showcase Matching the Homepage */}
-      <ServicesOverview />
+      <ServicesOverview headingLevel="h1" />
 
       {/* Conversion CTA */}
       <ServiceCTASection

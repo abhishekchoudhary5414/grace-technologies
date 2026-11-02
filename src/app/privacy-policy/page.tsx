@@ -7,7 +7,8 @@ import styles from './legal.module.css';
 
 export const metadata: Metadata = constructMetadata({
   title: 'Privacy Policy',
-  description: 'Privacy Policy and data governance principles of Grace Technologies.',
+  description:
+    "Read Grace Technologies' UK privacy policy for details on how we collect, use and protect personal data submitted through our website and services.",
   canonicalPath: '/privacy-policy',
 });
 
@@ -70,4 +71,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-

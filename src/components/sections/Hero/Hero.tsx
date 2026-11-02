@@ -48,7 +48,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
             >
-              We provide smart technology solutions, including software development, AI automation, digital marketing, merchant account management, and IT consulting to help businesses grow and succeed.            </motion.p>
+              Our technology services help businesses move forward through website development, merchant account management, AI automation and digital marketing. Grace Technologies is UK-based and partners with Ank Square in India to deliver these services.
+            </motion.p>
             <motion.div
               className={styles.actions}
               initial={{ opacity: 0, y: 20 }}

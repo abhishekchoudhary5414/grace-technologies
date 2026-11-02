@@ -17,7 +17,7 @@ import styles from './projects.module.css';
 export const metadata: Metadata = constructMetadata({
   title: 'Our Projects & Case Studies | Grace Technologies',
   description:
-    'Explore featured case studies and production deployments delivered by Grace Technologies across Web Development, Merchant Operations, AI Automation, and Digital Marketing.',
+    'Explore Grace Technologies case studies for UK and international clients, featuring websites, merchant operations, AI automation and digital marketing.',
   canonicalPath: '/projects',
   keywords: [
     'Grace Technologies projects',
@@ -52,8 +52,9 @@ export default function ProjectsPage() {
           <SectionHeading
             label="OUR PORTFOLIO"
             title="Ideas Into Real Digital Solutions."
-            description="Explore our proven digital architectures, multi-currency merchant ecosystems, automated AI systems, and precision growth marketing implementations."
+            description="See how ideas become real digital solutions through our website development, merchant operations, AI automation and digital marketing projects."
             align="center"
+            headingLevel="h1"
           />
         </Container>
       </section>

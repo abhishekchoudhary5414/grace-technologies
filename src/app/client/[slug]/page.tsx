@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return constructMetadata({
     title: `${client.name} Case Study | ${client.project}`,
-    description: client.summary || client.testimonial,
+    description: createCaseStudyDescription(client),
     canonicalPath: `/client/${client.slug}`,
     keywords: [
       `${client.name} case study`,
@@ -61,6 +61,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'Technology delivery case study',
     ],
   });
+}
+
+function createCaseStudyDescription(client: ClientItem): string {
+  const description = `${client.name}: ${client.project}. ${client.summary || client.testimonial}`;
+  if (description.length <= 160) {
+    return description;
+  }
+
+  const shortened = description.slice(0, 157).replace(/\s+\S*$/, '');
+  return `${shortened}...`;
 }
 
 export default function ClientDetailPage({ params }: Props) {

@@ -41,7 +41,7 @@ export default function CompanyIntro() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Grace TechnoloGrace Technologies brings together technology and business expertise to help companies grow and succeed. We provide website and mobile app development, digital marketing, AI automation, merchant account management, and IT solutions to simplify business operations and support long-term growth.gies combines digital expertise, business understanding, and technical innovation to help ambitious companies solve complex operational challenges.
+              Grace Technologies combines technology and business expertise to help UK companies move forward. We provide website development, merchant account management, AI automation and digital marketing in partnership with Ank Square in India.
             </motion.p>
 
             <motion.div
@@ -111,4 +111,3 @@ export default function CompanyIntro() {
     </section>
   );
 }
-
