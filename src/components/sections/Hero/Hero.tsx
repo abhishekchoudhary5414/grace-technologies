@@ -48,7 +48,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
             >
-              Our technology services help businesses move forward through website development, merchant account management, AI automation and digital marketing. Grace Technologies is UK-based and partners with Ank Square in India to deliver these services.
+              Grace Technologies provides technology and digital solutions for growing UK businesses through website development, merchant account management, AI automation and digital marketing. We are UK-based and partnered with Ank Square in India.
             </motion.p>
             <motion.div
               className={styles.actions}
