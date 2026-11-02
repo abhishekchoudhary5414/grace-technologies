@@ -323,7 +323,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </span>
               )}
             </div>
-            <h3 className={styles.projectTitle}>{title}</h3>
+            <p className={styles.projectTitle}>{title}</p>
             <p className={styles.projectDescription}>{summary}</p>
           </div>
 
@@ -353,7 +353,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               </button>
             ) : clientSlug ? (
               <Link href={`/client/${clientSlug}`} className={styles.primaryAction}>
-                <span>View</span>
+                <span>View {project.client} case study</span>
                 <ArrowForwardIcon fontSize="small" />
               </Link>
             ) : (

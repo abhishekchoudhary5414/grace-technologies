@@ -71,7 +71,7 @@ export default function GlobalOffices() {
             </div>
 
             <div className={styles.companyMeta}>
-              <h4 className={styles.companyName}>{uk.company}</h4>
+              <p className={styles.companyName}>{uk.company}</p>
               <span className={styles.companyRole}>{uk.role}</span>
             </div>
 
@@ -228,7 +228,7 @@ export default function GlobalOffices() {
             </div>
 
             <div className={styles.companyMeta}>
-              <h4 className={styles.companyName}>{india.company}</h4>
+              <p className={styles.companyName}>{india.company}</p>
               <span className={styles.companyRole}>{india.role}</span>
             </div>
 

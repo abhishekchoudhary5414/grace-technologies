@@ -19,7 +19,7 @@ import styles from './contact.module.css';
 export const metadata: Metadata = constructMetadata({
   title: 'Contact Grace Technologies | Discuss Your Project',
   description:
-    'Contact Grace Technologies in the UK to discuss website development, merchant account management, AI automation or digital marketing for your business.',
+    'Discuss your goals with Grace Technologies in the UK: website development, merchant account management, AI automation and digital marketing for your business.',
   canonicalPath: '/contact',
   keywords: [
     'Contact technology company UK',

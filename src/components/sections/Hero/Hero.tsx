@@ -38,8 +38,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Technology That Moves{' '}
-              <span className={styles.highlightText}>Business Forward.</span>
+              Technology and Digital Solutions for{' '}
+              <span className={styles.highlightText}>Growing Businesses</span>
             </motion.h1>
 
             <motion.p

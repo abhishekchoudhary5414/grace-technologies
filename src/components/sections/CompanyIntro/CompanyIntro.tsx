@@ -30,8 +30,7 @@ export default function CompanyIntro() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              More Than Technology. <br />
-              <span className={styles.accentText}>Your Partner in Growth.</span>
+              About Grace Technologies
             </motion.h2>
 
             <motion.p
@@ -74,28 +73,28 @@ export default function CompanyIntro() {
               </div>
 
               <div className={styles.cardContent}>
-                <h3 className={styles.cardHeading}>Technology That Delivers Real Results.</h3>
+                <p className={styles.cardHeading}>Technology That Delivers Real Results.</p>
                 <p className={styles.cardText}>
                   At Grace Technologies, we combine strategic business insight with technical excellence to deliver solutions that create lasting value. From software and mobile application development to AI automation and digital services, every project is strategically managed in the United Kingdom and executed by our dedicated technology delivery partner, Ank Square Private Limited, India. This approach enables us to deliver scalable, efficient, and high-quality solutions aligned with our clients' business objectives.                </p>
                 <div className={styles.valuesList}>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <h4 className={styles.valTitle}>Strategic Business Alignment</h4>
+                      <p className={styles.valTitle}>Strategic Business Alignment</p>
                       <p className={styles.valDesc}>Connecting technology decisions with business goals to deliver meaningful results.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <h4 className={styles.valTitle}>Tailored Technology Solutions</h4>
+                      <p className={styles.valTitle}>Tailored Technology Solutions</p>
                       <p className={styles.valDesc}>Developing custom, scalable, and maintainable solutions designed around your business needs.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <h4 className={styles.valTitle}>Reliable Project Delivery</h4>
+                      <p className={styles.valTitle}>Reliable Project Delivery</p>
                       <p className={styles.valDesc}>Ensuring transparent communication, structured project management, timely delivery, and ongoing support.</p>
                     </div>
                   </div>

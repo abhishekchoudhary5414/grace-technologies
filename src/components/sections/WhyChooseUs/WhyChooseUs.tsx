@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
       <Container size="wide">
         <SectionHeading
           label="THE GRACE ADVANTAGE"
-          title="Technology With a Business-First Mindset."
+          title="Why Choose Grace Technologies"
           description="We bridge the gap between high-level business strategy and rigorous engineering execution."
           align="left"
         />
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
                   </div>
                   <span className={styles.cardNumber}>{item.number}</span>
                 </div>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
+                <p className={styles.cardTitle}>{item.title}</p>
                 <p className={styles.cardDescription}>{item.description}</p>
                 <div className={styles.bottomBorder} />
               </motion.div>
@@ -91,4 +91,3 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-

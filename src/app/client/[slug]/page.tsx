@@ -45,7 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!client) {
     return constructMetadata({
       title: 'Client Case Study',
-      description: 'Explore commercial case studies and digital deliveries by Grace Technologies.',
+      description:
+        'Explore Grace Technologies client projects, from UK website development and brand identity to digital services delivered with Ank Square in India.',
       noIndex: true,
     });
   }
@@ -64,7 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 function createCaseStudyDescription(client: ClientItem): string {
-  const description = `${client.name}: ${client.project}. ${client.summary || client.testimonial}`;
+  const description = `See how Grace Technologies and Ank Square helped ${client.name} with ${client.project.toLowerCase()}, in our UK-India case study.`;
   if (description.length <= 160) {
     return description;
   }
@@ -247,7 +248,7 @@ async function ClientDetailContent({ params }: Props) {
         <section className={styles.workSection}>
           <SectionHeading
             label="TECHNICAL EXECUTION"
-            title="Scope of Work & Architectural Deliverables."
+            title={`${client.name}: Project Scope & Digital Deliverables`}
             description={`Detailed breakdown of technical solutions, branding systems, and digital infrastructure engineered for ${client.name}.`}
             align="left"
           />
@@ -258,7 +259,7 @@ async function ClientDetailContent({ params }: Props) {
 
       {/* Conversion CTA */}
       <ServiceCTASection
-        title={`Scale Your Engineering & Digital Architecture with Grace Technologies`}
+        title={`${client.name}: Plan Your Next Digital Project with Grace Technologies`}
         description="Schedule a technical roadmap discussion with our lead engineering architects to evaluate your digital platform requirements."
         primaryCtaText="Consult With Our Architects"
         secondaryCtaText="Explore All Projects"

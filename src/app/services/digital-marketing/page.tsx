@@ -18,7 +18,7 @@ const service = SERVICES_DATA[3]; // Digital Marketing
 export const metadata: Metadata = constructMetadata({
   title: 'Digital Marketing & SEO Services UK',
   description:
-    'Help your UK business stand out with digital marketing from Grace Technologies, including SEO, content, paid campaigns and conversion optimisation.',
+    'Grow your UK audience with digital marketing from Grace Technologies, including SEO, content strategy, paid campaigns and conversion optimisation.',
   canonicalPath: '/services/digital-marketing',
   keywords: [
     'Digital marketing agency UK',

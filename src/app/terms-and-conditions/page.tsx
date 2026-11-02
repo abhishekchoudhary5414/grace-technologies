@@ -8,7 +8,7 @@ import styles from './legal.module.css';
 export const metadata: Metadata = constructMetadata({
   title: 'Terms & Conditions',
   description:
-    'Review the terms for using Grace Technologies’ website and UK services, including website development, merchant account support and our Ank Square partnership.',
+    'Review the terms for Grace Technologies’ website and UK services, including website development, merchant account support and our Ank Square partnership.',
   canonicalPath: '/terms-and-conditions',
 });
 

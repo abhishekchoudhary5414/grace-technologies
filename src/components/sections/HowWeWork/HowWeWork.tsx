@@ -39,7 +39,7 @@ export default function HowWeWork() {
                 </div>
 
                 <div className={styles.cardContent}>
-                  <h3 className={styles.stepTitle}>{step.title}</h3>
+                  <p className={styles.stepTitle}>{step.title}</p>
                   <p className={styles.stepDescription}>{step.description}</p>
                 </div>
               </motion.div>
@@ -50,4 +50,3 @@ export default function HowWeWork() {
     </section>
   );
 }
-

@@ -25,7 +25,7 @@ import Logo from "../../../public/logo/logo.png"
 export const metadata: Metadata = constructMetadata({
   title: 'UK–India Strategic Partnership | Grace Technologies & Ank Square',
   description:
-    'Learn how UK-based Grace Technologies partners with Ank Square in India, combining British business leadership with engineering delivery for UK clients.',
+    'See how UK-based Grace Technologies and Indian partner Ank Square combine business leadership and engineering to deliver digital services for UK clients.',
   canonicalPath: '/partnership',
   keywords: [
     'UK India technology partnership',

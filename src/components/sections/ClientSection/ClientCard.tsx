@@ -79,14 +79,14 @@ export default function ClientCard({ client, index }: ClientCardProps) {
         <div>
           <span className={styles.categoryLabel}>{category}</span>
           <h3 className={styles.clientName}>{name}</h3>
-          <h4 className={styles.projectTitle}>{project}</h4>
+          <p className={styles.projectTitle}>{project}</p>
           <p className={styles.description}>{summary}</p>
         </div>
 
         {/* Action Row */}
         <div className={styles.cardActionRow}>
           <Link href={`/client/${slug}`} className={styles.viewProjectLink}>
-            <span>View Full Case Details</span>
+            <span>View {name} case study</span>
             <ArrowForwardIcon />
           </Link>
 

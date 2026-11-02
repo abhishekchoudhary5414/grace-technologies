@@ -18,7 +18,7 @@ const service = SERVICES_DATA[2]; // AI Automation
 export const metadata: Metadata = constructMetadata({
   title: 'AI Automation Services UK',
   description:
-    'Turn repetitive work into intelligent workflows with AI automation, CRM integrations and document processing from Grace Technologies in the UK.',
+    'Automate repetitive work with AI workflows, CRM integrations and document processing. Grace Technologies helps UK businesses save time and reduce manual tasks.',
   canonicalPath: '/services/ai-automation',
   keywords: [
     'AI automation services UK',

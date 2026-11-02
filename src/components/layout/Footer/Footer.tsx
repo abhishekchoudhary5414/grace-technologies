@@ -82,7 +82,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.linksCol}>
-            <h4 className={styles.colTitle}>Services</h4>
+            <p className={styles.colTitle}>Services</p>
             <ul className={styles.linkList}>
               <li>
                 <Link href="/services/website-development" className={styles.footerLink}>
@@ -113,7 +113,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.linksCol}>
-            <h4 className={styles.colTitle}>Company</h4>
+            <p className={styles.colTitle}>Company</p>
             <ul className={styles.linkList}>
               <li>
                 <Link href="/about" className={styles.footerLink}>
@@ -154,7 +154,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.contactCol}>
-            <h4 className={styles.colTitle}>Headquarters & Hub</h4>
+            <p className={styles.colTitle}>Headquarters & Hub</p>
             
             {/* UK Headquarters */}
             <div className={styles.locationItem}>

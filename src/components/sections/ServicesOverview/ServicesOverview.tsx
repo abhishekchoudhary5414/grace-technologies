@@ -22,7 +22,7 @@ export default function ServicesOverview({
       <Container size="wide">
         <SectionHeading
           label="CORE CAPABILITIES"
-          title="Integrated Solutions. A Unified Vision for Growth."
+          title="Our Services"
           description="Integrated technology and business solutions that simplify operations, strengthen digital presence, and drive sustainable business growth."
           align="center"
           headingLevel={headingLevel}
@@ -79,7 +79,7 @@ export default function ServicesOverview({
                       variant="outline"
                       size="md"
                     >
-                      View Detail
+                      Explore {service.title}
                     </Button>
                   </div>
                 </div>

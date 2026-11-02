@@ -24,8 +24,7 @@ export default function PartnershipSection() {
         <div className={styles.header}>
           <span className={styles.badge}>STRATEGIC BILATERAL COLLABORATION</span>
           <h2 className={styles.title}>
-            British Business Vision. <br />
-            Indian Technology Expertise.
+            Our Partnership
           </h2>
           <p className={styles.description}>
             A strategic partnership combining United Kingdom commercial leadership and strategic client governance with world-class engineering execution from Ank Square Private Limited, India.
