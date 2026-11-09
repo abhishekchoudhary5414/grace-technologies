@@ -418,6 +418,288 @@ export function NewZealandFlag({ className, width = 60, height = 36 }: FlagProps
   );
 }
 
+export function JapanFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Japan Flag"
+    >
+      <clipPath id="jpFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#jpFlagClip)">
+        <rect width="60" height="36" fill="#FFFFFF" />
+        <circle cx="30" cy="18" r="10.8" fill="#BC002D" />
+      </g>
+    </svg>
+  );
+}
+
+export function SouthKoreaFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="South Korea Flag"
+    >
+      <clipPath id="krFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#krFlagClip)">
+        <rect width="60" height="36" fill="#FFFFFF" />
+        {/* Taegeuk center */}
+        <circle cx="30" cy="18" r="9" fill="#C60C30" />
+        <path d="M 21,18 A 9,9 0 0,0 39,18 A 4.5,4.5 0 0,0 30,18 A 4.5,4.5 0 0,1 21,18 Z" fill="#003478" />
+        {/* Simplified 4 Trigrams */}
+        <line x1="14" y1="9" x2="20" y2="6" stroke="#000000" strokeWidth="1.2" />
+        <line x1="15" y1="11" x2="21" y2="8" stroke="#000000" strokeWidth="1.2" />
+        <line x1="40" y1="28" x2="46" y2="25" stroke="#000000" strokeWidth="1.2" />
+        <line x1="41" y1="30" x2="47" y2="27" stroke="#000000" strokeWidth="1.2" />
+        <line x1="40" y1="8" x2="46" y2="11" stroke="#000000" strokeWidth="1.2" />
+        <line x1="14" y1="27" x2="20" y2="30" stroke="#000000" strokeWidth="1.2" />
+      </g>
+    </svg>
+  );
+}
+
+export function SpainFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Spain Flag"
+    >
+      <clipPath id="esFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#esFlagClip)">
+        <rect width="60" height="9" fill="#AA151B" />
+        <rect y="9" width="60" height="18" fill="#F1BF00" />
+        <rect y="27" width="60" height="9" fill="#AA151B" />
+        {/* Coat of arms shield representation */}
+        <circle cx="18" cy="18" r="4.2" fill="#AA151B" stroke="#800C11" strokeWidth="0.8" />
+      </g>
+    </svg>
+  );
+}
+
+export function ItalyFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Italy Flag"
+    >
+      <clipPath id="itFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#itFlagClip)">
+        <rect width="20" height="36" fill="#009246" />
+        <rect x="20" width="20" height="36" fill="#FFFFFF" />
+        <rect x="40" width="20" height="36" fill="#CE2B37" />
+      </g>
+    </svg>
+  );
+}
+
+export function SwedenFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Sweden Flag"
+    >
+      <clipPath id="seFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#seFlagClip)">
+        <rect width="60" height="36" fill="#006AA7" />
+        <rect x="18" width="7" height="36" fill="#FECC00" />
+        <rect y="14.5" width="60" height="7" fill="#FECC00" />
+      </g>
+    </svg>
+  );
+}
+
+export function NorwayFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Norway Flag"
+    >
+      <clipPath id="noFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#noFlagClip)">
+        <rect width="60" height="36" fill="#BA0C2F" />
+        <rect x="17" width="10" height="36" fill="#FFFFFF" />
+        <rect y="13" width="60" height="10" fill="#FFFFFF" />
+        <rect x="19" width="6" height="36" fill="#00205B" />
+        <rect y="15" width="60" height="6" fill="#00205B" />
+      </g>
+    </svg>
+  );
+}
+
+export function DenmarkFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Denmark Flag"
+    >
+      <clipPath id="dkFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#dkFlagClip)">
+        <rect width="60" height="36" fill="#C60C30" />
+        <rect x="18" width="6" height="36" fill="#FFFFFF" />
+        <rect y="15" width="60" height="6" fill="#FFFFFF" />
+      </g>
+    </svg>
+  );
+}
+
+export function PolandFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Poland Flag"
+    >
+      <clipPath id="plFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#plFlagClip)">
+        <rect width="60" height="18" fill="#FFFFFF" />
+        <rect y="18" width="60" height="18" fill="#DC143C" />
+      </g>
+    </svg>
+  );
+}
+
+export function BelgiumFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Belgium Flag"
+    >
+      <clipPath id="beFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#beFlagClip)">
+        <rect width="20" height="36" fill="#000000" />
+        <rect x="20" width="20" height="36" fill="#FDDA24" />
+        <rect x="40" width="20" height="36" fill="#EF3340" />
+      </g>
+    </svg>
+  );
+}
+
+export function SouthAfricaFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="South Africa Flag"
+    >
+      <clipPath id="zaFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#zaFlagClip)">
+        <rect width="60" height="18" fill="#E03C31" />
+        <rect y="18" width="60" height="18" fill="#001489" />
+        <polygon points="0,0 24,18 0,36" fill="#000000" />
+        <polygon points="0,0 20,18 0,36" fill="#FFB81C" />
+        <polygon points="0,3 17,18 0,33" fill="#000000" />
+        <line x1="24" y1="18" x2="60" y2="18" stroke="#007749" strokeWidth="8" />
+        <polyline points="0,0 24,18 0,36" fill="none" stroke="#FFFFFF" strokeWidth="3" />
+        <polyline points="0,0 24,18 0,36" fill="none" stroke="#007749" strokeWidth="7" />
+      </g>
+    </svg>
+  );
+}
+
+export function BrazilFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Brazil Flag"
+    >
+      <clipPath id="brFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#brFlagClip)">
+        <rect width="60" height="36" fill="#009739" />
+        <polygon points="30,4 54,18 30,32 6,18" fill="#FEDD00" />
+        <circle cx="30" cy="18" r="6.8" fill="#012169" />
+        <path d="M 23.5,18 Q 30,15 36.5,18" stroke="#FFFFFF" strokeWidth="0.8" fill="none" />
+      </g>
+    </svg>
+  );
+}
+
+export function MexicoFlag({ className, width = 60, height = 36 }: FlagProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 36"
+      width={width}
+      height={height}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Mexico Flag"
+    >
+      <clipPath id="mxFlagClip">
+        <rect width="60" height="36" rx="3" />
+      </clipPath>
+      <g clipPath="url(#mxFlagClip)">
+        <rect width="20" height="36" fill="#006847" />
+        <rect x="20" width="20" height="36" fill="#FFFFFF" />
+        <rect x="40" width="20" height="36" fill="#CE1126" />
+        {/* Simplified Eagle symbol */}
+        <circle cx="30" cy="18" r="3.2" fill="#755034" />
+      </g>
+    </svg>
+  );
+}
+
 export function GlobalFlag({ className, width = 60, height = 36 }: FlagProps) {
   return (
     <svg
