@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import clientsData from '@/config/clients.json';
 import { BLOG_POSTS } from '@/data/blog';
+import { getAllServiceConfigs } from '@/config/services';
+import { cities, normalizeSegment } from '@/data/cities';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SEO_CONFIG.siteUrl;
@@ -107,5 +109,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...clientRoutes];
+  // Generate dynamic location landing pages for all UK cities across all active services
+  const services = getAllServiceConfigs();
+  const locationRoutes: MetadataRoute.Sitemap = [];
+
+  for (const s of services) {
+    for (const item of cities) {
+      const cSlug = normalizeSegment(item.city);
+      const sSlug = normalizeSegment(item.state);
+      const coSlug = normalizeSegment(item.country);
+
+      locationRoutes.push({
+        url: `${baseUrl}/services/${s.slug}/${cSlug}/${sSlug}/${coSlug}`,
+        lastModified: new Date('2026-11-09'),
+        changeFrequency: 'weekly' as const,
+        priority: 0.75,
+      });
+    }
+  }
+
+  return [...staticRoutes, ...blogRoutes, ...clientRoutes, ...locationRoutes];
 }

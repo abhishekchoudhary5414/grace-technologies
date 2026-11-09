@@ -86,12 +86,43 @@ export function getServiceSchema({
   description,
   url,
   serviceType,
+  areaServedName,
 }: {
   name: string;
   description: string;
   url: string;
   serviceType: string;
+  areaServedName?: string;
 }) {
+  const defaultArea = [
+    {
+      '@type': 'Country',
+      name: 'United Kingdom',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Greater London',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'England',
+    },
+    {
+      '@type': 'Country',
+      name: 'India',
+    },
+  ];
+
+  const areaServed = areaServedName
+    ? [
+        {
+          '@type': 'AdministrativeArea',
+          name: areaServedName,
+        },
+        ...defaultArea,
+      ]
+    : defaultArea;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -103,24 +134,7 @@ export function getServiceSchema({
     provider: {
       '@id': SEO_CONFIG.organizationId,
     },
-    areaServed: [
-      {
-        '@type': 'Country',
-        name: 'United Kingdom',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Greater London',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'England',
-      },
-      {
-        '@type': 'Country',
-        name: 'India',
-      },
-    ],
+    areaServed,
   };
 }
 

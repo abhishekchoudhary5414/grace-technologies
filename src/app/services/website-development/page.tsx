@@ -6,6 +6,7 @@ import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDe
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
+import LocationNavigation from '@/components/sections/LocationNavigation/LocationNavigation';
 import JsonLd from '@/components/seo/JsonLd';
 import { constructMetadata } from '@/lib/seo/metadata';
 import { getServiceSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo/schema';
@@ -152,6 +153,14 @@ export default function WebsiteDevelopmentPage() {
           <FaqAccordion faqs={service.faqs} />
         </Container>
       </section>
+
+      {/* Regional UK Locations Navigation */}
+      <Container size="wide">
+        <LocationNavigation
+          currentServiceSlug="website-development"
+          serviceTitle="Website Development"
+        />
+      </Container>
 
       {/* Enquiry CTA */}
       <ServiceCTASection

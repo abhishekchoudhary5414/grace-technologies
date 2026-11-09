@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
 import ConditionalShell from '@/components/layout/ConditionalShell/ConditionalShell';
@@ -81,7 +82,9 @@ export default function RootLayout({
         <JsonLd data={[organizationSchema, webSiteSchema]} />
       </head>
       <body>
-        <ConditionalShell>{children}</ConditionalShell>
+        <Suspense fallback={null}>
+          <ConditionalShell>{children}</ConditionalShell>
+        </Suspense>
       </body>
     </html>
   );
