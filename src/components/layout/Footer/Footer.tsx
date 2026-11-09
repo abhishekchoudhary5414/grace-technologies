@@ -121,6 +121,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className={styles.footerLink}>
+                  Blog & Industry Insights
+                </Link>
+              </li>
+              <li>
                 <Link href="/projects" className={styles.footerLink}>
                   Featured Projects
                 </Link>

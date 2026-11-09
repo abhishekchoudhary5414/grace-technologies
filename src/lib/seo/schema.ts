@@ -200,3 +200,25 @@ export function getFaqSchema(faqs: Array<{ question: string; answer: string }>) 
   };
 }
 
+export function getBlogIndexSchema(posts: Array<{ title: string; url: string; datePublished: string; description: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SEO_CONFIG.siteUrl}/blog#collection`,
+    url: `${SEO_CONFIG.siteUrl}/blog`,
+    name: 'Grace Technologies Insights & Thought Leadership',
+    description: 'Expert publications on UK website development, enterprise AI automation, answer engine optimization (AEO), generative engine optimization (GEO), and merchant operations.',
+    publisher: {
+      '@id': SEO_CONFIG.organizationId,
+    },
+    inLanguage: SEO_CONFIG.language,
+    hasPart: posts.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      url: post.url,
+      datePublished: post.datePublished,
+      description: post.description,
+    })),
+  };
+}
+

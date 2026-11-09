@@ -41,10 +41,10 @@ export default function BlogLanding() {
       <Container size="wide">
         <header className={styles.hero}>
           <div className={styles.heroCopy}>
-            <span className={styles.eyebrow}>Insights & strategy</span>
-            <h1>Practical guidance for smarter digital growth.</h1>
+            <span className={styles.eyebrow}>Insights, Strategy & Thought Leadership</span>
+            <h1>Technical Intelligence for Modern Enterprise Growth.</h1>
             <p>
-              Short, useful reads on websites, AI, performance, payments and growth strategy for UK businesses.
+              In-depth strategic analyses, architectural blueprints, and actionable intelligence covering Next.js website engineering, Answer Engine Optimisation (AEO), Generative Engine Optimisation (GEO), enterprise AI automation, and merchant payment infrastructure for UK & global enterprises.
             </p>
 
             <div className={styles.filterBar} aria-label="Blog categories">
@@ -100,8 +100,8 @@ export default function BlogLanding() {
         <section className={styles.contentSection}>
           <div className={styles.sectionHeader}>
             <div>
-              <span className={styles.sectionLabel}>Latest insights</span>
-              <h2>Fresh thinking for growth-minded teams</h2>
+              <span className={styles.sectionLabel}>Knowledge Base & Topical Hub</span>
+              <h2>Authoritative Guides for Enterprise Leaders & Engineers</h2>
             </div>
             <span className={styles.resultCount}>{filteredPosts.length} articles</span>
           </div>
