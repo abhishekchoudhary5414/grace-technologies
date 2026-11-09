@@ -19,6 +19,7 @@ import { getBreadcrumbSchema } from '@/lib/seo/schema';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import { UkFlag, IndiaFlag } from '@/components/common/Flags/CountryFlags';
 import officesData from '@/config/offices.json';
+import PartnershipHeroVisual from '@/components/sections/PartnershipHeroVisual/PartnershipHeroVisual';
 import styles from './partnership.module.css';
 import Logo from "../../../public/logo/logo.png"
 
@@ -55,15 +56,21 @@ export default function PartnershipPage() {
       {/* Hero */}
       <section className={styles.heroSection}>
         <Container size="wide">
-          <div className={styles.heroContent}>
-            <span className={styles.badge}>BILATERAL STRATEGIC ALLIANCE</span>
-            <h1 className={styles.heroTitle}>
-              British Business Vision. <br />
-              Indian Technology Expertise.
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Grace Technologies is a UK-based service company partnered with Ank Square in India. Together, we bring British business vision and Indian technology expertise to deliver digital systems and business transformation for our clients.
-            </p>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroContent}>
+              <span className={styles.badge}>BILATERAL STRATEGIC ALLIANCE</span>
+              <h1 className={styles.heroTitle}>
+                British Business Vision. <br />
+                Indian Technology Expertise.
+              </h1>
+              <p className={styles.heroSubtitle}>
+                Grace Technologies is a UK-based service company partnered with Ank Square in India. Together, we bring British business vision and Indian technology expertise to deliver digital systems and business transformation for our clients.
+              </p>
+            </div>
+
+            <div className={styles.heroVisualCol}>
+              <PartnershipHeroVisual />
+            </div>
           </div>
         </Container>
       </section>
