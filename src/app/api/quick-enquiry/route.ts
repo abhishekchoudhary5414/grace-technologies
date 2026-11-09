@@ -17,11 +17,12 @@ export async function POST(request: Request) {
       );
     }
 
-    const { fullName, serviceType, email, phone } = validation.data;
+    const { fullName, serviceType, country, email, phone } = validation.data;
 
     // Connect to Supabase and persist directly into enquiries table
     const supabase = createServerSupabaseClient();
     if (supabase) {
+      const countryNote = country ? `[Country: ${country}]` : '';
       const { error: dbError } = await supabase.from('enquiries').insert([
         {
           name: fullName,
@@ -29,7 +30,7 @@ export async function POST(request: Request) {
           email: email || 'Not Provided (Phone Only)',
           phone: phone || 'Not Provided (Email Only)',
           status: 'New',
-          notes: null,
+          notes: countryNote || null,
         },
       ]);
 

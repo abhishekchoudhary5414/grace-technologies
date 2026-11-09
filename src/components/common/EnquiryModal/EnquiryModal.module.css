@@ -152,16 +152,181 @@
 
 .select {
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   cursor: pointer;
+  padding-right: 2.2rem;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.selectArrowIcon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.25rem !important;
+  color: var(--color-accent);
+  transition: transform var(--transition-fast);
+}
+
+.select:focus + .selectArrowIcon {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .select option {
   background-color: var(--color-primary);
   color: var(--color-accent);
+}
+
+/* Country Picker Custom Dropdown */
+.countryPickerWrap {
+  position: relative;
+  width: 100%;
+}
+
+.countryTrigger {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  background-color: var(--color-panel-dark);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  text-align: left;
+}
+
+.countryTrigger:hover,
+.countryTrigger:focus-visible,
+.countryTriggerActive {
+  border-color: var(--color-accent);
+  background-color: var(--color-primary);
+}
+
+.selectedCountryDisplay {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flagIconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 14px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.countryFlagSvg {
+  display: block;
+  width: 22px;
+  height: 14px;
+}
+
+.countryNameText {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdownArrow {
+  font-size: 1.15rem !important;
+  color: var(--color-text-secondary);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.dropdownArrowOpen {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+.countryMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 210px;
+  overflow-y: auto;
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border-active);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  z-index: 2100;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-soft) transparent;
+}
+
+.countryMenu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.countryMenu::-webkit-scrollbar-thumb {
+  background: var(--color-border-soft);
+  border-radius: 4px;
+}
+
+.countryOption {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: calc(var(--radius-sm) - 2px);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  color: var(--color-text-primary);
+  font-size: 0.8125rem;
+}
+
+.countryOption:hover {
+  background-color: var(--color-panel-dark);
+  color: var(--color-accent);
+}
+
+.countryOptionSelected {
+  background-color: var(--color-panel);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.optionCountryName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.optionDialCode {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
 }
 
 .contactNotice {

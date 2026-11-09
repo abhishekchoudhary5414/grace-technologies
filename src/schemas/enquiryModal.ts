@@ -22,6 +22,7 @@ export const quickEnquirySchema = z
         message: 'Please choose a service',
       }
     ),
+    country: z.string().trim().optional(),
     email: z
       .string()
       .trim()
@@ -35,14 +36,21 @@ export const quickEnquirySchema = z
       .trim()
       .optional()
       .refine(
-        (val) => !val || (/^[0-9+()\-\s]+$/.test(val) && val.replace(/\D/g, '').length >= 6),
+        (val) => {
+          if (!val) return true;
+          const digits = val.replace(/\D/g, '');
+          // If only country code was entered without actual number, treat as empty for optional phone
+          if (digits === '44' && val.trim() === '+44') return true;
+          return /^[0-9+()\-\s]+$/.test(val) && digits.length >= 6;
+        },
         { message: 'Please enter a valid phone number' }
       ),
   })
   .refine(
     (data) => {
-      const hasEmail = Boolean(data.email && data.email.length > 0);
-      const hasPhone = Boolean(data.phone && data.phone.length > 0);
+      const hasEmail = Boolean(data.email && data.email.trim().length > 0);
+      const digits = (data.phone || '').replace(/\D/g, '');
+      const hasPhone = Boolean(data.phone && digits.length >= 6);
       return hasEmail || hasPhone;
     },
     {

@@ -28,6 +28,7 @@ export async function POST(request: Request) {
     // 3. Connect to Supabase and persist into contact_submissions table
     const supabase = createServerSupabaseClient();
     if (supabase) {
+      const countryNote = data.country ? `[Country: ${data.country}]` : '';
       const { error: dbError } = await supabase.from('contact_submissions').insert([
         {
           name: data.name,
@@ -36,7 +37,7 @@ export async function POST(request: Request) {
           service: data.service,
           messages: data.message,
           status: 'New',
-          notes: null,
+          notes: countryNote || null,
         },
       ]);
 

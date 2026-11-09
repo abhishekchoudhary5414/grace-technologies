@@ -31,6 +31,7 @@ export const contactFormSchema = z.object({
   ], {
     message: 'Please select a valid service',
   }),
+  country: z.string().trim().optional(),
   message: z
     .string()
     .min(10, { message: 'Message must be at least 10 characters' })
