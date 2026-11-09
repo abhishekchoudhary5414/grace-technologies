@@ -7,7 +7,7 @@ import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import EnquiryNowButton from '@/components/common/EnquiryNowButton/EnquiryNowButton';
 import JsonLd from '@/components/seo/JsonLd';
 import { constructMetadata } from '@/lib/seo/metadata';
-import { getArticleSchema, getBreadcrumbSchema } from '@/lib/seo/schema';
+import { getArticleSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo/schema';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import { BLOG_POSTS } from '@/data/blog';
 import styles from './page.module.css';
@@ -29,14 +29,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     });
   }
 
-  return constructMetadata({
-    title: post.title,
-    description: post.excerpt,
-    canonicalPath: `/blog/${post.slug}`,
-    ogImage: `${SEO_CONFIG.siteUrl}${post.image}`,
-    ogType: 'article',
-    keywords: post.tags,
-  });
+  return {
+    ...constructMetadata({
+      title: post.title,
+      description: post.excerpt,
+      canonicalPath: `/blog/${post.slug}`,
+      ogImage: `${SEO_CONFIG.siteUrl}${post.image}`,
+      ogType: 'article',
+      keywords: post.tags,
+      publishedTime: post.date,
+      modifiedTime: post.updated,
+      authors: [post.author],
+    }),
+    authors: [{ name: post.author }],
+  };
 }
 
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -63,13 +69,14 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     { name: 'Blog', url: `${SEO_CONFIG.siteUrl}/blog` },
     { name: post.title, url: `${SEO_CONFIG.siteUrl}/blog/${post.slug}` },
   ]);
+  const faqSchema = getFaqSchema(post.faq);
 
   const visualKey = `visual${post.visual.charAt(0).toUpperCase()}${post.visual.slice(1)}` as keyof typeof styles;
   const visualClass = styles[visualKey] ?? styles.visualBlue;
 
   return (
     <div className={styles.page}>
-      <JsonLd data={[articleSchema, breadcrumbSchema]} />
+      <JsonLd data={[articleSchema, breadcrumbSchema, faqSchema]} />
       <Breadcrumb items={[{ label: 'Blog', href: '/blog' }, { label: post.title }]} backHref="/blog" backLabel="Back to Blog" />
 
       <Container size="narrow">

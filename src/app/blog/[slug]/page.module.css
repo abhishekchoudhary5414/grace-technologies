@@ -196,6 +196,7 @@
 
 .relatedList {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -207,4 +208,11 @@
   background: var(--color-surface);
   border-radius: 10px;
   border: 1px solid var(--color-glass-medium);
+  min-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .relatedList {
+    grid-template-columns: 1fr;
+  }
 }
