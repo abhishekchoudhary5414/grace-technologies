@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from './NotesModal.module.css';
 
@@ -19,12 +19,8 @@ export function NotesModal({
   initialNotes = '',
   title = 'Internal Administrative Notes',
 }: NotesModalProps) {
-  const [notes, setNotes] = useState(initialNotes || '');
+  const [notes, setNotes] = useState(initialNotes ?? '');
   const [isSaving, setIsSaving] = useState(false);
-
-  useEffect(() => {
-    setNotes(initialNotes || '');
-  }, [initialNotes]);
 
   if (!isOpen) return null;
 

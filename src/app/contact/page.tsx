@@ -6,7 +6,6 @@ import LanguageIcon from '@mui/icons-material/Language';
 import HubIcon from '@mui/icons-material/Hub';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import JsonLd from '@/components/seo/JsonLd';
@@ -63,7 +62,7 @@ export default function ContactPage() {
                   <LanguageIcon className={styles.officeIcon} />
                   <div>
                     <h3 className={styles.officeName}>{uk.country}</h3>
-                    <span className={styles.officeRole}>{uk.company} // {uk.tag}</span>
+                    <span className={styles.officeRole}>{uk.company} • {uk.tag}</span>
                   </div>
                 </div>
                 <div className={styles.officeDetails}>
@@ -85,7 +84,7 @@ export default function ContactPage() {
                   <HubIcon className={styles.officeIcon} />
                   <div>
                     <h3 className={styles.officeName}>{india.country}</h3>
-                    <span className={styles.officeRole}>{india.company} // {india.tag}</span>
+                    <span className={styles.officeRole}>{india.company} • {india.tag}</span>
                   </div>
                 </div>
                 <div className={styles.officeDetails}>

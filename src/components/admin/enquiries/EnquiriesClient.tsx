@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styles from './EnquiriesClient.module.css';
 import { StatCard } from '@/components/admin/common/StatCard/StatCard';
-import { StatusBadge } from '@/components/admin/common/StatusBadge/StatusBadge';
 import { NotesModal } from '@/components/admin/common/NotesModal/NotesModal';
 
 // MUI Icons
@@ -96,6 +95,7 @@ export default function EnquiriesClient() {
     }
   }, [page, pageSize, sort, search, service, status]);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => {
     fetchEnquiries();
   }, [fetchEnquiries]);
@@ -110,8 +110,9 @@ export default function EnquiriesClient() {
         body: JSON.stringify({ id, status: newStatus }),
       });
       if (res.ok) {
+        const nextStatus = newStatus as Enquiry['status'];
         setEnquiries((prev) =>
-          prev.map((item) => (item.id === id ? { ...item, status: newStatus as any } : item))
+          prev.map((item) => (item.id === id ? { ...item, status: nextStatus } : item))
         );
         // Refresh counts in the background
         fetchEnquiries();

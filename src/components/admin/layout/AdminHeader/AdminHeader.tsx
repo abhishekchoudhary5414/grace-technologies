@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from './AdminHeader.module.css';
 
@@ -17,7 +17,7 @@ export default function AdminHeader({
   adminName = 'Administrator',
   adminRole = 'Executive Console',
 }: AdminHeaderProps) {
-  const [currentDate, setCurrentDate] = useState<string>('');
+  const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
     setCurrentDate(

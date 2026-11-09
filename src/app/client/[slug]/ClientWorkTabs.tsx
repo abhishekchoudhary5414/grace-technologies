@@ -2,14 +2,10 @@
 
 import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
-import LaunchIcon from '@mui/icons-material/Launch';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import CodeIcon from '@mui/icons-material/Code';
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
-import LayersIcon from '@mui/icons-material/Layers';
 import { ClientItem } from '@/components/sections/ClientSection/ClientCard';
 import MediaPreviewModal from '@/components/sections/Projects/MediaPreviewModal';
 import { openEnquiryModal } from '@/utils/modal';
@@ -201,7 +197,7 @@ export default function ClientWorkTabs({ workItems }: { workItems: ClientItem['w
                       className={styles.talkBtn}
                       onClick={() => openEnquiryModal(work.title)}
                     >
-                      <span>Let's Talk</span>
+                      <span>Let&apos;s Talk</span>
                       <ArrowForwardIcon fontSize="small" />
                     </button>
                   </div>

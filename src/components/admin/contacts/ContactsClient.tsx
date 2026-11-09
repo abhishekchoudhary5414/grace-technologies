@@ -99,6 +99,7 @@ export default function ContactsClient() {
     }
   }, [page, pageSize, sort, search, service, status]);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => {
     fetchContacts();
   }, [fetchContacts]);
@@ -113,8 +114,9 @@ export default function ContactsClient() {
         body: JSON.stringify({ id, status: newStatus }),
       });
       if (res.ok) {
+        const nextStatus = newStatus as ContactSubmission['status'];
         setContacts((prev) =>
-          prev.map((item) => (item.id === id ? { ...item, status: newStatus as any } : item))
+          prev.map((item) => (item.id === id ? { ...item, status: nextStatus } : item))
         );
         fetchContacts();
       }

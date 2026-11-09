@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import AdminHeader from '../AdminHeader/AdminHeader';
 import styles from './AdminLayout.module.css';
@@ -22,19 +22,15 @@ export function AdminLayout({
   adminRole = 'Executive Console',
 }: AdminLayoutProps) {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
-  // Restore collapse state from localStorage on desktop if saved
-  useEffect(() => {
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
     try {
-      const saved = localStorage.getItem('gt_admin_sidebar_collapsed');
-      if (saved !== null) {
-        setIsCollapsed(saved === 'true');
-      }
+      const saved = window.localStorage.getItem('gt_admin_sidebar_collapsed');
+      return saved === 'true';
     } catch {
-      // Ignore localStorage exceptions in restricted contexts
+      return false;
     }
-  }, []);
+  });
 
   const handleToggleCollapse = () => {
     setIsCollapsed((prev) => {

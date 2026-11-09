@@ -1,11 +1,11 @@
 import { MetadataRoute } from 'next';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import clientsData from '@/config/clients.json';
+import { BLOG_POSTS } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SEO_CONFIG.siteUrl;
 
-  // Static core marketing pages
   const staticRoutes = [
     {
       url: `${baseUrl}`,
@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-11-01'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date('2026-11-01'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/services`,
@@ -87,7 +93,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic client case study pages
+  const blogRoutes = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updated),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
   const clientRoutes = clientsData.clients.map((client) => ({
     url: `${baseUrl}/client/${client.slug}`,
     lastModified: new Date('2026-11-01'),
@@ -95,5 +107,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...clientRoutes];
+  return [...staticRoutes, ...blogRoutes, ...clientRoutes];
 }

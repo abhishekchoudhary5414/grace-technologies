@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     template: SEO_CONFIG.titleTemplate,
   },
   description: SEO_CONFIG.defaultDescription,
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || '',
+  },
   icons: {
     apple: SEO_CONFIG.appleTouchIcon,
   },
