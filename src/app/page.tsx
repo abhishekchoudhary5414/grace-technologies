@@ -8,7 +8,6 @@ import ClientSection from '@/components/sections/ClientSection/ClientSection';
 import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
 import HowWeWork from '@/components/sections/HowWeWork/HowWeWork';
 import PartnershipSection from '@/components/sections/PartnershipSection/PartnershipSection';
-import Industries from '@/components/sections/Industries/Industries';
 import Testimonials from '@/components/sections/Testimonials/Testimonials';
 import CTASection from '@/components/common/CTASection/CTASection';
 import HomeContactSection from '@/components/sections/HomeContactSection/HomeContactSection';
