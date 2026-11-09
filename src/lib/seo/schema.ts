@@ -58,6 +58,9 @@ export function getOrganizationSchema() {
       'Merchant Account Operations',
       'Digital Marketing & Search Engine Optimisation (SEO)',
       'Generative Engine Optimisation (GEO)',
+      'Answer Engine Optimisation (AEO)',
+      'B2B Organic Lead Generation UK',
+      'High-Intent Client Acquisition Architecture',
     ],
     sameAs: SEO_CONFIG.socialLinks,
   };
