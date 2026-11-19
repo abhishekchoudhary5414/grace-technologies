@@ -5,6 +5,8 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 // Privileged server operations prioritize the SUPABASE_SECRET_KEY, with fallback to publishable key if secret not yet placed
 const supabaseKey = process.env.SUPABASE_SECRET_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '';
 
+class ServerWsTransport {}
+
 export const createServerSupabaseClient = () => {
   if (!supabaseUrl || !supabaseKey) {
     return null;
@@ -13,6 +15,9 @@ export const createServerSupabaseClient = () => {
     auth: {
       persistSession: false,
       autoRefreshToken: false,
+    },
+    realtime: {
+      transport: ServerWsTransport as unknown as Parameters<typeof createClient>[2] extends { realtime?: { transport?: infer T } } ? T : never,
     },
   });
 };

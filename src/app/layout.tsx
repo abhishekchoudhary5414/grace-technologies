@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import ConditionalShell from '@/components/layout/ConditionalShell/ConditionalShell';
 import JsonLd from '@/components/seo/JsonLd';
@@ -78,10 +79,33 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        {/* Google Tag Manager / Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-PJDG73P2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-manager-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
+
         {/* Sitewide Organization and WebSite Linked Data */}
         <JsonLd data={[organizationSchema, webSiteSchema]} />
       </head>
       <body>
+        {/* Google Tag Manager (noscript fallback) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PJDG73P2"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+
         <Suspense fallback={null}>
           <ConditionalShell>{children}</ConditionalShell>
         </Suspense>

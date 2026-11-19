@@ -43,11 +43,11 @@ export async function getContactSubmissions(params: ContactQueryParams) {
     query = query.or(`name.ilike.${s},email.ilike.${s},phone_number.ilike.${s}`);
   }
 
-  if (params.service && params.service !== 'all') {
+  if (params.service && params.service !== 'all' && params.service !== 'All Services') {
     query = query.eq('service', params.service);
   }
 
-  if (params.status && params.status !== 'all') {
+  if (params.status && params.status !== 'all' && params.status !== 'All Statuses') {
     query = query.eq('status', params.status);
   }
 
