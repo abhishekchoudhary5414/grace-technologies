@@ -90,6 +90,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/app-development" className={styles.footerLink}>
+                  App Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/software-development" className={styles.footerLink}>
+                  Software Development
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/merchant-account-management" className={styles.footerLink}>
                   Merchant Account Management
                 </Link>

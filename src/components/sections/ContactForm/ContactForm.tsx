@@ -366,6 +366,8 @@ export default function ContactForm() {
                   {...register('service')}
                 >
                   <option value="Website Development">Website Development</option>
+                  <option value="App Development">App Development</option>
+                  <option value="Software Development">Software Development</option>
                   <option value="Merchant Account Management">Merchant Account Management</option>
                   <option value="AI Automation">AI Automation</option>
                   <option value="Digital Marketing">Digital Marketing</option>

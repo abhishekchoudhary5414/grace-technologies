@@ -1636,3 +1636,456 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+/* ====================================================
+   APP DEVELOPMENT VISUAL STAGE
+   ==================================================== */
+.appDevStage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.appDevHeaderBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px var(--color-overlay-light);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.appPlatformBadges {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+
+.platformBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border-subtle);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.appMainGrid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .appMainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smartphone Device Mockup */
+.phoneDeviceCard {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border-medium);
+  border-radius: 36px;
+  padding: 0.75rem 0.875rem 1.25rem;
+  box-shadow:
+    0 12px 32px var(--color-overlay-medium),
+    0 0 0 1px var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.phoneNotch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.phoneSpeaker {
+  width: 48px;
+  height: 4px;
+  background-color: var(--color-border-medium);
+  border-radius: var(--radius-full);
+}
+
+.phoneCamera {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-border-strong);
+  border-radius: 50%;
+}
+
+.phoneStatusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.phoneIcons {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.phoneSignal {
+  font-size: 0.625rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.phoneScreenContent {
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.appHeaderWidget {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.appAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-blue-dark));
+}
+
+.appUserGreeting {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+}
+
+.appBrandName {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.appBalanceWidget {
+  padding: 0.875rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-panel-subtle) 0%, var(--color-surface-hover) 100%);
+  border: 1px solid var(--color-border-soft);
+}
+
+.appBalanceLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.appBalanceAmount {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin: 0.2rem 0 0.35rem;
+}
+
+.appSyncRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.appActionsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem;
+}
+
+.appActionPill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* App Architecture Col */
+.appArchitectureCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appInfoCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: 0 4px 16px var(--color-overlay-light);
+}
+
+.appCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+
+.appStoreStatsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.appStatItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-panel-subtle);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.appStatNum {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1.1;
+}
+
+.appStatLabel {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.appBuildCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  padding: 1.125rem 1.25rem;
+  box-shadow: 0 4px 16px var(--color-overlay-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.appBuildItem {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* ====================================================
+   SOFTWARE DEVELOPMENT VISUAL STAGE
+   ==================================================== */
+.softDevStage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.softHeaderBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.125rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px var(--color-overlay-light);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.softHeaderTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.softClusterGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
+}
+
+@media (max-width: 600px) {
+  .softClusterGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.softNodeCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.125rem;
+  box-shadow: 0 2px 8px var(--color-overlay-light);
+  transition: all var(--transition-normal);
+}
+
+.softNodeCard:hover {
+  border-color: var(--color-border-active);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--color-overlay-medium);
+}
+
+.softNodeHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.softNodeMetric {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+}
+
+.softNodeDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.latencyTag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background-color: var(--color-surface-hover);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.statusActiveTag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-whatsapp-green-strong, #22c55e);
+  background-color: rgba(34, 197, 94, 0.1);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+}
+
+.softPipelineStrip {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  padding: 1.125rem 1.25rem;
+  box-shadow: 0 4px 16px var(--color-overlay-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.softPipelineHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.softPipelineTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.softPipelineSteps {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.pipeStep {
+  background-color: var(--color-surface-hover);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.pipeStepArrow {
+  color: var(--color-text-dim);
+}
+
+.pipeStepLive {
+  background-color: rgba(34, 197, 94, 0.12);
+  color: var(--color-whatsapp-green-strong, #22c55e);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  font-weight: 700;
+}
+
+.softComplianceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.softCompItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}

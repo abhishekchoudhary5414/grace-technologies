@@ -1,0 +1,130 @@
+{
+  "technologies": [
+    {
+      "id": "html5",
+      "name": "HTML5",
+      "category": "Semantic Web Standards",
+      "color": "#E34F26",
+      "logo": "/tech/html.svg"
+    },
+    {
+      "id": "css3",
+      "name": "CSS3",
+      "category": "Responsive Layouts & Styling",
+      "color": "#1572B6",
+      "logo": "/tech/css.svg"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "ECMAScript Modern Runtime",
+      "color": "#F7DF1E",
+      "logo": "/tech/javascript.svg"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "Enterprise Type Safety",
+      "color": "#3178C6",
+      "logo": "/tech/typescript.svg"
+    },
+    {
+      "id": "react",
+      "name": "React 19",
+      "category": "Component Architecture",
+      "color": "#61DAFB",
+      "logo": "/tech/react.svg"
+    },
+    {
+      "id": "reactnative",
+      "name": "React Native",
+      "category": "Cross-Platform Mobile Apps",
+      "color": "#61DAFB",
+      "logo": "/tech/reactnative.svg"
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js 16",
+      "category": "Full-Stack Server Components",
+      "color": "#000000",
+      "logo": "/tech/nextjs.svg"
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "category": "Next-Gen Frontend Bundler",
+      "color": "#646CFF",
+      "logo": "/tech/vite.svg"
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "category": "Structured Query Language",
+      "color": "#00758F",
+      "logo": "/tech/sql.svg"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "Enterprise Relational Database",
+      "color": "#336791",
+      "logo": "/tech/postgresql.svg"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "NoSQL Document Database",
+      "color": "#47A248",
+      "logo": "/tech/mongodb.svg"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "AI Workflow Automation",
+      "color": "#EA4B71",
+      "logo": "/tech/n8n.svg"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "Distributed Version Control",
+      "color": "#F05032",
+      "logo": "/tech/git.svg"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "category": "CI/CD & Cloud Repositories",
+      "color": "#181717",
+      "logo": "/tech/github.svg"
+    },
+    {
+      "id": "hostinger",
+      "name": "Hostinger",
+      "category": "High-Performance Cloud & VPS",
+      "color": "#673DE6",
+      "logo": "/tech/hostinger.svg"
+    },
+    {
+      "id": "python",
+      "name": "Python & AI",
+      "category": "LLM & Autonomous Agents",
+      "color": "#3776AB",
+      "logo": "/tech/python.svg"
+    },
+    {
+      "id": "docker",
+      "name": "Docker & K8s",
+      "category": "Containerized Deployments",
+      "color": "#2496ED",
+      "logo": "/tech/docker.svg"
+    },
+    {
+      "id": "aws",
+      "name": "AWS Cloud",
+      "category": "Global Cloud Infrastructure",
+      "color": "#FF9900",
+      "logo": "/tech/aws.svg"
+    }
+  ]
+}

@@ -12,6 +12,8 @@ import CodeIcon from '@mui/icons-material/Code';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import TerminalIcon from '@mui/icons-material/Terminal';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
 import { openEnquiryModal } from '@/utils/modal';
@@ -25,6 +27,18 @@ const servicesList = [
     href: '/services/website-development',
     description: 'Digital experiences designed to make an impact. High-performance Next.js architectures.',
     icon: CodeIcon,
+  },
+  {
+    title: 'App Development',
+    href: '/services/app-development',
+    description: 'Native iOS & Android and cross-platform Flutter/React Native mobile engineering.',
+    icon: PhoneIphoneIcon,
+  },
+  {
+    title: 'Software Development',
+    href: '/services/software-development',
+    description: 'Mission-critical enterprise software, cloud-native microservices, and bespoke SaaS platforms.',
+    icon: TerminalIcon,
   },
   {
     title: 'Merchant Account Management',

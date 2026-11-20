@@ -1,0 +1,283 @@
+/* ----------------------------------------------------
+   404 NOT FOUND PAGE (Grace Technologies Light Theme)
+   All colors, surfaces, typography, and radiuses strictly
+   sourced from globals.css tokens.
+---------------------------------------------------- */
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + 1.25rem);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary);
+  background-image:
+    radial-gradient(ellipse 75% 55% at 50% 8%, var(--color-globe-atmosphere) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 88% 88%, var(--color-border-subtle) 0%, transparent 60%),
+    linear-gradient(180deg, var(--color-primary) 0%, var(--color-panel-subtle) 50%, var(--color-surface-strong) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Atmospheric ambient light rings */
+.ambientRingOne {
+  position: absolute;
+  top: -160px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, var(--color-globe-atmosphere) 0%, transparent 70%);
+  border: 1px solid var(--color-border-subtle);
+  pointer-events: none;
+}
+
+.ambientRingTwo {
+  position: absolute;
+  bottom: -140px;
+  left: -100px;
+  width: 440px;
+  height: 440px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, var(--color-globe-grid) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Central Hero Section */
+.heroSection {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2.5rem, 6vw, 5.5rem) 0 clamp(4rem, 8vw, 7rem);
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.25rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+  box-shadow:
+    0 4px 20px var(--color-overlay-light),
+    0 24px 50px var(--color-overlay-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top decorative hairline using royal blue */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0.85;
+}
+
+/* Top Status Badge */
+.badgeWrap {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border-soft);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px var(--color-globe-ring-glow);
+}
+
+/* Huge 404 Headline Number */
+.errorCode {
+  font-family: var(--font-heading);
+  font-size: clamp(5.5rem, 16vw, 9.5rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin: 0 0 0.5rem;
+  background: linear-gradient(135deg, var(--color-black) 15%, var(--color-blue-dark) 55%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+/* Primary Title */
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.2vw, 2.35rem);
+  font-weight: 700;
+  color: var(--color-black);
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+
+/* Contextual Subtitle */
+.description {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.8vw, 1.125rem);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto 2.25rem;
+}
+
+/* Action Buttons Group */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+}
+
+/* Section Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 2.25rem auto 1.75rem;
+  max-width: 540px;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-medium), transparent);
+}
+
+.dividerText {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Core Service Navigation Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.875rem;
+  text-align: left;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.125rem 1.125rem 1rem;
+  background-color: var(--color-panel-subtle);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  box-shadow: 0 2px 8px var(--color-overlay-light);
+}
+
+.serviceCard:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-active);
+  box-shadow: 0 8px 24px var(--color-overlay-medium);
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.serviceName {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-black);
+  letter-spacing: -0.01em;
+}
+
+.serviceArrow {
+  font-size: 1rem !important;
+  color: var(--color-accent);
+  transition: transform var(--transition-fast);
+}
+
+.serviceCard:hover .serviceArrow {
+  transform: translateX(3px);
+}
+
+.serviceCategory {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    padding: 2.25rem 1.5rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .actions > * {
+    width: 100%;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .card {
+    padding: 1.75rem 1.125rem;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+  }
+}

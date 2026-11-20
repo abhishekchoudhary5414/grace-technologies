@@ -24,6 +24,8 @@ export const contactFormSchema = z.object({
     .max(25, { message: 'Phone number is too long' }),
   service: z.enum([
     'Website Development',
+    'App Development',
+    'Software Development',
     'Merchant Account Management',
     'AI Automation',
     'Digital Marketing',

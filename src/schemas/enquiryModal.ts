@@ -13,6 +13,8 @@ export const quickEnquirySchema = z
     serviceType: z.enum(
       [
         'Website Development',
+        'App Development',
+        'Software Development',
         'Merchant Account Management',
         'AI Automation',
         'Digital Marketing',

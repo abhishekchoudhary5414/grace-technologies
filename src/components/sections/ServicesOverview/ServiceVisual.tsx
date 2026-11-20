@@ -32,6 +32,18 @@ import PublicIcon from '@mui/icons-material/Public';
 import SpeedIcon from '@mui/icons-material/Speed';
 import DevicesIcon from '@mui/icons-material/Devices';
 import SecurityIcon from '@mui/icons-material/Security';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import AppleIcon from '@mui/icons-material/Apple';
+import AndroidIcon from '@mui/icons-material/Android';
+import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+import StorageIcon from '@mui/icons-material/Storage';
+import DnsIcon from '@mui/icons-material/Dns';
+import SyncAltIcon from '@mui/icons-material/SyncAlt';
+import LayersIcon from '@mui/icons-material/Layers';
+import TouchAppIcon from '@mui/icons-material/TouchApp';
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import styles from './ServiceVisual.module.css';
 
 interface ServiceVisualProps {
@@ -161,6 +173,249 @@ export default function ServiceVisual({ serviceId }: ServiceVisualProps) {
               <div className={styles.webDevFeatureItem}>
                 <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-blue)' }} />
                 <span>Enterprise SEO Foundations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'app-development':
+      return (
+        <div className={styles.visualContainer}>
+          <div className={styles.ambientGlow} />
+
+          {/* App Development Interactive Visual Stage */}
+          <div className={styles.appDevStage}>
+            {/* Top Device Stack Bar */}
+            <div className={styles.appDevHeaderBar}>
+              <div className={styles.appPlatformBadges}>
+                <div className={styles.platformBadge}>
+                  <AppleIcon sx={{ fontSize: 16 }} />
+                  <span>iOS (Swift)</span>
+                </div>
+                <div className={styles.platformBadge}>
+                  <AndroidIcon sx={{ fontSize: 16 }} />
+                  <span>Android (Kotlin)</span>
+                </div>
+                <div className={styles.platformBadge}>
+                  <DevicesIcon sx={{ fontSize: 15 }} />
+                  <span>Flutter & React Native</span>
+                </div>
+              </div>
+              <div className={styles.liveProdBadge}>
+                <span className={styles.beaconPingDot} />
+                <span>60 FPS NATIVE</span>
+              </div>
+            </div>
+
+            {/* Mobile Device Mockup & Architecture Card Grid */}
+            <div className={styles.appMainGrid}>
+              {/* Smartphone Frame */}
+              <div className={styles.phoneDeviceCard}>
+                <div className={styles.phoneNotch}>
+                  <span className={styles.phoneSpeaker} />
+                  <span className={styles.phoneCamera} />
+                </div>
+                <div className={styles.phoneStatusBar}>
+                  <span className={styles.phoneTime}>09:41</span>
+                  <div className={styles.phoneIcons}>
+                    <SpeedIcon sx={{ fontSize: 11, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                    <span className={styles.phoneSignal}>5G</span>
+                  </div>
+                </div>
+
+                {/* In-App Interactive Interface */}
+                <div className={styles.phoneScreenContent}>
+                  <div className={styles.appHeaderWidget}>
+                    <div className={styles.appAvatar} />
+                    <div>
+                      <div className={styles.appUserGreeting}>Welcome Back</div>
+                      <div className={styles.appBrandName}>Grace Mobile Hub</div>
+                    </div>
+                    <NotificationsActiveIcon sx={{ fontSize: 16, color: 'var(--color-blue)', marginLeft: 'auto' }} />
+                  </div>
+
+                  {/* App Live Balance Card */}
+                  <div className={styles.appBalanceWidget}>
+                    <span className={styles.appBalanceLabel}>Offline-First Cloud Sync</span>
+                    <div className={styles.appBalanceAmount}>£84,920.00</div>
+                    <div className={styles.appSyncRow}>
+                      <SyncAltIcon sx={{ fontSize: 12, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                      <span>Encrypted Realm DB Active</span>
+                    </div>
+                  </div>
+
+                  {/* Feature Quick Actions */}
+                  <div className={styles.appActionsRow}>
+                    <div className={styles.appActionPill}>
+                      <FingerprintIcon sx={{ fontSize: 14, color: 'var(--color-blue)' }} />
+                      <span>Face ID</span>
+                    </div>
+                    <div className={styles.appActionPill}>
+                      <TouchAppIcon sx={{ fontSize: 14, color: 'var(--color-blue)' }} />
+                      <span>Haptic UX</span>
+                    </div>
+                    <div className={styles.appActionPill}>
+                      <SecurityIcon sx={{ fontSize: 14, color: 'var(--color-blue)' }} />
+                      <span>OWASP</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side: Architecture & App Store Readiness Deck */}
+              <div className={styles.appArchitectureCol}>
+                <div className={styles.appInfoCard}>
+                  <div className={styles.appCardHeader}>
+                    <DeveloperModeIcon sx={{ fontSize: 15, color: 'var(--color-blue)' }} />
+                    <span>App Store & Play Store Ready</span>
+                  </div>
+                  <div className={styles.appStoreStatsRow}>
+                    <div className={styles.appStatItem}>
+                      <span className={styles.appStatNum}>99.98%</span>
+                      <span className={styles.appStatLabel}>Crash-Free Rate</span>
+                    </div>
+                    <div className={styles.appStatItem}>
+                      <span className={styles.appStatNum}>&lt;0.8s</span>
+                      <span className={styles.appStatLabel}>Cold Start Time</span>
+                    </div>
+                    <div className={styles.appStatItem}>
+                      <span className={styles.appStatNum}>100%</span>
+                      <span className={styles.appStatLabel}>Code Ownership</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.appBuildCard}>
+                  <div className={styles.appBuildItem}>
+                    <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                    <span>Biometric FaceID / TouchID Authentication</span>
+                  </div>
+                  <div className={styles.appBuildItem}>
+                    <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                    <span>Push Notifications & Background Sync</span>
+                  </div>
+                  <div className={styles.appBuildItem}>
+                    <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                    <span>Native Apple & Google In-App Purchases</span>
+                  </div>
+                  <div className={styles.appBuildItem}>
+                    <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                    <span>Automated Fastlane Store Deployment</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'software-development':
+      return (
+        <div className={styles.visualContainer}>
+          <div className={styles.ambientGlow} />
+
+          {/* Software Development Enterprise Architecture Visual Stage */}
+          <div className={styles.softDevStage}>
+            {/* Header: Cluster Topology */}
+            <div className={styles.softHeaderBar}>
+              <div className={styles.softHeaderTitleGroup}>
+                <DnsIcon sx={{ fontSize: 16, color: 'var(--color-blue)' }} />
+                <span>Enterprise Cloud Infrastructure & Distributed Architecture</span>
+              </div>
+              <div className={styles.liveProdBadge}>
+                <span className={styles.beaconPingDot} />
+                <span>CLUSTER HEALTHY</span>
+              </div>
+            </div>
+
+            {/* Microservice Flow & Architecture Diagram */}
+            <div className={styles.softClusterGrid}>
+              {/* Node 1: API Gateway & Load Balancer */}
+              <div className={styles.softNodeCard}>
+                <div className={styles.softNodeHeader}>
+                  <HubIcon sx={{ fontSize: 15, color: 'var(--color-blue)' }} />
+                  <span>API Gateway & Ingress</span>
+                </div>
+                <div className={styles.softNodeMetric}>Kong / NGINX Envoy</div>
+                <div className={styles.softNodeDetail}>
+                  <span>TLS 1.3 / mTLS Mesh</span>
+                  <span className={styles.latencyTag}>1.2ms</span>
+                </div>
+              </div>
+
+              {/* Node 2: Microservices Engine */}
+              <div className={styles.softNodeCard}>
+                <div className={styles.softNodeHeader}>
+                  <LayersIcon sx={{ fontSize: 15, color: 'var(--color-blue)' }} />
+                  <span>Microservices Engine</span>
+                </div>
+                <div className={styles.softNodeMetric}>Docker + Kubernetes (K8s)</div>
+                <div className={styles.softNodeDetail}>
+                  <span>Horizontal Pod Autoscaler</span>
+                  <span className={styles.statusActiveTag}>Active</span>
+                </div>
+              </div>
+
+              {/* Node 3: Cloud Database & Cache */}
+              <div className={styles.softNodeCard}>
+                <div className={styles.softNodeHeader}>
+                  <StorageIcon sx={{ fontSize: 15, color: 'var(--color-blue)' }} />
+                  <span>Distributed Database</span>
+                </div>
+                <div className={styles.softNodeMetric}>PostgreSQL HA + Redis Cluster</div>
+                <div className={styles.softNodeDetail}>
+                  <span>99.999% Read/Write SLAs</span>
+                  <span className={styles.latencyTag}>&lt;2ms</span>
+                </div>
+              </div>
+
+              {/* Node 4: Cloud Event Stream */}
+              <div className={styles.softNodeCard}>
+                <div className={styles.softNodeHeader}>
+                  <CloudQueueIcon sx={{ fontSize: 15, color: 'var(--color-blue)' }} />
+                  <span>Event Streaming</span>
+                </div>
+                <div className={styles.softNodeMetric}>Apache Kafka / RabbitMQ</div>
+                <div className={styles.softNodeDetail}>
+                  <span>1.4M Events/Sec Ingest</span>
+                  <span className={styles.statusActiveTag}>Zero Loss</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Enterprise Telemetry & CI/CD Pipeline Strip */}
+            <div className={styles.softPipelineStrip}>
+              <div className={styles.softPipelineHeader}>
+                <div className={styles.softPipelineTitle}>
+                  <TerminalIcon sx={{ fontSize: 14, color: 'var(--color-blue)' }} />
+                  <span>Automated CI/CD Pipeline & Zero-Downtime Governance</span>
+                </div>
+                <div className={styles.softPipelineSteps}>
+                  <span className={styles.pipeStep}>Lint & TypeCheck ✓</span>
+                  <span className={styles.pipeStepArrow}>→</span>
+                  <span className={styles.pipeStep}>Integration Tests ✓</span>
+                  <span className={styles.pipeStepArrow}>→</span>
+                  <span className={styles.pipeStep}>Security Scan ✓</span>
+                  <span className={styles.pipeStepArrow}>→</span>
+                  <span className={styles.pipeStepLive}>Prod Live ✓</span>
+                </div>
+              </div>
+
+              {/* Enterprise Security Checklist */}
+              <div className={styles.softComplianceRow}>
+                <div className={styles.softCompItem}>
+                  <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                  <span>SOC2 & GDPR Audited Architecture</span>
+                </div>
+                <div className={styles.softCompItem}>
+                  <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                  <span>Zero-Trust RBAC & Encryption At Rest</span>
+                </div>
+                <div className={styles.softCompItem}>
+                  <CheckCircleIcon sx={{ fontSize: 13, color: 'var(--color-whatsapp-green-strong, #22c55e)' }} />
+                  <span>Automated Multi-Region Disaster Recovery</span>
+                </div>
               </div>
             </div>
           </div>

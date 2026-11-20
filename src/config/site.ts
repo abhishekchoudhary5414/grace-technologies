@@ -389,6 +389,212 @@ export const SERVICES_DATA: ServiceDetail[] = [
       },
     ],
   },
+  {
+    id: 'app-development',
+    number: '05',
+    title: 'App Development',
+    shortTitle: 'App Development',
+    tagline: 'Native & Cross-Platform Mobile Engineering.',
+    headline: 'High-Performance Mobile Applications Built for Scale.',
+    description:
+      'We design and develop high-calibre iOS, Android, and cross-platform mobile applications that combine fluid native user experiences, resilient cloud backends, and rigorous security.',
+    route: '/services/app-development',
+    capabilities: [
+      {
+        title: 'Native iOS & Android Engineering',
+        description: 'Bespoke mobile applications crafted with Swift, Kotlin, and native platform APIs for uncompromised performance.',
+      },
+      {
+        title: 'Cross-Platform Flutter & React Native',
+        description: 'Single-codebase mobile platforms delivering native look, smooth 60fps animations, and rapid deployment across app stores.',
+      },
+      {
+        title: 'Enterprise Mobile Solutions',
+        description: 'Secure enterprise field tools, client self-service portals, and workforce mobility apps integrated with corporate systems.',
+      },
+      {
+        title: 'Mobile UI/UX Architecture',
+        description: 'Intuitive touch interactions, fluid gestures, and British aesthetic standards adhering to Apple HIG and Google Material Design.',
+      },
+      {
+        title: 'Offline-First & Realtime Sync',
+        description: 'Resilient local caching, background data synchronization, and realtime WebSocket feeds ensuring uninterrupted productivity.',
+      },
+      {
+        title: 'App Store Optimization & Deployment',
+        description: 'Full handling of Apple App Store and Google Play compliance, metadata optimization, certificate signing, and continuous releases.',
+      },
+      {
+        title: 'API & Microservice Integration',
+        description: 'Seamless connectivity with payment gateways, enterprise CRMs, auth systems, and cloud databases with end-to-end encryption.',
+      },
+      {
+        title: 'Continuous Support & Lifecycle Management',
+        description: 'OS version upgrades, crash monitoring, regression test automation, performance tuning, and SLA-backed maintenance.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'Elevated Customer Retention',
+        description: 'Engage and retain users through frictionless on-device experiences, biometric security, and intelligent push notifications.',
+      },
+      {
+        title: 'Uncompromised Native Speed',
+        description: 'Sub-second touch responses and memory-efficient runtime architectures engineered for top app store ratings.',
+      },
+      {
+        title: 'Enterprise-Grade Security',
+        description: 'Encrypted on-device storage, biometric authentication, OWASP mobile compliance, and secure tokenized API communications.',
+      },
+      {
+        title: 'Rapid Market Velocity',
+        description: 'Modular architecture and automated CI/CD pipelines enabling rapid iteration and feature deployments.',
+      },
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Discovery & Product Architecture',
+        description: 'Auditing platform constraints, user journeys, offline requirements, and technical backend integrations.',
+      },
+      {
+        step: '02',
+        title: 'Mobile UI/UX Prototyping',
+        description: 'Interactive high-fidelity prototypes validated against platform-specific usability standards.',
+      },
+      {
+        step: '03',
+        title: 'Agile Mobile Development',
+        description: 'Native or cross-platform coding with automated unit testing, secure API orchestration, and clean architecture.',
+      },
+      {
+        step: '04',
+        title: 'Store Submission & Launch',
+        description: 'Thorough device-farm testing, security scans, store review compliance, and guided public rollout.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you build native or cross-platform mobile apps?',
+        answer: 'We build both depending on your strategic requirements. For peak graphics or deep hardware sensor access, we build native iOS (Swift) and Android (Kotlin). For multi-platform velocity and shared business logic, we leverage Flutter and React Native.',
+      },
+      {
+        question: 'How do you handle App Store and Google Play submissions?',
+        answer: 'Our team manages the entire submission lifecycle—from certificate provisioning and privacy disclosures to guideline compliance, review response handling, and post-launch store updates.',
+      },
+      {
+        question: 'Can the app work offline and sync when reconnected?',
+        answer: 'Yes. We architect offline-first mobile apps utilizing encrypted SQLite or Realm databases that synchronize automatically with cloud backends whenever network connectivity is re-established.',
+      },
+      {
+        question: 'Who retains the intellectual property and source code?',
+        answer: 'You retain 100% intellectual property ownership of all application source code, UI designs, and backend integrations upon milestone completion.',
+      },
+    ],
+  },
+  {
+    id: 'software-development',
+    number: '06',
+    title: 'Software Development',
+    shortTitle: 'Software Development',
+    tagline: 'Bespoke Cloud Software & Enterprise Platforms.',
+    headline: 'Mission-Critical Enterprise Software Built for Scalability.',
+    description:
+      'We engineer bespoke cloud-native software systems, robust microservice architectures, and multi-tenant SaaS platforms tailored to streamline mission-critical business operations.',
+    route: '/services/software-development',
+    capabilities: [
+      {
+        title: 'Custom Enterprise Software',
+        description: 'Bespoke software platforms developed around your operational workflows, eliminating limitations of off-the-shelf software.',
+      },
+      {
+        title: 'SaaS Platform Architecture',
+        description: 'Scalable multi-tenant cloud architectures with granular role-based access control, automated billing, and tenant data isolation.',
+      },
+      {
+        title: 'API & Microservices Engineering',
+        description: 'Modular microservice ecosystems, resilient GraphQL/REST APIs, and event-driven data streaming pipelines.',
+      },
+      {
+        title: 'Legacy Modernization & Cloud Migration',
+        description: 'Refactoring monolithic legacy systems into cloud-native microservices hosted on AWS, GCP, or Azure with zero downtime.',
+      },
+      {
+        title: 'Database Architecture & Data Pipelines',
+        description: 'High-concurrency PostgreSQL, distributed databases, caching tiers, and optimized ETL pipelines for high throughput.',
+      },
+      {
+        title: 'DevOps & CI/CD Automation',
+        description: 'Containerized deployments with Docker, Kubernetes orchestration, infrastructure as code, and zero-downtime deployment pipelines.',
+      },
+      {
+        title: 'Enterprise Security & Compliance',
+        description: 'Adherence to GDPR, ISO 27001, SOC2 security frameworks, data encryption at rest and in transit, and continuous audits.',
+      },
+      {
+        title: 'Technical Consulting & System Architecture',
+        description: 'Senior architectural guidance, technical feasibility evaluations, code health reviews, and scalability roadmapping.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'Operational Precision & Efficiency',
+        description: 'Eliminate manual bottlenecks with software engineered precisely to match your unique organizational processes.',
+      },
+      {
+        title: 'Limitless Horizontal Scalability',
+        description: 'Cloud-native distributed systems engineered to handle explosive data and transaction growth without degradation.',
+      },
+      {
+        title: 'Total Intellectual Property Control',
+        description: 'Complete commercial sovereignty over your software assets with zero recurring per-seat vendor licensing fees.',
+      },
+      {
+        title: 'Enterprise Data Security',
+        description: 'Rigorous bank-grade encryption, audit trails, and strict compliance posture protecting sensitive corporate data.',
+      },
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Systems & Requirements Analysis',
+        description: 'Deconstructing complex operational workflows, data entities, integration points, and security constraints.',
+      },
+      {
+        step: '02',
+        title: 'System & Architecture Blueprint',
+        description: 'Designing distributed system schematics, database schemas, microservice contracts, and cloud infrastructure.',
+      },
+      {
+        step: '03',
+        title: 'Iterative Sprint Development',
+        description: 'Continuous delivery sprints with clean typing, comprehensive automated testing, and bi-weekly milestone reviews.',
+      },
+      {
+        step: '04',
+        title: 'Deployment & SLA Governance',
+        description: 'Zero-downtime cloud provisioning, automated health monitoring, load testing, and ongoing SLA-backed support.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What technologies and frameworks do you use for software development?',
+        answer: 'We leverage modern, battle-tested technologies including TypeScript, Node.js, Next.js, Python, Go, PostgreSQL, Redis, Docker, Kubernetes, and major cloud providers (AWS, Google Cloud, Azure).',
+      },
+      {
+        question: 'Can you integrate with our existing third-party systems?',
+        answer: 'Yes. We specialize in complex enterprise integrations across ERPs (SAP, NetSuite), CRMs (Salesforce, HubSpot), payment gateways, and bespoke legacy internal databases via robust APIs.',
+      },
+      {
+        question: 'How do you guarantee software quality and uptime?',
+        answer: 'We enforce automated unit, integration, and end-to-end test suites within CI/CD pipelines, containerized staging environments, redundant cloud failover architectures, and 24/7 telemetry monitoring.',
+      },
+      {
+        question: 'Do you provide ongoing support after deployment?',
+        answer: 'Yes. We provide comprehensive SLAs encompassing 24/7 infrastructure monitoring, security patch management, performance tuning, and dedicated feature roadmap evolution.',
+      },
+    ],
+  },
 ];
 
 export const INDUSTRIES_DATA: IndustryItem[] = [

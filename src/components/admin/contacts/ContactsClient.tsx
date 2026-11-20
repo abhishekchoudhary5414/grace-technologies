@@ -45,6 +45,8 @@ interface ContactStats {
 const SERVICES = [
   'All Services',
   'Website Development',
+  'App Development',
+  'Software Development',
   'Merchant Account Management',
   'AI Automation',
   'Digital Marketing',

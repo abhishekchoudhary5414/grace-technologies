@@ -1,18 +1,27 @@
+/* ----------------------------------------------------
+   CONTACT PAGE (Grace Technologies Light Theme)
+   High contrast, crisp typography, clean flag badges,
+   and colors strictly from globals.css tokens.
+---------------------------------------------------- */
+
 .page {
   background-color: var(--color-primary);
-  padding-top: calc(var(--header-height) + 2rem);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 15% 15%, var(--color-globe-atmosphere) 0%, transparent 65%),
+    linear-gradient(180deg, var(--color-primary) 0%, var(--color-panel-subtle) 100%);
+  padding-top: calc(var(--header-height) + 1.25rem);
   min-height: 100vh;
 }
 
 .section {
-  padding-top: 3.5rem;
-  padding-bottom: var(--section-padding-y);
+  padding-top: 2.5rem;
+  padding-bottom: clamp(3.5rem, 6vw, 6rem);
 }
 
 .layout {
   display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: clamp(2.5rem, 5vw, 5rem);
+  grid-template-columns: 1.05fr 1.25fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
   align-items: flex-start;
 }
 
@@ -21,44 +30,70 @@
   flex-direction: column;
 }
 
+.badgeWrap {
+  margin-bottom: 1.25rem;
+}
+
 .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border-soft);
+  color: var(--color-accent);
   font-family: var(--font-heading);
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
   font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-accent);
-  padding: 0.35rem 0.875rem;
-  background-color: var(--color-secondary);
-  border: 1px solid var(--color-border-soft);
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
   border-radius: var(--radius-full);
-  display: inline-block;
-  align-self: flex-start;
-  margin-bottom: 1.75rem;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-globe-ring-glow);
 }
 
 .heading {
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.8vw, 2.85rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.03em;
-  color: var(--color-accent);
-  margin-bottom: 1.5rem;
+  color: var(--color-black);
+  margin-bottom: 1.125rem;
 }
 
 .subheading {
-  font-size: 1.0625rem;
+  font-family: var(--font-body);
+  font-size: 1.025rem;
   line-height: 1.65;
   color: var(--color-text-secondary);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  max-width: 580px;
 }
 
+/* Office Cards with Flag integration */
 .officeCard {
-  background-color: var(--color-secondary);
-  border: 1px solid var(--color-glass-medium);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 1.75rem;
-  margin-bottom: 1.25rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.125rem;
+  box-shadow:
+    0 4px 16px var(--color-overlay-light),
+    0 1px 3px var(--color-border-subtle);
+  transition: all var(--transition-normal);
+}
+
+.officeCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-active);
+  box-shadow: 0 10px 28px var(--color-overlay-medium);
 }
 
 .officeHeader {
@@ -66,33 +101,93 @@
   align-items: center;
   gap: 0.875rem;
   margin-bottom: 0.875rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
-.officeIcon {
-  font-size: 1.5rem;
-  color: var(--color-accent);
+.flagWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 24px;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  box-shadow: 0 2px 6px var(--color-overlay-medium);
+  border: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.flagSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.officeTitleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.officeTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .officeName {
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.officeTag {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
   font-weight: 700;
   color: var(--color-accent);
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border-soft);
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .officeRole {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: var(--color-text-muted);
-  display: block;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .officeDetails {
+  font-family: var(--font-body);
   font-size: 0.875rem;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--color-text-secondary);
-  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.45rem;
+}
+
+.addressLine {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--color-text-primary);
+  font-weight: 500;
 }
 
 .contactLine {
@@ -100,24 +195,43 @@
   align-items: center;
   gap: 0.5rem;
   margin: 0;
-  color: var(--color-accent);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .contactLine a {
   color: var(--color-accent);
   text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
 .contactLine a:hover {
   text-decoration: underline;
+  color: var(--color-blue-dark);
 }
 
+.timezoneLine {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.detailIcon {
+  font-size: 1rem !important;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Trust Strip */
 .trustStrip {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
+  gap: 0.75rem;
 }
 
 .trustItem {
@@ -125,11 +239,16 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 0.8125rem;
+  font-weight: 500;
   color: var(--color-text-secondary);
+  background-color: var(--color-panel-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.85rem;
 }
 
 .trustIcon {
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
   color: var(--color-accent);
   flex-shrink: 0;
 }
@@ -141,5 +260,6 @@
 @media (max-width: 992px) {
   .layout {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }

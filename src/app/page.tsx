@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import Hero from '@/components/sections/Hero/Hero';
 import CompanyIntro from '@/components/sections/CompanyIntro/CompanyIntro';
 import ServicesOverview from '@/components/sections/ServicesOverview/ServicesOverview';
+import TechMarquee from '@/components/sections/TechMarquee/TechMarquee';
+
 import Projects from '@/components/sections/Projects/Projects';
 import ClientSection from '@/components/sections/ClientSection/ClientSection';
 import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
@@ -42,6 +44,9 @@ export default function HomePage() {
 
       {/* SECTION 3 – SERVICES OVERVIEW */}
       <ServicesOverview />
+
+      {/* SECTION 3B – ENTERPRISE TECH STACK MARQUEE */}
+      <TechMarquee />
 
       {/* SECTION 4 – FEATURED PROJECTS (REDESIGNED HORIZONTAL CAROUSEL & FILTERS) */}
       <Projects />

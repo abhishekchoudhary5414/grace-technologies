@@ -247,6 +247,109 @@ export const SERVICES_CONFIG: Record<string, ServiceConfig> = {
     ],
     enabled: true,
   },
+
+  'app-development': {
+    slug: 'app-development',
+    name: 'App Development',
+    shortName: 'App Development',
+    primaryKeyword: 'App Development Company UK',
+    description:
+      'Native iOS & Android app development, cross-platform Flutter and React Native mobile applications, and scalable mobile backend architectures.',
+    keywords: [
+      'Best App Development Company UK',
+      'App Development Services UK',
+      'Mobile App Development Company',
+      'iOS App Development UK',
+      'Android App Development UK',
+      'Flutter App Development Agency',
+      'React Native App Development',
+      'Custom Mobile Apps UK',
+    ],
+    capabilities: [
+      {
+        title: 'Native iOS & Android Apps',
+        description: 'High-performance bespoke mobile applications tailored for Apple iOS and Google Android ecosystems.',
+      },
+      {
+        title: 'Cross-Platform Frameworks',
+        description: 'Single-codebase React Native and Flutter solutions that reduce time-to-market without sacrificing native feel.',
+      },
+      {
+        title: 'Mobile Backend & API Infrastructure',
+        description: 'Scalable cloud backends, GraphQL/REST endpoints, and secure database synchronization for mobile workloads.',
+      },
+      {
+        title: 'UI/UX Mobile Architecture',
+        description: 'Modern, gesture-driven mobile interfaces adhering to Apple Human Interface Guidelines and Material Design.',
+      },
+      {
+        title: 'App Store Submission & Compliance',
+        description: 'End-to-end management of App Store and Google Play compliance, metadata optimization, and release rollouts.',
+      },
+      {
+        title: 'App Maintenance & OS Updates',
+        description: 'Proactive support, OS version compatibility updates, crash telemetry monitoring, and performance tuning.',
+      },
+    ],
+    process: [
+      { step: '01', title: 'Product & Tech Discovery', description: 'Defining mobile requirements, target platforms, hardware access, and cloud dependencies.' },
+      { step: '02', title: 'Mobile UX/UI Design', description: 'Crafting interactive prototypes and user-centric flows for mobile device viewports.' },
+      { step: '03', title: 'Mobile & Cloud Engineering', description: 'Sprint-based native or cross-platform coding, API integration, and automated CI/CD.' },
+      { step: '04', title: 'Testing & Store Release', description: 'Device testing, performance profiling, store submission, and release monitoring.' },
+    ],
+    enabled: true,
+  },
+
+  'software-development': {
+    slug: 'software-development',
+    name: 'Software Development',
+    shortName: 'Software Development',
+    primaryKeyword: 'Software Development Company UK',
+    description:
+      'Bespoke enterprise software development, cloud-native SaaS systems, custom microservice architectures, and mission-critical business automation.',
+    keywords: [
+      'Best Software Development Company UK',
+      'Custom Software Development UK',
+      'Enterprise Software Solutions',
+      'SaaS Platform Development',
+      'Cloud Software Development',
+      'Bespoke Software Services UK',
+      'Software Engineering Agency UK',
+    ],
+    capabilities: [
+      {
+        title: 'Custom Enterprise Software',
+        description: 'Tailored software architectures built around your exact business logic and operational workflows.',
+      },
+      {
+        title: 'Cloud & SaaS Platform Engineering',
+        description: 'Multi-tenant scalable cloud applications built on AWS, Azure, and Google Cloud with strict isolation.',
+      },
+      {
+        title: 'Microservices & API Architecture',
+        description: 'Decoupled, resilient microservice architectures engineered for high concurrency and easy maintainability.',
+      },
+      {
+        title: 'Legacy Modernization',
+        description: 'Refactoring outdated legacy systems into high-performance, modern cloud-native architectures.',
+      },
+      {
+        title: 'Database & Data Pipeline Design',
+        description: 'Robust PostgreSQL and distributed database architectures optimized for high transaction throughput.',
+      },
+      {
+        title: 'DevOps & SLA Governance',
+        description: 'Automated CI/CD pipelines, containerization with Docker and Kubernetes, and 24/7 SLA-backed uptime.',
+      },
+    ],
+    process: [
+      { step: '01', title: 'Architecture & Scope', description: 'Deconstructing workflows, data schemas, security compliance, and system scale metrics.' },
+      { step: '02', title: 'System Blueprinting', description: 'Designing distributed microservice contracts, cloud infrastructure, and data flows.' },
+      { step: '03', title: 'Full-Stack Implementation', description: 'Agile sprints with clean typing, comprehensive testing, and bi-weekly deliverables.' },
+      { step: '04', title: 'Cloud Launch & Support', description: 'Zero-downtime deployment, infrastructure monitoring, and continuous maintenance.' },
+    ],
+    enabled: true,
+  },
 };
 
 export const getServiceConfig = (slug: string): ServiceConfig | null => {
