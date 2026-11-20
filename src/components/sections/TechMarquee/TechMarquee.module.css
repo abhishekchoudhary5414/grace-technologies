@@ -55,7 +55,7 @@
   font-weight: 800;
   line-height: 1.18;
   letter-spacing: -0.025em;
-  color: var(--color-black);
+  color: var(--color-accent);
   margin-bottom: 0.875rem;
 }
 
@@ -83,7 +83,7 @@
   align-items: center;
   gap: 1.25rem;
   width: max-content;
-  animation: scrollMarqueeForward 36s linear infinite;
+  animation: scrollMarqueeForward 75s linear infinite;
   will-change: transform;
 }
 
@@ -92,7 +92,7 @@
   align-items: center;
   gap: 1.25rem;
   width: max-content;
-  animation: scrollMarqueeReverse 36s linear infinite;
+  animation: scrollMarqueeReverse 75s linear infinite;
   will-change: transform;
 }
 
@@ -177,15 +177,41 @@
 @media (max-width: 768px) {
   .marqueeTrackForward,
   .marqueeTrackReverse {
-    animation-duration: 26s;
+    animation-duration: 55s;
     gap: 0.875rem;
   }
   .techCard {
-    padding: 0.625rem 1rem;
+    padding: 0.5rem 0.875rem;
+    gap: 0.625rem;
   }
   .techIconWrap {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
+  }
+  .techName {
+    font-size: 0.85rem;
+  }
+  .techCategory {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marqueeTrackForward,
+  .marqueeTrackReverse {
+    animation-duration: 45s;
+    gap: 0.625rem;
+  }
+  .techCard {
+    padding: 0.45rem 0.75rem;
+  }
+  .techIconWrap {
+    width: 32px;
+    height: 32px;
+  }
+  .techLogoImage {
+    width: 22px;
+    height: 22px;
   }
 }
 
