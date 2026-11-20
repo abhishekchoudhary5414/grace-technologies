@@ -53,17 +53,9 @@ export default function ContactPage() {
           <div className={styles.layout}>
             {/* Left Column: Context, Trust, Offices with Flags */}
             <div className={styles.infoCol}>
-              <div className={styles.badgeWrap}>
-                <span className={styles.badge}>
-                  <span className={styles.badgeDot} />
-                  EXECUTIVE CONSULTATION
-                </span>
-              </div>
 
-              <h1 className={styles.heading}>Your Next Move Starts With a Conversation.</h1>
-              <p className={styles.subheading}>
-                Connect directly with our UK and global technical leadership to evaluate your objectives in website development, mobile apps, bespoke software, merchant infrastructure, AI automation, or digital marketing.
-              </p>
+
+
 
               {/* UK Office Card with Flag */}
               <div className={styles.officeCard}>

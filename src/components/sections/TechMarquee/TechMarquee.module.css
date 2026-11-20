@@ -75,28 +75,47 @@
   display: flex;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
 }
 
-.marqueeTrack {
+.marqueeTrackForward {
   display: flex;
   align-items: center;
   gap: 1.25rem;
   width: max-content;
-  animation: scrollMarquee 32s linear infinite;
+  animation: scrollMarqueeForward 36s linear infinite;
   will-change: transform;
 }
 
-.marqueeContainer:hover .marqueeTrack {
+.marqueeTrackReverse {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: max-content;
+  animation: scrollMarqueeReverse 36s linear infinite;
+  will-change: transform;
+}
+
+.marqueeContainer:hover .marqueeTrackForward,
+.marqueeContainer:hover .marqueeTrackReverse {
   animation-play-state: paused;
 }
 
-@keyframes scrollMarquee {
+@keyframes scrollMarqueeForward {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollMarqueeReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -156,8 +175,9 @@
 }
 
 @media (max-width: 768px) {
-  .marqueeTrack {
-    animation-duration: 22s;
+  .marqueeTrackForward,
+  .marqueeTrackReverse {
+    animation-duration: 26s;
     gap: 0.875rem;
   }
   .techCard {
