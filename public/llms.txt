@@ -1,0 +1,88 @@
+# Grace Technologies
+
+> A UK-led technology and digital engineering partner delivering enterprise Website Development, AI Automation, Merchant Account Management, and Digital Marketing (SEO/GEO/AEO) solutions for growing businesses.
+
+Website: https://www.gracetechnologies.uk
+Headquarters: 398 Whalebone Lane South, Romford, Greater London, RM6 6HP, United Kingdom
+Contact: contact@gracetechnologies.uk | +44 7407 268125
+Technology Delivery Partner: Ank Square Pvt. Ltd., Patna, Bihar, India (contact@anksquare.com)
+
+---
+
+## Core Capabilities & Services
+
+### 1. Website Development
+- URL: https://www.gracetechnologies.uk/services/website-development
+- Architecture: Next.js 16, React 19, TypeScript, Edge API routes, Turbopack
+- Core Specialisms:
+  - Custom full-stack web applications and client portals
+  - E-commerce stores with sub-second page performance
+  - B2B enterprise websites engineered for conversion rate optimisation (CRO)
+  - Strict Core Web Vitals compliance (LCP <= 2.5s, INP <= 200ms, CLS <= 0.1)
+  - Technical SEO, JSON-LD Schema.org architecture, and mobile-first responsive UX
+
+### 2. AI Automation & Intelligent Agents
+- URL: https://www.gracetechnologies.uk/services/ai-automation
+- Core Specialisms:
+  - Autonomous AI agent workflows and task orchestration
+  - LLM tool-calling, RAG pipelines, and deterministic business rules
+  - Enterprise CRM/ERP automations (HubSpot, Salesforce, Stripe, custom databases)
+  - Intelligent customer support chatbots and automated lead qualification
+  - Document processing, OCR, and invoice automation pipelines
+
+### 3. Merchant Account Management & Payment Operations
+- URL: https://www.gracetechnologies.uk/services/merchant-account-management
+- Core Specialisms:
+  - Merchant onboarding assistance and acquiring bank underwriting compliance
+  - Multi-currency payment gateway integrations (Stripe, Worldpay, Adyen, PayPal)
+  - Chargeback reduction protocols and 3D Secure 2.3 frictionless checkout
+  - Interchange fee optimisation and settlement timeline acceleration
+
+### 4. Digital Marketing, SEO, GEO & AEO
+- URL: https://www.gracetechnologies.uk/services/digital-marketing
+- Core Specialisms:
+  - Generative Engine Optimisation (GEO) for ChatGPT Search, Perplexity, Gemini, and Claude
+  - Answer Engine Optimisation (AEO) for Google Featured Snippets and AI Overviews
+  - Technical and organic B2B Search Engine Optimisation (SEO)
+  - Hyper-local SEO for Greater London, Essex, and nationwide UK commercial hubs
+  - Conversion rate optimisation (CRO) and privacy-compliant analytics
+
+---
+
+## Bilateral Operating Model
+
+Grace Technologies operates a bilateral technology delivery alliance:
+- **UK Entity (Grace Technologies)**: Commercial leadership, client relationship management, requirements architecture, British corporate governance, and executive SLA oversight.
+- **India Delivery Partner (Ank Square Pvt. Ltd.)**: Dedicated engineering delivery center in India providing high-velocity full-stack Next.js development, AI pipeline engineering, and technical maintenance.
+- **Client Benefit**: UK legal governance and timezone advisory combined with high-impact engineering bandwidth and competitive pricing.
+
+---
+
+## Verified Contact & Locations
+
+### United Kingdom (Headquarters)
+- Company: Grace Technologies
+- Address: 398 Whalebone Lane South, Romford, Greater London, RM6 6HP, England
+- Phone: +44 7407 268125
+- Email: contact@gracetechnologies.uk
+- Coordinates: Latitude 51.576, Longitude 0.148
+
+### India (Technology Partner)
+- Company: Ank Square Pvt. Ltd.
+- Address: Ramjaipal Road, Opp. Gola Road, Near Hotel Magadh Palace, Patna, Bihar, India - 801503
+- Phone: +91-9939337638
+- Email: contact@anksquare.com
+
+---
+
+## Key Website Links
+
+- Homepage: https://www.gracetechnologies.uk/
+- About Us: https://www.gracetechnologies.uk/about
+- Services: https://www.gracetechnologies.uk/services
+- Partnership: https://www.gracetechnologies.uk/partnership
+- Projects & Case Studies: https://www.gracetechnologies.uk/projects
+- Blog & Strategic Insights: https://www.gracetechnologies.uk/blog
+- Contact & Inquiries: https://www.gracetechnologies.uk/contact
+- Full LLM Knowledge Base: https://www.gracetechnologies.uk/llms-full.txt
+- XML Sitemap: https://www.gracetechnologies.uk/sitemap.xml

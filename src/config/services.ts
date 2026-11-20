@@ -35,13 +35,17 @@ export const SERVICES_CONFIG: Record<string, ServiceConfig> = {
     description:
       'Custom website development, high-performance Next.js web applications, scalable e-commerce platforms, and technical Core Web Vitals optimization.',
     keywords: [
-      'Website Development Company',
+      'Best Website Development Company UK',
+      'Best Website Development Services',
+      'Best Custom Website Development',
+      'Website Development Company UK',
       'Website Development Services',
       'Custom Website Development',
       'Business Website Design',
       'E-commerce Development',
       'Web Application Development',
       'Next.js Development Agency',
+      'Best Web Design Company UK',
     ],
     capabilities: [
       {
@@ -86,6 +90,9 @@ export const SERVICES_CONFIG: Record<string, ServiceConfig> = {
     description:
       'Autonomous AI agent workflows, business process automation, custom CRM/ERP integrations, and LLM-powered enterprise tooling.',
     keywords: [
+      'Best AI Automation Company UK',
+      'Best AI Automation Services',
+      'Best AI Automation Agency UK',
       'AI Automation Services',
       'AI Automation Agency',
       'Business Process Automation',
@@ -93,6 +100,7 @@ export const SERVICES_CONFIG: Record<string, ServiceConfig> = {
       'AI Integration',
       'Workflow Automation',
       'Autonomous AI Agents',
+      'Best Workflow Automation UK',
     ],
     capabilities: [
       {
@@ -137,12 +145,16 @@ export const SERVICES_CONFIG: Record<string, ServiceConfig> = {
     description:
       'Professional payment operations, merchant account onboarding assistance, multi-currency gateway integration, and chargeback mitigation.',
     keywords: [
+      'Best Merchant Account Management UK',
+      'Best Merchant Account Support',
+      'Best Payment Gateway Integration UK',
       'Merchant Account Management',
       'Merchant Onboarding',
       'Merchant Account Support',
       'Payment Operations Management',
       'Payment Gateway Integration',
       'High-Risk Merchant Consulting',
+      'Best Payment Operations Management',
     ],
     capabilities: [
       {
@@ -187,6 +199,10 @@ export const SERVICES_CONFIG: Record<string, ServiceConfig> = {
     description:
       'High-intent search engine optimisation (SEO), Generative Engine Optimisation (GEO), Answer Engine Optimisation (AEO), and paid client acquisition.',
     keywords: [
+      'Best Digital Marketing Agency UK',
+      'Best SEO Agency UK',
+      'Best Local SEO Services UK',
+      'Best Generative Engine Optimisation UK',
       'Digital Marketing Services',
       'SEO Services',
       'Local SEO',
@@ -195,6 +211,7 @@ export const SERVICES_CONFIG: Record<string, ServiceConfig> = {
       'AEO',
       'Digital Growth Strategy',
       'Generative Engine Optimisation',
+      'Best AEO Services UK',
     ],
     capabilities: [
       {

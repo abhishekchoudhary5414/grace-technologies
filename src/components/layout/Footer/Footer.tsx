@@ -26,7 +26,7 @@ export default function Footer() {
     { label: 'Facebook', href: 'https://www.facebook.com/share/1CKuqfF3Ef/', icon: Facebook },
     { label: 'YouTube', href: 'https://www.youtube.com/@Gracetechnologiesofficial', icon: YouTube },
     { label: 'X', href: 'https://x.com/grace_Official4', icon: X },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: LinkedIn },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/gracetechnologies-uk', icon: LinkedIn },
   ];
 
   return (

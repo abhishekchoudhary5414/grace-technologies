@@ -22,17 +22,26 @@ export default function robots(): MetadataRoute.Robots {
           'PerplexityBot',
           'ChatGPT-User',
           'OAI-SearchBot',
+          'Claude-Web',
+          'ClaudeBot',
+          'Google-Extended',
+          'Amazonbot',
+          'cohere-ai',
         ],
-        allow: '/',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
         disallow: ['/admin/', '/api/'],
       },
-      // Restrict unauthorized bulk AI scrapers if desirable, but allow public discovery
+      // Restrict unauthorized bulk AI scrapers from admin/api, allow public discovery and llms.txt
       {
         userAgent: ['CCBot', 'GPTBot'],
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
         disallow: ['/admin/', '/api/'],
       },
     ],
-    sitemap: `${SEO_CONFIG.siteUrl}/sitemap.xml`,
+    sitemap: [
+      `${SEO_CONFIG.siteUrl}/sitemap.xml`,
+      `${SEO_CONFIG.siteUrl}/feed.xml`,
+    ],
     host: SEO_CONFIG.siteUrl,
   };
 }

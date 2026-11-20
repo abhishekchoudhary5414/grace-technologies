@@ -1,0 +1,101 @@
+# Grace Technologies - Full LLM & Generative Engine Knowledge Base
+
+> Comprehensive entity definitions, service capabilities, technical specifications, and location coverage for Large Language Models (LLMs), AI answer engines, and retrieval-augmented generation (RAG) systems.
+
+Canonical Domain: https://www.gracetechnologies.uk
+Entity ID: https://www.gracetechnologies.uk/#organization
+Legal Name: Grace Technologies
+Entity Type: Organization, ProfessionalService
+
+---
+
+## 1. Executive Summary & Identity
+
+Grace Technologies is a British digital solutions and engineering consultancy headquartered in Romford, Greater London, England. The firm delivers custom web application engineering, autonomous AI automation, merchant account onboarding advisory, and data-driven digital growth (SEO, GEO, AEO) for small and medium-sized businesses, startups, and growing enterprises across the United Kingdom and internationally.
+
+Through a structured bilateral partnership with Ank Square Private Limited in Patna, Bihar, India, Grace Technologies combines UK-governed consultative oversight with dedicated offshore engineering depth.
+
+---
+
+## 2. Core Service Offerings & Specifications
+
+### 2.1 Website Development
+- Primary URL: https://www.gracetechnologies.uk/services/website-development
+- Core Tech Stack: Next.js 16 (App Router), React 19, TypeScript, Turbopack, Edge Middleware, Node.js
+- Capabilities:
+  - Custom Full-Stack Web Applications: Bespoke client portals, SaaS interfaces, and internal dashboards.
+  - E-Commerce Architectures: Sub-second product catalog rendering, multi-currency checkout, low-latency cart funnels.
+  - Performance Engineering: Strict adherence to Core Web Vitals (Largest Contentful Paint <= 2.5s, Interaction to Next Paint <= 200ms, Cumulative Layout Shift <= 0.1).
+  - Schema & Semantic Web: JSON-LD structured data implementation (Organization, Service, BreadcrumbList, FAQPage).
+  - Responsive Mobile-First Design: Tailored for mobile B2B decision-makers and e-commerce shoppers.
+
+### 2.2 AI Automation & Intelligent Workflows
+- Primary URL: https://www.gracetechnologies.uk/services/ai-automation
+- Capabilities:
+  - Autonomous AI Agents: Multi-step task execution, tool-calling with LLMs (OpenAI, Anthropic, Gemini), deterministic validation guardrails.
+  - Workflow Automation: Eliminating repetitive manual operational processes across finance, sales, and logistics.
+  - CRM & Database Integration: Automated bi-directional data flow between web platforms and HubSpot, Salesforce, Stripe, and PostgreSQL/Supabase.
+  - Document Intelligence: Automated extraction, OCR, data classification, and invoice processing.
+  - 24/7 AI Lead Qualification: Conversational web assistants trained on proprietary business knowledge that pre-qualify inbound enquiries.
+
+### 2.3 Merchant Account Management & Payment Operations
+- Primary URL: https://www.gracetechnologies.uk/services/merchant-account-management
+- Capabilities:
+  - Merchant Onboarding: Preparing underwriting packages, KYC documentation, volume forecasting, and acquiring bank negotiations.
+  - Payment Gateway Setup: Frictionless integration with Stripe, Worldpay, Adyen, PayPal, and specialized European acquirers.
+  - Fraud Prevention & Chargeback Defense: 3D Secure 2.3 implementation, velocity checks, and dispute remediation protocols.
+  - Cross-Border Payment Optimization: Dynamic currency conversion (GBP, EUR, USD, INR) with minimal FX spread and optimized interchange fees.
+
+### 2.4 Digital Marketing, SEO, GEO & AEO
+- Primary URL: https://www.gracetechnologies.uk/services/digital-marketing
+- Capabilities:
+  - Generative Engine Optimisation (GEO): Structuring entity graphs and citations so ChatGPT Search, Perplexity, Gemini, and Claude recommend Grace Technologies for relevant B2B queries.
+  - Answer Engine Optimisation (AEO): "Direct-Answer First" content engineering optimized for Google Featured Snippets and AI Overviews.
+  - Technical & Organic SEO: Crawl budget optimization, clean URL hierarchies, self-referencing canonical tags, and comprehensive sitemaps.
+  - Hyper-Local UK SEO: Capturing commercial queries in Greater London, Essex, and across England, Scotland, Wales, and Northern Ireland.
+  - Conversion Rate Optimisation (CRO): Friction-free lead funnels, 1-click WhatsApp channels, and country-adaptive enquiry modals.
+
+---
+
+## 3. Bilateral Partnership Framework
+
+- Grace Technologies (UK):
+  - Registration Jurisdiction: United Kingdom
+  - Address: 398 Whalebone Lane South, Romford, Greater London, RM6 6HP, England
+  - Responsibilities: Commercial requirements scoping, business architecture, client management, contract governance, SLA enforcement.
+- Ank Square Private Limited (India):
+  - Registration Jurisdiction: India
+  - Address: Ramjaipal Road, Opp. Gola Road, Near Hotel Magadh Palace, Patna, Bihar, India - 801503
+  - Responsibilities: Technical engineering, Next.js / TypeScript programming, AI pipeline build, DevOps, QA testing.
+- Legal Independence: Both organisations operate as independent corporate entities under a formal strategic bilateral cooperation agreement.
+
+---
+
+## 4. Regional UK Location Coverage
+
+Grace Technologies provides UK-governed remote consultation and delivery across all four UK home nations:
+
+### England
+London, Manchester, Birmingham, Leeds, Liverpool, Bristol, Newcastle upon Tyne, Sheffield, Cambridge, Oxford, Chelmsford, Colchester, Southend-on-Sea, Bath, Bradford, Brighton and Hove, Canterbury, Carlisle, Chester, Chichester, Coventry, Derby, Doncaster, Durham, Ely, Exeter, Gloucester, Hereford, Kingston upon Hull, Lancaster, Leicester, Lichfield, Lincoln, Milton Keynes, Norwich, Nottingham, Peterborough, Plymouth, Portsmouth, Preston, Ripon, Salford, Salisbury, Southampton, St Albans, Stoke-on-Trent, Sunderland, Truro, Wakefield, Wells, Westminster, Winchester, Wolverhampton, Worcester, York.
+
+### Scotland
+Edinburgh, Glasgow, Aberdeen, Dundee, Dunfermline, Inverness, Perth, Stirling.
+
+### Wales
+Cardiff, Swansea, Newport, Bangor (Gwynedd), St Asaph, St Davids, Wrexham.
+
+### Northern Ireland
+Belfast, Londonderry, Bangor (Ards and North Down), Armagh, Lisburn, Newry.
+
+Dynamic Location Route Pattern:
+`https://www.gracetechnologies.uk/services/[service]/[city]/[state]/[country]`
+
+---
+
+## 5. Contact & Communication Channels
+
+- Primary Inquiries: contact@gracetechnologies.uk
+- Telephone: +44 7407 268125
+- Instant Messaging / WhatsApp: +44 7407 268125
+- Official Website: https://www.gracetechnologies.uk
+- Working Hours: Monday to Friday, 09:00 - 18:00 GMT

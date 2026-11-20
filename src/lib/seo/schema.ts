@@ -20,6 +20,27 @@ export function getOrganizationSchema() {
     priceRange: '££',
     currenciesAccepted: 'GBP, USD, EUR, INR',
     paymentAccepted: 'Bank Transfer, Stripe, Credit Card',
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'London, United Kingdom',
+    },
+    actionableFeedbackPolicy: 'https://www.gracetechnologies.uk/terms-and-conditions',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: SEO_CONFIG.contact.uk.phone,
+        contactType: 'customer service',
+        areaServed: 'GB',
+        availableLanguage: ['English'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: SEO_CONFIG.contact.indiaPartner.phone,
+        contactType: 'technical support',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi'],
+      },
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: SEO_CONFIG.contact.uk.addressLines[0],

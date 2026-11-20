@@ -44,12 +44,19 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   const status = getLocationStatus(serviceSlug, citySlug, stateSlug, countrySlug);
   const canonicalUrl = `${SEO_CONFIG.siteUrl}/services/${service.slug}/${cityData.citySlug}/${cityData.stateSlug}/${cityData.countrySlug}`;
 
-  const metaTitle = `${service.name} in ${cityData.city} | Grace Technologies`;
-  const metaDescription = `Looking for professional ${service.name.toLowerCase()} in ${cityData.city}, ${cityData.state}? Grace Technologies provides UK-governed digital solutions, custom engineering, and remote delivery for ambitious enterprises.`;
+  const metaTitle = `Best ${service.name} in ${cityData.city} | Grace Technologies`;
+  const metaDescription = `Looking for the best ${service.name.toLowerCase()} in ${cityData.city}, ${cityData.state}? Grace Technologies provides top-rated UK-governed digital solutions, custom engineering, and remote delivery for ambitious enterprises.`;
 
   return {
     title: metaTitle,
     description: metaDescription,
+    keywords: [
+      `Best ${service.name} in ${cityData.city}`,
+      `Best ${service.name} ${cityData.state}`,
+      `Top ${service.name} Company ${cityData.city}`,
+      ...service.keywords.map((kw) => `${kw} ${cityData.city}`),
+      ...service.keywords,
+    ],
     alternates: {
       canonical: canonicalUrl,
     },
