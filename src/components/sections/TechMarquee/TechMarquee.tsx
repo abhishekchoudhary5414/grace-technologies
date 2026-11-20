@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/common/Container/Container';
 import technologiesData from '@/config/technologies.json';
+import marketplacesData from '@/config/marketplaces.json';
 import styles from './TechMarquee.module.css';
 
 interface TechItem {
@@ -16,14 +17,15 @@ interface TechItem {
 
 export default function TechMarquee() {
   const technologies: TechItem[] = technologiesData.technologies;
+  const marketplaces: TechItem[] = marketplacesData.marketplaces;
 
-  // Split technology list evenly into two rows for dual opposing marquees
+  // Split developer technologies list evenly into two rows for dual opposing marquees
   const midPoint = Math.ceil(technologies.length / 2);
   const rowOne = technologies.slice(0, midPoint);
   const rowTwo = technologies.slice(midPoint);
 
   return (
-    <section className={styles.section} aria-label="Core Technology Stack">
+    <section className={styles.section} aria-label="Core Technology & Retail Architecture Stack">
       <Container size="wide">
         <div className={styles.headerBlock}>
           <div className={styles.badgeWrap}>
@@ -39,7 +41,7 @@ export default function TechMarquee() {
         </div>
       </Container>
 
-      {/* Row 1: Forward Direction (Left Scrolling) */}
+      {/* Row 1: Engineering & Languages (Left Scrolling) */}
       <div className={styles.marqueeContainer}>
         <div className={styles.marqueeTrackForward}>
           {[...rowOne, ...rowOne, ...rowOne].map((tech, index) => (
@@ -62,7 +64,7 @@ export default function TechMarquee() {
         </div>
       </div>
 
-      {/* Row 2: Reverse Direction (Right Scrolling) */}
+      {/* Row 2: Infrastructure, Databases & Tooling (Right Scrolling - Opposite Direction) */}
       <div className={styles.marqueeContainer} style={{ marginTop: '0.75rem' }}>
         <div className={styles.marqueeTrackReverse}>
           {[...rowTwo, ...rowTwo, ...rowTwo].map((tech, index) => (
@@ -79,6 +81,29 @@ export default function TechMarquee() {
               <div className={styles.techInfo}>
                 <span className={styles.techName}>{tech.name}</span>
                 <span className={styles.techCategory}>{tech.category}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Row 3: Top UK & Global Retail/E-Commerce Marketplaces (Left Scrolling - Added from Ecommerce Guide) */}
+      <div className={styles.marqueeContainer} style={{ marginTop: '0.75rem' }}>
+        <div className={styles.marqueeTrackForward}>
+          {[...marketplaces, ...marketplaces, ...marketplaces].map((market, index) => (
+            <div key={`market-${market.id}-${index}`} className={styles.techCard}>
+              <div className={styles.techIconWrap} style={{ borderColor: `${market.color}33` }}>
+                <Image
+                  src={market.logo}
+                  alt={`${market.name} official logo`}
+                  width={28}
+                  height={28}
+                  className={styles.techLogoImage}
+                />
+              </div>
+              <div className={styles.techInfo}>
+                <span className={styles.techName}>{market.name}</span>
+                <span className={styles.techCategory}>{market.category}</span>
               </div>
             </div>
           ))}

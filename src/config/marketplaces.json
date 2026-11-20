@@ -1,0 +1,144 @@
+{
+  "marketplaces": [
+    {
+      "id": "amazon",
+      "name": "Amazon UK",
+      "category": "UK #1 Marketplace & Cloud",
+      "color": "#FF9900",
+      "logo": "/tech/amazon.svg"
+    },
+    {
+      "id": "ebay",
+      "name": "eBay UK",
+      "category": "Global Commerce & Auction",
+      "color": "#E53238",
+      "logo": "/tech/ebay.svg"
+    },
+    {
+      "id": "marksandspencer",
+      "name": "M&S",
+      "category": "British Retail Institution",
+      "color": "#2E7D32",
+      "logo": "/tech/marksandspencer.svg"
+    },
+    {
+      "id": "next",
+      "name": "Next UK",
+      "category": "Omnichannel Retail Platform",
+      "color": "#111111",
+      "logo": "/tech/next.svg"
+    },
+    {
+      "id": "argos",
+      "name": "Argos",
+      "category": "Digital Catalogue Commerce",
+      "color": "#E53238",
+      "logo": "/tech/argos.svg"
+    },
+    {
+      "id": "asda",
+      "name": "ASDA",
+      "category": "Enterprise Supermarket Network",
+      "color": "#78BE20",
+      "logo": "/tech/asda.svg"
+    },
+    {
+      "id": "currys",
+      "name": "Currys",
+      "category": "Electronics & Hardware Retail",
+      "color": "#3D1152",
+      "logo": "/tech/currys.svg"
+    },
+    {
+      "id": "etsy",
+      "name": "Etsy",
+      "category": "Artisan & Creative Commerce",
+      "color": "#F1641E",
+      "logo": "/tech/etsy.svg"
+    },
+    {
+      "id": "boots",
+      "name": "Boots UK",
+      "category": "Health & Beauty Pharmacy",
+      "color": "#0079C1",
+      "logo": "/tech/boots.svg"
+    },
+    {
+      "id": "tesco",
+      "name": "Tesco",
+      "category": "UK Leading Grocery Enterprise",
+      "color": "#00539F",
+      "logo": "/tech/tesco.svg"
+    },
+    {
+      "id": "johnlewis",
+      "name": "John Lewis",
+      "category": "Premium British Department Store",
+      "color": "#000000",
+      "logo": "/tech/johnlewis.svg"
+    },
+    {
+      "id": "sainsburys",
+      "name": "Sainsbury's",
+      "category": "Supermarket & Retail Chain",
+      "color": "#F06C00",
+      "logo": "/tech/sainsburys.svg"
+    },
+    {
+      "id": "ikea",
+      "name": "IKEA UK",
+      "category": "Global Furniture Architecture",
+      "color": "#005AA9",
+      "logo": "/tech/ikea.svg"
+    },
+    {
+      "id": "asos",
+      "name": "ASOS",
+      "category": "Global Fashion Destination",
+      "color": "#000000",
+      "logo": "/tech/asos.svg"
+    },
+    {
+      "id": "screwfix",
+      "name": "Screwfix",
+      "category": "Trade Tools & Hardware Tech",
+      "color": "#005596",
+      "logo": "/tech/screwfix.svg"
+    },
+    {
+      "id": "sportsdirect",
+      "name": "Sports Direct",
+      "category": "Athletic Apparel Enterprise",
+      "color": "#003399",
+      "logo": "/tech/sportsdirect.svg"
+    },
+    {
+      "id": "aliexpress",
+      "name": "AliExpress",
+      "category": "Cross-Border Wholesale & Direct",
+      "color": "#E51937",
+      "logo": "/tech/aliexpress.svg"
+    },
+    {
+      "id": "dunelm",
+      "name": "Dunelm",
+      "category": "Home Furnishings Enterprise",
+      "color": "#005A36",
+      "logo": "/tech/dunelm.svg"
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify Plus",
+      "category": "Scalable Cloud Commerce",
+      "color": "#96BF48",
+      "logo": "/tech/shopify.svg"
+    },
+    {
+      "id": "woocommerce",
+      "name": "WooCommerce",
+      "category": "Open Architecture Commerce",
+      "color": "#96588A",
+      "logo": "/tech/woocommerce.svg"
+    }
+  ]
+}

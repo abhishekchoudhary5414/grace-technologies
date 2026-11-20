@@ -1,0 +1,6 @@
+<svg role="img" viewBox="0 0 24 24" fill="#005AA9" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="11" fill="#FFFFFF"/>
+  <ellipse cx="12" cy="12" rx="10" ry="7" fill="#005AA9"/>
+  <ellipse cx="12" cy="12" rx="9" ry="6" fill="#FFDA1A"/>
+  <text x="12" y="14.5" font-family="Arial, sans-serif" font-weight="900" font-size="6.5" fill="#005AA9" text-anchor="middle">IKEA</text>
+</svg>
