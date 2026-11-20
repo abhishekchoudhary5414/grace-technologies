@@ -14,7 +14,7 @@ import { SEO_CONFIG } from '@/lib/seo/config';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
-const service = SERVICES_DATA[1]; // Merchant Account Management
+const service = SERVICES_DATA.find((s) => s.id === 'merchant-account-management') || SERVICES_DATA[0];
 
 export const metadata: Metadata = constructMetadata({
   title: 'Merchant Account Management Services',

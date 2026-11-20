@@ -85,6 +85,62 @@
       "logo": "/tech/apache.svg"
     },
     {
+      "id": "paypal",
+      "name": "PayPal",
+      "category": "Global Merchant Gateway",
+      "color": "#003087",
+      "logo": "/tech/paypal.svg"
+    },
+    {
+      "id": "razorpay",
+      "name": "Razorpay",
+      "category": "Payment Operations & APIs",
+      "color": "#3395FF",
+      "logo": "/tech/razorpay.svg"
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "category": "Multi-Currency Payment Engine",
+      "color": "#635BFF",
+      "logo": "/tech/stripe.svg"
+    },
+    {
+      "id": "quickbooks",
+      "name": "QuickBooks",
+      "category": "Accounting & Financial Ops",
+      "color": "#2CA01C",
+      "logo": "/tech/quickbooks.svg"
+    },
+    {
+      "id": "xero",
+      "name": "Xero",
+      "category": "Cloud Account Management",
+      "color": "#13B5EA",
+      "logo": "/tech/xero.svg"
+    },
+    {
+      "id": "googleanalytics",
+      "name": "Google Analytics 4",
+      "category": "Marketing & Attribution Tech",
+      "color": "#F9AB00",
+      "logo": "/tech/googleanalytics.svg"
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "category": "Marketing Automation & CRM",
+      "color": "#FF7A59",
+      "logo": "/tech/hubspot.svg"
+    },
+    {
+      "id": "googlesearchconsole",
+      "name": "Search Console",
+      "category": "SEO & Indexation Intelligence",
+      "color": "#4285F4",
+      "logo": "/tech/googlesearchconsole.svg"
+    },
+    {
       "id": "c",
       "name": "C",
       "category": "Low-Level System Engineering",

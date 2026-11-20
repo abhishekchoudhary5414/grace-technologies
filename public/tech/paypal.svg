@@ -1,0 +1,6 @@
+<svg role="img" viewBox="0 0 24 24" fill="#003087" xmlns="http://www.w3.org/2000/svg">
+  <title>PayPal</title>
+  <circle cx="12" cy="12" r="11" fill="#FFFFFF"/>
+  <path fill="#003087" d="M14.6 5.5H9.2l-1.9 12H10l.7-4.5h2.3c3.4 0 5.3-1.6 5.8-4.4.4-2.1-.9-3.1-4.2-3.1z"/>
+  <path fill="#0079C1" d="M15.5 8.7c-.5 2.8-2.4 4.4-5.8 4.4H7.4L6 22h3.5l.8-5h1.9c3.2 0 5-1.5 5.5-4.2.3-1.7-.3-3.1-2.2-4.1z"/>
+</svg>

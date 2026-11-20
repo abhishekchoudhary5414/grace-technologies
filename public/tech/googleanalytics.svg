@@ -1,0 +1,7 @@
+<svg role="img" viewBox="0 0 24 24" fill="#F9AB00" xmlns="http://www.w3.org/2000/svg">
+  <title>Google Analytics</title>
+  <circle cx="12" cy="12" r="11" fill="#FFFFFF"/>
+  <path fill="#F9AB00" d="M19.5 5.5v13c0 1.2-.9 2.1-2.1 2.1s-2.1-.9-2.1-2.1v-13c0-1.2.9-2.1 2.1-2.1s2.1.9 2.1 2.1z"/>
+  <path fill="#E37400" d="M12.5 10v8.5c0 1.2-.9 2.1-2.1 2.1s-2.1-.9-2.1-2.1V10c0-1.2.9-2.1 2.1-2.1s2.1.9 2.1 2.1z"/>
+  <circle cx="5.5" cy="18.5" r="2.1" fill="#E37400"/>
+</svg>

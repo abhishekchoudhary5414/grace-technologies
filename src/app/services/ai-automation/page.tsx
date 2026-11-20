@@ -13,7 +13,7 @@ import { SEO_CONFIG } from '@/lib/seo/config';
 import { SERVICES_DATA } from '@/config/site';
 import styles from '../service-page.module.css';
 
-const service = SERVICES_DATA[2]; // AI Automation
+const service = SERVICES_DATA.find((s) => s.id === 'ai-automation') || SERVICES_DATA[0];
 
 export const metadata: Metadata = constructMetadata({
   title: 'AI Automation Services UK',
