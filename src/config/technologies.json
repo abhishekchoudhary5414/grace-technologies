@@ -57,6 +57,48 @@
       "logo": "/tech/vite.svg"
     },
     {
+      "id": "java",
+      "name": "Java",
+      "category": "Enterprise Backend Systems",
+      "color": "#EA2D2E",
+      "logo": "/tech/java.svg"
+    },
+    {
+      "id": "springboot",
+      "name": "Spring Boot",
+      "category": "Production Microservices",
+      "color": "#6DB33F",
+      "logo": "/tech/springboot.svg"
+    },
+    {
+      "id": "kafka",
+      "name": "Apache Kafka",
+      "category": "Distributed Event Streaming",
+      "color": "#FFFFFF",
+      "logo": "/tech/kafka.svg"
+    },
+    {
+      "id": "apache",
+      "name": "Apache HTTP Server",
+      "category": "Open-Source Web Architecture",
+      "color": "#D22128",
+      "logo": "/tech/apache.svg"
+    },
+    {
+      "id": "c",
+      "name": "C",
+      "category": "Low-Level System Engineering",
+      "color": "#A8B9CC",
+      "logo": "/tech/c.svg"
+    },
+    {
+      "id": "cplusplus",
+      "name": "C++",
+      "category": "High-Performance Computing",
+      "color": "#00599C",
+      "logo": "/tech/cplusplus.svg"
+    },
+    {
       "id": "sql",
       "name": "SQL",
       "category": "Structured Query Language",
