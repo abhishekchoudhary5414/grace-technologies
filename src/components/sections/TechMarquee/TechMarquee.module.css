@@ -83,7 +83,7 @@
   align-items: center;
   gap: 1.25rem;
   width: max-content;
-  animation: scrollMarqueeForward 75s linear infinite;
+  animation: scrollMarqueeForward 130s linear infinite;
   will-change: transform;
 }
 
@@ -92,7 +92,7 @@
   align-items: center;
   gap: 1.25rem;
   width: max-content;
-  animation: scrollMarqueeReverse 75s linear infinite;
+  animation: scrollMarqueeReverse 130s linear infinite;
   will-change: transform;
 }
 
@@ -177,7 +177,7 @@
 @media (max-width: 768px) {
   .marqueeTrackForward,
   .marqueeTrackReverse {
-    animation-duration: 55s;
+    animation-duration: 95s;
     gap: 0.875rem;
   }
   .techCard {
@@ -199,7 +199,7 @@
 @media (max-width: 480px) {
   .marqueeTrackForward,
   .marqueeTrackReverse {
-    animation-duration: 45s;
+    animation-duration: 80s;
     gap: 0.625rem;
   }
   .techCard {
